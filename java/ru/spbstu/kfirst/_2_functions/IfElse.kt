@@ -1,4 +1,4 @@
-package _2_functions
+package ru.spbstu.kfirst._2_functions
 
 /*
 Даны четыре точки на одной прямой: A, B, C и D.

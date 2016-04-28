@@ -1,4 +1,4 @@
-package _1_functions
+package ru.spbstu.kfirst._1_functions
 
 /*
 Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
