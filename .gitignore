@@ -3,6 +3,7 @@
 
 .idea
 target
+out
 
 *.iml
 *.ipr
