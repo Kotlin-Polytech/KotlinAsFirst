@@ -1,4 +1,4 @@
-package ru.spbstu.kfirst._2_functions
+package ru.spbstu.kfirst.task2
 
 /*
 Даны четыре точки на одной прямой: A, B, C и D.

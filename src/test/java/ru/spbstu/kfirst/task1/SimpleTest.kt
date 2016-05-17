@@ -1,4 +1,4 @@
-package ru.spbstu.kfirst._1_functions
+package ru.spbstu.kfirst.task1
 
 import org.junit.Test
 
