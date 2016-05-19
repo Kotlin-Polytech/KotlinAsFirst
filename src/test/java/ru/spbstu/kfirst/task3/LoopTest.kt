@@ -80,4 +80,12 @@ class LoopTest {
         assertEquals(5, fibSequenceDigit(14))
         assertEquals(2, fibSequenceDigit(20))
     }
+
+    @Test
+    fun isCoPrime() {
+        assertTrue(isCoPrime(25, 49))
+        assertFalse(isCoPrime(6, 8))
+        assertTrue(isCoPrime(17, 97))
+        assertFalse(isCoPrime(37, 111))
+    }
 }
