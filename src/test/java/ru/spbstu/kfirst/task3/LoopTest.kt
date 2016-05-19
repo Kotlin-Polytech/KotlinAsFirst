@@ -34,6 +34,15 @@ class LoopTest {
     }
 
     @Test
+    fun maxDivisor() {
+        assertEquals(1, maxDivisor(17))
+        assertEquals(12, maxDivisor(24))
+        assertEquals(59, maxDivisor(177))
+        assertEquals(17, maxDivisor(34))
+        assertEquals(7, maxDivisor(49))
+    }
+
+    @Test
     fun revert() {
         assertEquals(87431, revert(13478))
         assertEquals(0, revert(0))
