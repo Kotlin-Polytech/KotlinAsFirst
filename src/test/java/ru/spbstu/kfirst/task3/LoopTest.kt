@@ -23,4 +23,13 @@ class LoopTest {
         assertEquals(975, lcm(39, 75))
     }
 
+    @Test
+    fun minDivisor() {
+        assertEquals(2, minDivisor(2))
+        assertEquals(3, minDivisor(75))
+        assertEquals(5, minDivisor(75 / 3))
+        assertEquals(97, minDivisor(97))
+        assertEquals(7, minDivisor(49))
+        assertEquals(17, minDivisor(8653))
+    }
 }
