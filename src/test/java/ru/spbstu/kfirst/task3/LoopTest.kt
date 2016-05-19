@@ -88,4 +88,12 @@ class LoopTest {
         assertTrue(isCoPrime(17, 97))
         assertFalse(isCoPrime(37, 111))
     }
+
+    @Test
+    fun squareBetweenExists() {
+        assertTrue(squareBetweenExists(1, 1))
+        assertTrue(squareBetweenExists(21, 28))
+        assertFalse(squareBetweenExists(51, 61))
+        assertFalse(squareBetweenExists(999, 1001))
+    }
 }
