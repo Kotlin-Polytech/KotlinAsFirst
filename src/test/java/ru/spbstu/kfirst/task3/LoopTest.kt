@@ -114,4 +114,30 @@ class LoopTest {
         assertFalse(hasDifferentDigits(0))
         assertFalse(hasDifferentDigits(777))
     }
+
+    @Test
+    fun factorial() {
+        assertEquals(1.0, factorial(0), 1e-5)
+        assertEquals(1.0, factorial(1), 1e-5)
+        assertEquals(6.0, factorial(3), 1e-5)
+        assertEquals(120.0, factorial(5), 1e-5)
+        assertEquals(3628800.0, factorial(10), 1e-5)
+        assertEquals(2.43290200817664E18, factorial(20), 1E10)
+    }
+
+    @Test
+    fun sin() {
+        assertEquals(0.0, sin(0.0, 1e-5), 1e-5)
+        assertEquals(1.0, sin(Math.PI / 2.0, 1e-5), 1e-5)
+        assertEquals(0.0, sin(Math.PI, 1e-5), 1e-5)
+        assertEquals(-1.0, sin(3.0 * Math.PI / 2.0, 1e-5), 1e-5)
+    }
+
+    @Test
+    fun cos() {
+        assertEquals(1.0, cos(0.0, 1e-5), 1e-5)
+        assertEquals(0.0, cos(Math.PI / 2.0, 1e-5), 1e-5)
+        assertEquals(-1.0, cos(Math.PI, 1e-5), 1e-5)
+        assertEquals(0.0, cos(3.0 * Math.PI / 2.0, 1e-5), 1e-5)
+    }
 }
