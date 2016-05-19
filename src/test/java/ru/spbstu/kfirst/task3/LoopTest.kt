@@ -50,4 +50,34 @@ class LoopTest {
         assertTrue(isAnagram(15751))
         assertTrue(isAnagram(24688642))
     }
+
+    @Test
+    fun digitNumber() {
+        assertEquals(1, digitNumber(0))
+        assertEquals(1, digitNumber(7))
+        assertEquals(2, digitNumber(10))
+        assertEquals(2, digitNumber(99))
+        assertEquals(3, digitNumber(123))
+        assertEquals(10, digitNumber(Int.MAX_VALUE))
+    }
+
+    @Test
+    fun squareSequenceDigit() {
+        assertEquals(1, squareSequenceDigit(1))
+        assertEquals(4, squareSequenceDigit(2))
+        assertEquals(5, squareSequenceDigit(7))
+        assertEquals(6, squareSequenceDigit(12))
+        assertEquals(0, squareSequenceDigit(17))
+        assertEquals(9, squareSequenceDigit(27))
+    }
+
+    @Test
+    fun fibSequenceDigit() {
+        assertEquals(1, fibSequenceDigit(1))
+        assertEquals(1, fibSequenceDigit(2))
+        assertEquals(3, fibSequenceDigit(4))
+        assertEquals(2, fibSequenceDigit(9))
+        assertEquals(5, fibSequenceDigit(14))
+        assertEquals(2, fibSequenceDigit(20))
+    }
 }
