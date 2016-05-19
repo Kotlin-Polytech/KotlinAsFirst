@@ -105,4 +105,13 @@ class LoopTest {
         assertFalse(squareBetweenExists(51, 61))
         assertFalse(squareBetweenExists(999, 1001))
     }
+
+    @Test
+    fun hasDifferentDigits() {
+        assertTrue(hasDifferentDigits(323))
+        assertTrue(hasDifferentDigits(54))
+        assertTrue(hasDifferentDigits(222266666))
+        assertFalse(hasDifferentDigits(0))
+        assertFalse(hasDifferentDigits(777))
+    }
 }

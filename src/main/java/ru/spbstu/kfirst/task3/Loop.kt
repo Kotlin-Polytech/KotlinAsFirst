@@ -68,3 +68,9 @@ fun isCoPrime(m: Int, n: Int): Boolean = TODO()
  * Например, для интервала 21..28 21 <= 5*5 <= 28, а для интервала 51..61 квадрата не существует.
  */
 fun squareBetweenExists(m: Int, n: Int): Boolean = TODO()
+
+/*
+ * Для заданного числа n определить, содержит ли оно различающиеся цифры.
+ * Например, 54 и 323 состоят из разных цифр, а 111 и 0 из одинаковых.
+ */
+fun hasDifferentDigits(n: Int): Boolean = TODO()
