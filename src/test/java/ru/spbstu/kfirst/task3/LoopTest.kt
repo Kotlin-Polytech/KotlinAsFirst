@@ -32,4 +32,22 @@ class LoopTest {
         assertEquals(7, minDivisor(49))
         assertEquals(17, minDivisor(8653))
     }
+
+    @Test
+    fun revert() {
+        assertEquals(87431, revert(13478))
+        assertEquals(0, revert(0))
+        assertEquals(3, revert(3))
+        assertEquals(111, revert(111))
+        assertEquals(17571, revert(17571))
+        assertEquals(123456789, revert(987654321))
+    }
+
+    @Test
+    fun isAnagram() {
+        assertTrue(isAnagram(3))
+        assertFalse(isAnagram(3653))
+        assertTrue(isAnagram(15751))
+        assertTrue(isAnagram(24688642))
+    }
 }
