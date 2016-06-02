@@ -44,3 +44,16 @@ fun decimal(digits: List<Int>, base: Int): Int = TODO()
  * Например: str = "13c", base = 14 -> 250
  */
 fun decimalFromString(str: String, base: Int): Int = TODO()
+
+/*
+ * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст
+ */
+fun mean(list: List<Double>): Double = TODO()
+
+/*
+ * Центрировать заданный список list, уменьшив каждый элемент на среднее арифметическое всех элементов.
+ * Если список пуст, не делать ничего. Вернуть изменённый список.
+ */
+fun center(list: MutableList<Double>): MutableList<Double> {
+    TODO()
+}

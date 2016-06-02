@@ -52,4 +52,20 @@ class ListTest {
         assertEquals(1000, decimalFromString("2ec", 19))
         assertEquals(35, decimalFromString("z", 36))
     }
+
+    @Test
+    fun mean() {
+        assertEquals(0.0, mean(listOf()), 1e-5)
+        assertEquals(1.0, mean(listOf(1.0)), 1e-5)
+        assertEquals(2.0, mean(listOf(3.0, 1.0, 2.0)), 1e-5)
+        assertEquals(3.0, mean(listOf(0.0, 2.0, 7.0, 8.0, -2.0)), 1e-5)
+    }
+
+    @Test
+    fun center() {
+        assertEquals(listOf<Double>(), center(arrayListOf()))
+        assertEquals(listOf(0.0), center(arrayListOf(3.14)))
+        assertEquals(listOf(1.0, -1.0, 0.0), center(arrayListOf(3.0, 1.0, 2.0)))
+        assertEquals(listOf(-3.0, -1.0, 4.0, 5.0, -5.0), center(arrayListOf(0.0, 2.0, 7.0, 8.0, -2.0)))
+    }
 }
