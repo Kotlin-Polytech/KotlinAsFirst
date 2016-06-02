@@ -35,4 +35,21 @@ class ListTest {
         assertEquals("2ec", convertToString(1000, 19))
         assertEquals("z", convertToString(35, 36))
     }
+
+    @Test
+    fun decimal() {
+        assertEquals(1, decimal(listOf(1), 2))
+        assertEquals(100, decimal(listOf(1, 2, 1, 0), 4))
+        assertEquals(250, decimal(listOf(1, 3, 12), 14))
+        assertEquals(1000, decimal(listOf(2, 14, 12), 19))
+    }
+
+    @Test
+    fun decimalFromString() {
+        assertEquals(1, decimalFromString("1", 2))
+        assertEquals(100, decimalFromString("1210", 4))
+        assertEquals(250, decimalFromString("13c", 14))
+        assertEquals(1000, decimalFromString("2ec", 19))
+        assertEquals(35, decimalFromString("z", 36))
+    }
 }
