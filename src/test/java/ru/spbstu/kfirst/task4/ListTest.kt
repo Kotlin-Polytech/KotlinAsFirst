@@ -99,4 +99,12 @@ class ListTest {
         assertEquals(1000, decimalFromString("2ec", 19))
         assertEquals(35, decimalFromString("z", 36))
     }
+
+    @Test
+    fun roman() {
+        assertEquals("I", roman(1))
+        assertEquals("MMM", roman(3000))
+        assertEquals("MCMLXXVIII", roman(1978))
+        assertEquals("DCXCIV", roman(694))
+    }
 }
