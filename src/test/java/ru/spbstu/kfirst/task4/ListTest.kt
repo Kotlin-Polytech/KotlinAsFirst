@@ -107,4 +107,11 @@ class ListTest {
         assertEquals("MCMLXXVIII", roman(1978))
         assertEquals("DCXCIV", roman(694))
     }
+
+    @Test
+    fun russian() {
+        assertEquals("триста семьдесят пять", russian(375))
+        assertEquals("двадцать две тысячи девятьсот шестьдесят четыре", russian(22964))
+        assertEquals("сто девятнадцать тысяч пятьсот восемь", russian(119508))
+    }
 }
