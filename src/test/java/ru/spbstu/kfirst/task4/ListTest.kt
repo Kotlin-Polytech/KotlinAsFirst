@@ -68,4 +68,19 @@ class ListTest {
         assertEquals(listOf(1.0, -1.0, 0.0), center(arrayListOf(3.0, 1.0, 2.0)))
         assertEquals(listOf(-3.0, -1.0, 4.0, 5.0, -5.0), center(arrayListOf(0.0, 2.0, 7.0, 8.0, -2.0)))
     }
+
+    @Test
+    fun times() {
+        assertEquals(0.0, times(listOf(), listOf()), 1e-5)
+        assertEquals(-5.0, times(listOf(1.0, -4.0), listOf(3.0, 2.0)), 1e-5)
+        assertEquals(-19.0, times(listOf(-1.0, 2.0, -3.0), listOf(3.0, -2.0, 4.0)), 1e-5)
+    }
+
+    @Test
+    fun abs() {
+        assertEquals(0.0, abs(listOf()), 1e-5)
+        assertEquals(3.0, abs(listOf(3.0)), 1e-5)
+        assertEquals(5.0, abs(listOf(3.0, -4.0)), 1e-5)
+        assertEquals(8.774964, abs(listOf(4.0, -5.0, 6.0)), 1e-5)
+    }
 }
