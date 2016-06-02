@@ -91,6 +91,12 @@ class ListTest {
         assertEquals(13.0, polynom(listOf(3.0, 2.0), 5.0), 1e-5)
         assertEquals(0.0, polynom(listOf(2.0, -3.0, 1.0), 1.0), 1e-5)
         assertEquals(45.0, polynom(listOf(-7.0, 6.0, 4.0, -4.0, 1.0), -2.0), 1e-5)
+    }
 
+    @Test
+    fun accumulate() {
+        assertEquals(listOf<Double>(), accumulate(arrayListOf()))
+        assertEquals(listOf(3.14), accumulate(arrayListOf(3.14)))
+        assertEquals(listOf(1.0, 3.0, 6.0, 10.0), accumulate(arrayListOf(1.0, 2.0, 3.0, 4.0)))
     }
 }

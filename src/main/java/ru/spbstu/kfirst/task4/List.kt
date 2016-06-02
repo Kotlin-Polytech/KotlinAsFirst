@@ -77,3 +77,11 @@ fun abs(v: List<Double>): Double = TODO()
  * Значение пустого многочлена равно 0.0 при любом x.
  */
 fun polynom(p: List<Double>, x: Double): Double = TODO()
+
+/*
+ * В заданном списке list каждый элемент, кроме первого, заменить
+ * суммой данного элемента и всех предыдущих.
+ * Например: 1, 2, 3, 4 -> 1, 3, 6, 10.
+ * Пустой список не следует изменять. Вернуть изменённый список.
+ */
+fun accumulate(list: MutableList<Double>): MutableList<Double> = TODO()
