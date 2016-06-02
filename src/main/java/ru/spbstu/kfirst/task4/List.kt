@@ -69,3 +69,11 @@ fun times(a: List<Double>, b: List<Double>): Double = TODO()
  * Модуль пустого вектора считать равным 0.0.
  */
 fun abs(v: List<Double>): Double = TODO()
+
+/*
+ * Рассчитать значение многочлена при заданном x:
+ * p(x) = p0 + p1*x + p2*x^2 + p3*x^3 + ... + pN*x^N.
+ * Коэффициенты многочлена заданы списком p: (p0, p1, p2, p3, ..., pN).
+ * Значение пустого многочлена равно 0.0 при любом x.
+ */
+fun polynom(p: List<Double>, x: Double): Double = TODO()
