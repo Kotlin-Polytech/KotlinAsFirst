@@ -31,4 +31,13 @@ class ParseTest {
         assertEquals("+12345", flattenPhoneNumber("+12 (3) 4-5"))
         assertEquals("", flattenPhoneNumber("134_+874"))
     }
+
+    @Test
+    fun bestJump() {
+        assertEquals(717, bestJump("706 x - 717 - 703"))
+        assertEquals(-1, bestJump("x - - x -"))
+        assertEquals(754, bestJump("700 717 707 x 754"))
+        assertEquals(-1, bestJump("700 + 700"))
+
+    }
 }
