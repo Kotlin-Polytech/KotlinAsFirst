@@ -47,4 +47,12 @@ class ParseTest {
         assertEquals(-1, bestHighJump("???"))
         assertEquals(230, bestHighJump("220 о 224 хо 228 х- 230 о 232 хх- 234 х"))
     }
+
+    @Test
+    fun plusMinus() {
+        assertEquals(0, plusMinus("0"))
+        assertEquals(4, plusMinus("2 + 2"))
+        assertEquals(6, plusMinus("2 + 31 - 40 + 13"))
+        assertEquals(-1, plusMinus("0 - 1"))
+    }
 }
