@@ -33,11 +33,18 @@ class ParseTest {
     }
 
     @Test
-    fun bestJump() {
-        assertEquals(717, bestJump("706 x - 717 - 703"))
-        assertEquals(-1, bestJump("x - - x -"))
-        assertEquals(754, bestJump("700 717 707 x 754"))
-        assertEquals(-1, bestJump("700 + 700"))
+    fun bestLongJump() {
+        assertEquals(717, bestLongJump("706 x - 717 - 703"))
+        assertEquals(-1, bestLongJump("x - - x -"))
+        assertEquals(754, bestLongJump("700 717 707 x 754"))
+        assertEquals(-1, bestLongJump("700 + 700"))
 
+    }
+
+    @Test
+    fun bestHighJump() {
+        assertEquals(226, bestHighJump("226 о"))
+        assertEquals(-1, bestHighJump("???"))
+        assertEquals(230, bestHighJump("220 о 224 хо 228 х- 230 о 232 хх- 234 х"))
     }
 }
