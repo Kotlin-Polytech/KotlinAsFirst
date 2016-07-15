@@ -4,7 +4,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-class LoopTest {
+class Tests {
     @Test
     fun fib() {
         assertEquals(1, fib(1))

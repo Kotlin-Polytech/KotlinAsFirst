@@ -4,7 +4,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-class ListTest {
+class Tests {
     @Test
     fun mean() {
         assertEquals(0.0, mean(listOf()), 1e-5)

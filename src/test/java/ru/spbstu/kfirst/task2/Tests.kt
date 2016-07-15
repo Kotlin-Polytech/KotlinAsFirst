@@ -4,7 +4,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-class IfElseTest {
+class Tests {
     @Test
     fun segmentLength() {
         assertEquals(-1, segmentLength(1, 2, 3, 4))

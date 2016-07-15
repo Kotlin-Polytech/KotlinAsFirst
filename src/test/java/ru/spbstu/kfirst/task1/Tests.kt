@@ -4,7 +4,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-class SimpleTest {
+class Tests {
     @Test
     fun seconds() {
         assertEquals(30035, seconds(8, 20, 35))

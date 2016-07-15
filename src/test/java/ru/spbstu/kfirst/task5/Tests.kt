@@ -4,7 +4,7 @@ import org.junit.Test
 
 import org.junit.Assert.*
 
-class ParseTest {
+class Tests {
     @Test
     fun dateStrToDigit() {
         assertEquals("15.07.2016", dateStrToDigit("15 июля 2016"))
