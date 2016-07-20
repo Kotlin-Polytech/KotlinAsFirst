@@ -1,5 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
-package ru.spbstu.kfirst.task3
+package ru.spbstu.kfirst.lesson3
 
 /*
  * Найти число Фибоначчи из ряда 1, 1, 2, 3, 5, 8, 13, 21, ... с номером n.
