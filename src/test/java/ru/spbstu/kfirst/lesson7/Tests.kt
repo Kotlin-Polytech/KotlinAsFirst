@@ -99,4 +99,30 @@ class Tests {
                 )), generateRectangles(5, 6))
 
     }
+
+    @Test
+    fun generateSnake() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateSnake(1, 1))
+        assertEquals(createMatrix(2, 2,
+                listOf(
+                        listOf(1, 2),
+                        listOf(3, 4)
+                )), generateSnake(2, 2))
+        assertEquals(createMatrix(4, 2,
+                listOf(
+                        listOf(1, 2),
+                        listOf(3, 4),
+                        listOf(5, 6),
+                        listOf(7, 8)
+                )), generateSnake(4, 2))
+        assertEquals(createMatrix(5, 4,
+                listOf(
+                        listOf(1, 2, 4, 7),
+                        listOf(3, 5, 8, 11),
+                        listOf(6, 9, 12, 15),
+                        listOf(10, 13, 16, 18),
+                        listOf(14, 17, 19, 20)
+                )), generateSnake(5, 4))
+
+    }
 }

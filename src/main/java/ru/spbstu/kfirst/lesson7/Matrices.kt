@@ -28,3 +28,16 @@ fun generateSpiral(height: Int, width: Int): Matrix<Int> = TODO()
  *  1  1  1  1  1  1
  */
 fun generateRectangles(height: Int, width: Int): Matrix<Int> = TODO()
+
+/*
+ * Заполнить матрицу заданной высоты height и ширины width диагональной змейкой:
+ * в левый верхний угол 1, во вторую от угла диагональ 2 и 3 сверху вниз, в третью 4-6 сверху вниз и так далее.
+ *
+ * Пример для height = 5, width = 4:
+ *  1  2  4  7
+ *  3  5  8 11
+ *  6  9 12 15
+ * 10 13 16 18
+ * 14 17 19 20
+ */
+fun generateSnake(height: Int, width: Int): Matrix<Int> = TODO()
