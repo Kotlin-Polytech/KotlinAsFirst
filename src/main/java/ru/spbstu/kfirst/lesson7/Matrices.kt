@@ -84,3 +84,20 @@ fun isLatinSquare(matrix: Matrix<Int>): Boolean = TODO()
  * 42 ===> 0
  */
 fun sumNeighbours(matrix: Matrix<Int>): Matrix<Int> = TODO()
+
+/*
+ * Целочисленная матрица matrix состоит из "дырок" (на их месте стоит 0) и "кирпичей" (на их месте стоит 1).
+ * Найти в этой матрице все ряды и колонки, целиком состоящие из "дырок".
+ * Результат вернуть в виде Holes(rows = список дырчатых рядов, columns = список дырчатых колонок).
+ * Ряды и колонки нумеруются с нуля. Любой из спискоов rows / columns может оказаться пустым.
+ *
+ * Пример для матрицы 5 х 4:
+ * 1 0 1 0
+ * 0 0 1 0
+ * 1 0 0 0 ==> результат: Holes(rows = listOf(4), columns = listOf(1, 3)): 4-й ряд, 1-я и 3-я колонки
+ * 0 0 1 0
+ * 0 0 0 0
+ */
+data class Holes(val rows: List<Int>, val columns: List<Int>)
+
+fun findHoles(matrix: Matrix<Int>): Holes = TODO()

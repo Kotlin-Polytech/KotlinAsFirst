@@ -160,4 +160,15 @@ class Tests {
                 sumNeighbours(createMatrix(4, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6),
                                                         listOf(6, 5, 4), listOf(3, 2, 1)))))
     }
+
+    @Test
+    fun findHoles() {
+        assertEquals(Holes(listOf(), listOf()), findHoles(createMatrix(1, 1, listOf(listOf(1)))))
+        assertEquals(Holes(listOf(0), listOf(0)), findHoles(createMatrix(1, 1, listOf(listOf(0)))))
+        assertEquals(Holes(listOf(), listOf()), findHoles(createMatrix(2, 2, listOf(listOf(0, 1), listOf(1, 0)))))
+        assertEquals(Holes(listOf(), listOf(0)), findHoles(createMatrix(2, 2, listOf(listOf(0, 1), listOf(0, 1)))))
+        assertEquals(Holes(listOf(4), listOf(1, 3)),
+                findHoles(createMatrix(5, 4, listOf(listOf(1, 0, 1, 0), listOf(0, 0, 1, 0), listOf(1, 0, 0, 0),
+                                                    listOf(0, 0, 1, 0), listOf(0, 0, 0, 0)))))
+    }
 }
