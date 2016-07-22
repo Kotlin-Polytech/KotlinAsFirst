@@ -41,3 +41,14 @@ fun generateRectangles(height: Int, width: Int): Matrix<Int> = TODO()
  * 14 17 19 20
  */
 fun generateSnake(height: Int, width: Int): Matrix<Int> = TODO()
+
+/*
+ * Содержимое квадратной матрицы matrix (с произвольным содержимым) повернуть на 90 градусов по часовой стрелке.
+ * Если height != width, бросить IllegalArgumentException.
+ *
+ * Пример:    Станет:
+ * 1 2 3      7 4 1
+ * 4 5 6      8 5 2
+ * 7 8 9      9 6 3
+ */
+fun <E> rotate(matrix: Matrix<E>): Matrix<E> = TODO()
