@@ -149,4 +149,15 @@ class Tests {
         assertFalse(isLatinSquare(createMatrix(3, 3, listOf(listOf(2, 3, 1), listOf(1, 2, 3), listOf(1, 3, 2)))))
         assertFalse(isLatinSquare(createMatrix(3, 3, listOf(listOf(2, 3, 0), listOf(1, 2, 3), listOf(3, 1, 2)))))
     }
+
+    @Test
+    fun sumNeighbours() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(0))), sumNeighbours(createMatrix(1, 1, listOf(listOf(42)))))
+        assertEquals(createMatrix(2, 2, listOf(listOf(9, 8), listOf(7, 6))),
+                sumNeighbours(createMatrix(2, 2, listOf(listOf(1, 2), listOf(3, 4)))))
+        assertEquals(createMatrix(4, 3, listOf(listOf(11, 19, 13), listOf(19, 31, 19),
+                                               listOf(19, 31, 19), listOf(13, 19, 11))),
+                sumNeighbours(createMatrix(4, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6),
+                                                        listOf(6, 5, 4), listOf(3, 2, 1)))))
+    }
 }

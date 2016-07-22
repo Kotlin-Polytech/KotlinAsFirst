@@ -1,6 +1,8 @@
 @file:Suppress("UNUSED_PARAMETER")
 package ru.spbstu.kfirst.lesson7
 
+import kotlin.comparisons.compareValuesBy
+
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
 
 /*
@@ -65,3 +67,20 @@ fun <E> rotate(matrix: Matrix<E>): Matrix<E> = TODO()
  * 3 1 2
  */
 fun isLatinSquare(matrix: Matrix<Int>): Boolean = TODO()
+
+/*
+ * В матрице matrix каждый элемент заменить суммой непосредственно примыкающих к нему
+ * элементов по вертикали, горизонтали и диагоналям.
+ *
+ * Пример для матрицы 4 x 3: (11=2+4+5, 19=1+3+4+5+6, ...)
+ * 1 2 3       11 19 13
+ * 4 5 6  ===> 19 31 19
+ * 6 5 4       19 31 19
+ * 3 2 1       13 19 11
+ *
+ * Поскольку в матрице 1 х 1 примыкающие элементы отсутствуют,
+ * для неё следует вернуть как результат нулевую матрицу:
+ *
+ * 42 ===> 0
+ */
+fun sumNeighbours(matrix: Matrix<Int>): Matrix<Int> = TODO()
