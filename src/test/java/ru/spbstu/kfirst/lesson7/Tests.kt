@@ -46,7 +46,31 @@ class Tests {
                 assertEquals(strings[index++], matrix[row, column])
             }
         }
-
     }
 
+    private fun<E> createMatrix(height: Int, width: Int, values: List<List<E>>): Matrix<E> {
+        val matrix = createMatrix<E>(height, width)
+        for (row in 0..height - 1) {
+            for (column in 0..width - 1) {
+                matrix[row, column] = values[row][column]
+            }
+        }
+        return matrix
+    }
+
+    @Test
+    fun generateSpiral() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateSpiral(1, 1))
+        assertEquals(createMatrix(2, 2,
+                listOf(
+                        listOf(1, 2),
+                        listOf(4, 3)
+                )), generateSpiral(2, 2))
+        assertEquals(createMatrix(3, 4,
+                listOf(
+                    listOf(1, 2, 3, 4),
+                    listOf(10, 11, 12, 5),
+                    listOf(9, 8, 7, 6)
+                )), generateSpiral(3, 4))
+    }
 }
