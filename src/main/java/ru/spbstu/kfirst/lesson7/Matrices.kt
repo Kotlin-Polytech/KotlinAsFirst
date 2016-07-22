@@ -1,8 +1,6 @@
 @file:Suppress("UNUSED_PARAMETER")
 package ru.spbstu.kfirst.lesson7
 
-import kotlin.comparisons.compareValuesBy
-
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
 
 /*
