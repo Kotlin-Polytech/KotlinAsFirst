@@ -73,4 +73,30 @@ class Tests {
                     listOf(9, 8, 7, 6)
                 )), generateSpiral(3, 4))
     }
+
+    @Test
+    fun generateRectangles() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateRectangles(1, 1))
+        assertEquals(createMatrix(2, 2,
+                listOf(
+                        listOf(1, 1),
+                        listOf(1, 1)
+                )), generateRectangles(2, 2))
+        assertEquals(createMatrix(4, 3,
+                listOf(
+                        listOf(1, 1, 1),
+                        listOf(1, 2, 1),
+                        listOf(1, 2, 1),
+                        listOf(1, 1, 1)
+                )), generateRectangles(4, 3))
+        assertEquals(createMatrix(5, 6,
+                listOf(
+                        listOf(1, 1, 1, 1, 1, 1),
+                        listOf(1, 2, 2, 2, 2, 1),
+                        listOf(1, 2, 3, 3, 2, 1),
+                        listOf(1, 2, 2, 2, 2, 1),
+                        listOf(1, 1, 1, 1, 1, 1)
+                )), generateRectangles(5, 6))
+
+    }
 }

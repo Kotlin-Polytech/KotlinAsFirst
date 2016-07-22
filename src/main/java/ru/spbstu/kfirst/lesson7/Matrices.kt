@@ -14,3 +14,17 @@ package ru.spbstu.kfirst.lesson7
  *  9  8  7  6
  */
 fun generateSpiral(height: Int, width: Int): Matrix<Int> = TODO()
+
+/*
+ * Заполнить матрицу заданной высоты height и ширины width следующим образом.
+ * Элементам, находящимся на периферии (по периметру матрицы), присвоить значение 1;
+ * периметру оставшейся подматрицы – значение 2 и так далее до заполнения всей матрицы.
+ *
+ * Пример для height = 5, width = 6:
+ *  1  1  1  1  1  1
+ *  1  2  2  2  2  1
+ *  1  2  3  3  2  1
+ *  1  2  2  2  2  1
+ *  1  1  1  1  1  1
+ */
+fun generateRectangles(height: Int, width: Int): Matrix<Int> = TODO()
