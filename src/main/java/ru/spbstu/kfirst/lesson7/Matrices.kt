@@ -52,3 +52,16 @@ fun generateSnake(height: Int, width: Int): Matrix<Int> = TODO()
  * 7 8 9      9 6 3
  */
 fun <E> rotate(matrix: Matrix<E>): Matrix<E> = TODO()
+
+/*
+ * Проверить, является ли квадратная целочисленная матрица matrix латинским квадратом.
+ * Латинским квадратом называется матрица размером n x n,
+ * каждая строка и каждый столбец которой содержат все числа от 1 до n.
+ * Если height != width, вернуть false.
+ *
+ * Пример латинского квадрата 3х3:
+ * 2 3 1
+ * 1 2 3
+ * 3 1 2
+ */
+fun isLatinSquare(matrix: Matrix<Int>): Boolean = TODO()
