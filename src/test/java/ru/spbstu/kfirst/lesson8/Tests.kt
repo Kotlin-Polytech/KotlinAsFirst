@@ -23,4 +23,11 @@ class Tests {
         assertFileContent("temp.txt", "Zzdrавствуy,\nmyyr!!!")
         File("temp.txt").delete()
     }
+
+    @Test
+    fun chooseLongestChaoticWord() {
+        chooseLongestChaoticWord("input/chaotic_in1.txt", "temp.txt")
+        assertFileContent("temp.txt", "Карминовый, Некрасивый")
+        File("temp.txt").delete()
+    }
 }
