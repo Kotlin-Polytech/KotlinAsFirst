@@ -1,5 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
-package ru.spbstu.kfirst.lesson5
+package ru.spbstu.kfirst.lesson5.task1
 
 /*
  * Дата представлена строкой вида "15 июля 2016".

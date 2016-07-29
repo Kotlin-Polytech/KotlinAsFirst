@@ -1,4 +1,4 @@
-package ru.spbstu.kfirst.lesson2
+package ru.spbstu.kfirst.lesson2.task1
 
 import org.junit.Test
 

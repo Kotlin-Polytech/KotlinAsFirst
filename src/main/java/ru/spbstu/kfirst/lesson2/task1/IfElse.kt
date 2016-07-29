@@ -1,5 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
-package ru.spbstu.kfirst.lesson2
+package ru.spbstu.kfirst.lesson2.task1
 
 /*
 Даны четыре точки на одной прямой: A, B, C и D.

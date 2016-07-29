@@ -1,5 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
-package ru.spbstu.kfirst.lesson7
+package ru.spbstu.kfirst.lesson7.task1
 
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
 

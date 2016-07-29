@@ -1,5 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
-package ru.spbstu.kfirst.lesson4
+package ru.spbstu.kfirst.lesson4.task1
 
 /*
  * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст
