@@ -735,7 +735,76 @@
                         </entry>
                         <entry key="Matrix.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="14" />
+                                    <option name="line" value="32" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="31" />
+                                    <option name="taskText" value="Высота матрицы" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="14" />
+                                    <option name="line" value="34" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="30" />
+                                    <option name="taskText" value="Ширина матрицы" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="3" />
+                                    <option name="length" value="32" />
+                                    <option name="line" value="36" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="50" />
+                                    <option name="taskText" value="Содержимое ячейки по координатам" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="4" />
+                                    <option name="length" value="17" />
+                                    <option name="line" value="38" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="39" />
+                                    <option name="taskText" value="Содержимое ячейки" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="5" />
+                                    <option name="length" value="30" />
+                                    <option name="line" value="41" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="8" />
+                                    <option name="taskText" value="Запись в ячейку по координатам" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="6" />
+                                    <option name="length" value="15" />
+                                    <option name="line" value="45" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="8" />
+                                    <option name="taskText" value="Запись в ячейку" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="7" />
+                                    <option name="length" value="29" />
+                                    <option name="line" value="48" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="39" />
+                                    <option name="taskText" value="Сравнение матриц на равенство" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="8" />
+                                    <option name="length" value="35" />
+                                    <option name="line" value="50" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="38" />
+                                    <option name="taskText" value="Представление матрицы в виде строки" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Tests.kt" />
