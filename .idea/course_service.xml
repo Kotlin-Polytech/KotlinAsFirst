@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CCProjectService">
+    <option name="course">
+      <Course>
+        <option name="authors">
+          <list>
+            <Author />
+          </list>
+        </option>
+        <option name="description" value="Котлин как первый язык программирования" />
+        <option name="language" value="kotlin" />
+        <option name="lessons">
+          <list>
+            <Lesson>
+              <option name="index" value="1" />
+              <option name="name" value="lesson1" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Простые функции" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="Simple.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="Simple.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+            <Lesson>
+              <option name="index" value="2" />
+              <option name="name" value="lesson2" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Функции с ветвлениями" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="IfElse.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="IfElse.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+            <Lesson>
+              <option name="index" value="3" />
+              <option name="name" value="lesson3" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Циклические / рекурсивные функции" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="Loop.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="Loop.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+            <Lesson>
+              <option name="index" value="4" />
+              <option name="name" value="lesson4" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Работа со списками" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="List.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="List.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+            <Lesson>
+              <option name="index" value="5" />
+              <option name="name" value="lesson5" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Разбор строк" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="Parse.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="Parse.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+            <Lesson>
+              <option name="index" value="6" />
+              <option name="name" value="lesson6" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Простые классы" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="DataClass.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="DataClass.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+            <Lesson>
+              <option name="index" value="7" />
+              <option name="name" value="lesson7" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Разработка / использование класса" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="Matrices.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="Matrices.kt"/>
+                        </entry>
+                        <entry key="Matrix.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="1"/>
+                          <option name="name" value="Matrix.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+            <Lesson>
+              <option name="index" value="8" />
+              <option name="name" value="lesson8" />
+              <option name="taskList">
+                <list>
+                  <Task>
+                    <option name="index" value="1" />
+                    <option name="name" value="Работа с файлами" />
+                    <option name="taskFiles">
+                      <map>
+                        <entry key="Files.kt">
+                          <value>
+                            <TaskFile>
+                            </TaskFile>
+                          </value>
+                          <option name="highlightErrors" value="true"/>
+                          <option name="index" value="0"/>
+                          <option name="name" value="Files.kt"/>
+                        </entry>
+                        <entry key="Tests.kt" />
+                      </map>
+                    </option>
+                  </Task>
+                </list>
+              </option>
+            </Lesson>
+          </list>
+        </option>
+        <option name="name" value="Котлин как первый язык программирования" />
+      </Course>
+    </option>
+  </component>
+</project>
