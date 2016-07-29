@@ -607,7 +607,108 @@
                       <map>
                         <entry key="DataClass.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="35" />
+                                    <option name="line" value="8" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="41" />
+                                    <option name="taskText" value="Рассчитать расстояние между точками" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="40" />
+                                    <option name="line" value="18" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="42" />
+                                    <option name="taskText" value="Рассчитать расстояние между окружностями" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="3" />
+                                    <option name="length" value="41" />
+                                    <option name="line" value="23" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="38" />
+                                    <option name="taskText" value="Определить, содержит ли круг данную точку" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="4" />
+                                    <option name="length" value="61" />
+                                    <option name="line" value="33" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="46" />
+                                    <option name="taskText" value="Найти отрезок, соединяющий наиболее удалённые точки множества" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="5" />
+                                    <option name="length" value="35" />
+                                    <option name="line" value="39" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="50" />
+                                    <option name="taskText" value="Построить окружность по её диаметру" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="6" />
+                                    <option name="length" value="39" />
+                                    <option name="line" value="50" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="41" />
+                                    <option name="taskText" value="Найти точку пересечения с другой линией" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="7" />
+                                    <option name="length" value="27" />
+                                    <option name="line" value="54" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="38" />
+                                    <option name="taskText" value="Построить прямую по отрезку" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="8" />
+                                    <option name="length" value="31" />
+                                    <option name="line" value="56" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="45" />
+                                    <option name="taskText" value="Построить прямую по двум точкам" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="9" />
+                                    <option name="length" value="59" />
+                                    <option name="line" value="59" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="49" />
+                                    <option name="taskText" value="Построить серединный перпендикуляр по двум границам отрезка" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="10" />
+                                    <option name="length" value="49" />
+                                    <option name="line" value="65" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="74" />
+                                    <option name="taskText" value="Найти пару из двух наименее удалённых окружностей" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="11" />
+                                    <option name="length" value="35" />
+                                    <option name="line" value="74" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="64" />
+                                    <option name="taskText" value="Построить окружность по трём точкам" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="12" />
+                                    <option name="length" value="62" />
+                                    <option name="line" value="84" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="56" />
+                                    <option name="taskText" value="Найти круг минимального радиуса, содержащий все заданные точки" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Tests.kt" />
