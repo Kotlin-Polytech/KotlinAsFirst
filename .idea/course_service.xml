@@ -730,7 +730,68 @@
                       <map>
                         <entry key="Matrices.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="49" />
+                                    <option name="line" value="15" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="59" />
+                                    <option name="taskText" value="Заполнить матрицу натуральными числами по спирали" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="60" />
+                                    <option name="line" value="29" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="63" />
+                                    <option name="taskText" value="Заполнить матрицу натуральными числами от периметра к центру" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="3" />
+                                    <option name="length" value="38" />
+                                    <option name="line" value="42" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="58" />
+                                    <option name="taskText" value="Заполнить матрицу диагональной змейкой" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="4" />
+                                    <option name="length" value="51" />
+                                    <option name="line" value="53" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="47" />
+                                    <option name="taskText" value="Повернуть матрицу на 90 градусов по часовой стрелке" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="5" />
+                                    <option name="length" value="53" />
+                                    <option name="line" value="66" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="50" />
+                                    <option name="taskText" value="Определить, верно ли, что матрица - латинский квадрат" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="6" />
+                                    <option name="length" value="59" />
+                                    <option name="line" value="83" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="54" />
+                                    <option name="taskText" value="Заменить в матрице каждый элемент суммой примыкающих к нему" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="7" />
+                                    <option name="length" value="58" />
+                                    <option name="line" value="100" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="44" />
+                                    <option name="taskText" value="Найти в матрице ряды и колонки, целиком состоящие из дырок" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Matrix.kt">
