@@ -222,7 +222,132 @@
                       <map>
                         <entry key="Loop.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="40" />
+                                    <option name="line" value="7" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="23" />
+                                    <option name="taskText" value="Найти число Фибоначчи с заданным номером" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="41" />
+                                    <option name="line" value="13" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="31" />
+                                    <option name="taskText" value="Найти наименьшее общее кратное двух чисел" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="3" />
+                                    <option name="length" value="35" />
+                                    <option name="line" value="18" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="30" />
+                                    <option name="taskText" value="Найти минимальный делитель больше 1" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="4" />
+                                    <option name="length" value="52" />
+                                    <option name="line" value="23" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="30" />
+                                    <option name="taskText" value="Найти максимальный делитель, меньший заданного числа" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="5" />
+                                    <option name="length" value="39" />
+                                    <option name="line" value="29" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="26" />
+                                    <option name="taskText" value="Изменить порядок цифр числа на обратный" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="6" />
+                                    <option name="length" value="40" />
+                                    <option name="line" value="36" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="33" />
+                                    <option name="taskText" value="Определить, является ли число анаграммой" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="7" />
+                                    <option name="length" value="29" />
+                                    <option name="line" value="42" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="31" />
+                                    <option name="taskText" value="Найти количество цифр в числе" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="8" />
+                                    <option name="length" value="61" />
+                                    <option name="line" value="49" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="39" />
+                                    <option name="taskText" value="Найти цифру с заданным номером в последовательности квадратов" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="9" />
+                                    <option name="length" value="61" />
+                                    <option name="line" value="56" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="36" />
+                                    <option name="taskText" value="Найти цифру с заданным номером в последовательности Фибоначчи" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="10" />
+                                    <option name="length" value="46" />
+                                    <option name="line" value="63" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="41" />
+                                    <option name="taskText" value="Определить, являются ли числа взаимно простыми" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="11" />
+                                    <option name="length" value="57" />
+                                    <option name="line" value="70" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="51" />
+                                    <option name="taskText" value="Определить, имеется ли точный квадрат между двумя числами" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="12" />
+                                    <option name="length" value="49" />
+                                    <option name="line" value="76" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="42" />
+                                    <option name="taskText" value="Определить, содержит ли число различающиеся цифры" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="13" />
+                                    <option name="length" value="21" />
+                                    <option name="line" value="81" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="32" />
+                                    <option name="taskText" value="Найти факториал числа" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="14" />
+                                    <option name="length" value="39" />
+                                    <option name="line" value="88" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="42" />
+                                    <option name="taskText" value="Найти синус числа, рассчитав сумму ряда" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="15" />
+                                    <option name="length" value="40" />
+                                    <option name="line" value="95" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="42" />
+                                    <option name="taskText" value="Найти косинус числа, посчитав сумму ряда" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Tests.kt" />
