@@ -369,7 +369,124 @@
                       <map>
                         <entry key="List.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="50" />
+                                    <option name="line" value="6" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="39" />
+                                    <option name="taskText" value="Рассчитать среднее арифметическое элементов списка" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="28" />
+                                    <option name="line" value="12" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="61" />
+                                    <option name="taskText" value="Центрировать заданный список" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="3" />
+                                    <option name="length" value="37" />
+                                    <option name="line" value="19" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="54" />
+                                    <option name="taskText" value="Найти скалярное произведение векторов" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="4" />
+                                    <option name="length" value="20" />
+                                    <option name="line" value="26" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="35" />
+                                    <option name="taskText" value="Найти модуль вектора" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="5" />
+                                    <option name="length" value="43" />
+                                    <option name="line" value="34" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="50" />
+                                    <option name="taskText" value="Рассчитать значение многочлена по аргументу" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="6" />
+                                    <option name="length" value="59" />
+                                    <option name="line" value="42" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="65" />
+                                    <option name="taskText" value="Заменить каждый элемент списка суммой его и всех предыдущих" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="7" />
+                                    <option name="length" value="36" />
+                                    <option name="line" value="49" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="35" />
+                                    <option name="taskText" value="Разложить число на простые множители" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="8" />
+                                    <option name="length" value="63" />
+                                    <option name="line" value="55" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="40" />
+                                    <option name="taskText" value="Представить в виде строки разложение числа на простые множители" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="9" />
+                                    <option name="length" value="44" />
+                                    <option name="line" value="62" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="44" />
+                                    <option name="taskText" value="Перевести число в заданную систему счисления" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="10" />
+                                    <option name="length" value="51" />
+                                    <option name="line" value="70" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="49" />
+                                    <option name="taskText" value="Составить запись числа в заданной системе счисления" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="11" />
+                                    <option name="length" value="46" />
+                                    <option name="line" value="77" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="49" />
+                                    <option name="taskText" value="Перевести число в десятичную систему счисления" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="12" />
+                                    <option name="length" value="45" />
+                                    <option name="line" value="86" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="53" />
+                                    <option name="taskText" value="Перевести число из строки в систему счисления" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="13" />
+                                    <option name="length" value="43" />
+                                    <option name="line" value="94" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="28" />
+                                    <option name="taskText" value="Перевести число в римскую систему счисления" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="14" />
+                                    <option name="length" value="33" />
+                                    <option name="line" value="101" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="30" />
+                                    <option name="taskText" value="Записать число прописью по-русски" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Tests.kt" />
