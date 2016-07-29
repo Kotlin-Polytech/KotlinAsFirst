@@ -887,7 +887,28 @@
                       <map>
                         <entry key="Files.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="41" />
+                                    <option name="line" value="30" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="4" />
+                                    <option name="taskText" value="Реализовать транслитерацию входного файла" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="69" />
+                                    <option name="line" value="56" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="4" />
+                                    <option name="taskText" value="Выбрать из словаря наиболее длинное слово, в котором все буквы разные" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Tests.kt" />
