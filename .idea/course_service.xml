@@ -28,7 +28,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="53" />
                                     <option name="line" value="7" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -36,7 +36,7 @@
                                     <option name="taskText" value="Рассчитать время в секундах, прошедшее с начала суток" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="41" />
                                     <option name="line" value="15" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -44,7 +44,7 @@
                                     <option name="taskText" value="Определить длину того же отрезка в метрах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="38" />
                                     <option name="line" value="22" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -52,7 +52,7 @@
                                     <option name="taskText" value="Определить в числе третью цифру справа" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="35" />
                                     <option name="line" value="29" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -60,7 +60,7 @@
                                     <option name="taskText" value="Определить значение угла в радианах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="40" />
                                     <option name="line" value="37" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -68,7 +68,7 @@
                                     <option name="taskText" value="Определить время поезда в пути в минутах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="52" />
                                     <option name="line" value="44" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -76,7 +76,7 @@
                                     <option name="taskText" value="Найти длину отрезка, соединяющего точки на плоскости" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="55" />
                                     <option name="line" value="52" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -84,7 +84,7 @@
                                     <option name="taskText" value="Определить, сколько денег будет на счету через три года" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="61" />
                                     <option name="line" value="59" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -115,7 +115,92 @@
                       <map>
                         <entry key="IfElse.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="32" />
+                                    <option name="line" value="10" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="57" />
+                                    <option name="taskText" value="Найти длину пересечения отрезков" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="57" />
+                                    <option name="line" value="18" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="64" />
+                                    <option name="taskText" value="Определить, лежит ли 1-я окружность внутри 2-й окружности" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="3" />
+                                    <option name="length" value="46" />
+                                    <option name="line" value="25" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="39" />
+                                    <option name="taskText" value="Составить строку, описывающую возраст человека" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="4" />
+                                    <option name="length" value="60" />
+                                    <option name="line" value="34" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="67" />
+                                    <option name="taskText" value="Определить, пройдёт ли кирпич сквозь прямоугольное отверстие" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="5" />
+                                    <option name="length" value="63" />
+                                    <option name="line" value="44" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="53" />
+                                    <option name="taskText" value="Определить время, за которое путник одолел первую половину пути" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="6" />
+                                    <option name="length" value="57" />
+                                    <option name="line" value="55" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="56" />
+                                    <option name="taskText" value="Определить, находится ли король под боем и от кого угроза" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="7" />
+                                    <option name="length" value="57" />
+                                    <option name="line" value="67" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="61" />
+                                    <option name="taskText" value="Определить, находится ли король под боем и от кого угроза" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="8" />
+                                    <option name="length" value="40" />
+                                    <option name="line" value="74" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="66" />
+                                    <option name="taskText" value="Определить, угрожают ли ферзи друг другу" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="9" />
+                                    <option name="length" value="40" />
+                                    <option name="line" value="81" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="42" />
+                                    <option name="taskText" value="Определить, счастливое ли заданное число" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="10" />
+                                    <option name="length" value="67" />
+                                    <option name="line" value="90" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="57" />
+                                    <option name="taskText" value="Определить, является ли треугольник остро-, прямо- или тупоугольным" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Tests.kt" />
