@@ -508,7 +508,84 @@
                       <map>
                         <entry key="Parse.kt">
                           <value>
-                            <TaskFile />
+                            <TaskFile>
+                              <option name="answerPlaceholders">
+                                <list>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="1" />
+                                    <option name="length" value="32" />
+                                    <option name="line" value="9" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="42" />
+                                    <option name="taskText" value="Перевести дату в цифровой формат" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="2" />
+                                    <option name="length" value="33" />
+                                    <option name="line" value="16" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="46" />
+                                    <option name="taskText" value="Перевести дату в строковый формат" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="3" />
+                                    <option name="length" value="46" />
+                                    <option name="line" value="28" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="48" />
+                                    <option name="taskText" value="Записать телефонный номер в формате без скобок" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="4" />
+                                    <option name="length" value="47" />
+                                    <option name="line" value="36" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="39" />
+                                    <option name="taskText" value="Найти в строке результат самого длинного прыжка" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="5" />
+                                    <option name="length" value="47" />
+                                    <option name="line" value="46" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="39" />
+                                    <option name="taskText" value="Найти в строке результат самого высокого прыжка" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="6" />
+                                    <option name="length" value="51" />
+                                    <option name="line" value="55" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="41" />
+                                    <option name="taskText" value="Рассчитать алгебраическую сумму по строковой записи" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="7" />
+                                    <option name="length" value="34" />
+                                    <option name="line" value="64" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="44" />
+                                    <option name="taskText" value="Найти в строке повторяющиеся слова" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="8" />
+                                    <option name="length" value="37" />
+                                    <option name="line" value="75" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="49" />
+                                    <option name="taskText" value="Найти название самого дорогого товара" />
+                                  </AnswerPlaceholder>
+                                  <AnswerPlaceholder>
+                                    <option name="index" value="9" />
+                                    <option name="length" value="54" />
+                                    <option name="line" value="105" />
+                                    <option name="possibleAnswer" value="TODO()" />
+                                    <option name="start" value="66" />
+                                    <option name="taskText" value="Рассчитать результат работы вычислительного устройства" />
+                                  </AnswerPlaceholder>
+                                </list>
+                              </option>
+                            </TaskFile>
                           </value>
                         </entry>
                         <entry key="Tests.kt" />
