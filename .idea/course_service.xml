@@ -3,11 +3,6 @@
   <component name="CCProjectService">
     <option name="course">
       <Course>
-        <option name="authors">
-          <list>
-            <Author />
-          </list>
-        </option>
         <option name="description" value="Котлин как первый язык программирования" />
         <option name="language" value="kotlin" />
         <option name="lessons">
@@ -28,7 +23,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="0" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="53" />
                                     <option name="line" value="7" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -36,7 +31,7 @@
                                     <option name="taskText" value="Рассчитать время в секундах, прошедшее с начала суток" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="41" />
                                     <option name="line" value="15" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -44,7 +39,7 @@
                                     <option name="taskText" value="Определить длину того же отрезка в метрах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="38" />
                                     <option name="line" value="22" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -52,7 +47,7 @@
                                     <option name="taskText" value="Определить в числе третью цифру справа" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="35" />
                                     <option name="line" value="29" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -60,7 +55,7 @@
                                     <option name="taskText" value="Определить значение угла в радианах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="40" />
                                     <option name="line" value="37" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -68,7 +63,7 @@
                                     <option name="taskText" value="Определить время поезда в пути в минутах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="52" />
                                     <option name="line" value="44" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -76,7 +71,7 @@
                                     <option name="taskText" value="Найти длину отрезка, соединяющего точки на плоскости" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="55" />
                                     <option name="line" value="52" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -84,7 +79,7 @@
                                     <option name="taskText" value="Определить, сколько денег будет на счету через три года" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="8" />
                                     <option name="length" value="61" />
                                     <option name="line" value="59" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -93,6 +88,8 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
+                              <option name="name" value="Simple.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -200,6 +197,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="IfElse.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -347,6 +345,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="Loop.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -486,6 +485,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="List.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -585,6 +585,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="Parse.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -708,6 +709,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="DataClass.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -791,6 +793,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="Matrices.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -865,6 +868,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="Matrix.kt" />
                             </TaskFile>
                           </value>
                         </entry>
@@ -908,6 +912,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="name" value="Files.kt" />
                             </TaskFile>
                           </value>
                         </entry>
