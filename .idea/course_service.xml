@@ -23,7 +23,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="53" />
                                     <option name="line" value="7" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -31,7 +31,7 @@
                                     <option name="taskText" value="Рассчитать время в секундах, прошедшее с начала суток" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="41" />
                                     <option name="line" value="15" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -39,7 +39,7 @@
                                     <option name="taskText" value="Определить длину того же отрезка в метрах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="38" />
                                     <option name="line" value="22" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -47,7 +47,7 @@
                                     <option name="taskText" value="Определить в числе третью цифру справа" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="35" />
                                     <option name="line" value="29" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -55,7 +55,7 @@
                                     <option name="taskText" value="Определить значение угла в радианах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="40" />
                                     <option name="line" value="37" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -63,7 +63,7 @@
                                     <option name="taskText" value="Определить время поезда в пути в минутах" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="52" />
                                     <option name="line" value="44" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -71,7 +71,7 @@
                                     <option name="taskText" value="Найти длину отрезка, соединяющего точки на плоскости" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="55" />
                                     <option name="line" value="52" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -79,7 +79,7 @@
                                     <option name="taskText" value="Определить, сколько денег будет на счету через три года" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="61" />
                                     <option name="line" value="59" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -93,7 +93,6 @@
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
@@ -116,7 +115,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="32" />
                                     <option name="line" value="10" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -124,7 +123,7 @@
                                     <option name="taskText" value="Найти длину пересечения отрезков" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="57" />
                                     <option name="line" value="18" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -132,7 +131,7 @@
                                     <option name="taskText" value="Определить, лежит ли 1-я окружность внутри 2-й окружности" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="46" />
                                     <option name="line" value="25" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -140,7 +139,7 @@
                                     <option name="taskText" value="Составить строку, описывающую возраст человека" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="60" />
                                     <option name="line" value="34" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -148,7 +147,7 @@
                                     <option name="taskText" value="Определить, пройдёт ли кирпич сквозь прямоугольное отверстие" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="63" />
                                     <option name="line" value="44" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -156,7 +155,7 @@
                                     <option name="taskText" value="Определить время, за которое путник одолел первую половину пути" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="57" />
                                     <option name="line" value="55" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -164,7 +163,7 @@
                                     <option name="taskText" value="Определить, находится ли король под боем и от кого угроза" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="57" />
                                     <option name="line" value="67" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -172,7 +171,7 @@
                                     <option name="taskText" value="Определить, находится ли король под боем и от кого угроза" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="40" />
                                     <option name="line" value="74" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -180,7 +179,7 @@
                                     <option name="taskText" value="Определить, угрожают ли ферзи друг другу" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="9" />
+                                    <option name="index" value="8" />
                                     <option name="length" value="40" />
                                     <option name="line" value="81" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -188,7 +187,7 @@
                                     <option name="taskText" value="Определить, счастливое ли заданное число" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="10" />
+                                    <option name="index" value="9" />
                                     <option name="length" value="67" />
                                     <option name="line" value="90" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -197,11 +196,11 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="IfElse.kt" />
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
@@ -224,7 +223,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="40" />
                                     <option name="line" value="7" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -232,7 +231,7 @@
                                     <option name="taskText" value="Найти число Фибоначчи с заданным номером" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="41" />
                                     <option name="line" value="13" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -240,7 +239,7 @@
                                     <option name="taskText" value="Найти наименьшее общее кратное двух чисел" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="35" />
                                     <option name="line" value="18" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -248,7 +247,7 @@
                                     <option name="taskText" value="Найти минимальный делитель больше 1" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="52" />
                                     <option name="line" value="23" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -256,7 +255,7 @@
                                     <option name="taskText" value="Найти максимальный делитель, меньший заданного числа" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="39" />
                                     <option name="line" value="29" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -264,7 +263,7 @@
                                     <option name="taskText" value="Изменить порядок цифр числа на обратный" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="40" />
                                     <option name="line" value="36" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -272,7 +271,7 @@
                                     <option name="taskText" value="Определить, является ли число анаграммой" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="29" />
                                     <option name="line" value="42" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -280,7 +279,7 @@
                                     <option name="taskText" value="Найти количество цифр в числе" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="61" />
                                     <option name="line" value="49" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -288,7 +287,7 @@
                                     <option name="taskText" value="Найти цифру с заданным номером в последовательности квадратов" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="9" />
+                                    <option name="index" value="8" />
                                     <option name="length" value="61" />
                                     <option name="line" value="56" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -296,7 +295,7 @@
                                     <option name="taskText" value="Найти цифру с заданным номером в последовательности Фибоначчи" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="10" />
+                                    <option name="index" value="9" />
                                     <option name="length" value="46" />
                                     <option name="line" value="63" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -304,7 +303,7 @@
                                     <option name="taskText" value="Определить, являются ли числа взаимно простыми" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="11" />
+                                    <option name="index" value="10" />
                                     <option name="length" value="57" />
                                     <option name="line" value="70" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -312,7 +311,7 @@
                                     <option name="taskText" value="Определить, имеется ли точный квадрат между двумя числами" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="12" />
+                                    <option name="index" value="11" />
                                     <option name="length" value="49" />
                                     <option name="line" value="76" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -320,7 +319,7 @@
                                     <option name="taskText" value="Определить, содержит ли число различающиеся цифры" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="13" />
+                                    <option name="index" value="12" />
                                     <option name="length" value="21" />
                                     <option name="line" value="81" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -328,7 +327,7 @@
                                     <option name="taskText" value="Найти факториал числа" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="14" />
+                                    <option name="index" value="13" />
                                     <option name="length" value="39" />
                                     <option name="line" value="88" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -336,7 +335,7 @@
                                     <option name="taskText" value="Найти синус числа, рассчитав сумму ряда" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="15" />
+                                    <option name="index" value="14" />
                                     <option name="length" value="40" />
                                     <option name="line" value="95" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -345,11 +344,11 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="Loop.kt" />
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
@@ -372,7 +371,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="50" />
                                     <option name="line" value="6" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -380,7 +379,7 @@
                                     <option name="taskText" value="Рассчитать среднее арифметическое элементов списка" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="28" />
                                     <option name="line" value="12" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -388,7 +387,7 @@
                                     <option name="taskText" value="Центрировать заданный список" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="37" />
                                     <option name="line" value="19" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -396,7 +395,7 @@
                                     <option name="taskText" value="Найти скалярное произведение векторов" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="20" />
                                     <option name="line" value="26" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -404,7 +403,7 @@
                                     <option name="taskText" value="Найти модуль вектора" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="43" />
                                     <option name="line" value="34" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -412,7 +411,7 @@
                                     <option name="taskText" value="Рассчитать значение многочлена по аргументу" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="59" />
                                     <option name="line" value="42" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -420,7 +419,7 @@
                                     <option name="taskText" value="Заменить каждый элемент списка суммой его и всех предыдущих" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="36" />
                                     <option name="line" value="49" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -428,7 +427,7 @@
                                     <option name="taskText" value="Разложить число на простые множители" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="63" />
                                     <option name="line" value="55" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -436,7 +435,7 @@
                                     <option name="taskText" value="Представить в виде строки разложение числа на простые множители" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="9" />
+                                    <option name="index" value="8" />
                                     <option name="length" value="44" />
                                     <option name="line" value="62" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -444,7 +443,7 @@
                                     <option name="taskText" value="Перевести число в заданную систему счисления" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="10" />
+                                    <option name="index" value="9" />
                                     <option name="length" value="51" />
                                     <option name="line" value="70" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -452,7 +451,7 @@
                                     <option name="taskText" value="Составить запись числа в заданной системе счисления" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="11" />
+                                    <option name="index" value="10" />
                                     <option name="length" value="46" />
                                     <option name="line" value="77" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -460,7 +459,7 @@
                                     <option name="taskText" value="Перевести число в десятичную систему счисления" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="12" />
+                                    <option name="index" value="11" />
                                     <option name="length" value="45" />
                                     <option name="line" value="86" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -468,7 +467,7 @@
                                     <option name="taskText" value="Перевести число из строки в систему счисления" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="13" />
+                                    <option name="index" value="12" />
                                     <option name="length" value="43" />
                                     <option name="line" value="94" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -476,7 +475,7 @@
                                     <option name="taskText" value="Перевести число в римскую систему счисления" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="14" />
+                                    <option name="index" value="13" />
                                     <option name="length" value="33" />
                                     <option name="line" value="101" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -485,11 +484,11 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="List.kt" />
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
@@ -512,7 +511,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="32" />
                                     <option name="line" value="9" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -520,7 +519,7 @@
                                     <option name="taskText" value="Перевести дату в цифровой формат" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="33" />
                                     <option name="line" value="16" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -528,7 +527,7 @@
                                     <option name="taskText" value="Перевести дату в строковый формат" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="46" />
                                     <option name="line" value="28" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -536,7 +535,7 @@
                                     <option name="taskText" value="Записать телефонный номер в формате без скобок" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="47" />
                                     <option name="line" value="36" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -544,7 +543,7 @@
                                     <option name="taskText" value="Найти в строке результат самого длинного прыжка" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="47" />
                                     <option name="line" value="46" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -552,7 +551,7 @@
                                     <option name="taskText" value="Найти в строке результат самого высокого прыжка" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="51" />
                                     <option name="line" value="55" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -560,7 +559,7 @@
                                     <option name="taskText" value="Рассчитать алгебраическую сумму по строковой записи" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="34" />
                                     <option name="line" value="64" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -568,7 +567,7 @@
                                     <option name="taskText" value="Найти в строке повторяющиеся слова" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="37" />
                                     <option name="line" value="75" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -576,7 +575,7 @@
                                     <option name="taskText" value="Найти название самого дорогого товара" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="9" />
+                                    <option name="index" value="8" />
                                     <option name="length" value="54" />
                                     <option name="line" value="105" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -585,11 +584,11 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="Parse.kt" />
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
@@ -612,7 +611,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="35" />
                                     <option name="line" value="8" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -620,7 +619,7 @@
                                     <option name="taskText" value="Рассчитать расстояние между точками" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="40" />
                                     <option name="line" value="18" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -628,7 +627,7 @@
                                     <option name="taskText" value="Рассчитать расстояние между окружностями" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="41" />
                                     <option name="line" value="23" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -636,7 +635,7 @@
                                     <option name="taskText" value="Определить, содержит ли круг данную точку" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="61" />
                                     <option name="line" value="33" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -644,7 +643,7 @@
                                     <option name="taskText" value="Найти отрезок, соединяющий наиболее удалённые точки множества" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="35" />
                                     <option name="line" value="39" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -652,7 +651,7 @@
                                     <option name="taskText" value="Построить окружность по её диаметру" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="39" />
                                     <option name="line" value="50" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -660,7 +659,7 @@
                                     <option name="taskText" value="Найти точку пересечения с другой линией" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="27" />
                                     <option name="line" value="54" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -668,7 +667,7 @@
                                     <option name="taskText" value="Построить прямую по отрезку" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="31" />
                                     <option name="line" value="56" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -676,7 +675,7 @@
                                     <option name="taskText" value="Построить прямую по двум точкам" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="9" />
+                                    <option name="index" value="8" />
                                     <option name="length" value="59" />
                                     <option name="line" value="59" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -684,7 +683,7 @@
                                     <option name="taskText" value="Построить серединный перпендикуляр по двум границам отрезка" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="10" />
+                                    <option name="index" value="9" />
                                     <option name="length" value="49" />
                                     <option name="line" value="65" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -692,7 +691,7 @@
                                     <option name="taskText" value="Найти пару из двух наименее удалённых окружностей" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="11" />
+                                    <option name="index" value="10" />
                                     <option name="length" value="35" />
                                     <option name="line" value="74" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -700,7 +699,7 @@
                                     <option name="taskText" value="Построить окружность по трём точкам" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="12" />
+                                    <option name="index" value="11" />
                                     <option name="length" value="62" />
                                     <option name="line" value="84" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -709,11 +708,11 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="DataClass.kt" />
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
@@ -736,7 +735,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="49" />
                                     <option name="line" value="15" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -744,7 +743,7 @@
                                     <option name="taskText" value="Заполнить матрицу натуральными числами по спирали" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="60" />
                                     <option name="line" value="29" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -752,7 +751,7 @@
                                     <option name="taskText" value="Заполнить матрицу натуральными числами от периметра к центру" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="38" />
                                     <option name="line" value="42" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -760,7 +759,7 @@
                                     <option name="taskText" value="Заполнить матрицу диагональной змейкой" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="51" />
                                     <option name="line" value="53" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -768,7 +767,7 @@
                                     <option name="taskText" value="Повернуть матрицу на 90 градусов по часовой стрелке" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="53" />
                                     <option name="line" value="66" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -776,7 +775,7 @@
                                     <option name="taskText" value="Определить, верно ли, что матрица - латинский квадрат" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="59" />
                                     <option name="line" value="83" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -784,7 +783,7 @@
                                     <option name="taskText" value="Заменить в матрице каждый элемент суммой примыкающих к нему" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="58" />
                                     <option name="line" value="100" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -793,6 +792,7 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="Matrices.kt" />
                             </TaskFile>
                           </value>
@@ -803,7 +803,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="14" />
                                     <option name="line" value="32" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -811,7 +811,7 @@
                                     <option name="taskText" value="Высота матрицы" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="14" />
                                     <option name="line" value="34" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -819,7 +819,7 @@
                                     <option name="taskText" value="Ширина матрицы" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="3" />
+                                    <option name="index" value="2" />
                                     <option name="length" value="32" />
                                     <option name="line" value="36" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -827,7 +827,7 @@
                                     <option name="taskText" value="Содержимое ячейки по координатам" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="4" />
+                                    <option name="index" value="3" />
                                     <option name="length" value="17" />
                                     <option name="line" value="38" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -835,7 +835,7 @@
                                     <option name="taskText" value="Содержимое ячейки" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="5" />
+                                    <option name="index" value="4" />
                                     <option name="length" value="30" />
                                     <option name="line" value="41" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -843,7 +843,7 @@
                                     <option name="taskText" value="Запись в ячейку по координатам" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="6" />
+                                    <option name="index" value="5" />
                                     <option name="length" value="15" />
                                     <option name="line" value="45" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -851,7 +851,7 @@
                                     <option name="taskText" value="Запись в ячейку" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="7" />
+                                    <option name="index" value="6" />
                                     <option name="length" value="29" />
                                     <option name="line" value="48" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -859,7 +859,7 @@
                                     <option name="taskText" value="Сравнение матриц на равенство" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="8" />
+                                    <option name="index" value="7" />
                                     <option name="length" value="35" />
                                     <option name="line" value="50" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -868,11 +868,11 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="Matrix.kt" />
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
@@ -895,7 +895,7 @@
                               <option name="answerPlaceholders">
                                 <list>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="1" />
+                                    <option name="index" value="0" />
                                     <option name="length" value="41" />
                                     <option name="line" value="30" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -903,7 +903,7 @@
                                     <option name="taskText" value="Реализовать транслитерацию входного файла" />
                                   </AnswerPlaceholder>
                                   <AnswerPlaceholder>
-                                    <option name="index" value="2" />
+                                    <option name="index" value="1" />
                                     <option name="length" value="69" />
                                     <option name="line" value="56" />
                                     <option name="possibleAnswer" value="TODO()" />
@@ -912,11 +912,11 @@
                                   </AnswerPlaceholder>
                                 </list>
                               </option>
+                              <option name="highlightErrors" value="true" />
                               <option name="name" value="Files.kt" />
                             </TaskFile>
                           </value>
                         </entry>
-                        <entry key="Tests.kt" />
                       </map>
                     </option>
                   </Task>
