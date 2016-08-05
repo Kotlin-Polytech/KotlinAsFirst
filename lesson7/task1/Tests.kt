@@ -8,14 +8,14 @@ class Tests {
 
     @Test
     fun createMatrix() {
-        val matrix = createMatrix<Double>(4, 6)
+        val matrix = createMatrix<Double>(4, 6, 0.0)
         assertEquals(4, matrix.height)
         assertEquals(6, matrix.width)
     }
 
     @Test
     fun getSetInt() {
-        val matrix = createMatrix<Int>(3, 2)
+        val matrix = createMatrix<Int>(3, 2, 0)
         var value = 0
         for (row in 0..matrix.height - 1) {
             for (column in 0..matrix.width - 1) {
@@ -32,7 +32,7 @@ class Tests {
 
     @Test
     fun getSetString() {
-        val matrix = createMatrix<String>(2, 2)
+        val matrix = createMatrix<String>(2, 2, "")
         val strings = listOf("alpha", "beta", "gamma", "omega")
         var index = 0
         for (row in 0..matrix.height - 1) {
@@ -49,7 +49,7 @@ class Tests {
     }
 
     private fun<E> createMatrix(height: Int, width: Int, values: List<List<E>>): Matrix<E> {
-        val matrix = createMatrix<E>(height, width)
+        val matrix = createMatrix<E>(height, width, values[0][0])
         for (row in 0..height - 1) {
             for (column in 0..width - 1) {
                 matrix[row, column] = values[row][column]

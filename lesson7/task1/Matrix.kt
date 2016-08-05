@@ -23,10 +23,10 @@ interface Matrix<E> {
 
 /*
  * Метод для создания матрицы, должен вернуть РЕАЛИЗАЦИЮ Matrix<E>.
- * height = высота, width = ширина.
+ * height = высота, width = ширина, e = чем заполнить элементы.
  * Бросить исключение IllegalArgumentException, если height или width <= 0.
  */
-fun <E> createMatrix(height: Int, width: Int): Matrix<E> = TODO()
+fun <E> createMatrix(height: Int, width: Int, e: E): Matrix<E> = TODO()
 
 /* Реализация интерфейса "матрица" */
 class MatrixImpl<E> : Matrix<E> {
@@ -34,9 +34,9 @@ class MatrixImpl<E> : Matrix<E> {
 
     override val width: Int = TODO()
 
-    override fun get(row: Int, column: Int): E? = TODO()
+    override fun get(row: Int, column: Int): E  = TODO()
 
-    override fun get(cell: Cell): E? = TODO()
+    override fun get(cell: Cell): E  = TODO()
 
     override fun set(row: Int, column: Int, value: E) {
         TODO()
