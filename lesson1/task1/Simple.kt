@@ -1,5 +1,4 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson1.task1
 
 /*
 Пользователь задает время в часах, минутах и секундах, например, 8:20:35.

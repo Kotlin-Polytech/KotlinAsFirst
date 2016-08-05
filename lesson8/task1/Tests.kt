@@ -1,6 +1,4 @@
-package lesson8.task1
-
-import org.junit.Test
+﻿import org.junit.Test
 
 import org.junit.Assert.*
 import java.io.File

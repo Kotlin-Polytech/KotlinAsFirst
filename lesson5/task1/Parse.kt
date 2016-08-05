@@ -1,5 +1,4 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson5.task1
 
 /*
  * Дата представлена строкой вида "15 июля 2016".

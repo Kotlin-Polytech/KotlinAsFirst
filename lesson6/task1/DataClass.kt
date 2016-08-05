@@ -1,5 +1,4 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson6.task1
 
 /* Точка на плоскости */
 data class Point(val x: Double, val y: Double) {

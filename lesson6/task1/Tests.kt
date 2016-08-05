@@ -1,5 +1,3 @@
-package lesson6.task1
-
 import org.junit.Test
 
 import org.junit.Assert.*

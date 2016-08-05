@@ -1,5 +1,4 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson4.task1
 
 /*
  * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст

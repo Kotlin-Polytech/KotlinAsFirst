@@ -1,5 +1,4 @@
 @file:Suppress("UNUSED_PARAMETER", "unused")
-package lesson7.task1
 
 /* Ячейка матрицы: row = ряд, column = колонка */
 data class Cell(val row: Int, val column: Int)

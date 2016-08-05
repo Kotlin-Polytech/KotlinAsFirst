@@ -1,5 +1,4 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson2.task1
 
 /*
 Даны четыре точки на одной прямой: A, B, C и D.
