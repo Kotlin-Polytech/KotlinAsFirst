@@ -13,8 +13,8 @@ interface Matrix<E> {
     val width: Int
 
     /* Доступ к ячейке. Методы могут вернуть null, если в ячейку ранее ничего не было записано */
-    operator fun get(row: Int, column: Int): E?
-    operator fun get(cell: Cell): E?
+    operator fun get(row: Int, column: Int): E
+    operator fun get(cell: Cell): E
 
     /* Запись в ячейку */
     operator fun set(row: Int, column: Int, value: E)
