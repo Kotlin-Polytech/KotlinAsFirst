@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="StudySettings">
+    <StudyTaskManager>
+      <option name="course">
+        <Course>
+          <option name="adaptive" value="false" />
+          <option name="authors">
+            <list>
+              <StepicUser>
+                <option name="email" value="" />
+                <option name="firstName" value="Михаил" />
+                <option name="id" value="-1" />
+                <option name="lastName" value="Глухих" />
+              </StepicUser>
+            </list>
+          </option>
+          <option name="courseDirectory" value="C:\Users\Mikhail.Glukhikh\.IntelliJIdea2016.2\config\courses\Котлин как первый язык программирования-KotlinAsFirst" />
+          <option name="courseMode" value="Course Creator" />
+          <option name="courseType" value="PyCharm" />
+          <option name="description" value="Котлин как первый язык программирования" />
+          <option name="id" value="0" />
+          <option name="language" value="kotlin" />
+          <option name="lessons">
+            <list>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="1" />
+                <option name="name" value="lesson1" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Простые функции" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="Simple.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="53" />
+                                      <option name="offset" value="255" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Рассчитать время в секундах, прошедшее с начала суток" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="41" />
+                                      <option name="offset" value="571" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить длину того же отрезка в метрах" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="38" />
+                                      <option name="offset" value="750" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить в числе третью цифру справа" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="35" />
+                                      <option name="offset" value="987" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить значение угла в радианах" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="40" />
+                                      <option name="offset" value="1324" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить время поезда в пути в минутах" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="52" />
+                                      <option name="offset" value="1554" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти длину отрезка, соединяющего точки на плоскости" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="55" />
+                                      <option name="offset" value="1859" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, сколько денег будет на счету через три года" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="61" />
+                                      <option name="offset" value="2077" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти число, полученное перестановкой цифр в обратном порядке" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="Simple.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="2" />
+                <option name="name" value="lesson2" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Функции с ветвлениями" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="IfElse.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="32" />
+                                      <option name="offset" value="285" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти длину пересечения отрезков" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="57" />
+                                      <option name="offset" value="546" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, лежит ли 1-я окружность внутри 2-й окружности" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="46" />
+                                      <option name="offset" value="732" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Составить строку, описывающую возраст человека" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="60" />
+                                      <option name="offset" value="1119" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, пройдёт ли кирпич сквозь прямоугольное отверстие" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="63" />
+                                      <option name="offset" value="1459" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить время, за которое путник одолел первую половину пути" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="57" />
+                                      <option name="offset" value="1941" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, находится ли король под боем и от кого угроза" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="57" />
+                                      <option name="offset" value="2436" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, находится ли король под боем и от кого угроза" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="40" />
+                                      <option name="offset" value="2646" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, угрожают ли ферзи друг другу" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="40" />
+                                      <option name="offset" value="2846" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, счастливое ли заданное число" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="67" />
+                                      <option name="offset" value="3142" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, является ли треугольник остро-, прямо- или тупоугольным" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="IfElse.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="3" />
+                <option name="name" value="lesson3" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Циклические / рекурсивные функции" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="Loop.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="40" />
+                                      <option name="offset" value="241" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти число Фибоначчи с заданным номером" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="41" />
+                                      <option name="offset" value="422" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти наименьшее общее кратное двух чисел" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="35" />
+                                      <option name="offset" value="538" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти минимальный делитель больше 1" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="52" />
+                                      <option name="offset" value="651" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти максимальный делитель, меньший заданного числа" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="39" />
+                                      <option name="offset" value="810" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Изменить порядок цифр числа на обратный" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="40" />
+                                      <option name="offset" value="1019" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, является ли число анаграммой" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="29" />
+                                      <option name="offset" value="1182" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти количество цифр в числе" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="61" />
+                                      <option name="offset" value="1378" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти цифру с заданным номером в последовательности квадратов" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="61" />
+                                      <option name="offset" value="1583" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти цифру с заданным номером в последовательности Фибоначчи" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="46" />
+                                      <option name="offset" value="1823" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, являются ли числа взаимно простыми" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="10" />
+                                      <option name="initialState" />
+                                      <option name="length" value="57" />
+                                      <option name="offset" value="2148" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, имеется ли точный квадрат между двумя числами" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="11" />
+                                      <option name="initialState" />
+                                      <option name="length" value="49" />
+                                      <option name="offset" value="2350" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, содержит ли число различающиеся цифры" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="12" />
+                                      <option name="initialState" />
+                                      <option name="length" value="21" />
+                                      <option name="offset" value="2466" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти факториал числа" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="13" />
+                                      <option name="initialState" />
+                                      <option name="length" value="39" />
+                                      <option name="offset" value="2717" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти синус числа, рассчитав сумму ряда" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="14" />
+                                      <option name="initialState" />
+                                      <option name="length" value="40" />
+                                      <option name="offset" value="2968" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти косинус числа, посчитав сумму ряда" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="Loop.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="4" />
+                <option name="name" value="lesson4" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Работа со списками" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="List.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="50" />
+                                      <option name="offset" value="172" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Рассчитать среднее арифметическое элементов списка" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="28" />
+                                      <option name="offset" value="418" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Центрировать заданный список" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="37" />
+                                      <option name="offset" value="718" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти скалярное произведение векторов" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="20" />
+                                      <option name="offset" value="934" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти модуль вектора" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="43" />
+                                      <option name="offset" value="1229" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Рассчитать значение многочлена по аргументу" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="59" />
+                                      <option name="offset" value="1526" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Заменить каждый элемент списка суммой его и всех предыдущих" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="36" />
+                                      <option name="offset" value="1787" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Разложить число на простые множители" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="63" />
+                                      <option name="offset" value="1978" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Представить в виде строки разложение числа на простые множители" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="44" />
+                                      <option name="offset" value="2298" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Перевести число в заданную систему счисления" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="51" />
+                                      <option name="offset" value="2662" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Составить запись числа в заданной системе счисления" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="10" />
+                                      <option name="initialState" />
+                                      <option name="length" value="46" />
+                                      <option name="offset" value="2910" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Перевести число в десятичную систему счисления" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="11" />
+                                      <option name="initialState" />
+                                      <option name="length" value="45" />
+                                      <option name="offset" value="3238" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Перевести число из строки в систему счисления" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="12" />
+                                      <option name="initialState" />
+                                      <option name="length" value="43" />
+                                      <option name="offset" value="3510" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Перевести число в римскую систему счисления" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="13" />
+                                      <option name="initialState" />
+                                      <option name="length" value="33" />
+                                      <option name="offset" value="3729" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Записать число прописью по-русски" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="List.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="5" />
+                <option name="name" value="lesson5" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Разбор строк" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="Parse.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="32" />
+                                      <option name="offset" value="317" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Перевести дату в цифровой формат" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="33" />
+                                      <option name="offset" value="543" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Перевести дату в строковый формат" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="46" />
+                                      <option name="offset" value="1160" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Записать телефонный номер в формате без скобок" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="47" />
+                                      <option name="offset" value="1576" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти в строке результат самого длинного прыжка" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="47" />
+                                      <option name="offset" value="2022" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти в строке результат самого высокого прыжка" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="51" />
+                                      <option name="offset" value="2437" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Рассчитать алгебраическую сумму по строковой записи" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="34" />
+                                      <option name="offset" value="2863" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти в строке повторяющиеся слова" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="37" />
+                                      <option name="offset" value="3348" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти название самого дорогого товара" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="54" />
+                                      <option name="offset" value="5274" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Рассчитать результат работы вычислительного устройства" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="Parse.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="6" />
+                <option name="name" value="lesson6" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Простые классы" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="DataClass.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="35" />
+                                      <option name="offset" value="238" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Рассчитать расстояние между точками" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="40" />
+                                      <option name="offset" value="627" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Рассчитать расстояние между окружностями" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="41" />
+                                      <option name="offset" value="785" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, содержит ли круг данную точку" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="61" />
+                                      <option name="offset" value="1092" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти отрезок, соединяющий наиболее удалённые точки множества" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="35" />
+                                      <option name="offset" value="1328" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Построить окружность по её диаметру" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="39" />
+                                      <option name="offset" value="1756" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти точку пересечения с другой линией" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="27" />
+                                      <option name="offset" value="1857" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Построить прямую по отрезку" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="31" />
+                                      <option name="offset" value="1910" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Построить прямую по двум точкам" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="8" />
+                                      <option name="initialState" />
+                                      <option name="length" value="59" />
+                                      <option name="offset" value="2038" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Построить серединный перпендикуляр по двум границам отрезка" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="9" />
+                                      <option name="initialState" />
+                                      <option name="length" value="49" />
+                                      <option name="offset" value="2286" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти пару из двух наименее удалённых окружностей" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="10" />
+                                      <option name="initialState" />
+                                      <option name="length" value="35" />
+                                      <option name="offset" value="2663" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Построить окружность по трём точкам" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="11" />
+                                      <option name="initialState" />
+                                      <option name="length" value="62" />
+                                      <option name="offset" value="3214" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти круг минимального радиуса, содержащий все заданные точки" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="DataClass.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="7" />
+                <option name="name" value="lesson7" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Разработка / использование класса" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="Matrices.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="49" />
+                                      <option name="offset" value="453" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Заполнить матрицу натуральными числами по спирали" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="60" />
+                                      <option name="offset" value="927" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Заполнить матрицу натуральными числами от периметра к центру" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="38" />
+                                      <option name="offset" value="1308" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Заполнить матрицу диагональной змейкой" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="51" />
+                                      <option name="offset" value="1627" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Повернуть матрицу на 90 градусов по часовой стрелке" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="53" />
+                                      <option name="offset" value="2014" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Определить, верно ли, что матрица - латинский квадрат" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="59" />
+                                      <option name="offset" value="2520" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Заменить в матрице каждый элемент суммой примыкающих к нему" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="58" />
+                                      <option name="offset" value="3197" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Найти в матрице ряды и колонки, целиком состоящие из дырок" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="Matrices.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                          <entry key="Matrix.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="14" />
+                                      <option name="offset" value="1015" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Высота матрицы" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="14" />
+                                      <option name="offset" value="1053" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Ширина матрицы" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="2" />
+                                      <option name="initialState" />
+                                      <option name="length" value="32" />
+                                      <option name="offset" value="1111" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Содержимое ячейки по координатам" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="3" />
+                                      <option name="initialState" />
+                                      <option name="length" value="17" />
+                                      <option name="offset" value="1158" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Содержимое ячейки" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="4" />
+                                      <option name="initialState" />
+                                      <option name="length" value="30" />
+                                      <option name="offset" value="1230" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Запись в ячейку по координатам" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="5" />
+                                      <option name="initialState" />
+                                      <option name="length" value="15" />
+                                      <option name="offset" value="1297" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Запись в ячейку" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="6" />
+                                      <option name="initialState" />
+                                      <option name="length" value="29" />
+                                      <option name="offset" value="1350" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Сравнение матриц на равенство" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="7" />
+                                      <option name="initialState" />
+                                      <option name="length" value="35" />
+                                      <option name="offset" value="1396" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Представление матрицы в виде строки" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="Matrix.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+              <Lesson>
+                <option name="id" value="0" />
+                <option name="index" value="8" />
+                <option name="name" value="lesson8" />
+                <option name="updateDate" />
+                <option name="taskList">
+                  <list>
+                    <Task>
+                      <option name="index" value="1" />
+                      <option name="name" value="Работа с файлами" />
+                      <option name="status" value="Unchecked" />
+                      <option name="stepicId" value="0" />
+                      <option name="text" />
+                      <option name="updateDate" />
+                      <option name="taskFiles">
+                        <map>
+                          <entry key="Files.kt">
+                            <value>
+                              <TaskFile>
+                                <option name="answerPlaceholders">
+                                  <list>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="0" />
+                                      <option name="initialState" />
+                                      <option name="length" value="41" />
+                                      <option name="offset" value="1122" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Реализовать транслитерацию входного файла" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                    <AnswerPlaceholder>
+                                      <option name="additionalHints">
+                                        <list />
+                                      </option>
+                                      <option name="hint" value="" />
+                                      <option name="index" value="1" />
+                                      <option name="initialState" />
+                                      <option name="length" value="69" />
+                                      <option name="offset" value="1949" />
+                                      <option name="possibleAnswer" value="TODO()" />
+                                      <option name="selected" value="false" />
+                                      <option name="status" value="Unchecked" />
+                                      <option name="taskText" value="Выбрать из словаря наиболее длинное слово, в котором все буквы разные" />
+                                      <option name="useLength" value="false" />
+                                    </AnswerPlaceholder>
+                                  </list>
+                                </option>
+                                <option name="highlightErrors" value="true" />
+                                <option name="index" value="-1" />
+                                <option name="trackChanges" value="true" />
+                                <option name="userCreated" value="false" />
+                                <option name="name" value="Files.kt" />
+                                <option name="text" />
+                              </TaskFile>
+                            </value>
+                          </entry>
+                        </map>
+                      </option>
+                    </Task>
+                  </list>
+                </option>
+              </Lesson>
+            </list>
+          </option>
+          <option name="name" value="Котлин как первый язык программирования" />
+          <option name="updateDate" />
+        </Course>
+      </option>
+      <option name="enableTestingFromSamples" value="true" />
+      <option name="toolWindowMode" value="TEXT" />
+      <option name="turnEditingMode" value="false" />
+      <option name="user">
+        <StepicUser>
+          <option name="email" value="" />
+          <option name="firstName" value="" />
+          <option name="id" value="-1" />
+          <option name="lastName" value="" />
+        </StepicUser>
+      </option>
+      <option name="VERSION" value="3" />
+      <option name="myUserTests">
+        <map />
+      </option>
+      <option name="myInvisibleFiles">
+        <list />
+      </option>
+      <option name="myShouldUseJavaFx" value="true" />
+    </StudyTaskManager>
+  </component>
+</project>
