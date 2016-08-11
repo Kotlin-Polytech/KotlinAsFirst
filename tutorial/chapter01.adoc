@@ -228,7 +228,7 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
 [source,kotlin]
 ----
 fun quadraticRootProduct(a: Double, b: Double, c: Double) =
-        ((-b + discriminant(a, b, c)) / (2 * a)) * (-b - discriminant(a, b, c)) / (2 * a))
+        ((-b + discriminant(a, b, c)) / (2 * a)) * ((-b - discriminant(a, b, c)) / (2 * a))
 ----
 
 Хотя и записанная в одну строчку, такая функция является гораздо менее понятной,
@@ -251,7 +251,7 @@ fun solveQuadraticEquation(a: Double, b: Double, c: Double) /* no result */ {
     // Вывод на экран строки вида x1 = 3.0 x2 = 2.0
     println("x1 = $x1 x2 = $x2")
     // Вывод на экран произведения корней
-    println("x1 * x2 = ${x1 * x2}"
+    println("x1 * x2 = ${x1 * x2}")
 }
 ----
 
