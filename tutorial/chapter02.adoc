@@ -115,7 +115,10 @@ fun gradeNotation(grade: Int): String = when (grade) {
 рассчитывающую минимальный из имеющихся корней биквадратного уравнения: ax^4^ + bx^2^ + c = 0.
 Попробуем сначала записать алгоритм решения задачи в виде последовательности действий:
 
- 1. Если a равно 0, уравнение вырождается в bx^2^ + c = 0. Вырожденное уравнение имеет решение при отрицательном c / b.
+ 1. Если a равно 0, уравнение вырождается в bx^2^ + c = 0. Вырожденное уравнение:
+  * при b равном 0 не имеет решений (или имеет бесконечно много)
+  * при c / b > 0 также не имеет решений
+  * в противном случае минимальное решение -- это -sqrt(-c / b)
  1. Рассчитаем дискриминант d = b^2^ - 4ac.
  1. Если d меньше 0, у уравнения нет решений.
  1. В противном случае рассчитаем x1 = (-b + sqrt(d))/(2a) и x2 = (-b - sqrt(d))/(2a).
@@ -132,17 +135,21 @@ fun gradeNotation(grade: Int): String = when (grade) {
 ----
 fun minBiRoot(a: Double, b: Double, c: Double) {
     if (a == 0.0) {
-        if (b == 0.0) return Double.NaN
+        if (b == 0.0) return Double.NaN // ... и ничего больше не делать
         val bc = -c / b
-        return if (bc < 0.0) Double.NaN else -Math.sqrt(bc)
+        if (bc < 0.0) return Double.NaN // ... и ничего больше не делать
+        return -Math.sqrt(bc)
+        // Дальше функция при a == 0.0 не идёт
     }
     val d = discriminant(a, b, c)
     if (d < 0.0) return Double.NaN
     val x1 = (-b + Math.sqrt(d)) / (2 * a)
     val x2 = (-b - Math.sqrt(d)) / (2 * a)
     val x3 = Math.max(x1, x2)
-    return if (x3 < 0.0) Double.NaN else -Math.sqrt(x3)
+    if (x3 < 0.0) return Double.NaN
+    return -Math.sqrt(x3)
 }
+----
 
 Пояснения.
 
