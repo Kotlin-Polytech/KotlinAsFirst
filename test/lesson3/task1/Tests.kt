@@ -5,6 +5,16 @@ import org.junit.jupiter.api.Test
 
 class Tests {
     @Test
+    fun factorial() {
+        assertEquals(1.0, factorial(0), 1e-5)
+        assertEquals(1.0, factorial(1), 1e-5)
+        assertEquals(6.0, factorial(3), 1e-5)
+        assertEquals(120.0, factorial(5), 1e-5)
+        assertEquals(3628800.0, factorial(10), 1e-5)
+        assertEquals(2.43290200817664E18, factorial(20), 1E10)
+    }
+
+    @Test
     fun fib() {
         assertEquals(1, fib(1))
         assertEquals(1, fib(2))
@@ -112,16 +122,6 @@ class Tests {
         assertTrue(hasDifferentDigits(222266666))
         assertFalse(hasDifferentDigits(0))
         assertFalse(hasDifferentDigits(777))
-    }
-
-    @Test
-    fun factorial() {
-        assertEquals(1.0, factorial(0), 1e-5)
-        assertEquals(1.0, factorial(1), 1e-5)
-        assertEquals(6.0, factorial(3), 1e-5)
-        assertEquals(120.0, factorial(5), 1e-5)
-        assertEquals(3628800.0, factorial(10), 1e-5)
-        assertEquals(2.43290200817664E18, factorial(20), 1E10)
     }
 
     @Test
