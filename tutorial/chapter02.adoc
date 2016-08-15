@@ -149,6 +149,7 @@ fun pointInsideCircle() {
     // (2, 2) NOT inside circle: center = (0, 0), r = 2
     assertFalse(pointInsideCirecle(2.0, 2.0, 0.0, 0.0, 2.0))
 }
+----
 
 Обе функции имеют один параметр типа **Boolean**.
 **assertTrue** (проверить на истину) приводит к неудачному исходу теста, если её аргумент равен false,
