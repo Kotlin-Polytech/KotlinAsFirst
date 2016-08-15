@@ -1,8 +1,7 @@
 package lesson6.task1
 
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 
 class Tests {
 
@@ -165,7 +164,7 @@ class Tests {
         assertEquals(listOf(square("f3")), kingTrajectory(square("f3"), square("f3")))
         kingTrajectory(square("c2"), square("a6")).assertKingTrajectory(square("c2"), square("a6"), 4)
         assertEquals(listOf(square("h2"), square("g3"), square("f4"), square("e5"), square("d6"), square("c7")),
-                     kingTrajectory(square("h2"), square("c7")))
+                kingTrajectory(square("h2"), square("c7")))
     }
 
     @Test

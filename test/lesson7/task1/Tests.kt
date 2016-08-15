@@ -1,8 +1,7 @@
 package lesson7.task1
 
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 
 class Tests {
 
@@ -48,7 +47,7 @@ class Tests {
         }
     }
 
-    private fun<E> createMatrix(height: Int, width: Int, values: List<List<E>>): Matrix<E> {
+    private fun <E> createMatrix(height: Int, width: Int, values: List<List<E>>): Matrix<E> {
         val matrix = createMatrix<E>(height, width, values[0][0])
         for (row in 0..height - 1) {
             for (column in 0..width - 1) {
@@ -68,9 +67,9 @@ class Tests {
                 )), generateSpiral(2, 2))
         assertEquals(createMatrix(3, 4,
                 listOf(
-                    listOf(1, 2, 3, 4),
-                    listOf(10, 11, 12, 5),
-                    listOf(9, 8, 7, 6)
+                        listOf(1, 2, 3, 4),
+                        listOf(10, 11, 12, 5),
+                        listOf(9, 8, 7, 6)
                 )), generateSpiral(3, 4))
     }
 
@@ -131,11 +130,11 @@ class Tests {
         val m = createMatrix(1, 1, listOf(listOf(("single"))))
         assertEquals(m, rotate(m))
         assertEquals(createMatrix(2, 2, listOf(listOf("alpha", "beta"),
-                                               listOf("gamma", "delta"))),
-                     rotate(createMatrix(2, 2, listOf(listOf("beta", "delta"),
-                                                      listOf("alpha", "gamma")))))
+                listOf("gamma", "delta"))),
+                rotate(createMatrix(2, 2, listOf(listOf("beta", "delta"),
+                        listOf("alpha", "gamma")))))
         assertEquals(createMatrix(3, 3, listOf(listOf(7, 4, 1), listOf(8, 5, 2), listOf(9, 6, 3))),
-                     rotate(createMatrix(3, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 9)))))
+                rotate(createMatrix(3, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 9)))))
     }
 
     @Test
@@ -156,9 +155,9 @@ class Tests {
         assertEquals(createMatrix(2, 2, listOf(listOf(9, 8), listOf(7, 6))),
                 sumNeighbours(createMatrix(2, 2, listOf(listOf(1, 2), listOf(3, 4)))))
         assertEquals(createMatrix(4, 3, listOf(listOf(11, 19, 13), listOf(19, 31, 19),
-                                               listOf(19, 31, 19), listOf(13, 19, 11))),
+                listOf(19, 31, 19), listOf(13, 19, 11))),
                 sumNeighbours(createMatrix(4, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6),
-                                                        listOf(6, 5, 4), listOf(3, 2, 1)))))
+                        listOf(6, 5, 4), listOf(3, 2, 1)))))
     }
 
     @Test
@@ -169,6 +168,6 @@ class Tests {
         assertEquals(Holes(listOf(), listOf(0)), findHoles(createMatrix(2, 2, listOf(listOf(0, 1), listOf(0, 1)))))
         assertEquals(Holes(listOf(4), listOf(1, 3)),
                 findHoles(createMatrix(5, 4, listOf(listOf(1, 0, 1, 0), listOf(0, 0, 1, 0), listOf(1, 0, 0, 0),
-                                                    listOf(0, 0, 1, 0), listOf(0, 0, 0, 0)))))
+                        listOf(0, 0, 1, 0), listOf(0, 0, 0, 0)))))
     }
 }
