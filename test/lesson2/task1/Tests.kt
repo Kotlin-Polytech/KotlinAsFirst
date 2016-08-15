@@ -5,6 +5,17 @@ import org.junit.Test
 import org.junit.Assert.*
 
 class Tests {
+
+    @Test
+    fun minBiRoot() {
+        assertEquals(Double.NaN, minBiRoot(0.0, 0.0, 1.0), 1e-2)
+        assertEquals(Double.NaN, minBiRoot(0.0, 1.0, 2.0), 1e-2)
+        assertEquals(-2.0, minBiRoot(0.0, 1.0, -4.0), 1e-10)
+        assertEquals(Double.NaN, minBiRoot(1.0, -2.0, 4.0), 1e-2)
+        assertEquals(Double.NaN, minBiRoot(1.0, 3.0, 2.0), 1e-2)
+        assertEquals(-1.41, minBiRoot(1.0, -3.0, 2.0), 1e-2)
+    }
+
     @Test
     fun segmentLength() {
         assertEquals(-1, segmentLength(1, 2, 3, 4))
