@@ -1,8 +1,7 @@
 package lesson4.task1
 
-import org.junit.Test
-
-import org.junit.Assert.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Test
 
 class Tests {
     @Test

@@ -1,6 +1,14 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson3.task1
 
+fun factorial(n: Int): Double {
+    var result = 1.0
+    for (i in 1..n) {
+        result *= i
+    }
+    return result
+}
+
 /*
  * Найти число Фибоначчи из ряда 1, 1, 2, 3, 5, 8, 13, 21, ... с номером n.
  * Ряд Фибоначчи определён следующим образом: fib(1) = 1, fib(2) = 1, fib(n+2) = fib(n) + fib(n+1)
@@ -75,11 +83,6 @@ fun squareBetweenExists(m: Int, n: Int): Boolean = TODO()
  * Например, 54 и 323 состоят из разных цифр, а 111 и 0 из одинаковых.
  */
 fun hasDifferentDigits(n: Int): Boolean = TODO()
-
-/*
- * Для заданного n рассчитать n! = 1*2*3*...*n. Считать 0! = 1! = 1.
- */
-fun factorial(n: Int): Double = TODO()
 
 /*
  * Для заданного x рассчитать с заданной точностью eps
