@@ -38,6 +38,13 @@ class Tests {
     }
 
     @Test
+    fun isPerfect() {
+        assertTrue(isPerfect(6))
+        assertTrue(isPerfect(28))
+        assertFalse(isPerfect(100))
+    }
+
+    @Test
     fun fib() {
         assertEquals(1, fib(1))
         assertEquals(1, fib(2))
