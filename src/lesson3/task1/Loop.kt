@@ -1,12 +1,27 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson3.task1
 
+/*
+ * Пример: факториал
+ */
 fun factorial(n: Int): Double {
     var result = 1.0
     for (i in 1..n) {
         result *= i
     }
     return result
+}
+
+/*
+ * Пример: проверка на простоту
+ */
+fun isPrime(n: Int): Boolean {
+    if (n < 2) return false
+    for (m in 2..n - 1) {
+        if (n % m == 0) return false
+        if (m * m >= n) break
+    }
+    return true
 }
 
 /*

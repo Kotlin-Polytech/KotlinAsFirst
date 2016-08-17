@@ -15,6 +15,29 @@ class Tests {
     }
 
     @Test
+    fun isPrime() {
+        assertTrue(isPrime(2))
+        assertTrue(isPrime(3))
+        assertTrue(isPrime(19))
+        assertTrue(isPrime(53))
+        assertFalse(isPrime(1))
+        assertFalse(isPrime(9))
+        var count = 0
+        for (n in 2..7919) {
+            if (isPrime(n)) {
+                count++
+            }
+        }
+        assertEquals(1000, count)
+        for (n in 2..10000000) {
+            if (isPrime(n)) {
+                count++
+            }
+        }
+        assertEquals(665579, count)
+    }
+
+    @Test
     fun fib() {
         assertEquals(1, fib(1))
         assertEquals(1, fib(2))
