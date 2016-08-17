@@ -5,6 +5,13 @@ import org.junit.jupiter.api.Test
 
 class Tests {
     @Test
+    fun discriminant() {
+        assertEquals(0.0, discriminant(0.0, 0.0, 0.0), 1e-5)
+        assertEquals(0.0, discriminant(1.0, -2.0, 1.0), 1e-5)
+        assertEquals(1.0, discriminant(1.0, 3.0, 2.0), 1e-5)
+    }
+
+    @Test
     fun seconds() {
         assertEquals(30035, seconds(8, 20, 35))
         assertEquals(86400, seconds(24, 0, 0))

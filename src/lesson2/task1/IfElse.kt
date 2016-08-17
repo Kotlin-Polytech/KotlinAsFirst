@@ -1,11 +1,11 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson2.task1
 
+import lesson1.task1.discriminant
+
 /*
  * Пример -- решение биквадратного уравнения
  */
-fun discriminant(a: Double, b: Double, c: Double) = b * b - 4 * a * c
-
 fun minBiRoot(a: Double, b: Double, c: Double): Double {
     // 1: в главной ветке if выполняется НЕСКОЛЬКО операторов
     if (a == 0.0) {
