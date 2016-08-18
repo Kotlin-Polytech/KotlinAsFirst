@@ -27,28 +27,11 @@ class Tests {
     }
 
     @Test
-    fun circleInside() {
-        assertFalse(circleInside(0.0, 0.0, 6.0, 0.0, 0.0, 5.0))
-        assertFalse(circleInside(0.0, 0.0, 1.0, 10.0, 10.0, 9.0))
-        assertTrue(circleInside(2.0, 2.0, 2.0, 2.0, 2.0, 2.0))
-        assertTrue(circleInside(-2.0, 3.0, 2.0, -2.0, 0.0, 5.0))
-        assertFalse(circleInside(1.0, 2.0, 3.0, 4.0, 5.0, 6.0))
-    }
-
-    @Test
     fun ageDescription() {
         assertEquals("21 год", ageDescription(21))
         assertEquals("132 года", ageDescription(132))
         assertEquals("12 лет", ageDescription(12))
         assertEquals("199 лет", ageDescription(199))
-    }
-
-    @Test
-    fun brickPasses() {
-        assertTrue(brickPasses(2, 10, 5, 6, 3))
-        assertTrue(brickPasses(4, 4, 4, 4, 4))
-        assertFalse(brickPasses(6, 5, 4, 3, 6))
-        assertTrue(brickPasses(3, 2, 1, 1, 2))
     }
 
     @Test
@@ -75,6 +58,39 @@ class Tests {
     }
 
     @Test
+    fun triangleKind() {
+        assertEquals(-1, triangleKind(3.0, 7.5, 4.0))
+        assertEquals(1, triangleKind(5.0, 3.0, 4.0))
+        assertEquals(2, triangleKind(4.0, 6.0, 8.0))
+        assertEquals(0, triangleKind(1.0, 1.5, 1.5))
+    }
+
+    @Test
+    fun pointInsideCircle() {
+        // (1, 1) inside circle: center = (0, 0), r = 2
+        assertTrue(pointInsideCircle(1.0, 1.0, 0.0, 0.0, 2.0))
+        // (2, 2) NOT inside circle: center = (0, 0), r = 2
+        assertFalse(pointInsideCircle(2.0, 2.0, 0.0, 0.0, 2.0))
+    }
+
+    @Test
+    fun brickPasses() {
+        assertTrue(brickPasses(2, 10, 5, 6, 3))
+        assertTrue(brickPasses(4, 4, 4, 4, 4))
+        assertFalse(brickPasses(6, 5, 4, 3, 6))
+        assertTrue(brickPasses(3, 2, 1, 1, 2))
+    }
+
+    @Test
+    fun circleInside() {
+        assertFalse(circleInside(0.0, 0.0, 6.0, 0.0, 0.0, 5.0))
+        assertFalse(circleInside(0.0, 0.0, 1.0, 10.0, 10.0, 9.0))
+        assertTrue(circleInside(2.0, 2.0, 2.0, 2.0, 2.0, 2.0))
+        assertTrue(circleInside(-2.0, 3.0, 2.0, -2.0, 0.0, 5.0))
+        assertFalse(circleInside(1.0, 2.0, 3.0, 4.0, 5.0, 6.0))
+    }
+
+    @Test
     fun queenThreatens() {
         assertTrue(queenThreatens(3, 6, 7, 6))
         assertTrue(queenThreatens(8, 1, 1, 8))
@@ -86,13 +102,5 @@ class Tests {
         assertTrue(isNumberHappy(1533))
         assertTrue(isNumberHappy(9009))
         assertFalse(isNumberHappy(3644))
-    }
-
-    @Test
-    fun triangleKind() {
-        assertEquals(-1, triangleKind(3.0, 7.5, 4.0))
-        assertEquals(1, triangleKind(5.0, 3.0, 4.0))
-        assertEquals(2, triangleKind(4.0, 6.0, 8.0))
-        assertEquals(0, triangleKind(1.0, 1.5, 1.5))
     }
 }

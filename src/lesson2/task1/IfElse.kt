@@ -31,39 +31,19 @@ fun minBiRoot(a: Double, b: Double, c: Double): Double {
 Найти длину пересечения отрезков AB и CD.
 Если пересечения нет, вернуть -1.
  */
-
 fun segmentLength(a: Int, b: Int, c: Int, d: Int): Int = TODO()
-
-/*
-Проверить, лежит ли окружность с центром в (x1, y1) и радиусом r1 целиком внутри
-окружности с центром в (x2, y2) и радиусом r2.
- */
-
-fun circleInside(x1: Double, y1: Double, r1: Double,
-                 x2: Double, y2: Double, r2: Double): Boolean = TODO()
 
 /*
 Мой возраст. Для заданного 0 < n < 200, рассматриваемого как возраст человека,
 вернуть строку вида: «21 год», «32 года», «12 лет».
  */
-
 fun ageDescription(age: Int): String = TODO()
-
-/*
-Определить, пройдет ли кирпич со сторонами а, b, c сквозь прямоугольное отверстие в стене со сторонами r и s.
-Стороны отверстия должны быть параллельны граням кирпича.
-Считать, что совпадения длин сторон достаточно для прохождения кирпича, т.е., например,
-кирпич 4 х 4 х 4 пройдёт через отверстие 4 х 4.
- */
-
-fun brickPasses(a: Int, b: Int, c: Int, r: Int, s: Int): Boolean = TODO()
 
 /*
 Путник двигался t1 часов со скоростью v1 км/час, затем t2 часов — со скоростью v2 км/час
 и t3 часов — со скоростью v3 км/час.
 Определить, за какое время он одолел первую половину пути?
  */
-
 fun timeForHalfWay(t1: Double, v1: Double,
                    t2: Double, v2: Double,
                    t3: Double, v3: Double): Double = TODO()
@@ -74,7 +54,6 @@ fun timeForHalfWay(t1: Double, v1: Double,
 Вернуть 0, если угрозы нет, 1, если угроза только от первой ладьи, 2, если только от второй ладьи,
 и 3, если угроза от обеих ладей.
  */
-
 fun whichRookThreatens(kingX: Int, kingY: Int,
                        rookX1: Int, rookY1: Int,
                        rookX2: Int, rookY2: Int): Int = TODO()
@@ -86,24 +65,9 @@ fun whichRookThreatens(kingX: Int, kingY: Int,
 Вернуть 0, если угрозы нет, 1, если угроза только от ладьи, 2, если только от слона,
 и 3, если угроза есть и от ладьи и от слона.
  */
-
 fun rookOrBishopThreatens(kingX: Int, kingY: Int,
                           rookX: Int, rookY: Int,
                           bishopX: Int, bishopY: Int): Int = TODO()
-
-/*
-На шахматной доске стоят два ферзя (ферзь бьет по вертикали, горизонтали и диагоналям).
-Определить, угрожают ли они друг другу.
- */
-
-fun queenThreatens(x1: Int, y1: Int, x2: Int, y2: Int): Boolean = TODO()
-
-/*
-Четырехзначное число назовем счастливым, если сумма первых двух ее цифр равна сумме двух последних.
-Определить, счастливое ли заданное число.
- */
-
-fun isNumberHappy(number: Int): Boolean = TODO()
 
 /*
 Треугольник задан длинами своих сторон a, b, c.
@@ -111,5 +75,4 @@ fun isNumberHappy(number: Int): Boolean = TODO()
 прямоугольным (вернуть 1) или тупоугольным (вернуть 2).
 Если такой треугольник не существует, вернуть -1.
  */
-
 fun triangleKind(a: Double, b: Double, c: Double): Int = TODO()

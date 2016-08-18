@@ -147,7 +147,7 @@ fun pointInsideCircle() {
     // (1, 1) inside circle: center = (0, 0), r = 2
     assertTrue(pointInsideCircle(1.0, 1.0, 0.0, 0.0, 2.0))
     // (2, 2) NOT inside circle: center = (0, 0), r = 2
-    assertFalse(pointInsideCirecle(2.0, 2.0, 0.0, 0.0, 2.0))
+    assertFalse(pointInsideCircle(2.0, 2.0, 0.0, 0.0, 2.0))
 }
 ----
 
@@ -302,7 +302,7 @@ fun minBiRoot() {
 
 Обратите внимание на задачи **circleInside**, **brickPasses**, **queenThreatens** и **isNumberHappy**.
 Особенность этих функций в том, что их результат имеет тип **Boolean**.
-Решите одну из них, обратите внимани
+Решите одну из них, обратите внимание на имеющиеся тестовые функции.
 
 Решите ещё хотя бы одну задачу из того же файла.
 Убедитесь в том, что можете решать такие задачи уверенно и без посторонней помощи.
