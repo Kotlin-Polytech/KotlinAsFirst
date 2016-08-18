@@ -45,6 +45,13 @@ class Tests {
     }
 
     @Test
+    fun digitCountInNumber() {
+        assertEquals(4, digitCountInNumber(5373393, 3))
+        assertEquals(2, digitCountInNumber(100, 0))
+        assertEquals(1, digitCountInNumber(0, 0))
+    }
+
+    @Test
     fun fib() {
         assertEquals(1, fib(1))
         assertEquals(1, fib(2))

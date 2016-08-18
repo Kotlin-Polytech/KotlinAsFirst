@@ -37,6 +37,21 @@ fun isPerfect(n: Int): Boolean {
 }
 
 /*
+ * Пример: число вхождений цифры m в число n
+ */
+fun digitCountInNumber(n: Int, m: Int): Int {
+    var count = 0
+    var number = n
+    do {
+        if (m == number % 10) {
+            count++
+        }
+        number /= 10
+    } while (number > 0)
+    return count
+}
+
+/*
  * Найти число Фибоначчи из ряда 1, 1, 2, 3, 5, 8, 13, 21, ... с номером n.
  * Ряд Фибоначчи определён следующим образом: fib(1) = 1, fib(2) = 1, fib(n+2) = fib(n) + fib(n+1)
  */
