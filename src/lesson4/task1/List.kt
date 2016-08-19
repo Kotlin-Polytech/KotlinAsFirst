@@ -32,6 +32,19 @@ fun biRoots(a: Double, b: Double, c: Double): List<Double> {
 }
 
 /*
+ * Пример: выделить из списка отрицательные элементы
+ */
+fun negativeList(list: List<Int>): List<Int> {
+    val result = mutableListOf<Int>()
+    for (element in list) {
+        if (element < 0) {
+            result.add(element)
+        }
+    }
+    return result
+}
+
+/*
  * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст
  */
 fun mean(list: List<Double>): Double = TODO()

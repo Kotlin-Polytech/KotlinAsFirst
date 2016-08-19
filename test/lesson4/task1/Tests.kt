@@ -17,6 +17,12 @@ class Tests {
     }
 
     @Test
+    fun negativeList() {
+        assertEquals(listOf<Int>(), negativeList(listOf(1, 2, 3)))
+        assertEquals(listOf(-1, -5), negativeList(listOf(-1, 2, 4, -5)))
+    }
+
+    @Test
     fun mean() {
         assertEquals(0.0, mean(listOf()), 1e-5)
         assertEquals(1.0, mean(listOf(1.0)), 1e-5)
