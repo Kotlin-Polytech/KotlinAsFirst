@@ -69,7 +69,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Nornal")
+    @Tag("Normal")
     fun center() {
         assertEquals(listOf<Double>(), center(arrayListOf()))
         assertEquals(listOf(0.0), center(arrayListOf(3.14)))
