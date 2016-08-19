@@ -1,5 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson6.task1
+package lesson6.task2
 
 /*
  * Клетка шахматной доски. Шахматная доска квадратная и имеет 8 х 8 клеток.
