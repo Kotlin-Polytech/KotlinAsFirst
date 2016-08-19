@@ -1,6 +1,36 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson4.task1
 
+import lesson1.task1.discriminant
+
+/*
+ * Найти все корни уравнения x^2 = y
+ */
+fun sqRoots(y: Double) =
+        if (y < 0) listOf()
+        else if (y == 0.0) listOf(0.0)
+        else {
+            val root = Math.sqrt(y)
+            // Результат!
+            listOf(-root, root)
+        }
+
+/*
+ * Пример: найти все корни биквадратного уравнения ax^4 + bx^2 + c = 0
+ */
+fun biRoots(a: Double, b: Double, c: Double): List<Double> {
+    if (a == 0.0) {
+        if (b == 0.0) return listOf()
+        else return sqRoots(-c / b)
+    }
+    val d = discriminant(a, b, c)
+    if (d < 0.0) return listOf()
+    if (d == 0.0) return sqRoots(-b / (2 * a))
+    val y1 = (-b + Math.sqrt(d)) / (2 * a)
+    val y2 = (-b - Math.sqrt(d)) / (2 * a)
+    return sqRoots(y1) + sqRoots(y2)
+}
+
 /*
  * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст
  */

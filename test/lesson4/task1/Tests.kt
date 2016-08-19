@@ -4,6 +4,18 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 class Tests {
+
+    @Test
+    fun biRoots() {
+        assertEquals(listOf<Double>(), biRoots(0.0, 0.0, 1.0))
+        assertEquals(listOf<Double>(), biRoots(0.0, 1.0, 2.0))
+        assertEquals(listOf(-2.0, 2.0), biRoots(0.0, 1.0, -4.0))
+        assertEquals(listOf<Double>(), biRoots(1.0, -2.0, 4.0))
+        assertEquals(listOf(-1.0, 1.0), biRoots(1.0, -2.0, 1.0))
+        assertEquals(listOf<Double>(), biRoots(1.0, 3.0, 2.0))
+        assertEquals(listOf(-2.0, -1.0, 1.0, 2.0), biRoots(1.0, -5.0, 4.0).sorted())
+    }
+
     @Test
     fun mean() {
         assertEquals(0.0, mean(listOf()), 1e-5)
