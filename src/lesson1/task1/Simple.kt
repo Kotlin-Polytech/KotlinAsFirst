@@ -20,7 +20,7 @@ fun lengthInMeters(sagenes: Int, arshins: Int, vershoks: Int): Double = TODO()
 Определить третью цифру справа в этом числе (в данном случае 8).
  */
 
-fun thirdDigit(number: Int): Int = TODO()
+fun thirdDigit(number: Int): Int = number.toString[2]
 
 /*
 Пользователь задает угол в градусах, минутах и секундах (например, 36 градусов 14 минут 35 секунд).
