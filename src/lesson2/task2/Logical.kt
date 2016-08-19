@@ -1,5 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson2.task1
+package lesson2.task2
 
 /**
  * Пример
@@ -45,4 +45,3 @@ fun circleInside(x1: Double, y1: Double, r1: Double,
  * Вернуть true, если кирпич пройдёт
  */
 fun brickPasses(a: Int, b: Int, c: Int, r: Int, s: Int): Boolean = TODO()
-
