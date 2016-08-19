@@ -45,6 +45,18 @@ fun negativeList(list: List<Int>): List<Int> {
 }
 
 /*
+ * Пример: поменять все положительные элементы списка на противоположные
+ */
+fun invertPositives(list: MutableList<Int>) {
+    for (i in 0..list.size - 1) {
+        val element = list[i]
+        if (element > 0) {
+            list[i] = -element
+        }
+    }
+}
+
+/*
  * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст
  */
 fun mean(list: List<Double>): Double = TODO()
