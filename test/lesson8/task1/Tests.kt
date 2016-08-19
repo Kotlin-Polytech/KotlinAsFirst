@@ -1,6 +1,7 @@
 package lesson8.task1
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 import java.io.File
 
@@ -13,6 +14,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun transliterate() {
         transliterate(
                 "input/trans_in1.txt",
@@ -24,6 +26,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun chooseLongestChaoticWord() {
         chooseLongestChaoticWord("input/chaotic_in1.txt", "temp.txt")
         assertFileContent("temp.txt", "Карминовый, Некрасивый")
