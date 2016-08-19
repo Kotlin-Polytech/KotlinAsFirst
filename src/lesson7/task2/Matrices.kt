@@ -5,7 +5,9 @@ import lesson7.task1.Matrix
 
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
 
-/*
+/**
+ * Сложная
+ *
  * Заполнить матрицу заданной высоты height и ширины width
  * натуральными числами от 1 до m*n по спирали,
  * начинающейся в левом верхнем углу и закрученной по часовой стрелке.
@@ -17,7 +19,9 @@ import lesson7.task1.Matrix
  */
 fun generateSpiral(height: Int, width: Int): Matrix<Int> = TODO()
 
-/*
+/**
+ * Сложная
+ *
  * Заполнить матрицу заданной высоты height и ширины width следующим образом.
  * Элементам, находящимся на периферии (по периметру матрицы), присвоить значение 1;
  * периметру оставшейся подматрицы – значение 2 и так далее до заполнения всей матрицы.
@@ -31,7 +35,9 @@ fun generateSpiral(height: Int, width: Int): Matrix<Int> = TODO()
  */
 fun generateRectangles(height: Int, width: Int): Matrix<Int> = TODO()
 
-/*
+/**
+ * Сложная
+ *
  * Заполнить матрицу заданной высоты height и ширины width диагональной змейкой:
  * в левый верхний угол 1, во вторую от угла диагональ 2 и 3 сверху вниз, в третью 4-6 сверху вниз и так далее.
  *
@@ -44,7 +50,9 @@ fun generateRectangles(height: Int, width: Int): Matrix<Int> = TODO()
  */
 fun generateSnake(height: Int, width: Int): Matrix<Int> = TODO()
 
-/*
+/**
+ * Средняя
+ *
  * Содержимое квадратной матрицы matrix (с произвольным содержимым) повернуть на 90 градусов по часовой стрелке.
  * Если height != width, бросить IllegalArgumentException.
  *
@@ -55,7 +63,9 @@ fun generateSnake(height: Int, width: Int): Matrix<Int> = TODO()
  */
 fun <E> rotate(matrix: Matrix<E>): Matrix<E> = TODO()
 
-/*
+/**
+ * Сложная
+ *
  * Проверить, является ли квадратная целочисленная матрица matrix латинским квадратом.
  * Латинским квадратом называется матрица размером n x n,
  * каждая строка и каждый столбец которой содержат все числа от 1 до n.
@@ -68,7 +78,9 @@ fun <E> rotate(matrix: Matrix<E>): Matrix<E> = TODO()
  */
 fun isLatinSquare(matrix: Matrix<Int>): Boolean = TODO()
 
-/*
+/**
+ * Средняя
+ *
  * В матрице matrix каждый элемент заменить суммой непосредственно примыкающих к нему
  * элементов по вертикали, горизонтали и диагоналям.
  *
@@ -85,7 +97,9 @@ fun isLatinSquare(matrix: Matrix<Int>): Boolean = TODO()
  */
 fun sumNeighbours(matrix: Matrix<Int>): Matrix<Int> = TODO()
 
-/*
+/**
+ * Средняя
+ *
  * Целочисленная матрица matrix состоит из "дырок" (на их месте стоит 0) и "кирпичей" (на их месте стоит 1).
  * Найти в этой матрице все ряды и колонки, целиком состоящие из "дырок".
  * Результат вернуть в виде Holes(rows = список дырчатых рядов, columns = список дырчатых колонок).
@@ -98,6 +112,9 @@ fun sumNeighbours(matrix: Matrix<Int>): Matrix<Int> = TODO()
  * 0 0 1 0
  * 0 0 0 0
  */
-data class Holes(val rows: List<Int>, val columns: List<Int>)
-
 fun findHoles(matrix: Matrix<Int>): Holes = TODO()
+
+/**
+ * Класс для описания местонахождения "дырок" в матрице
+ */
+data class Holes(val rows: List<Int>, val columns: List<Int>)

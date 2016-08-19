@@ -3,6 +3,7 @@ package lesson7.task2
 import lesson7.task1.Matrix
 import lesson7.task1.createMatrix
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 
 class Tests {
@@ -17,6 +18,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun generateSpiral() {
         assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateSpiral(1, 1))
         assertEquals(createMatrix(2, 2,
@@ -33,6 +35,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun generateRectangles() {
         assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateRectangles(1, 1))
         assertEquals(createMatrix(2, 2,
@@ -59,6 +62,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun generateSnake() {
         assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateSnake(1, 1))
         assertEquals(createMatrix(2, 2,
@@ -85,6 +89,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Normal")
     fun rotate() {
         val m = createMatrix(1, 1, listOf(listOf(("single"))))
         assertEquals(m, rotate(m))
@@ -97,6 +102,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun isLatinSquare() {
         assertTrue(isLatinSquare(createMatrix(1, 1, listOf(listOf(1)))))
         assertFalse(isLatinSquare(createMatrix(1, 1, listOf(listOf(2)))))
@@ -109,6 +115,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Normal")
     fun sumNeighbours() {
         assertEquals(createMatrix(1, 1, listOf(listOf(0))), sumNeighbours(createMatrix(1, 1, listOf(listOf(42)))))
         assertEquals(createMatrix(2, 2, listOf(listOf(9, 8), listOf(7, 6))),
@@ -120,6 +127,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Normal")
     fun findHoles() {
         assertEquals(Holes(listOf(), listOf()), findHoles(createMatrix(1, 1, listOf(listOf(1)))))
         assertEquals(Holes(listOf(0), listOf(0)), findHoles(createMatrix(1, 1, listOf(listOf(0)))))
