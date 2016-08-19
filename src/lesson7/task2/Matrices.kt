@@ -1,5 +1,7 @@
 @file:Suppress("UNUSED_PARAMETER")
-package lesson7.task1
+package lesson7.task2
+
+import lesson7.task1.Matrix
 
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
 
