@@ -57,6 +57,11 @@ fun invertPositives(list: MutableList<Int>) {
 }
 
 /*
+ * Пример: из имеющегося списка целых чисел, сформировать список их квадратов
+ */
+fun squares(list: List<Int>) = list.map { it * it }
+
+/*
  * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст
  */
 fun mean(list: List<Double>): Double = TODO()

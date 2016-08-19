@@ -33,6 +33,12 @@ class Tests {
     }
 
     @Test
+    fun squares() {
+        assertEquals(listOf(0), squares(listOf(0)))
+        assertEquals(listOf(1, 4, 9), squares(listOf(1, 2, -3)))
+    }
+
+    @Test
     fun mean() {
         assertEquals(0.0, mean(listOf()), 1e-5)
         assertEquals(1.0, mean(listOf(1.0)), 1e-5)
