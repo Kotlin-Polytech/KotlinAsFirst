@@ -1,10 +1,12 @@
 package lesson5.task1
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 
 class Tests {
     @Test
+    @Tag("Normal")
     fun dateStrToDigit() {
         assertEquals("15.07.2016", dateStrToDigit("15 июля 2016"))
         assertEquals("", dateStrToDigit("3 мартобря 1918"))
@@ -14,6 +16,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Normal")
     fun dateDigitToStr() {
         assertEquals("15 июля 2016", dateDigitToStr("15.07.2016"))
         assertEquals("", dateDigitToStr("01.02.20.19"))
@@ -23,6 +26,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun flattenPhoneNumber() {
         assertEquals("+79211234567", flattenPhoneNumber("+7 (921) 123-45-67"))
         assertEquals("123456798", flattenPhoneNumber("12 --  34- 5 -- 67 -98"))
@@ -32,6 +36,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun bestLongJump() {
         assertEquals(717, bestLongJump("706 x - 717 - 703"))
         assertEquals(-1, bestLongJump("x - - x -"))
@@ -41,6 +46,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun bestHighJump() {
         assertEquals(226, bestHighJump("226 о"))
         assertEquals(-1, bestHighJump("???"))
@@ -48,6 +54,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun plusMinus() {
         assertEquals(0, plusMinus("0"))
         assertEquals(4, plusMinus("2 + 2"))
@@ -56,6 +63,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun firstDuplicateIndex() {
         assertEquals(-1, firstDuplicateIndex("Привет"))
         assertEquals(9, firstDuplicateIndex("Он пошёл в в школу"))
@@ -64,6 +72,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Hard")
     fun mostExpensive() {
         assertEquals("", mostExpensive(""))
         assertEquals("Курица", mostExpensive("Хлеб 39.9; Молоко 62.5; Курица 184.0; Конфеты 89.9"))
@@ -71,6 +80,7 @@ class Tests {
     }
 
     @Test
+    @Tag("Impossible")
     fun computeDeviceCells() {
         assertEquals(listOf(0, 0, 0, 0, 0, 1, 1, 1, 1, 1), computeDeviceCells(10, "+>+>+>+>+"))
         assertEquals(listOf(-1, -1, -1, -1, -1, 0, 0, 0, 0, 0), computeDeviceCells(10, "<-<-<-<-<-"))
