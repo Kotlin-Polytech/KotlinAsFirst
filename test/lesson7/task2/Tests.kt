@@ -149,4 +149,21 @@ class Tests {
         assertEquals(createMatrix(3, 3, listOf(listOf(1, 3, 6), listOf(5, 12, 21), listOf(12, 27, 45))),
                 sumSubMatrix(createMatrix(3, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 9)))))
     }
+
+    @Test
+    @Tag("Hard")
+    fun canOpenLock() {
+        assertFalse(canOpenLock(
+                key = createMatrix(1, 1, listOf(listOf(1))),
+                lock = createMatrix(1, 1, listOf(listOf(1)))).first)
+        assertEquals(Triple(true, 0, 0), canOpenLock(
+                key = createMatrix(1, 1, listOf(listOf(1))),
+                lock = createMatrix(1, 1, listOf(listOf(0)))))
+        assertEquals(Triple(true, 0, 1), canOpenLock(
+                key = createMatrix(2, 2, listOf(listOf(1, 0), listOf(0, 1))),
+                lock = createMatrix(3, 3, listOf(listOf(1, 0, 1), listOf(0, 1, 0), listOf(1, 1, 1)))))
+        assertFalse(canOpenLock(
+                key = createMatrix(2, 2, listOf(listOf(1, 1), listOf(1, 0))),
+                lock = createMatrix(3, 3, listOf(listOf(1, 0, 1), listOf(0, 1, 0), listOf(1, 1, 1)))).first)
+    }
 }
