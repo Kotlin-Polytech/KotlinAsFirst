@@ -130,4 +130,45 @@ class Tests {
         assertEquals(listOf(square("h2"), square("g3"), square("f4"), square("e5"), square("d6"), square("c7")),
                 kingTrajectory(square("h2"), square("c7")))
     }
+
+    @Test
+    @Tag("Hard")
+    fun knightMoveNumber() {
+        assertEquals(0, knightMoveNumber(square("d3"), square("d3")))
+        assertEquals(1, knightMoveNumber(square("e4"), square("d6")))
+        assertEquals(2, knightMoveNumber(square("f5"), square("g6")))
+        assertEquals(3, knightMoveNumber(square("g6"), square("g3")))
+        assertEquals(3, knightMoveNumber(square("d4"), square("a8")))
+        assertEquals(4, knightMoveNumber(square("h7"), square("f5")))
+        assertEquals(4, knightMoveNumber(square("g7"), square("h8")))
+        assertEquals(6, knightMoveNumber(square("a8"), square("h1")))
+    }
+
+    private fun List<Square>.assertKnightTrajectory(start: Square, end: Square, length: Int) {
+        assertEquals(length + 1, size)
+        assertEquals(start, first())
+        assertEquals(end, last())
+        for (i in 0..size - 2) {
+            val previous = this[i]
+            val next = this[i + 1]
+            assertTrue(
+                    Math.abs(next.column - previous.column) == 2 && Math.abs(next.row - previous.row) == 1 ||
+                    Math.abs(next.column - previous.column) == 1 && Math.abs(next.row - previous.row) == 2
+            )
+        }
+    }
+
+    @Test
+    @Tag("Impossible")
+    fun knightTrajectory() {
+        assertEquals(listOf(square("d3")), knightTrajectory(square("d3"), square("d3")))
+        assertEquals(listOf(square("e4"), square("d6")), knightTrajectory(square("e4"), square("d6")))
+        knightTrajectory(square("f5"), square("g6")).assertKnightTrajectory(square("f5"), square("g6"), 2)
+        knightTrajectory(square("g6"), square("g3")).assertKnightTrajectory(square("g6"), square("g3"), 3)
+        knightTrajectory(square("d4"), square("a8")).assertKnightTrajectory(square("d4"), square("a8"), 3)
+        knightTrajectory(square("h7"), square("f5")).assertKnightTrajectory(square("h7"), square("f5"), 4)
+        knightTrajectory(square("g7"), square("h8")).assertKnightTrajectory(square("g7"), square("h8"), 4)
+        knightTrajectory(square("a1"), square("a8")).assertKnightTrajectory(square("a1"), square("a8"), 5)
+        knightTrajectory(square("a8"), square("h1")).assertKnightTrajectory(square("a8"), square("h1"), 6)
+    }
 }
