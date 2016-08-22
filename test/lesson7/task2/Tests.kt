@@ -137,4 +137,16 @@ class Tests {
                 findHoles(createMatrix(5, 4, listOf(listOf(1, 0, 1, 0), listOf(0, 0, 1, 0), listOf(1, 0, 0, 0),
                         listOf(0, 0, 1, 0), listOf(0, 0, 0, 0)))))
     }
+
+    @Test
+    @Tag("Normal")
+    fun sumSubMatrix() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(0))), sumSubMatrix(createMatrix(1, 1, listOf(listOf(0)))))
+        assertEquals(createMatrix(1, 5, listOf(listOf(1, 3, 6, 8, 9))),
+                sumSubMatrix(createMatrix(1, 5, listOf(listOf(1, 2, 3, 2, 1)))))
+        assertEquals(createMatrix(2, 2, listOf(listOf(2, 6), listOf(3, 10))),
+                sumSubMatrix(createMatrix(2, 2, listOf(listOf(2, 4), listOf(1, 3)))))
+        assertEquals(createMatrix(3, 3, listOf(listOf(1, 3, 6), listOf(5, 12, 21), listOf(12, 27, 45))),
+                sumSubMatrix(createMatrix(3, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 9)))))
+    }
 }
