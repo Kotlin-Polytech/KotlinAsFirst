@@ -42,7 +42,7 @@ fun square(notation: String): Square = TODO()
  *
  * xx.xxххх
  * xх.хxххх
- * ..K.....
+ * ..Л.....
  * xх.хxххх
  * xx.xxххх
  * xx.xxххх
@@ -68,10 +68,55 @@ fun rookMoveNumber(start: Square, end: Square): Int = TODO()
  *          (здесь возможен ещё один вариант)
  *          rookTrajectory(Square(3, 1), Square(6, 3)) = listOf(Square(3, 1), Square(3, 3), Square(6, 3))
  *          (здесь возможен единственный вариант)
- *          kingTrajectory(Square(3, 5), Square(8, 5)) = listOf(Square(3, 5), Square(8, 5))
+ *          rookTrajectory(Square(3, 5), Square(8, 5)) = listOf(Square(3, 5), Square(8, 5))
  * Если возможно несколько вариантов самой быстрой траектории, вернуть любой из них.
  */
 fun rookTrajectory(start: Square, end: Square): List<Square> = TODO()
+
+/**
+ * Простая
+ *
+ * Определить число ходов, за которое шахматный слон пройдёт из клетки start в клетку end.
+ * Шахматный слон может за один ход переместиться на любую другую клетку по диагонали.
+ * Ниже точками выделены возможные ходы слона, а крестиками -- невозможные:
+ *
+ * .xxx.ххх
+ * x.x.xххх
+ * xxСxxxxx
+ * x.x.xххх
+ * .xxx.ххх
+ * xxxxx.хх
+ * xxxxxх.х
+ * xxxxxхх.
+ *
+ * Если клетки start и end совпадают, вернуть 0.
+ * Если клетка end недостижима для слона, вернуть -1.
+ * Если любая из клеток некорректна, бросить IllegalArgumentException().
+ *
+ * Примеры: bishopMoveNumber(Square(3, 1), Square(6, 3)) = -1; bishopMoveNumber(Square(3, 1), Square(3, 7)) = 2.
+ * Слон может пройти через клетку (6, 4) к клетке (3, 7).
+ */
+fun bishopMoveNumber(start: Square, end: Square): Int = TODO()
+
+/**
+ * Сложная
+ *
+ * Вернуть список из клеток, по которым шахматный слон может быстрее всего попасть из клетки start в клетку end.
+ * Описание ходов слона см. предыдущую задачу.
+ *
+ * Если клетка end недостижима для слона, вернуть пустой список.
+ *
+ * Если клетка достижима:
+ * - список всегда включает в себя клетку start
+ * - клетка end включается, если она не совпадает со start.
+ * - между ними должны находиться промежуточные клетки, по порядку от start до end.
+ *
+ * Примеры: bishopTrajectory(Square(3, 3), Square(3, 3)) = listOf(Square(3, 3))
+ *          bishopTrajectory(Square(3, 1), Square(3, 7)) = listOf(Square(3, 1), Square(6, 4), Square(3, 7))
+ *          bishopTrajectory(Square(1, 3), Square(6, 8)) = listOf(Square(1, 3), Square(6, 8))
+ * Если возможно несколько вариантов самой быстрой траектории, вернуть любой из них.
+ */
+fun bishopTrajectory(start: Square, end: Square): List<Square> = TODO()
 
 /**
  * Средняя

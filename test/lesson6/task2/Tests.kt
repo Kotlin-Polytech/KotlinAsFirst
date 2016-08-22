@@ -68,6 +68,39 @@ class Tests {
     }
 
     @Test
+    @Tag("Easy")
+    fun bishopMoveNumber() {
+        assertEquals(-1, bishopMoveNumber(square("a1"), square("g8")))
+        assertEquals(-1, bishopMoveNumber(square("c1"), square("f3")))
+        assertEquals(0, bishopMoveNumber(square("d4"), square("d4")))
+        assertEquals(1, bishopMoveNumber(square("a3"), square("e7")))
+        assertEquals(2, bishopMoveNumber(square("c1"), square("c7")))
+    }
+
+    private fun List<Square>.assertBishopTrajectory(start: Square, end: Square, length: Int) {
+        assertEquals(length + 1, size)
+        assertEquals(start, first())
+        assertEquals(end, last())
+        for (i in 0..size - 2) {
+            val previous = this[i]
+            val next = this[i + 1]
+            assertTrue(Math.abs(next.row - previous.row) == Math.abs(next.column - previous.column))
+        }
+    }
+
+    @Test
+    @Tag("Hard")
+    fun bishopTrajectory() {
+        assertEquals(listOf<Square>(), bishopTrajectory(square("a1"), square("g8")))
+        assertEquals(listOf<Square>(), bishopTrajectory(square("c1"), square("f3")))
+        assertEquals(listOf(square("d4")), bishopTrajectory(square("d4"), square("d4")))
+        assertEquals(listOf(square("a3"), square("e7")), bishopTrajectory(square("a3"), square("e7")))
+        assertEquals(listOf(square("c1"), square("f4"), square("c7")), bishopTrajectory(square("c1"), square("c7")))
+        assertEquals(listOf(square("f1"), square("c4"), square("f7")), bishopTrajectory(square("f1"), square("f7")))
+        bishopTrajectory(square("d2"), square("e5")).assertBishopTrajectory(square("d2"), square("e5"), 2)
+    }
+
+    @Test
     @Tag("Normal")
     fun kingMoveNumber() {
         assertEquals(0, kingMoveNumber(square("e3"), square("e3")))
