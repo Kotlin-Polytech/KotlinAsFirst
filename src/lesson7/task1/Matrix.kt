@@ -1,34 +1,50 @@
 @file:Suppress("UNUSED_PARAMETER", "unused")
 package lesson7.task1
 
-/* Ячейка матрицы: row = ряд, column = колонка */
+/**
+ * Ячейка матрицы: row = ряд, column = колонка
+ */
 data class Cell(val row: Int, val column: Int)
 
-/* Интерфейс, описывающий возможности матрицы. E = тип элемента матрицы */
+/**
+ * Интерфейс, описывающий возможности матрицы. E = тип элемента матрицы
+ */
 interface Matrix<E> {
-    /* Высота */
+    /** Высота */
     val height: Int
 
-    /* Ширина */
+    /** Ширина */
     val width: Int
 
-    /* Доступ к ячейке. Методы могут вернуть null, если в ячейку ранее ничего не было записано */
+    /**
+     * Доступ к ячейке.
+     * Методы могут бросить исключение, если ячейка не существует или пуста
+     */
     operator fun get(row: Int, column: Int): E
     operator fun get(cell: Cell): E
 
-    /* Запись в ячейку */
+    /**
+     * Запись в ячейку.
+     * Методы могут бросить исключение, если ячейка не существует
+     */
     operator fun set(row: Int, column: Int, value: E)
     operator fun set(cell: Cell, value: E)
 }
 
-/*
+/**
+ * Простая
+ *
  * Метод для создания матрицы, должен вернуть РЕАЛИЗАЦИЮ Matrix<E>.
  * height = высота, width = ширина, e = чем заполнить элементы.
  * Бросить исключение IllegalArgumentException, если height или width <= 0.
  */
 fun <E> createMatrix(height: Int, width: Int, e: E): Matrix<E> = TODO()
 
-/* Реализация интерфейса "матрица" */
+/**
+ * Средняя сложность
+ *
+ * Реализация интерфейса "матрица"
+ */
 class MatrixImpl<E> : Matrix<E> {
     override val height: Int = TODO()
 
