@@ -193,4 +193,34 @@ class Tests {
             assert(false) { "IllegalStateException expected" }
         }
     }
+
+    private fun <T> Matrix<T>.copy(): Matrix<T> {
+        val result = lesson7.task1.createMatrix(height, width, this[0, 0])
+        for (row in 0..height - 1) {
+            for (column in 0..width - 1) {
+                result[row, column] = this[row, column]
+            }
+        }
+        return result
+    }
+
+    private fun Matrix<Int>.assertSolution() {
+        val copy = copy()
+        val moves = fifteenGameSolution(this)
+        val start1 = createMatrix(4, 4, listOf(listOf(1, 2, 3, 4), listOf(5, 6, 7, 8),
+                listOf(9, 10, 11, 12), listOf(13, 14, 15, 0)))
+        val start2 = createMatrix(4, 4, listOf(listOf(1, 2, 3, 4), listOf(5, 6, 7, 8),
+                listOf(9, 10, 11, 12), listOf(13, 15, 14, 0)))
+        val result = fifteenGameMoves(copy, moves)
+        assertTrue(result == start1 || result == start2) { "Result position is not a solution position: $result" }
+    }
+
+    @Test
+    @Tag("Impossible")
+    fun fifteenGameSolution() {
+        createMatrix(4, 4, listOf(listOf(1, 2, 3, 4), listOf(5, 6, 7, 8),
+                listOf(9, 10, 11, 12), listOf(13, 14, 15, 0))).assertSolution()
+        createMatrix(4, 4, listOf(listOf(5, 7, 9, 2), listOf(1, 12, 14, 15),
+                listOf(3, 4, 6, 8), listOf(10, 11, 13, 0))).assertSolution()
+    }
 }
