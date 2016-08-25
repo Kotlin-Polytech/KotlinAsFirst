@@ -2,6 +2,22 @@
 package lesson5.task1
 
 /**
+ * Пример
+ *
+ * Время представлено строкой вида "11:34:45", содержащей часы, минуты и секунды, разделённые двоеточием.
+ * Разобрать эту строку и рассчитать количество секунд, прошедшее с начала дня.
+ */
+fun timeStrToSeconds(str: String): Int {
+    val parts = str.split(":")
+    var result = 0
+    for (part in parts) {
+        val number = part.toInt()
+        result = result * 60 + number
+    }
+    return result
+}
+
+/**
  * Средняя
  *
  * Дата представлена строкой вида "15 июля 2016".
