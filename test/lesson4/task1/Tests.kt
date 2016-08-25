@@ -1,6 +1,6 @@
 package lesson4.task1
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 
@@ -48,6 +48,21 @@ class Tests {
     fun squares() {
         assertEquals(listOf(0), squares(listOf(0)))
         assertEquals(listOf(1, 4, 9), squares(listOf(1, 2, -3)))
+    }
+
+    @Test
+    @Tag("Example")
+    fun isAnagram() {
+        assertFalse(isAnagram("Барабан"))
+        assertTrue(isAnagram("А роза упала на лапу Азора"))
+        assertTrue(isAnagram("Шалаш"))
+    }
+
+    @Test
+    @Tag("Example")
+    fun buildSumExample() {
+        assertEquals("42 = 42", buildSumExample(listOf(42)))
+        assertEquals("3 + 6 + 5 + 4 + 9 = 27", buildSumExample(listOf(3, 6, 5, 4, 9)))
     }
 
     @Test
