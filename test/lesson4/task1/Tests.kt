@@ -51,6 +51,13 @@ class Tests {
     }
 
     @Test
+    @Tag("Example")
+    fun buildSumExample() {
+        assertEquals("42 = 42", buildSumExample(listOf(42)))
+        assertEquals("3 + 6 + 5 + 4 + 9 = 27", buildSumExample(listOf(3, 6, 5, 4, 9)))
+    }
+
+    @Test
     @Tag("Easy")
     fun abs() {
         assertEquals(0.0, abs(listOf()), 1e-5)

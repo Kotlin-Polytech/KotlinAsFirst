@@ -73,6 +73,14 @@ fun invertPositives(list: MutableList<Int>) {
 fun squares(list: List<Int>) = list.map { it * it }
 
 /**
+ * Пример
+ *
+ * По имеющемуся списку целых чисел, например [3, 6, 5, 4, 9], построить строку с примером их суммирования:
+ * 3 + 6 + 5 + 4 + 9 = 27 в данном случае.
+ */
+fun buildSumExample(list: List<Int>) = list.joinToString(separator = " + ", postfix = " = ${list.sum()}")
+
+/**
  * Простая
  *
  * Найти модуль заданного вектора, представленного в виде списка v,
