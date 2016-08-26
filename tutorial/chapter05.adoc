@@ -49,3 +49,5 @@ fun timeStrToSeconds(str: String): Int {
 
 == Регулярные выражения
 
+== Форматные строки
+
