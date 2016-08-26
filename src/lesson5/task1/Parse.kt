@@ -121,7 +121,7 @@ fun mostExpensive(description: String): String = TODO()
 fun fromRoman(roman: String): Int = TODO()
 
 /**
- * Очень сложная
+ * Сложная
  *
  * Имеется специальное устройство, представляющее собой
  * конвейер из cells ячеек (нумеруются от 0 до cells - 1 слева направо) и датчик, двигающийся над этим конвейером.
