@@ -6,6 +6,14 @@ import org.junit.jupiter.api.Test
 
 class Tests {
     @Test
+    @Tag("Example")
+    fun timeStrToSeconds() {
+        assertEquals(36000, timeStrToSeconds("10:00:00"))
+        assertEquals(41685, timeStrToSeconds("11:34:45"))
+        assertEquals(86399, timeStrToSeconds("23:59:59"))
+    }
+
+    @Test
     @Tag("Normal")
     fun dateStrToDigit() {
         assertEquals("15.07.2016", dateStrToDigit("15 июля 2016"))
@@ -36,7 +44,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("Normal")
     fun bestLongJump() {
         assertEquals(717, bestLongJump("706 % - 717 - 703"))
         assertEquals(-1, bestLongJump("% - - % -"))
@@ -87,11 +95,11 @@ class Tests {
         assertEquals(1978, fromRoman("MCMLXXVIII"))
         assertEquals(694, fromRoman("DCXCIV"))
         assertEquals(49, fromRoman("XLIX"))
-
+        assertEquals(-1, fromRoman("Z"))
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("Hard")
     fun computeDeviceCells() {
         assertEquals(listOf(0, 0, 0, 0, 0, 1, 1, 1, 1, 1), computeDeviceCells(10, "+>+>+>+>+"))
         assertEquals(listOf(-1, -1, -1, -1, -1, 0, 0, 0, 0, 0), computeDeviceCells(10, "<-<-<-<-<-"))

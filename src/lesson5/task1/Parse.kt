@@ -2,6 +2,22 @@
 package lesson5.task1
 
 /**
+ * Пример
+ *
+ * Время представлено строкой вида "11:34:45", содержащей часы, минуты и секунды, разделённые двоеточием.
+ * Разобрать эту строку и рассчитать количество секунд, прошедшее с начала дня.
+ */
+fun timeStrToSeconds(str: String): Int {
+    val parts = str.split(":")
+    var result = 0
+    for (part in parts) {
+        val number = part.toInt()
+        result = result * 60 + number
+    }
+    return result
+}
+
+/**
  * Средняя
  *
  * Дата представлена строкой вида "15 июля 2016".
@@ -35,7 +51,7 @@ fun dateDigitToStr(digital: String): String = TODO()
 fun flattenPhoneNumber(phone: String): String = TODO()
 
 /**
- * Сложная
+ * Средняя
  *
  * Результаты спортсмена на соревнованиях в прыжках в длину представлены строкой вида
  * "706 - % 717 % 703".
@@ -101,11 +117,13 @@ fun mostExpensive(description: String): String = TODO()
  * Римские цифры: 1 = I, 4 = IV, 5 = V, 9 = IX, 10 = X, 40 = XL, 50 = L,
  * 90 = XC, 100 = C, 400 = CD, 500 = D, 900 = CM, 1000 = M.
  * Например: XXIII = 23, XLIV = 44, C = 100
+ *
+ * Вернуть -1, если roman не является корректным римским числом
  */
 fun fromRoman(roman: String): Int = TODO()
 
 /**
- * Очень сложная
+ * Сложная
  *
  * Имеется специальное устройство, представляющее собой
  * конвейер из cells ячеек (нумеруются от 0 до cells - 1 слева направо) и датчик, двигающийся над этим конвейером.
