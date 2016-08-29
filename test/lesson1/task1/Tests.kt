@@ -7,10 +7,33 @@ import org.junit.jupiter.api.Test
 class Tests {
     @Test
     @Tag("Example")
+    fun sqr() {
+        assertEquals(0.0, sqr(0.0), 1e-5)
+        assertEquals(4.0, sqr(2.0), 1e-5)
+        assertEquals(9.0, sqr(-3.0), 1e-5)
+    }
+
+    @Test
+    @Tag("Example")
     fun discriminant() {
         assertEquals(0.0, discriminant(0.0, 0.0, 0.0), 1e-5)
         assertEquals(0.0, discriminant(1.0, -2.0, 1.0), 1e-5)
         assertEquals(1.0, discriminant(1.0, 3.0, 2.0), 1e-5)
+    }
+
+    @Test
+    @Tag("Example")
+    fun sqRoot() {
+        assertEquals(1.0, sqRoot(1.0, -2.0, 1.0), 1e-5)
+        assertEquals(-3.0, sqRoot(1.0, 6.0, 9.0), 1e-5)
+    }
+
+    @Test
+    @Tag("Example")
+    fun quadraticRootProduct() {
+        assertEquals(1.0, quadraticRootProduct(1.0, -2.0, 1.0), 1e-5)
+        assertEquals(9.0, quadraticRootProduct(1.0, 6.0, 9.0), 1e-5)
+        assertEquals(2.0, quadraticRootProduct(1.0, 3.0, 2.0), 1e-5)
     }
 
     @Test

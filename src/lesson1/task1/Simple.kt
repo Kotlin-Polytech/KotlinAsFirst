@@ -1,12 +1,49 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson1.task1
 
+import java.lang.Math.*
+
 /**
  * Пример
  *
- * Вычисление определителя квадратного уравнения
+ * Вычисление квадрата вещественного числа
  */
-fun discriminant(a: Double, b: Double, c: Double) = b * b - 4 * a * c
+fun sqr(x: Double) = x * x
+
+/**
+ * Пример
+ *
+ * Вычисление дискриминанта квадратного уравнения
+ */
+fun discriminant(a: Double, b: Double, c: Double) = sqr(b) - 4 * a * c
+
+/**
+ * Пример
+ *
+ * Поиск одного из корней квадратного уравнения
+ */
+fun sqRoot(a: Double, b: Double, c: Double) = (-b + sqrt(discriminant(a, b, c))) / (2 * a)
+
+/**
+ * Пример
+ *
+ * Поиск произведения корней квадратного уравнения
+ */
+fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
+    val sd = sqrt(discriminant(a, b, c))
+    val x1 = (-b + sd) / (2 * a)
+    val x2 = (-b - sd) / (2 * a)
+    return x1 * x2 // Результат
+}
+
+/**
+ * Пример главной функции
+ */
+fun main(args: Array<String>) {
+    // Решаем x^2 - 3*x + 2 = 0
+    val x1x2 = quadraticRootProduct(1.0, -3.0, 2.0)
+    println("Root product: $x1x2")
+}
 
 /**
  * Тривиальная
