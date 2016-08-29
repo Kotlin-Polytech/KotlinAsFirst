@@ -157,11 +157,11 @@ class Tests {
 
     @Test
     @Tag("Normal")
-    fun isAnagram() {
-        assertTrue(isAnagram(3))
-        assertFalse(isAnagram(3653))
-        assertTrue(isAnagram(15751))
-        assertTrue(isAnagram(24688642))
+    fun isPalindrome() {
+        assertTrue(isPalindrome(3))
+        assertFalse(isPalindrome(3653))
+        assertTrue(isPalindrome(15751))
+        assertTrue(isPalindrome(24688642))
     }
 
     @Test
