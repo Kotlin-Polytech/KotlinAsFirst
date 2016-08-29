@@ -32,4 +32,29 @@ class Tests {
         assertFileContent("temp.txt", "Карминовый, Некрасивый")
         File("temp.txt").delete()
     }
+
+    @Test
+    @Tag("Hard")
+    fun markdownToHtmlSimple() {
+        TODO()
+    }
+
+    @Test
+    @Tag("Hard")
+    fun markdownToHtmlLists() {
+        TODO()
+    }
+
+    @Test
+    @Tag("Impossible")
+    fun markdownToHtml() {
+        TODO()
+    }
+
+    @Test
+    @Tag("Impossible")
+    fun printDivisionProcess() {
+        TODO()
+    }
+
 }
