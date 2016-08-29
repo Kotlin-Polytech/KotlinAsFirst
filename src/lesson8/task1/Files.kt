@@ -80,23 +80,23 @@ fun chooseLongestChaoticWord(inputName: String, outputName: String) {
  * Все остальные части исходного текста должны остаться неизменными с точностью до наборов пробелов и переносов строк.
  *
  * Пример входного файла:
- * Lorem ipsum *dolor sit amet*, consectetur **adipiscing** elit.
- * Vestibulum lobortis, ~~Est vehicula rutrum *suscipit*~~, ipsum ~~lib~~ero *placerat **tortor***,
- *
- * Suspendisse ~~et elit in enim tempus iaculis~~.
+Lorem ipsum *dolor sit amet*, consectetur **adipiscing** elit.
+Vestibulum lobortis, ~~Est vehicula rutrum *suscipit*~~, ipsum ~~lib~~ero *placerat **tortor***,
+
+Suspendisse ~~et elit in enim tempus iaculis~~.
  *
  * Соответствующий выходной файл:
- * <html>
- *     <body>
- *         <p>
- *             Lorem ipsum <i>dolor sit amet</i>, consectetur <b>adipiscing</b> elit.
- *             Vestibulum lobortis. <s>Est vehicula rutrum <i>suscipit</i></s>, ipsum <s>lib</s>ero <i>placerat <b>tortor</b></i>.
- *         </p>
- *         <p>
- *             Suspendisse <s>et elit in enim tempus iaculis</s>.
- *         </p>
- *     </body>
- * </html>
+<html>
+    <body>
+        <p>
+            Lorem ipsum <i>dolor sit amet</i>, consectetur <b>adipiscing</b> elit.
+            Vestibulum lobortis. <s>Est vehicula rutrum <i>suscipit</i></s>, ipsum <s>lib</s>ero <i>placerat <b>tortor</b></i>.
+        </p>
+        <p>
+            Suspendisse <s>et elit in enim tempus iaculis</s>.
+        </p>
+    </body>
+</html>
  *
  * (Отступы и переносы строк в примере добавлены для наглядности, при решении задачи их реализовывать не обязательно)
  */
@@ -158,42 +158,42 @@ fun markdownToHtmlSimple(inputName: String, outputName: String) {
  *
  * Соответствующий выходной файл:
 ///////////////////////////////начало файла/////////////////////////////////////////////////////////////////////////////
- * <html>
- *   <body>
- *     <ul>
- *       <li>
- *         Утка по-пекински
- *         <ul>
- *           <li>Утка</li>
- *           <li>Соус</li>
- *         </ul>
- *       </li>
- *       <li>
- *         Салат Оливье
- *         <ol>
- *           <li>Мясо
- *             <ul>
- *               <li>
- *                   Или колбаса
- *               </li>
- *             </ul>
- *           </li>
- *           <li>Майонез</li>
- *           <li>Картофель</li>
- *           <li>Что-то там ещё</li>
- *         </ol>
- *       </li>
- *       <li>Помидоры</li>
- *       <li>
- *         Яблоки
- *         <ol>
- *           <li>Красные</li>
- *           <li>Зелёные</li>
- *         </ol>
- *       </li>
- *     </ul>
- *   </body>
- * </html>
+<html>
+  <body>
+    <ul>
+      <li>
+        Утка по-пекински
+        <ul>
+          <li>Утка</li>
+          <li>Соус</li>
+        </ul>
+      </li>
+      <li>
+        Салат Оливье
+        <ol>
+          <li>Мясо
+            <ul>
+              <li>
+                  Или колбаса
+              </li>
+            </ul>
+          </li>
+          <li>Майонез</li>
+          <li>Картофель</li>
+          <li>Что-то там ещё</li>
+        </ol>
+      </li>
+      <li>Помидоры</li>
+      <li>
+        Яблоки
+        <ol>
+          <li>Красные</li>
+          <li>Зелёные</li>
+        </ol>
+      </li>
+    </ul>
+  </body>
+</html>
 ///////////////////////////////конец файла//////////////////////////////////////////////////////////////////////////////
  * (Отступы и переносы строк в примере добавлены для наглядности, при решении задачи их реализовывать не обязательно)
  */
@@ -213,22 +213,44 @@ fun markdownToHtml(inputName: String, outputName: String) {
 }
 
 /**
+ * Средняя
+ *
+ * Вывести в выходной файл процесс умножения столбиком числа lhv (> 0) на число rhv (> 0).
+ *
+ * Пример (для lhv == 19935, rhv == 111):
+   19935
+*    111
+--------
+   19935
++ 19935
++19935
+--------
+ 2212785
+ * Используемые пробелы, отступы и дефисы должны в точности соответствовать примеру.
+ *
+ */
+fun printMultiplicationProcess(lhv: Int, rhv: Int, outputName: String) {
+    TODO()
+}
+
+
+/**
  * Очень сложная
  *
  * Вывести в выходной файл процесс деления столбиком числа lhv (> 0) на число rhv (> 0).
  *
- * Пример (для lhv == 199735, rhv == 22):
- *  19935 | 22
- * -198     906
- * ----
- *    13
- *    -0
- *    --
- *    135
- *   -132
- *   ----
- *      3
- *
+ * Пример (для lhv == 19935, rhv == 22):
+  19935 | 22
+ -198     906
+ ----
+    13
+    -0
+    --
+    135
+   -132
+   ----
+      3
+
  * Используемые пробелы, отступы и дефисы должны в точности соответствовать примеру.
  *
  */
