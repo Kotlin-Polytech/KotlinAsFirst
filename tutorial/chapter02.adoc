@@ -136,10 +136,11 @@ fun gradeNotation(grade: Int): String = when (grade) {
 [source,kotlin]
 ----
 fun pointInsideCircle(x: Double, y: Double, x0: Double, y0: Double, r: Double) =
-        (x - x0) * (x - x0) + (y - y0) * (y - y0) <= r * r // true / false
+        sqr(x - x0) + sqr(y - y0) <= sqr(r)
 ----
 
-Тип результата данной функции -- **Boolean**.
+Здесь вновь используется функция **sqr** из урока 1 для вычисления квадратов чисел.
+Тип результата функции **pointInsideCircle** -- **Boolean**.
 При написании тестовых функций для неё удобно использовать готовые функции **assertTrue** и **assertFalse**, например:
 
 [source,kotlin]
