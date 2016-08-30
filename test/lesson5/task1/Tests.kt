@@ -14,6 +14,14 @@ class Tests {
     }
 
     @Test
+    @Tag("Example")
+    fun timeSecondsToStr() {
+        assertEquals("10:00:00", timeSecondsToStr(36000))
+        assertEquals("11:34:45", timeSecondsToStr(41685))
+        assertEquals("23:59:59", timeSecondsToStr(86399))
+    }
+
+    @Test
     @Tag("Normal")
     fun dateStrToDigit() {
         assertEquals("15.07.2016", dateStrToDigit("15 июля 2016"))
