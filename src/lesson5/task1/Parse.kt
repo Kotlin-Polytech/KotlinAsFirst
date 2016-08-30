@@ -33,6 +33,26 @@ fun timeSecondsToStr(seconds: Int): String {
 }
 
 /**
+ * Пример: консольный ввод
+ */
+fun main(args: Array<String>) {
+    println("Введите время в формате ЧЧ:ММ:СС")
+    val line = readLine()
+    if (line != null) {
+        val seconds = timeStrToSeconds(line)
+        if (seconds == -1) {
+            println("Введённая строка $line не соответствует формату ЧЧ:ММ:СС")
+        }
+        else {
+            println("Прошло секунд с начала суток: $seconds")
+        }
+    }
+    else {
+        println("Достигнут <конец файла> в процессе чтения строки. Программа прервана")
+    }
+}
+
+/**
  * Средняя
  *
  * Дата представлена строкой вида "15 июля 2016".
