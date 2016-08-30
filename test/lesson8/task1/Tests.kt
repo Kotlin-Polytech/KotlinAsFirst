@@ -55,7 +55,7 @@ class Tests {
             """.trimIndent().replace("\\s+", " ").replace("[\\t\\n]", " ").trim()
         assertEquals(expected, result)
 
-        File("temp.txt").delete()
+        File("temp.html").delete()
     }
 
     @Test
@@ -105,13 +105,67 @@ class Tests {
             """.trimIndent().replace("\\s+", " ").replace("[\\t\\n]", " ").trim()
         assertEquals(expected, result)
 
-        File("temp.txt").delete()
+        File("temp.html").delete()
     }
 
     @Test
     @Tag("Impossible")
     fun markdownToHtml() {
-        TODO()
+        markdownToHtml("input/markdown.md", "temp.html")
+
+        val result = File("temp.html").readText().replace("\\s+", " ").replace("[\\t\\n]", " ").trim()
+        val expected =
+            """
+            <html>
+                <body>
+                    <p>
+                        <ul>
+                            <li>Lorem <b>ipsum</b> dolor sit amet, consectetur adipiscing elit.</li>
+                            <li>Nullam<i>ac</i><b>lectus</b> nec lectus congue sollicitudin vel vel eros.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <s>
+                            Phasellus accumsan enim eget tellus gravida, quis lacinia urna facilisis.
+                            Donec tristique risus sed nisl congue pulvinar.
+                            Ut vel odio convallis, pulvinar arcu semper, interdum lectus.
+                        <s>
+                    </p>
+                    <p>
+                        Mauris dictum nisl vitae odio sagittis, id aliquam nisl posuere.
+                        Duis vel sapien dignissim, fermentum ante at, porttitor turpis.
+                    </p>
+                    <p>
+                        <ol>
+                            <li>Duis vestibulum libero nec suscipit lobortis.</li>
+                            <li><i>Ut</i> sollicitudin lectus ac dapibus semper.
+                                <ul>
+                                    <li>Lists</li>
+                                    <li>Irony</li>
+                                    <li>Markdown</li>
+                                    <li>HTML</li>
+                                </ul>
+                            </li>
+                            <li>Vivamus aliquam enim quis lectus dapibus pellentesque vel nec nulla.</li>
+                        </ol>
+                    </p>
+                    <p>
+                        <ol>
+                            <li>Proin convallis arcu ac ante placerat, ac lobortis tellus eleifend.</li>
+                            <li>Nunc sit amet nulla facilisis orci congue vestibulum.</li>
+                            <li>Aliquam suscipit velit dictum cursus accumsan.</li>
+                        </ol>
+                    </p>
+                    <p>
+                        Fusce lacinia orci vel massa porta, at egestas lorem tempor.
+                        Fusce blandit sem sed urna facilisis efficitur.
+                        Nulla pulvinar lacus eget nunc aliquam, vitae hendrerit tortor condimentum.
+                    </p>
+                </body>
+            </html>
+            """.trimIndent().replace("\\s+", " ").replace("[\\t\\n]", " ").trim()
+        assertEquals(expected, result)
+        File("temp.html").delete()
     }
 
     @Test
