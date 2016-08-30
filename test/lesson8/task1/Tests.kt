@@ -14,7 +14,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("Normal")
     fun transliterate() {
         transliterate(
                 "input/trans_in1.txt",
@@ -26,7 +26,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("Normal")
     fun chooseLongestChaoticWord() {
         chooseLongestChaoticWord("input/chaotic_in1.txt", "temp.txt")
         assertFileContent("temp.txt", "Карминовый, Некрасивый")
