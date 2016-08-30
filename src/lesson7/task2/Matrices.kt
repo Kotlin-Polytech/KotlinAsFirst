@@ -2,8 +2,31 @@
 package lesson7.task2
 
 import lesson7.task1.Matrix
+import lesson7.task1.createMatrix
 
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
+
+/**
+ * Пример
+ *
+ * Транспонировать заданную матрицу matrix.
+ * При транспонировании строки матрицы становятся столбцами и наоборот:
+ *
+ * 1 2 3      1 4 6 3
+ * 4 5 6  ==> 2 5 5 2
+ * 6 5 4      3 6 4 1
+ * 3 2 1
+ */
+fun <E> transpose(matrix: Matrix<E>): Matrix<E> {
+    if (matrix.width < 1 || matrix.height < 1) return matrix
+    val result = createMatrix(height = matrix.width, width = matrix.height, e = matrix[0, 0])
+    for (i in 0..matrix.width - 1) {
+        for (j in 0..matrix.height - 1) {
+            result[i, j] = matrix[j, i]
+        }
+    }
+    return result
+}
 
 /**
  * Сложная

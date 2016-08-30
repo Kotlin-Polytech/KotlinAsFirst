@@ -1,16 +1,46 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson6.task1
 
+import lesson1.task1.sqr
+
 /**
  * Точка на плоскости
  */
 data class Point(val x: Double, val y: Double) {
     /**
-     * Тривиальная
+     * Пример
      *
      * Рассчитать (по известной формуле) расстояние между двумя точками
      */
-    fun distance(other: Point): Double = TODO()
+    fun distance(other: Point): Double = Math.sqrt(sqr(x - other.x) + sqr(y - other.y))
+}
+
+/**
+ * Треугольник, заданный тремя точками
+ */
+data class Triangle(val a: Point, val b: Point, val c: Point) {
+    /**
+     * Пример: полупериметр
+     */
+    fun halfPerimeter() = (a.distance(b) + b.distance(c) + c.distance(a)) / 2.0
+
+    /**
+     * Пример: площадь
+     */
+    fun area(): Double {
+        val p = halfPerimeter()
+        return Math.sqrt(p * (p - a.distance(b)) * (p - b.distance(c)) * (p - c.distance(a)))
+    }
+
+    /**
+     * Пример: треугольник содержит точку
+     */
+    fun contains(p: Point): Boolean {
+        val abp = Triangle(a, b, p)
+        val bcp = Triangle(b, c, p)
+        val cap = Triangle(c, a, p)
+        return abp.area() + bcp.area() + cap.area() <= area()
+    }
 }
 
 /**

@@ -18,6 +18,14 @@ class Tests {
     }
 
     @Test
+    @Tag("Example")
+    fun transpose() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(1))), transpose(createMatrix(1, 1, listOf(listOf(1)))))
+        assertEquals(createMatrix(3, 4, listOf(listOf(1, 4, 6, 3), listOf(2, 5, 5, 2), listOf(3, 6, 4, 1))),
+                transpose(createMatrix(4, 3, listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(6, 5, 4), listOf(3, 2, 1)))))
+    }
+
+    @Test
     @Tag("Hard")
     fun generateSpiral() {
         assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateSpiral(1, 1))

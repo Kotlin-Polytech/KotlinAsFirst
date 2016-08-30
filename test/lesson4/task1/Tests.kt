@@ -52,10 +52,10 @@ class Tests {
 
     @Test
     @Tag("Example")
-    fun isAnagram() {
-        assertFalse(isAnagram("Барабан"))
-        assertTrue(isAnagram("А роза упала на лапу Азора"))
-        assertTrue(isAnagram("Шалаш"))
+    fun isPalindrome() {
+        assertFalse(isPalindrome("Барабан"))
+        assertTrue(isPalindrome("А роза упала на лапу Азора"))
+        assertTrue(isPalindrome("Шалаш"))
     }
 
     @Test
