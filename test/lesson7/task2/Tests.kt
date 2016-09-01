@@ -168,6 +168,15 @@ class Tests {
     }
 
     @Test
+    @Tag("Normal")
+    fun unaryMinus() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(3))), -createMatrix(1, 1, listOf(listOf(-3))))
+        assertEquals(createMatrix(2, 2, listOf(listOf(-1, -2), listOf(-3, -4))),
+                -createMatrix(2, 2, listOf(listOf(1, 2), listOf(3, 4))))
+        assertEquals(createMatrix(1, 3, listOf(listOf(-4, -6, -8))), -createMatrix(1, 3, listOf(listOf(4, 6, 8))))
+    }
+
+    @Test
     @Tag("Hard")
     fun canOpenLock() {
         assertFalse(canOpenLock(

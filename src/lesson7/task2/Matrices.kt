@@ -3,7 +3,6 @@ package lesson7.task2
 
 import lesson7.task1.Matrix
 import lesson7.task1.createMatrix
-import java.lang.IllegalArgumentException
 
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
 
@@ -199,6 +198,14 @@ fun sumSubMatrix(matrix: Matrix<Int>): Matrix<Int> = TODO()
  * Если наложение невозможно, то первый элемент тройки "нет" и сдвиги могут быть любыми.
  */
 fun canOpenLock(key: Matrix<Int>, lock: Matrix<Int>): Triple<Boolean, Int, Int> = TODO()
+
+/**
+ * Средняя
+ *
+ * Инвертировать заданную матрицу.
+ * При инвертировании знак каждого элемента матрицы следует заменить на обратный
+ */
+operator fun Matrix<Int>.unaryMinus(): Matrix<Int> = TODO(this.toString())
 
 /**
  * Сложная
