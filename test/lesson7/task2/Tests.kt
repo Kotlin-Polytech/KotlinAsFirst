@@ -177,6 +177,13 @@ class Tests {
     }
 
     @Test
+    @Tag("Normal")
+    fun times() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(2))),
+                createMatrix(1, 1, listOf(listOf(1))) * createMatrix(1, 1, listOf(listOf(2))))
+    }
+
+    @Test
     @Tag("Hard")
     fun canOpenLock() {
         assertFalse(canOpenLock(
