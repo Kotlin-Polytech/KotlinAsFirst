@@ -1,17 +1,20 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson6.task2
 
+import java.util.*
+
 /**
  * Клетка шахматной доски. Шахматная доска квадратная и имеет 8 х 8 клеток.
- * Поэтому, обе координаты клетки (горизонталь row, вертикаль column) могут находиться в пределах от 1 до 8
+ * Поэтому, обе координаты клетки (горизонталь row, вертикаль column) могут находиться в пределах от 1 до 8.
+ * Горизонтали нумеруются снизу вверх, вертикали слева направо.
  */
 data class Square(val column: Int, val row: Int) {
     /**
-     * Тривиальная
+     * Пример
      *
      * Возвращает true, если клетка находится в пределах доски
      */
-    fun inside(): Boolean = TODO()
+    fun inside(): Boolean = column in 1..8 && row in 1..8
 
     /**
      * Простая
@@ -21,6 +24,61 @@ data class Square(val column: Int, val row: Int) {
      * Для клетки не в пределах доски вернуть пустую строку
      */
     fun notation(): String = TODO()
+}
+
+/**
+ * Пример
+ *
+ * В списке occupied даны занятые клетки доски,
+ * в start -- исходная позиция "человечка", в finish -- клетка, куда человечек должен пройти.
+ * start и finish не должны присутствовать в occupied.
+ * Человечек умеет ходит в соседнюю клетку по горизонтали или вертикали (но не диагонали),
+ * и не может вставать в занятые клетки.
+ *
+ * Вернуть кратчайшую траекторию движения человечка в виде списка клеток, по которым он проходит.
+ * Список всегда начинается с клетки start и заканчивается клеткой end,
+ * между ними должны быть промежуточные клетки движения человечка.
+ * Если start == end, список должен состоять из одной клетки start.
+ * Если решение задания невозможно, список должен быть пустым.
+ *
+ * .XXX.XXf
+ * .X.X....
+ * .X.X.XXX
+ * ...X...X => (1,1),(1,2),(1,3),(1,4),(1,5),(2,5),(3,5),(3,4),(4,4),(4,3),
+ * .X..XX.X    (5,3),(6,3),(7,3),(7,4),(7,5),(6,5),(5,5),(5,6),(5,7),(6,7),
+ * .XX....X    (7,7),(8,7),(8,8)
+ * .XXXXXX.
+ * s.......
+ */
+fun humanTrajectory(occupied: List<Square>, start: Square, end: Square): List<Square> {
+    if (!start.inside() || start in occupied) return listOf()
+    if (!end.inside() || end in occupied) return listOf()
+    val waveQueue = ArrayDeque<Square>()
+    val previous = hashMapOf<Square, Square>()
+    waveQueue.add(start)
+    while (waveQueue.isNotEmpty()) {
+        val next = waveQueue.poll()
+        if (next == end) {
+            val result = arrayListOf(end)
+            var current = previous[next]
+            while (current != null) {
+                result.add(current)
+                current = previous[current]
+            }
+            result.reverse()
+            return result
+        }
+        fun queueAdd(square: Square) {
+            if (!square.inside() || square in previous.keys || square in occupied || square == start) return
+            waveQueue.add(square)
+            previous[square] = next
+        }
+        queueAdd(Square(next.column, next.row - 1))
+        queueAdd(Square(next.column, next.row + 1))
+        queueAdd(Square(next.column - 1, next.row))
+        queueAdd(Square(next.column + 1, next.row))
+    }
+    return listOf()
 }
 
 /**

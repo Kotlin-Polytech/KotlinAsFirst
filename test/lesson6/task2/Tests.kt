@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 
 class Tests {
     @Test
-    @Tag("Trivial")
+    @Tag("Example")
     fun inside() {
         assertTrue(Square(1, 1).inside())
         assertTrue(Square(8, 8).inside())
@@ -17,6 +17,26 @@ class Tests {
         assertFalse(Square(6, 9).inside())
         assertFalse(Square(100, 1).inside())
         assertFalse(Square(7, -100).inside())
+    }
+
+    @Test
+    @Tag("Example")
+    fun humanTrajectory() {
+        assertEquals(listOf(
+                Square(1, 1), Square(1, 2), Square(1, 3), Square(1, 4), Square(1, 5),
+                Square(2, 5), Square(3, 5), Square(3, 4), Square(4, 4), Square(4, 3),
+                Square(5, 3), Square(6, 3), Square(7, 3), Square(7, 4), Square(7, 5),
+                Square(6, 5), Square(5, 5), Square(5, 6), Square(5, 7), Square(6, 7),
+                Square(7, 7), Square(8, 7), Square(8, 8)
+        ), humanTrajectory(listOf(
+                Square(2, 2), Square(3, 2), Square(4, 2), Square(5, 2), Square(6, 2),
+                Square(7, 2), Square(2, 3), Square(3, 3), Square(8, 3), Square(2, 4),
+                Square(5, 4), Square(6, 4), Square(8, 4), Square(4, 5), Square(8, 5),
+                Square(2, 6), Square(4, 6), Square(6, 6), Square(7, 6), Square(8, 6),
+                Square(2, 7), Square(4, 7), Square(2, 8), Square(3, 8), Square(4, 8),
+                Square(6, 8), Square(7, 8)
+        ), Square(1, 1), Square(8, 8)))
+        assertEquals(listOf(Square(4, 4)), humanTrajectory(listOf(), Square(4, 4), Square(4, 4)))
     }
 
     @Test
