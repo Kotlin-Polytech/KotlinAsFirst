@@ -3,6 +3,7 @@ package lesson7.task2
 
 import lesson7.task1.Matrix
 import lesson7.task1.createMatrix
+import java.lang.IllegalArgumentException
 
 // Все задачи в этом файле требуют наличия реализации интерфейса "Матрица" в Matrix.kt
 
@@ -23,6 +24,25 @@ fun <E> transpose(matrix: Matrix<E>): Matrix<E> {
     for (i in 0..matrix.width - 1) {
         for (j in 0..matrix.height - 1) {
             result[i, j] = matrix[j, i]
+        }
+    }
+    return result
+}
+
+/**
+ * Пример
+ *
+ * Сложить две заданные матрицы друг с другом.
+ * Складывать можно только матрицы совпадающего размера -- в противном случае бросить IllegalArgumentException.
+ * При сложении попарно складываются соответствующие элементы матриц
+ */
+operator fun Matrix<Int>.plus(other: Matrix<Int>): Matrix<Int> {
+    if (width != other.width || height != other.height) throw IllegalArgumentException()
+    if (width < 1 || height < 1) return this
+    val result = createMatrix(height, width, this[0, 0])
+    for (i in 0..height - 1) {
+        for (j in 0..width - 1) {
+            result[i, j] = this[i, j] + other[i, j]
         }
     }
     return result

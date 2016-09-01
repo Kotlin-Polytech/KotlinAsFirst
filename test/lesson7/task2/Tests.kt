@@ -26,6 +26,15 @@ class Tests {
     }
 
     @Test
+    @Tag("Example")
+    fun plus() {
+        assertEquals(createMatrix(1, 1, listOf(listOf(3))),
+                createMatrix(1, 1, listOf(listOf(1))) + createMatrix(1, 1, listOf(listOf(2))))
+        assertEquals(createMatrix(2, 2, listOf(listOf(2, 5), listOf(8, 11))),
+                createMatrix(2, 2, listOf(listOf(1, 2), listOf(3, 4))) + createMatrix(2, 2, listOf(listOf(1, 3), listOf(5, 7))))
+    }
+
+    @Test
     @Tag("Hard")
     fun generateSpiral() {
         assertEquals(createMatrix(1, 1, listOf(listOf(1))), generateSpiral(1, 1))
