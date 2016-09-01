@@ -37,6 +37,9 @@ class Tests {
                 Square(6, 8), Square(7, 8)
         ), Square(1, 1), Square(8, 8)))
         assertEquals(listOf(Square(4, 4)), humanTrajectory(listOf(), Square(4, 4), Square(4, 4)))
+        assertEquals(listOf<Square>(), humanTrajectory(
+                listOf(Square(1, 2), Square(2, 2), Square(3, 2), Square(3, 1)), Square(1, 1), Square(5, 5)))
+        assertEquals(7, humanTrajectory(listOf(Square(4, 5)), Square(3, 3), Square(6, 6)).size)
     }
 
     @Test
