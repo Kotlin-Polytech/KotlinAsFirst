@@ -1,6 +1,49 @@
 @file:Suppress("UNUSED_PARAMETER")
 package lesson8.task1
 
+import java.io.File
+
+/**
+ * Пример
+ *
+ * Во входном файле с именем inputName содержится некоторый текст.
+ * Вывести его в выходной файл с именем outputName, выровняв по левому краю,
+ * чтобы длина каждой строки не превосходила lineLength.
+ * Слова в слишком длинных строках следует переносить на следующую строку.
+ * Слишком короткие строки следует дополнять словами из следующей строки.
+ * Пустые строки во входном файле обозначают конец абзаца,
+ * их следует сохранить и в выходном файле
+ */
+fun alignFile(inputName: String, lineLength: Int, outputName: String) {
+    val outputStream = File(outputName).bufferedWriter()
+    var currentLineLength = 0
+    for (line in File(inputName).readLines()) {
+        if (line.isEmpty()) {
+            outputStream.newLine()
+            if (currentLineLength > 0) {
+                outputStream.newLine()
+                currentLineLength = 0
+            }
+            continue
+        }
+        for (word in line.split(" ")) {
+            if (currentLineLength > 0) {
+                if (word.length + currentLineLength >= lineLength) {
+                    outputStream.newLine()
+                    currentLineLength = 0
+                }
+                else {
+                    outputStream.write(" ")
+                    currentLineLength++
+                }
+            }
+            outputStream.write(word)
+            currentLineLength += word.length
+        }
+    }
+    outputStream.close()
+}
+
 /**
  * Средняя
  *
