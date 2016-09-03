@@ -200,7 +200,7 @@ fun sumSubMatrix(matrix: Matrix<Int>): Matrix<Int> = TODO()
 fun canOpenLock(key: Matrix<Int>, lock: Matrix<Int>): Triple<Boolean, Int, Int> = TODO()
 
 /**
- * Средняя
+ * Простая
  *
  * Инвертировать заданную матрицу.
  * При инвертировании знак каждого элемента матрицы следует заменить на обратный
@@ -208,7 +208,7 @@ fun canOpenLock(key: Matrix<Int>, lock: Matrix<Int>): Triple<Boolean, Int, Int> 
 operator fun Matrix<Int>.unaryMinus(): Matrix<Int> = TODO(this.toString())
 
 /**
- * Сложная
+ * Средняя
  *
  * Перемножить две заданные матрицы друг с другом.
  * Матрицы можно умножать, только если ширина первой матрицы совпадает с высотой второй матрицы.

@@ -168,7 +168,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("Easy")
     fun unaryMinus() {
         assertEquals(createMatrix(1, 1, listOf(listOf(3))), -createMatrix(1, 1, listOf(listOf(-3))))
         assertEquals(createMatrix(2, 2, listOf(listOf(-1, -2), listOf(-3, -4))),
@@ -181,6 +181,11 @@ class Tests {
     fun times() {
         assertEquals(createMatrix(1, 1, listOf(listOf(2))),
                 createMatrix(1, 1, listOf(listOf(1))) * createMatrix(1, 1, listOf(listOf(2))))
+        assertEquals(createMatrix(1, 1, listOf(listOf(19))),
+                createMatrix(1, 3, listOf(listOf(2, 3, 5))) * createMatrix(3, 1, listOf(listOf(4), listOf(2), listOf(1))))
+        assertEquals(createMatrix(2, 2, listOf(listOf(23, -2), listOf(8, -18))),
+                createMatrix(2, 3, listOf(listOf(3, 5, 1), listOf(2, -2, 4))) *
+                        createMatrix(3, 2, listOf(listOf(4, 1), listOf(2, 0), listOf(1, -5))))
     }
 
     @Test
