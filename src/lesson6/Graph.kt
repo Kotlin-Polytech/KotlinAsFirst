@@ -47,3 +47,22 @@ fun bfs(start: Vertex, finish: Vertex): Int {
     }
     return -1
 }
+
+/**
+ * Пример
+ *
+ * По двум вершинам рассчитать расстояние между ними = число дуг на самом коротком пути между ними.
+ * Вернуть -1, если пути между вершинами не существует.
+ *
+ * Используется поиск в глубину
+ */
+fun dfs(start: Vertex, finish: Vertex): Int = dfs(start, finish, setOf()) ?: -1
+
+fun dfs(start: Vertex, finish: Vertex, visited: Set<Vertex>): Int? =
+        if (start == finish) 0
+        else {
+            val min = start.neighbors.filter { it !in visited }
+                    .map { dfs(it, finish, visited + start) }
+                    .filterNotNull().min()
+            if (min == null) null else min + 1
+        }
