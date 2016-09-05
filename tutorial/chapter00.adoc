@@ -73,7 +73,7 @@ Community Edition является полностью бесплатной,
 
 * Зарегистрироваться на https://github.com/ (в случае, если у Вас еще нет GitHub аккаунта). Далее выбранное Вами имя будет обозначаться как <USERNAME>.
 * Создать специальную копию репозитория проекта -- _форк_. Для этого достаточно зайти на страницу проекта https://github.com/Kotlin-Polytech/KotlinAsFirst2016 и нажать кнопку `Fork` в правом верхнем углу страницы. После этого Ваша персональная копия проекта станет доступна по адресу https://github.com/<USERNAME>/KotlinAsFirst2016, и всю работу по решению различных задач Вы должны выполнять именно с Вашей копией.
-* Для загрузки проекта в Intellij IDEA следует выполнить команду `File` -> `New` -> `Project from Version Control` -> `GitHub`, в появившемся окне ввести Git Repository URL https://github.com/<USERNAME>/KotlinAsFirst2016 и место на компьютере, куда будет скачан проект (Parent Directory).
+* Для загрузки проекта в Intellij IDEA следует выполнить команду `Check out from Version Control` -> `GitHub` из окна `Welcome to Intellij IDEA` (или `File` -> `New` -> `Project from Version Control` -> `GitHub` из окна проекта), в появившемся окне ввести Git Repository URL https://github.com/<USERNAME>/KotlinAsFirst2016 и место на компьютере, куда будет скачан проект (Parent Directory).
 
 Проект содержит задачи, разбитые на восемь уроков (lesson).
 Тексты задач доступны через окно Project в Intellij IDEA (открывается комбинацией клавиш Alt+1).
