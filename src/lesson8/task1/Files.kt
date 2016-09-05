@@ -45,7 +45,7 @@ fun alignFile(inputName: String, lineLength: Int, outputName: String) {
 }
 
 /**
- * Простая
+ * Средняя
  *
  * Во входном файле с именем inputName содержится некоторый текст.
  * На вход подаётся список строк substrings.
@@ -59,7 +59,7 @@ fun countSubstrings(inputName: String, substrings: List<String>): Map<String, In
 
 
 /**
- * Простая
+ * Средняя
  *
  * В русском языке, как правило, после букв Ж, Ч, Ш, Щ пишется И, А, У, а не Ы, Я, Ю.
  * Во входном файле с именем inputName содержится некоторый текст на русском языке.
@@ -76,7 +76,7 @@ fun sibilants(inputName: String, outputName: String) {
 }
 
 /**
- * Простая
+ * Средняя
  *
  * Во входном файле с именем inputName содержится некоторый текст (в том числе, и на русском языке).
  * Вывести его в выходной файл с именем outputName, выровняв по центру
@@ -97,7 +97,7 @@ fun centerFile(inputName: String, outputName: String) {
 }
 
 /**
- * Средняя
+ * Сложная
  *
  * Во входном файле с именем inputName содержится некоторый текст (в том числе, и на русском языке).
  * Вывести его в выходной файл с именем outputName, выровняв по левому и правому краю относительно
@@ -368,6 +368,14 @@ fun markdownToHtml(inputName: String, outputName: String) {
 --------
  2212785
  * Используемые пробелы, отступы и дефисы должны в точности соответствовать примеру.
+ * Нули в множителе обрабатывать так же, как и остальные цифры:
+  235
+*  10
+-----
+    0
++235
+-----
+ 2350
  *
  */
 fun printMultiplicationProcess(lhv: Int, rhv: Int, outputName: String) {
