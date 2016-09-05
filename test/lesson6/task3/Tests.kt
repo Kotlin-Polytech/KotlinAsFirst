@@ -1,4 +1,4 @@
-package lesson6
+package lesson6.task3
 
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
