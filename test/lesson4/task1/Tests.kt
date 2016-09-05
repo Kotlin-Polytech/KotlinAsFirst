@@ -86,10 +86,10 @@ class Tests {
     @Test
     @Tag("Normal")
     fun center() {
-        assertEquals(listOf<Double>(), center(arrayListOf()))
-        assertEquals(listOf(0.0), center(arrayListOf(3.14)))
-        assertEquals(listOf(1.0, -1.0, 0.0), center(arrayListOf(3.0, 1.0, 2.0)))
-        assertEquals(listOf(-3.0, -1.0, 4.0, 5.0, -5.0), center(arrayListOf(0.0, 2.0, 7.0, 8.0, -2.0)))
+        assertEquals(listOf<Double>(), center(mutableListOf()))
+        assertEquals(listOf(0.0), center(mutableListOf(3.14)))
+        assertEquals(listOf(1.0, -1.0, 0.0), center(mutableListOf(3.0, 1.0, 2.0)))
+        assertEquals(listOf(-3.0, -1.0, 4.0, 5.0, -5.0), center(mutableListOf(0.0, 2.0, 7.0, 8.0, -2.0)))
     }
 
     @Test
@@ -113,9 +113,9 @@ class Tests {
     @Test
     @Tag("Normal")
     fun accumulate() {
-        assertEquals(listOf<Double>(), accumulate(arrayListOf()))
-        assertEquals(listOf(3.14), accumulate(arrayListOf(3.14)))
-        assertEquals(listOf(1.0, 3.0, 6.0, 10.0), accumulate(arrayListOf(1.0, 2.0, 3.0, 4.0)))
+        assertEquals(listOf<Double>(), accumulate(mutableListOf()))
+        assertEquals(listOf(3.14), accumulate(mutableListOf(3.14)))
+        assertEquals(listOf(1.0, 3.0, 6.0, 10.0), accumulate(mutableListOf(1.0, 2.0, 3.0, 4.0)))
     }
 
     @Test
