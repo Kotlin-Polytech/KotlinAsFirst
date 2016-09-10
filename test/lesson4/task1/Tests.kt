@@ -9,8 +9,8 @@ class Tests {
     @Tag("Example")
     fun sqRoots() {
         assertEquals(listOf<Double>(), sqRoots(-1.0))
-        assertEquals(listOf(0.0), sqRoots(0.0))
-        assertEquals(listOf(-5.0, 5.0), sqRoots(25.0))
+        assertArrayEquals(listOf(0.0).toDoubleArray(), sqRoots(0.0).toDoubleArray(), 1e-5)
+        assertArrayEquals(listOf(-5.0, 5.0).toDoubleArray(), sqRoots(25.0).toDoubleArray(), 1e-5)
     }
 
     @Test
@@ -18,11 +18,20 @@ class Tests {
     fun biRoots() {
         assertEquals(listOf<Double>(), biRoots(0.0, 0.0, 1.0))
         assertEquals(listOf<Double>(), biRoots(0.0, 1.0, 2.0))
-        assertEquals(listOf(-2.0, 2.0), biRoots(0.0, 1.0, -4.0))
+        assertArrayEquals(
+                listOf(-2.0, 2.0).toDoubleArray(),
+                biRoots(0.0, 1.0, -4.0).toDoubleArray(),
+                1e-5)
         assertEquals(listOf<Double>(), biRoots(1.0, -2.0, 4.0))
-        assertEquals(listOf(-1.0, 1.0), biRoots(1.0, -2.0, 1.0))
+        assertArrayEquals(
+                listOf(-1.0, 1.0).toDoubleArray(),
+                biRoots(1.0, -2.0, 1.0).toDoubleArray(),
+                1e-5)
         assertEquals(listOf<Double>(), biRoots(1.0, 3.0, 2.0))
-        assertEquals(listOf(-2.0, -1.0, 1.0, 2.0), biRoots(1.0, -5.0, 4.0).sorted())
+        assertArrayEquals(
+                listOf(-2.0, -1.0, 1.0, 2.0).toDoubleArray(),
+                biRoots(1.0, -5.0, 4.0).sorted().toDoubleArray(),
+                1e-5)
     }
 
     @Test
