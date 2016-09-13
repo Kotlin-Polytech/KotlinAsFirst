@@ -108,6 +108,8 @@ class Tests {
                 listOf(-3.0, -1.0, 4.0, 5.0, -5.0).toDoubleArray(),
                 center(mutableListOf(0.0, 2.0, 7.0, 8.0, -2.0)).toDoubleArray(),
                 1e-5)
+        val toMutate = mutableListOf(-3.0, -1.0, 4.0, 5.0, -5.0)
+        assertTrue(toMutate === center(toMutate)) { "You should mutate input list, not create a copy" }
     }
 
     @Test
@@ -140,6 +142,8 @@ class Tests {
                 listOf(1.0, 3.0, 6.0, 10.0).toDoubleArray(),
                 accumulate(arrayListOf(1.0, 2.0, 3.0, 4.0)).toDoubleArray(),
                 1e-5)
+        val toMutate = mutableListOf(-3.0, -1.0, 4.0, 5.0, -5.0)
+        assertTrue(toMutate === accumulate(toMutate)) { "You should mutate input list, not create a copy" }
     }
 
     @Test
