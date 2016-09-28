@@ -275,3 +275,67 @@ fun connect(first: String, second: String) = connect(this[first], this[second])
 **this** здесь -- ключевое слово (этот), обозначающее граф-получатель, то есть тот граф,
 для которого вызвана функция `connect`.
 `this[first]` вместе использует индексацию на графе.
+
+== Поиск на графе
+
+Алгоритмы поиска на графе могут иметь различную цель.
+Мы рассмотрим их на примере определения расстояния между вершинами.
+Расстояние между вершинами `A` и `B` на графе определяется как минимальное число рёбер,
+по которым нужно пройти для того, чтобы попасть из `A` в `B` (см. пример TODO).
+
+Для определения расстояния нужно в том или ином порядке рассмотреть все цепочки рёбер,
+начинающихся в вершине `A`, найти те из них, которые заканчиваются в `B` и определить самую короткую цепочку.
+Есть два варианта рассмотрения таких цепочек -- поиск в глубину и поиск в ширину.
+
+При поиске в глубину мы от каждой вершины переходим к одной из её соседок, формируя всё более и более длинную цепочку.
+Цепочка прерывается, когда мы попадём в вершину `B`, или когда мы попадём в одну из уже имеющихся в цепочке вершин,
+образуя кольцо. После этого мы возвращаемся по цепочке на шаг назад и начинаем пробовать другие цепочки -- и так далее.
+
+Поиск в ширину идёт "волнами".
+Вначале мы перебираем всех соседок вершины `A`, запоминая расстояние до каждой из них (1).
+Затем мы перебираем всех соседок соседок вершины `A`, имея уже расстояние в 2 ребра.
+Затем происходит перебор вершин на расстоянии 3 и так далее, пока мы не уткнёмся в вершину `B`.
+
+=== Реализация поиска в глубину
+
+DFS = Depth-First Search.
+
+[source,kotlin]
+----
+fun dfs(start: String, finish: String): Int = dfs(this[start], this[finish], setOf()) ?: -1
+
+private fun dfs(start: Vertex, finish: Vertex, visited: Set<Vertex>): Int? =
+        if (start == finish) 0
+        else {
+            val min = start.neighbors.filter { it !in visited }
+                    .map { dfs(it, finish, visited + start) }
+                    .filterNotNull().min()
+            if (min == null) null else min + 1
+        }
+----
+
+=== Реализация поиска в ширину
+
+BFS = Breadth-First Search.
+
+[source,kotlin]
+----
+fun bfs(start: String, finish: String) = bfs(this[start], this[finish])
+
+private fun bfs(start: Vertex, finish: Vertex): Int {
+    val queue = ArrayDeque<Vertex>()
+    queue.add(start)
+    val visited = mutableMapOf(start to 0)
+    while (queue.isNotEmpty()) {
+        val next = queue.poll()
+        val distance = visited[next]!!
+        if (next == finish) return distance
+        for (neighbor in next.neighbors) {
+            if (neighbor in visited) continue
+            visited.put(neighbor, distance + 1)
+            queue.add(neighbor)
+        }
+    }
+    return -1
+}
+----
