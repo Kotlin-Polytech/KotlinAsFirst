@@ -218,7 +218,9 @@ class MatrixImpl<E> : Matrix<E> {
 
 [source,kotlin]
 ----
-class MatrixImpl<E>(override val height: Int, override val width: Int/*, something other?*/) : Matrix<E> {
+class MatrixImpl<E>(override val height: Int, override val width: Int
+                    //, something other?
+                    ) : Matrix<E> {
     // Attention: no more height / width here
     
     override fun get(row: Int, column: Int): E  = TODO()
@@ -229,11 +231,66 @@ class MatrixImpl<E>(override val height: Int, override val width: Int/*, somethi
 Обратите внимание, что определения свойств высоты и ширины исчезли из тело класса и переехали в конструктор --
 при этом сохранив необходимый модификатор `override`.
 
+Что касается набора элементов, то здесь актуальна вторая часть вопроса -- как представить этот набор?
+Для этого нужен некоторый контейнер, ссылка на который хранилась бы в ещё одном свойстве матрицы.
+Лучше, чтобы это свойство было закрытым,
+чтобы возможные действия с матрицей ограничивались лишь свойствами и функциями из интерфейса `Matrix<E>`.
+Существует несколько вариантов такого контейнера. Рассмотрим некоторые из них.
+
+=== Сквозной список ===
+
+В матрице высотой `height` и шириной `width` всего имеется `height * width` элементов. 
+Они все могут быть сохранены внутри мутирующего списка 
+(мутирующего -- потому что в матрицу включены возможности изменения элементов).
+Определение этого списка могло бы выглядеть так:
+
+[source,kotlin]
+----
+class MatrixImpl<E>(override val height: Int, override val width: Int
+                    //, something other?
+                    ) : Matrix<E> {
+    private val list = mutableListOf<E>() // content???
+    
+    override fun get(row: Int, column: Int): E  = TODO()
+    // Other functions...
+}
+----
+
+Чтобы после создания матрицы из списка можно было читать элементы, его необходимо чем-то заполнить.
+Напомним, что функция-создатель матрицы была ранее определена так:
+
+[source,kotlin]
+----
+fun <E> createMatrix(height: Int, width: Int, e: E): Matrix<E> = TODO()
+----
+
+Её третьим параметром был элемент для заполнения матрицы, и его нам необходимо передать в конструктор:
+
+[source,kotlin]
+----
+class MatrixImpl<E>(override val height: Int, override val width: Int, e: E) : Matrix<E> {
+    private val list = mutableListOf<E>()
+    
+    init {
+        for (i in ...) {
+            list.add(e)
+        }
+    }
+    
+    override fun get(row: Int, column: Int): E  = TODO()
+    // Other functions...
+}
+----
+
+Таким образом, наш список будет заполнен `height * width` элементами `e` сразу после создания матрицы.
+В дальнейшем, в функциях `get` и `set` мы должны будем прочесть или перезаписать элемент списка `list`
+по определённому индексу, зависящему от `row` и `column`.
+
 == Упражнения
 
 Откройте файл `srс/lesson7/task1/Matrix.kt` в проекте `KotlinAsFirst`.
 Он содержит определение интерфейса `Matrix<E>`, функции-создателя `createMatrix` и реализации `MatrixImpl<E>`.
-Выберите один из рассмотренных выше вариантов реализаций матрицы и напишите определения ВСЕХ функций
+Выберите один из рассмотренных выше вариантов реализаций матрицы (или придумайте свой) и напишите определения ВСЕХ функций
 в классе `MatrixImpl`, после чего напишите определение функции-создателя.
 Протестируйте свою реализацию, используя тесты из `test/lesson7/task1/Tests.kt`.
 
