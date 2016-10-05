@@ -238,8 +238,9 @@ fun main(args: Array<String>) {
 ----
 data class Segment(val begin: Point, val end: Point) {
 
-    override fun equals(o: Any?) =
-            o is Segment && ((begin == o.begin && end == o.end) || (begin == o.end && end == o.begin))
+    override fun equals(other: Any?) =
+            other is Segment && ((begin == other.begin && end == other.end) ||
+                                 (begin == other.end && end == other.begin))
 }
 ----
 
