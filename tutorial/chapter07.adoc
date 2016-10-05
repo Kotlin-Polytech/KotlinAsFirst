@@ -81,6 +81,8 @@ fun invertMatrix(matrix: Matrix<Int>) {
 Это довольно частый случай, но, вообще говоря, в нём могут присутствовать и свойства со значениями, и функции с реализациями.
 Например:
 
+[source,kotlin]
+----
 interface Matrix<E> {
     val height: Int
     val width: Int
