@@ -376,9 +376,18 @@ class MatrixImpl<E> : Matrix<E> {
     // ... Other functions ...
 
     override fun equals(other: Any?) = 
-            other is MatrixImpl<*> && height == other.height && width == other.width // && elements comparison
+            other is MatrixImpl<*> &&
+            height == other.height && 
+            width == other.width // && elements comparison
 }
 ----
+
+Обратите внимание на то, как проверяется тип `other`: `is MatrixImpl<*>`, то есть `E` заменяется на `*`.
+Такая запись означает "MatrixImpl с элементами произвольного типа" и 
+связана с особенностями реализации настраиваемых типов в JVM.
+Во время выполнения программы **можно** определить принадлежность к основному типу `MatrixImpl`,
+но **нельзя** сделать то же самое для какого-либо его конкретного варианта, например `MatrixImpl<Int>`.
+Попытка написать `other is MatrixImpl<E>` приведёт к предупреждению компиляции Unchecked Cast.
 
 При реализации `equals` в своём классе следует помнить о пяти различных свойствах, которым эта реализация должна удовлетворять:
 
@@ -403,7 +412,9 @@ class MatrixImpl<E> : Matrix<E> {
     // ... Other functions ...
 
     override fun equals(other: Any?) = 
-            other is MatrixImpl<*> && height == other.height && width == other.width // && elements comparison
+            other is MatrixImpl<*> && 
+            height == other.height && 
+            width == other.width // && elements comparison
             
     override fun hashCode(): Int {
         var result = 5
