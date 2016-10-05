@@ -306,6 +306,22 @@ data class Triangle(val a: Point, val b: Point, val c: Point) {
 `S(ABC) = S(ABP) + S(BCP) + S(CAP)`.
 Это становится очевидно, если нарисовать все эти треугольники.
 
+== Готовые классы с данными
+
+В Котлине имеются два готовых класса с данными, которые могут применяться в программе,
+если потребовалось объединить в один тип два или три связанных значения других типов.
+Это класс `Pair<A, B>` (пара) со свойствами `first` и `second` типов `A` и `B` и
+класс `Triple<A, B, C>` (тройка) со свойствами `first`, `second` и `third` типов `A`, `B` и `C`.
+Например:
+
+[source,kotlin]
+----
+fun combinePairs(pair1: Pair<String, Int>, pair2: Pair<Int, String>): Triple<String, Int, String> =
+        Triple(pair1.first, pair1.second + pair2.first, pair2.second)
+----
+
+Такая функция комбинирует две пары в строку, складывая второй элемент первой пары с первым элементом второй.
+
 == Упражнения
 
 Откройте файл `srс/lesson6/task1/Geometry.kt` в проекте `KotlinAsFirst`.
