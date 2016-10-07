@@ -14,7 +14,7 @@ image::https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/6n-graf.svg/333
 Например, для схемы дорог ей могут быть названия городов, соответствующих вершинам графа,
 или длины дорог, соответствующих рёбрам графа. Пример:
 
-image::https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/MapGermanyGraph.svg/461px-MapGermanyGraph.svg.png[]
+image::http://ermak.cs.nstu.ru/cprog/html/Images/086-01.gif[]
 
 Структуры данных, __подобные__ графам, могут возникать в различных задач поиска оптимального решения.
 Например, в `lesson6/task2` имеется задача о поиске наиболее короткой траектории движения шахматного коня.
