@@ -5,7 +5,7 @@
 и __рёбер__ (другое название ребра -- __дуга__), которые эти вершины соединяют.
 Пример графа приведён на рисунке.
 
-image::https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)#/media/File:6n-graf.svg[]
+image::https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/6n-graf.svg/333px-6n-graf.svg.png[]
 
 Чаще всего графы применяются для описания различных схем, например, 
 соединения узлов в компьютерной сети или городов и других пунктов на карте местности.
