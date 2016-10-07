@@ -291,6 +291,8 @@ fun connect(first: String, second: String) = connect(this[first], this[second])
 
 image::https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Shortest_path.svg/512px-Shortest_path.svg.png[]
 
+Здесь расстояние между вершинами A и B равно 1, между A и E -- 2, между C и F -- 3.
+
 Для определения расстояния нужно в том или ином порядке рассмотреть все цепочки рёбер,
 начинающихся в вершине `A`, найти те из них, которые заканчиваются в `B` и определить самую короткую цепочку.
 Есть два варианта рассмотрения таких цепочек -- поиск в глубину и поиск в ширину.
