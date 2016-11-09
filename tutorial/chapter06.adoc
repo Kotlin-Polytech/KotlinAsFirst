@@ -307,7 +307,7 @@ data class Triangle(val a: Point, val b: Point, val c: Point) {
 `S(ABC) = S(ABP) + S(BCP) + S(CAP)`.
 Это становится очевидно, если нарисовать все эти треугольники.
 
-== Готовые классы с данными
+== Готовые классы с данными, деструктурирование
 
 В Котлине имеются два готовых класса с данными, которые могут применяться в программе,
 если потребовалось объединить в один тип два или три связанных значения других типов.
@@ -321,7 +321,58 @@ fun combinePairs(pair1: Pair<String, Int>, pair2: Pair<Int, String>): Triple<Str
         Triple(pair1.first, pair1.second + pair2.first, pair2.second)
 ----
 
-Такая функция комбинирует две пары в строку, складывая второй элемент первой пары с первым элементом второй.
+Такая функция комбинирует две пары в тройку, складывая второй элемент первой пары с первым элементом второй.
+
+Пара и тройка полезны также в тех случаях, когда хочется получить от функции несколько результатов. Например:
+
+[source,kotlin]
+----
+fun timeStrToSeconds(str: String ): Triple<Int, Int, Int> {
+    val parts = str.split(":").map { it.toInt() }
+    return Triple(parts[0], parts[1], parts[2])
+}
+----
+
+Данная функция преобразует строку вида "11:34:45" в тройку (часы, минуты, секунды).
+Она может быть использована так:
+
+[source,kotlin]
+----
+fun useTimeStrToSeconds() {
+    val triple = timeStrToSeconds("11:34:45")
+    val hh = triple.first
+    val mm = triple.second
+    val ss = triple.third
+    // или: деструктурирование
+    val (hours, minutes, seconds) = timeStrToSeconds("11:34:45")
+}
+----
+
+__Деструктурирование__ в последней строчке функции позволяет выполнить разбиение тройки на отдельные компоненты,
+создавая три переменных `hours`, `minutes`, `seconds`.
+Та же операция доступна для любого другого класса с данными (data class).
+Другой пример его использования:
+
+[source,kotlin]
+----
+fun test() {
+    val list = listOf("abc", "def")
+    for ((index, value) in list.withIndex()) {
+        println("#$index: $value")
+    }
+}
+----
+
+Функция `list.withIndex()` возвращает список объектов типа `IndexedValue`,
+содержащих индекс элемента списка и его значение.
+Класс `IndexedValue` определён следующим образом:
+
+[source,kotlin]
+----
+data class IndexedValue<T>(index: Int, value: T)
+----
+
+Такая функция `test` выведет на консоль строчки `#0: abc` и `#1: def`.
 
 == Упражнения
 
