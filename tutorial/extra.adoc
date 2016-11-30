@@ -153,3 +153,127 @@ fun Expression.calculate(x: Int): Int = when (this) {
 === 2. Синтаксический анализ
 
 Этот этап иногда называется просто "разбор".
+Для его проведения, нам потребуется более подробное формальное описание выражения с учётом приоритетов операций.
+Скажем, операции в скобках всегда выполняются в первую очередь,
+умножение и деление -- во вторую, сложение и вычитание -- в третью.
+На основе этого описания можно составить __формальную грамматику__ выражения, выглядящую примерно так:
+
+* ВЫРАЖЕНИЕ ::= СЛАГАЕМОЕ +|- СЛАГАЕМОЕ +|- ... +|- СЛАГАЕМОЕ
+* СЛАГАЕМОЕ ::= МНОЖИТЕЛЬ *|/ МНОЖИТЕЛЬ *|/ ... *|/ МНОЖИТЕЛЬ
+* МНОЖИТЕЛЬ ::= (ВЫРАЖЕНИЕ) | -ВЫРАЖЕНИЕ | КОНСТАНТА | ПЕРЕМЕННАЯ
+
+То есть, выражение может включать в себя любое (в том числе одно) число слагаемых,
+разделённых операторами "плюс" и "минус".
+Слагаемое, в свою очередь, может включать в себя любое (в том числе одно) число множителей,
+разделённых операторами "умножить" и "разделить".
+Наконец, множитель -- это выражение в скобках, или с минусом впереди, или константа, или переменная.
+
+Знак `::=` в этом определении приближённо означает "состоит из", то есть, мы описываем одно понятие через другие.
+А сама по себе формальная грамматика позволяет определить, является ли заданная строка выражением,
+а также разобраться, из каких частей это выражение состоит. Например:
+
+[kotlin,source]
+----
+class Parser(val groups: List<String>) {
+    var pos = 0
+
+    fun parse(): Expression {
+        val result = parseExpression()
+        if (pos < groups.size) {
+            throw IllegalStateException("Unexpected expression remainder: ${groups.subList(pos, groups.size)}")
+        }
+        return result
+    }
+
+    private fun parseExpression(): Expression {
+        var left = parseItem()
+        while (pos < groups.size) {
+            val op = operationMap[groups[pos]]
+            when (op) {
+                PLUS, MINUS -> {
+                    pos++
+                    val right = parseItem()
+                    left = Expression.Binary(left, op, right)
+                }
+                else -> return left
+            }
+        }
+        return left
+    }
+
+    val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
+
+    // ...
+}
+----
+
+Данный класс `Parser` (разборщик, или просто парсер) имеет свойство `groups` -- список атомарных частей строки,
+полученный при лексическом анализе, а также изменяемое свойство `pos` --
+оно указывает, до какой из частей мы дошли в процессе разбора.
+Его функция `parse` осуществляет разбор всего выражения и проверяет,
+что была разобрана вся найденная строка и не осталось ничего в хвосте.
+
+Функция `parseExpression` соответствует определению выражения из грамматики.
+В соответствии с определением она разбирает первое слагаемое `parseItem`,
+затем, если найден плюс или минус -- второе, и составляет из них `Expression.Binary`.
+При наличии следующего плюса или минуса процедура повторяется.
+Для преобразования обозначения операции в объект перечисления `Operation` используется отображение `operationMap`.
+
+Результат функции `parseExpression`, как и других функций разбора -- `Expression`,
+то есть любая из описанных нами выше разновидностей алгебраического типа `Expression`.
+
+Аналогичным образом устроена функция `parseItem`.
+Она соответствует определению слагаемого, для разбора множителей использует `parseFactor`,
+и в качестве разделителей ищет знаки умножения и деления:
+
+[kotlin,source]
+----
+class Parser(val groups: List<String>) {
+    var pos = 0
+
+    // ...
+
+    private fun parseItem(): Expression {
+        var left = parseFactor()
+        while (pos < groups.size) {
+            val op = operationMap[groups[pos]]
+            when (op) {
+                TIMES, DIV -> {
+                    pos++
+                    val right = parseFactor()
+                    left = Expression.Binary(left, op, right)
+                }
+                else -> return left
+            }
+        }
+        return left
+    }
+----
+
+Наконец, разбор множителя `parseFactor` анализирует один из четырёх вариантов:
+выражение в скобках, выражение с минусом, константа, переменная.
+
+[kotlin,source]
+----
+class Parser(val groups: List<String>) {
+    var pos = 0
+
+    // ...
+    private fun parseFactor(): Expression =
+            if (pos >= groups.size) throw IllegalStateException("Unexpected expression end")
+            else {
+                val group = groups[pos++]
+                when (group) {
+                    "x" -> Expression.Variable
+                    "-" -> Expression.Negate(parseFactor())
+                    "(" -> {
+                        val arg = parseExpression()
+                        val next = groups[pos++]
+                        if (next == ")") arg
+                        else throw IllegalStateException(") expected instead of $next")
+                    }
+                    else -> Expression.Constant(group.toInt())
+                }
+            }
+}
+----
