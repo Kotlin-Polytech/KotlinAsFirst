@@ -253,7 +253,7 @@ class Parser(val groups: List<String>) {
 Наконец, разбор множителя `parseFactor` анализирует один из четырёх вариантов:
 выражение в скобках, выражение с минусом, константа, переменная.
 
-[kotlin,source]
+[source,kotlin]
 ----
 class Parser(val groups: List<String>) {
     var pos = 0
