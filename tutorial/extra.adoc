@@ -172,7 +172,7 @@ fun Expression.calculate(x: Int): Int = when (this) {
 А сама по себе формальная грамматика позволяет определить, является ли заданная строка выражением,
 а также разобраться, из каких частей это выражение состоит. Например:
 
-[kotlin,source]
+[source,kotlin]
 ----
 class Parser(val groups: List<String>) {
     var pos = 0
@@ -226,7 +226,7 @@ class Parser(val groups: List<String>) {
 Она соответствует определению слагаемого, для разбора множителей использует `parseFactor`,
 и в качестве разделителей ищет знаки умножения и деления:
 
-[kotlin,source]
+[source,kotlin]
 ----
 class Parser(val groups: List<String>) {
     var pos = 0
