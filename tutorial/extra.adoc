@@ -98,6 +98,7 @@ sealed class Expression {
     ) : Expression()
 
     class Negate(val arg: Expression) : Expression()
+}
 ----
 
 Алгебраический класс используется не сам по себе, а в виде его разновидностей,
