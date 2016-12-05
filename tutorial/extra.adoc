@@ -257,6 +257,7 @@ class Parser(val groups: List<String>) {
         }
         return left
     }
+}
 ----
 
 Наконец, разбор множителя `parseFactor` анализирует один из четырёх вариантов:
