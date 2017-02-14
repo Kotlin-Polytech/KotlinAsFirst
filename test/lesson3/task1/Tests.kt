@@ -32,12 +32,12 @@ class Tests {
             }
         }
         assertEquals(1000, count)
-        for (n in 2..10000000) {
+        for (n in 2..1000000) {
             if (isPrime(n)) {
                 count++
             }
         }
-        assertEquals(665579, count)
+        assertEquals(79498, count)
     }
 
     @Test
