@@ -8,8 +8,24 @@
     <artifactId>kfirst</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
+    <repositories>
+        <repository>
+            <id>bintray</id>
+            <name>bintray</name>
+            <url>http://dl.bintray.com/kotlin/kotlin-dev</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>bintray</id>
+            <name>bintray</name>
+            <url>http://dl.bintray.com/kotlin/kotlin-dev</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <properties>
-        <kotlin.version>1.0.3</kotlin.version>
+        <kotlin.version>1.1.0-rc-69</kotlin.version>
         <junit.jupiter.version>5.0.0-M3</junit.jupiter.version>
         <junit.vintage.version>4.12.0-M3</junit.vintage.version>
         <junit.platform.version>1.0.0-M3</junit.platform.version>
