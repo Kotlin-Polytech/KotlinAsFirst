@@ -33,7 +33,7 @@ fun parseExpr(inputName: String, values: List<Int>): Map<Int, Int> {
 }
 
 fun String.parseExpr(): Expression {
-    val pattern = Pattern.compile("""x|\+|-|\*|/|\(|\)|\d+?| +?|.+?""")
+    val pattern = Pattern.compile("""x|\+|-|\*|/|\(|\)|\d+| +?|.+?""")
     val matcher = pattern.matcher(this)
     val groups = mutableListOf<String>()
     while (matcher.find()) {
