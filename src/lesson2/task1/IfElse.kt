@@ -56,7 +56,7 @@ fun timeForHalfWay(t1: Double, v1: Double,
  * Считать, что ладьи не могут загораживать друг друга
  */
 fun whichRookThreatens(kingX: Int, kingY: Int,
-                       rookX1: Int, rookY1: Int,
+                       rookY1: Int, rookX1: Int,
                        rookX2: Int, rookY2: Int): Int = TODO()
 
 /**
