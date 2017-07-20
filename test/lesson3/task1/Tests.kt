@@ -68,7 +68,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Simple")
+    @Tag("Easy")
     fun fib() {
         assertEquals(1, fib(1))
         assertEquals(1, fib(2))
