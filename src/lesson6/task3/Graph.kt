@@ -62,9 +62,10 @@ class Graph {
     private fun dfs(start: Vertex, finish: Vertex, visited: Set<Vertex>): Int? =
             if (start == finish) 0
             else {
-                val min = start.neighbors.filter { it !in visited }
-                        .map { dfs(it, finish, visited + start) }
-                        .filterNotNull().min()
+                val min = start.neighbors
+                        .filter { it !in visited }
+                        .mapNotNull { dfs(it, finish, visited + start) }
+                        .min()
                 if (min == null) null else min + 1
             }
 }
