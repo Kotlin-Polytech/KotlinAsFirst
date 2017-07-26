@@ -130,7 +130,7 @@ fun bisectorByPoints(a: Point, b: Point): Line = TODO()
 fun findNearestCirclePair(vararg circles: Circle): Pair<Circle, Circle> = TODO()
 
 /**
- * Очень сложная
+ * Сложная
  *
  * Дано три различные точки. Построить окружность, проходящую через них
  * (все три точки должны лежать НА, а не ВНУТРИ, окружности).
