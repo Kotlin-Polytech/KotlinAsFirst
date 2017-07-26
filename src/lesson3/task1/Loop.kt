@@ -108,7 +108,7 @@ fun isCoPrime(m: Int, n: Int): Boolean = TODO()
 fun squareBetweenExists(m: Int, n: Int): Boolean = TODO()
 
 /**
- * Простая
+ * Средняя
  *
  * Для заданного x рассчитать с заданной точностью eps
  * sin(x) = x - x^3 / 3! + x^5 / 5! - x^7 / 7! + ...
@@ -117,7 +117,7 @@ fun squareBetweenExists(m: Int, n: Int): Boolean = TODO()
 fun sin(x: Double, eps: Double): Double = TODO()
 
 /**
- * Простая
+ * Средняя
  *
  * Для заданного x рассчитать с заданной точностью eps
  * cos(x) = 1 - x^2 / 2! + x^4 / 4! - x^6 / 6! + ...
