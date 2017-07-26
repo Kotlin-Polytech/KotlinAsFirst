@@ -74,8 +74,8 @@ sealed class Expression {
     }
 }
 
-class Parser(val groups: List<String>) {
-    var pos = 0
+class Parser(private val groups: List<String>) {
+    private var pos = 0
 
     fun parse(): Expression {
         val result = parseExpression()
@@ -134,5 +134,5 @@ class Parser(val groups: List<String>) {
                 }
             }
 
-    val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
+    private val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
 }
