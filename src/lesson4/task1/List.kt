@@ -9,12 +9,14 @@ import lesson1.task1.discriminant
  * Найти все корни уравнения x^2 = y
  */
 fun sqRoots(y: Double) =
-        if (y < 0) listOf()
-        else if (y == 0.0) listOf(0.0)
-        else {
-            val root = Math.sqrt(y)
-            // Результат!
-            listOf(-root, root)
+        when {
+            y < 0 -> listOf()
+            y == 0.0 -> listOf(0.0)
+            else -> {
+                val root = Math.sqrt(y)
+                // Результат!
+                listOf(-root, root)
+            }
         }
 
 /**
@@ -25,8 +27,8 @@ fun sqRoots(y: Double) =
  */
 fun biRoots(a: Double, b: Double, c: Double): List<Double> {
     if (a == 0.0) {
-        if (b == 0.0) return listOf()
-        else return sqRoots(-c / b)
+        return if (b == 0.0) listOf()
+        else sqRoots(-c / b)
     }
     val d = discriminant(a, b, c)
     if (d < 0.0) return listOf()
@@ -57,7 +59,7 @@ fun negativeList(list: List<Int>): List<Int> {
  * Изменить знак для всех положительных элементов списка
  */
 fun invertPositives(list: MutableList<Int>) {
-    for (i in 0..list.size - 1) {
+    for (i in 0 until list.size) {
         val element = list[i]
         if (element > 0) {
             list[i] = -element
