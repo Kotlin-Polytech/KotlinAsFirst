@@ -147,7 +147,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("Normal")
     fun sin() {
         assertEquals(0.0, sin(0.0, 1e-5), 1e-5)
         assertEquals(1.0, sin(Math.PI / 2.0, 1e-5), 1e-5)
@@ -157,7 +157,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("Normal")
     fun cos() {
         assertEquals(1.0, cos(0.0, 1e-5), 1e-5)
         assertEquals(0.0, cos(Math.PI / 2.0, 1e-5), 1e-5)
