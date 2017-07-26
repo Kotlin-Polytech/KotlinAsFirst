@@ -15,6 +15,15 @@ class Tests {
 
     @Test
     @Tag("Example")
+    fun twoDigitStr() {
+        assertEquals("00", twoDigitStr(0))
+        assertEquals("09", twoDigitStr(9))
+        assertEquals("10", twoDigitStr(10))
+        assertEquals("99", twoDigitStr(99))
+    }
+
+    @Test
+    @Tag("Example")
     fun timeSecondsToStr() {
         assertEquals("10:00:00", timeSecondsToStr(36000))
         assertEquals("11:34:45", timeSecondsToStr(41685))
