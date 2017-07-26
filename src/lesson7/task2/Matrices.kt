@@ -20,8 +20,8 @@ import lesson7.task1.createMatrix
 fun <E> transpose(matrix: Matrix<E>): Matrix<E> {
     if (matrix.width < 1 || matrix.height < 1) return matrix
     val result = createMatrix(height = matrix.width, width = matrix.height, e = matrix[0, 0])
-    for (i in 0..matrix.width - 1) {
-        for (j in 0..matrix.height - 1) {
+    for (i in 0 until matrix.width) {
+        for (j in 0 until matrix.height) {
             result[i, j] = matrix[j, i]
         }
     }
@@ -39,8 +39,8 @@ operator fun Matrix<Int>.plus(other: Matrix<Int>): Matrix<Int> {
     if (width != other.width || height != other.height) throw IllegalArgumentException()
     if (width < 1 || height < 1) return this
     val result = createMatrix(height, width, this[0, 0])
-    for (i in 0..height - 1) {
-        for (j in 0..width - 1) {
+    for (i in 0 until height) {
+        for (j in 0 until width) {
             result[i, j] = this[i, j] + other[i, j]
         }
     }
