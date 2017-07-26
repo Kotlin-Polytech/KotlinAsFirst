@@ -78,7 +78,7 @@ fun dateStrToDigit(str: String): String = TODO()
 fun dateDigitToStr(digital: String): String = TODO()
 
 /**
- * Сложная
+ * Средняя
  *
  * Номер телефона задан строкой вида "+7 (921) 123-45-67".
  * Префикс (+7) может отсутствовать, код города (в скобках) также может отсутствовать.
