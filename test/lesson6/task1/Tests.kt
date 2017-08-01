@@ -46,6 +46,41 @@ class Tests {
     }
 
     @Test
+    @Tag("Example")
+    fun lineEquals() {
+        run {
+            val first = Line(Point(0.0, 0.0), 0.0)
+            val second = Line(Point(3.0, 0.0), 0.0)
+            val third = Line(Point(-5.0, 0.0), 0.0)
+            val fourth = Line(Point(3.0, 1.0), 0.0)
+            assertEquals(first, second)
+            assertEquals(second, third)
+            assertEquals(third, first)
+            assertNotEquals(fourth, first)
+        }
+        run {
+            val first = Line(Point(0.0, 0.0), Math.PI / 2)
+            val second = Line(Point(0.0, 3.0), Math.PI / 2)
+            val third = Line(Point(0.0, -5.0), Math.PI / 2)
+            val fourth = Line(Point(1.0, 3.0), Math.PI / 2)
+            assertEquals(first, second)
+            assertEquals(second, third)
+            assertEquals(third, first)
+            assertNotEquals(fourth, first)
+        }
+        run {
+            val first = Line(Point(0.0, 0.0), Math.PI / 4)
+            val second = Line(Point(3.0, 3.0), Math.PI / 4)
+            val third = Line(Point(-5.0, -5.0), Math.PI / 4)
+            val fourth = Line(Point(3.00001, 3.0), Math.PI / 4)
+            assertEquals(first, second)
+            assertEquals(second, third)
+            assertEquals(third, first)
+            assertNotEquals(fourth, first)
+        }
+    }
+
+    @Test
     @Tag("Easy")
     fun circleDistance() {
         assertEquals(0.0, Circle(Point(0.0, 0.0), 1.0).distance(Circle(Point(1.0, 0.0), 1.0)), 1e-5)
@@ -89,7 +124,7 @@ class Tests {
     @Tag("Normal")
     fun crossPoint() {
         assertTrue(Point(2.0, 3.0).distance(Line(Point(2.0, 0.0), Math.PI / 2).crossPoint(Line(Point(0.0, 3.0), 0.0))) < 1e-5)
-        assertTrue(Point(2.0, 2.0).distance(Line(Point(0.0, 0.0), Math.PI / 4).crossPoint(Line(Point(0.0, 4.0), -Math.PI / 4))) < 1e-5)
+        assertTrue(Point(2.0, 2.0).distance(Line(Point(0.0, 0.0), Math.PI / 4).crossPoint(Line(Point(0.0, 4.0), 3 * Math.PI / 4))) < 1e-5)
         val p = Point(1.0, 3.0)
         assertTrue(p.distance(Line(p, 1.0).crossPoint(Line(p, 2.0))) < 1e-5)
     }
