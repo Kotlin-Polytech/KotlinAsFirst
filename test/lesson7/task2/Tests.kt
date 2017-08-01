@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test
 
 class Tests {
     private fun <E> createMatrix(height: Int, width: Int, values: List<List<E>>): Matrix<E> {
-        val matrix = createMatrix<E>(height, width, values[0][0])
-        for (row in 0..height - 1) {
-            for (column in 0..width - 1) {
+        val matrix = createMatrix(height, width, values[0][0])
+        for (row in 0 until height) {
+            for (column in 0 until width) {
                 matrix[row, column] = values[row][column]
             }
         }
@@ -234,8 +234,8 @@ class Tests {
 
     private fun <T> Matrix<T>.copy(): Matrix<T> {
         val result = lesson7.task1.createMatrix(height, width, this[0, 0])
-        for (row in 0..height - 1) {
-            for (column in 0..width - 1) {
+        for (row in 0 until height) {
+            for (column in 0 until width) {
                 result[row, column] = this[row, column]
             }
         }
