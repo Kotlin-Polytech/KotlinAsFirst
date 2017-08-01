@@ -81,6 +81,19 @@ class Tests {
     }
 
     @Test
+    @Tag("Example")
+    fun triangleEquals() {
+        val first = Triangle(Point(0.0, 0.0), Point(3.0, 0.0), Point(0.0, 4.0))
+        val second = Triangle(Point(0.0, 0.0), Point(0.0, 4.0), Point(3.0, 0.0))
+        val third = Triangle(Point(0.0, 4.0), Point(0.0, 0.0), Point(3.0, 0.0))
+        val fourth = Triangle(Point(0.0, 4.0), Point(0.0, 3.0), Point(3.0, 0.0))
+        assertEquals(first, second)
+        assertEquals(second, third)
+        assertEquals(third, first)
+        assertNotEquals(fourth, first)
+    }
+
+    @Test
     @Tag("Easy")
     fun circleDistance() {
         assertEquals(0.0, Circle(Point(0.0, 0.0), 1.0).distance(Circle(Point(1.0, 0.0), 1.0)), 1e-5)
