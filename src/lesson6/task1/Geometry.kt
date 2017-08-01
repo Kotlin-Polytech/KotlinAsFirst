@@ -18,7 +18,17 @@ data class Point(val x: Double, val y: Double) {
 /**
  * Треугольник, заданный тремя точками
  */
-data class Triangle(val a: Point, val b: Point, val c: Point) {
+class Triangle private constructor(private val points: Set<Point>) {
+
+    private val pointList = points.toList()
+
+    val a: Point get() = pointList[0]
+
+    val b: Point get() = pointList[1]
+
+    val c: Point get() = pointList[2]
+
+    constructor(a: Point, b: Point, c: Point): this(linkedSetOf(a, b, c))
     /**
      * Пример: полупериметр
      */
@@ -41,6 +51,12 @@ data class Triangle(val a: Point, val b: Point, val c: Point) {
         val cap = Triangle(c, a, p)
         return abp.area() + bcp.area() + cap.area() <= area()
     }
+
+    override fun equals(other: Any?) = other is Triangle && points == other.points
+
+    override fun hashCode() = points.hashCode()
+
+    override fun toString() = "Triangle(a = $a, b = $b, c = $c)"
 }
 
 /**
