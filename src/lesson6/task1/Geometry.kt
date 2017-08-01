@@ -68,7 +68,13 @@ data class Circle(val center: Point, val radius: Double) {
 /**
  * Отрезок между двумя точками
  */
-data class Segment(val begin: Point, val end: Point)
+data class Segment(val begin: Point, val end: Point) {
+    override fun equals(other: Any?) =
+            other is Segment && (begin == other.begin && end == other.end || end == other.begin && begin == other.end)
+
+    override fun hashCode() =
+            begin.hashCode() + end.hashCode()
+}
 
 /**
  * Средняя
