@@ -179,8 +179,8 @@ fun Expression.calculate(x: Int): Int = when (this) {
 
 [source,kotlin]
 ----
-class Parser(val groups: List<String>) {
-    var pos = 0
+class Parser(private val groups: List<String>) {
+    private var pos = 0
 
     fun parse(): Expression {
         val result = parseExpression()
@@ -206,7 +206,7 @@ class Parser(val groups: List<String>) {
         return left
     }
 
-    val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
+    private val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
 
     // ...
 }
