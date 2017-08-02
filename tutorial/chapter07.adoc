@@ -64,8 +64,8 @@ interface Matrix<E> {
 [source,kotlin]
 ----
 fun invertMatrix(matrix: Matrix<Int>) {
-    for (row in 0..matrix.height - 1) {
-        for (column in 0..matrix.width - 1) {
+    for (row in 0 until matrix.height) {
+        for (column in 0 until matrix.width) {
             matrix[row, column] = -matrix[row, column]
         }
     }
@@ -141,8 +141,8 @@ fun <E> createMatrix(height: Int, width: Int, e: E): Matrix<E> = TODO()
 fun <E> transpose(matrix: Matrix<E>): Matrix<E> {
     if (matrix.width < 1 || matrix.height < 1) return matrix
     val result = createMatrix(height = matrix.width, width = matrix.height, e = matrix[0, 0])
-    for (i in 0..matrix.width - 1) {
-        for (j in 0..matrix.height - 1) {
+    for (i in 0 until matrix.width) {
+        for (j in 0 until matrix.height) {
             result[i, j] = matrix[j, i]
         }
     }
