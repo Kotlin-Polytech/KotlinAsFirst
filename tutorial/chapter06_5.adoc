@@ -314,14 +314,15 @@ DFS = Depth-First Search.
 ----
 fun dfs(start: String, finish: String): Int = dfs(this[start], this[finish], setOf()) ?: -1
 
-private fun dfs(start: Vertex, finish: Vertex, visited: Set<Vertex>): Int? =
-        if (start == finish) 0
-        else {
-            val min = start.neighbors.filter { it !in visited }
-                    .map { dfs(it, finish, visited + start) }
-                    .filterNotNull().min()
-            if (min == null) null else min + 1
-        }
+    private fun dfs(start: Vertex, finish: Vertex, visited: Set<Vertex>): Int? =
+            if (start == finish) 0
+            else {
+                val min = start.neighbors
+                        .filter { it !in visited }
+                        .mapNotNull { dfs(it, finish, visited + start) }
+                        .min()
+                if (min == null) null else min + 1
+            }
 ----
 
 Поиск в глубину обычно реализуется рекурсивно, с использованием следующих правил:
@@ -335,14 +336,16 @@ private fun dfs(start: Vertex, finish: Vertex, visited: Set<Vertex>): Int? =
 private fun dfs(start: Vertex, finish: Vertex): Int? =
         if (start == finish) 0
         else {
-            val min = start.neighbors.map { dfs(it, finish) }.filterNotNull().min()
+            val min = start.neighbors.mapNotNull { dfs(it, finish) }.min()
             if (min == null) null else min + 1
         }    
 ----
 
 Предполагается, что результат этой функции равен **null** при отсутствии соединения между вершинами 
 (например, если у стартовой вершины нет соседей).
-Функция `filterNotNull` при этом фильтрует список, удаляя из него все значения, равные **null**.
+Функция высшего порядка `mapNotNull` при этом вызывает `dfs` на всех соседях и фильтрует получаемые результаты,
+удаляя из них все значения, равные **null**.
+Вызов `mapNotNull` в данном случае эквивалентен последовательности вызовов `map { dfs(it, finish) }.filterNotNull()`.
 
 Применение данной функции на практике приведёт к исключению `StackOverflowException` из-за бесконечной рекурсии,
 так как имеющаяся схема не препятствует нам бесконечно ходить из стартовой вершины в соседнюю к ней и обратно.
