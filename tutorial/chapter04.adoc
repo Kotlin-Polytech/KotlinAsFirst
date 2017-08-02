@@ -92,14 +92,31 @@ fun sqRoots(y: Double) =
 А вот ветка **else** вначале создаёт промежуточную переменную `root` и уже потом формирует результат `listOf(-root, root)`.
 Запомните: результат ветки в таких случаях формирует **последний** её оператор.
 
+Эту же функцию можно переписать с использованием оператора **when**:
+
+[source,kotlin]
+----
+fun sqRoots(y: Double) =
+        when {
+            y < 0 -> listOf()
+            y == 0.0 -> listOf(0.0)
+            else -> {
+                val root = Math.sqrt(y)
+                // Результат!
+                listOf(-root, root)
+            }
+        }
+
+----
+
 С использованием `sqRoots` функция `biRoots` примет следующий вид:
 
 [source,kotlin]
 ----
 fun biRoots(a: Double, b: Double, c: Double): List<Double> {
     if (a == 0.0) {
-        if (b == 0.0) return listOf()
-        else return sqRoots(-c / b)
+        return if (b == 0.0) listOf()
+        else sqRoots(-c / b)
     }
     val d = discriminant(a, b, c)
     if (d < 0.0) return listOf()
@@ -251,7 +268,7 @@ fun negativeList(list: List<Int>): List<Int> {
 [source,kotlin]
 ----
 fun invertPositives(list: MutableList<Int>) {
-    for (i in 0..list.size - 1) {
+    for (i in 0 until list.size) {
         val element = list[i]
         if (element > 0) {
             list[i] = -element
@@ -264,8 +281,10 @@ fun invertPositives(list: MutableList<Int>) {
 Это ещё один пример функции с побочным эффектом, которые уже встречались нам в первом уроке.
 Единственный смысл вызова данной функции -- это изменение мутирующего списка, переданного ей как аргумента.
 
-Обратите внимание, что в цикле **for** здесь мы вынуждены перебирать не элементы списка, а их индексы.
-Дело в том, что вот такая запись не проходит.
+Обратите внимание на заголовок цикла **for**.
+Здесь мы вынуждены перебирать не элементы списка, а их индексы,
+причём запись `i in 0 until list.size` эквивалентна `i in 0..list.size - 1`.
+Прямой перебор элементов списка в данном примере не проходит:
 
 [source,kotlin]
 ----
