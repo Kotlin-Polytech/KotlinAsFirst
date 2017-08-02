@@ -110,14 +110,18 @@ fun diameter(vararg points: Point): Segment = TODO()
 fun circleByDiameter(diameter: Segment): Circle = TODO()
 
 /**
- * Прямая, заданная точкой и углом наклона (в радианах) по отношению к оси X.
+ * Прямая, заданная точкой point и углом наклона angle (в радианах) по отношению к оси X.
  * Уравнение прямой: (y - point.y) * cos(angle) = (x - point.x) * sin(angle)
- * Угол наклона обязан находиться в диапазоне от 0 (включительно) до PI (исключительно)
+ * или: y * cos(angle) = x * sin(angle) + b, где b = point.y * cos(angle) - point.x * sin(angle).
+ * Угол наклона обязан находиться в диапазоне от 0 (включительно) до PI (исключительно).
  */
-data class Line(val point: Point, val angle: Double) {
+class Line private constructor(val b: Double, val angle: Double) {
     init {
         assert(angle >= 0 && angle < Math.PI) { "Incorrect line angle: $angle" }
     }
+
+    constructor(point: Point, angle: Double): this(point.y * Math.cos(angle) - point.x * Math.sin(angle), angle)
+
     /**
      * Средняя
      *
@@ -126,13 +130,11 @@ data class Line(val point: Point, val angle: Double) {
      */
     fun crossPoint(other: Line): Point = TODO()
 
-    override fun equals(other: Any?) =
-            other is Line && angle == other.angle &&
-            (point == other.point ||
-             Math.abs((other.point.y - point.y) * Math.cos(angle) - (other.point.x - point.x) * Math.sin(angle)) <=
-             Math.max(Math.abs(other.point.y - point.y), Math.abs(other.point.x - point.x)) * Math.ulp(1.0))
+    override fun equals(other: Any?) = other is Line && angle == other.angle && Math.abs(b - other.b) <= Math.ulp(10.0)
 
     override fun hashCode() = angle.hashCode()
+
+    override fun toString() = "Line(${Math.cos(angle)} * y = ${Math.sin(angle)} * x + $b)"
 }
 
 /**
