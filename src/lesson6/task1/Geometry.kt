@@ -16,7 +16,8 @@ data class Point(val x: Double, val y: Double) {
 }
 
 /**
- * Треугольник, заданный тремя точками
+ * Треугольник, заданный тремя точками (a, b, c, см. constructor ниже).
+ * Эти три точки хранятся в множестве points, их порядок не имеет значения.
  */
 class Triangle private constructor(private val points: Set<Point>) {
 
