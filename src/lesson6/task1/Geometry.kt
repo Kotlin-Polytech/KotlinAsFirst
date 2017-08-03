@@ -130,9 +130,13 @@ class Line private constructor(val b: Double, val angle: Double) {
      */
     fun crossPoint(other: Line): Point = TODO()
 
-    override fun equals(other: Any?) = other is Line && angle == other.angle && Math.abs(b - other.b) <= Math.ulp(10.0)
+    override fun equals(other: Any?) = other is Line && angle == other.angle && b == other.b
 
-    override fun hashCode() = angle.hashCode()
+    override fun hashCode(): Int {
+        var result = b.hashCode()
+        result = 31 * result + angle.hashCode()
+        return result
+    }
 
     override fun toString() = "Line(${Math.cos(angle)} * y = ${Math.sin(angle)} * x + $b)"
 }

@@ -45,6 +45,18 @@ class Tests {
         assertEquals(third, first)
     }
 
+    private fun approxEquals(expected: Line, actual: Line, delta: Double): Boolean =
+            Math.abs(expected.angle - actual.angle) <= delta &&
+            Math.abs(expected.b - actual.b) <= delta
+
+    private fun assertApproxEquals(expected: Line, actual: Line, delta: Double = Math.ulp(10.0)) {
+        assertTrue(approxEquals(expected, actual, delta))
+    }
+
+    private fun assertApproxNotEquals(expected: Line, actual: Line, delta: Double = Math.ulp(10.0)) {
+        assertFalse(approxEquals(expected, actual, delta))
+    }
+
     @Test
     @Tag("Example")
     fun lineEquals() {
@@ -53,30 +65,30 @@ class Tests {
             val second = Line(Point(3.0, 0.0), 0.0)
             val third = Line(Point(-5.0, 0.0), 0.0)
             val fourth = Line(Point(3.0, 1.0), 0.0)
-            assertEquals(first, second)
-            assertEquals(second, third)
-            assertEquals(third, first)
-            assertNotEquals(fourth, first)
+            assertApproxEquals(first, second)
+            assertApproxEquals(second, third)
+            assertApproxEquals(third, first)
+            assertApproxNotEquals(fourth, first)
         }
         run {
             val first = Line(Point(0.0, 0.0), Math.PI / 2)
             val second = Line(Point(0.0, 3.0), Math.PI / 2)
             val third = Line(Point(0.0, -5.0), Math.PI / 2)
             val fourth = Line(Point(1.0, 3.0), Math.PI / 2)
-            assertEquals(first, second)
-            assertEquals(second, third)
-            assertEquals(third, first)
-            assertNotEquals(fourth, first)
+            assertApproxEquals(first, second)
+            assertApproxEquals(second, third)
+            assertApproxEquals(third, first)
+            assertApproxNotEquals(fourth, first)
         }
         run {
             val first = Line(Point(0.0, 0.0), Math.PI / 4)
             val second = Line(Point(3.0, 3.0), Math.PI / 4)
             val third = Line(Point(-5.0, -5.0), Math.PI / 4)
             val fourth = Line(Point(3.00001, 3.0), Math.PI / 4)
-            assertEquals(first, second)
-            assertEquals(second, third)
-            assertEquals(third, first)
-            assertNotEquals(fourth, first)
+            assertApproxEquals(first, second)
+            assertApproxEquals(second, third)
+            assertApproxEquals(third, first)
+            assertApproxNotEquals(fourth, first)
         }
     }
 
@@ -145,22 +157,22 @@ class Tests {
     @Test
     @Tag("Normal")
     fun lineBySegment() {
-        assertEquals(Line(Point(0.0, 0.0), 0.0), lineBySegment(Segment(Point(0.0, 0.0), Point(7.0, 0.0))))
-        assertEquals(Line(Point(0.0, 0.0), Math.PI / 2), lineBySegment(Segment(Point(0.0, 0.0), Point(0.0, 8.0))))
-        assertEquals(Line(Point(1.0, 1.0), Math.PI / 4), lineBySegment(Segment(Point(1.0, 1.0), Point(3.0, 3.0))))
+        assertApproxEquals(Line(Point(0.0, 0.0), 0.0), lineBySegment(Segment(Point(0.0, 0.0), Point(7.0, 0.0))))
+        assertApproxEquals(Line(Point(0.0, 0.0), Math.PI / 2), lineBySegment(Segment(Point(0.0, 0.0), Point(0.0, 8.0))))
+        assertApproxEquals(Line(Point(1.0, 1.0), Math.PI / 4), lineBySegment(Segment(Point(1.0, 1.0), Point(3.0, 3.0))))
     }
 
     @Test
     @Tag("Normal")
     fun lineByPoint() {
-        assertEquals(Line(Point(1.0, 1.0), Math.PI / 4), lineByPoints(Point(1.0, 1.0), Point(3.0, 3.0)))
+        assertApproxEquals(Line(Point(1.0, 1.0), Math.PI / 4), lineByPoints(Point(1.0, 1.0), Point(3.0, 3.0)))
     }
 
     @Test
     @Tag("Hard")
     fun bisectorByPoints() {
-        assertEquals(Line(Point(2.0, 0.0), Math.PI / 2), bisectorByPoints(Point(0.0, 0.0), Point(4.0, 0.0)))
-        assertEquals(Line(Point(1.0, 2.0), 0.0), bisectorByPoints(Point(1.0, 5.0), Point(1.0, -1.0)))
+        assertApproxEquals(Line(Point(2.0, 0.0), Math.PI / 2), bisectorByPoints(Point(0.0, 0.0), Point(4.0, 0.0)))
+        assertApproxEquals(Line(Point(1.0, 2.0), 0.0), bisectorByPoints(Point(1.0, 5.0), Point(1.0, -1.0)))
     }
 
     @Test
