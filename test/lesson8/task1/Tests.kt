@@ -60,6 +60,8 @@ Basic, Ruby, Swift.
     fun countSubstrings() {
         assertEquals(mapOf("РАЗНЫЕ" to 2, "ные" to 2, "Неряшливость" to 1, "е" to 49, "эволюция" to 0),
                 countSubstrings("input/substrings_in1.txt", listOf("РАЗНЫЕ", "ные", "Неряшливость", "е", "эволюция")))
+        assertEquals(mapOf("Карминовый" to 2, "Некрасивый" to 2, "белоглазый" to 1),
+                countSubstrings("input/substrings_in1.txt", listOf("Карминовый", "Некрасивый", "белоглазый")))
     }
 
     @Test
@@ -152,7 +154,8 @@ Basic, Ruby, Swift.
                 "ее" to 95,
                 "мне" to 95,
                 "уж" to 95
-        ), lesson8.task1.top20Words("input/onegin.txt"))
+        ), top20Words("input/onegin.txt"))
+        assertEquals(mapOf<String, Int>(), top20Words("input/empty.txt"))
     }
 
     @Test
