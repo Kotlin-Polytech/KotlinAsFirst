@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'kotlin'
 apply plugin: 'maven'
+apply plugin: 'org.jetbrains.intellij.inspections'
 
 group = 'ru.spbstu'
 version = '0.0.1-SNAPSHOT'
@@ -15,15 +16,21 @@ buildscript {
 
     repositories {
         mavenCentral()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
     }
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath group: 'org.jetbrains.intellij.plugins', name: 'inspection-plugin', version: '0.1.1'
     }
 }
 
 repositories {
     maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+inspections {
+    toolVersion "ideaIC:2017.2.6"
 }
 
 dependencies {
