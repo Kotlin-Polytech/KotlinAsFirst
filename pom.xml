@@ -9,11 +9,19 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <kotlin.version>1.1.3</kotlin.version>
-        <junit.jupiter.version>5.0.0-M5</junit.jupiter.version>
-        <junit.vintage.version>4.12.0-M5</junit.vintage.version>
-        <junit.platform.version>1.0.0-M5</junit.platform.version>
+        <project.build.sourceEncoding>
+            UTF-8
+        </project.build.sourceEncoding>
+        <project.reporting.outputEncoding>
+            UTF-8
+        </project.reporting.outputEncoding>
+
+        <kotlin.version>1.1.3-2</kotlin.version>
+        <junit.jupiter.version>5.0.0-RC2</junit.jupiter.version>
+        <junit.vintage.version>4.12.0-RC2</junit.vintage.version>
+        <junit.platform.version>1.0.0-RC2</junit.platform.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -99,6 +107,42 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <artifactId>kfirst-runner-plugin</artifactId>
+                <groupId>org.jetbrains.research</groupId>
+                <version>0.1.1</version>
+                <configuration>
+                    <packages>
+                        <package>lesson1.task1</package>
+
+                        <package>lesson2.task1</package>
+                        <package>lesson2.task2</package>
+
+                        <package>lesson3.task1</package>
+                        <package>lesson4.task1</package>
+                        <package>lesson5.task1</package>
+
+                        <package>lesson6.task1</package>
+                        <package>lesson6.task2</package>
+                        <package>lesson6.task3</package>
+
+                        <package>lesson7.task1</package>
+                        <package>lesson7.task2</package>
+
+                        <package>lesson8.task1</package>
+                        <package>lesson8.task2</package>
+                    </packages>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>bintray-vorpal-research-kotlin-maven</id>
+            <name>vorpal-research-kotlin-maven</name>
+            <url>http://dl.bintray.com/vorpal-research/kotlin-maven</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>
