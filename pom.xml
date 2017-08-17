@@ -110,7 +110,7 @@
             <plugin>
                 <artifactId>kfirst-runner-plugin</artifactId>
                 <groupId>org.jetbrains.research</groupId>
-                <version>0.1.1</version>
+                <version>0.1.2</version>
                 <configuration>
                     <packages>
                         <package>lesson1.task1</package>
