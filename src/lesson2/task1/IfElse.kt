@@ -53,7 +53,24 @@ fun ageDescription(age: Int): String {
  */
 fun timeForHalfWay(t1: Double, v1: Double,
                    t2: Double, v2: Double,
-                   t3: Double, v3: Double): Double = TODO()
+                   t3: Double, v3: Double): Double {
+    val S: Double = t1*v1 + t2*v2 + t3*v3
+    val  hS: Double = S*0.5
+    val s1 = t1*v1
+    val s2 = t2*v2
+    val s3 = t3*v3
+    var k: Double = 0.0
+    if (hS <= s1) {
+        k = hS/v1
+    }
+    else if (hS <= s1 + s2) {
+        k = t1 + (hS - s1)/v2
+    }
+    else {
+        k = t1 + t2 + (hS - s1 - s2)/v3
+    }
+    return k
+}
 
 /**
  * Простая
@@ -86,8 +103,8 @@ fun whichRookThreatens(kingX: Int, kingY: Int,
 fun rookOrBishopThreatens(kingX: Int, kingY: Int,
                           rookX: Int, rookY: Int,
                           bishopX: Int, bishopY: Int): Int {
-    val n1 = bishopX - kingX
-    val n2 = bishopY - kingY
+    val n1 = abs(bishopX - kingX)
+    val n2 = abs(bishopY - kingY)
     if ((kingX != rookX)&&(kingY != rookY)&&(n1 != n2)) return 0
     else if (((kingX == rookX)||(kingY == rookY))&&(n1 != n2)) return 1
     else if ((kingX != rookX)&&(kingY != rookY)&&(n1 == n2)) return 2
@@ -103,22 +120,15 @@ fun rookOrBishopThreatens(kingX: Int, kingY: Int,
  * Если такой треугольник не существует, вернуть -1.
  */
 fun triangleKind(a: Double, b: Double, c: Double): Int {
-    if ((a > (b+c))||(b > (a+c))||(c > (a+b))) return -1
-    else if ((a > b)&&(b > c)) {
-        if (a*a == b*b + c*c) return 1
-        else if (a*a > b*b + c*c) return 2
-        else return 0
-    }
-    else if ((b > a) && (b > c)) {
-        if (b*b == a*a + c*c) return 1
-        else if (b*b > a*a + c*c) return 2
-        else return 0
-    }
-    else {
-        if (c*c == b*b + a*a) return 1
-        else if (c*c > b*b + a*a) return 2
-        else return 0
-    }
+    val x = max(a, b)
+    val y = max(x, c)
+    val z = sqr(y)
+    val m = sqr(a + b + c - y)
+    val n = 2*a*b*c/y
+    if((m - n < z)&&( a + b + c > 2 * y)) return 2
+    else if ((m - n > z)&&( a + b + c > 2 * y )) return 0
+    else if((m - n == z)&&( a + b + c > 2 * y)) return 1
+    else  return -1
 }
 /**
  * Средняя
@@ -128,4 +138,22 @@ fun triangleKind(a: Double, b: Double, c: Double): Int {
  * Найти длину пересечения отрезков AB и CD.
  * Если пересечения нет, вернуть -1.
  */
-fun segmentLength(a: Int, b: Int, c: Int, d: Int): Int = TODO()
+fun segmentLength(a: Int, b: Int, c: Int, d: Int): Int {
+    var x = 0
+    return if ((a <= c)&&(c < b)&&(b <= d)) {
+        b - c
+    }
+    else if ((a == d)||(b == c)) {
+        0
+    }
+    else if ((c <= a)&&(b <= d)) {
+        b - a
+    }
+    else if ((a <= c)&&(d <= b)) {
+        d - c
+    }
+    else if ((c <= a)&&(a < d)&&(d <= b)) {
+        d - a
+    }
+    else -1
+}
