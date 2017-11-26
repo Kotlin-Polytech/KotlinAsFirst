@@ -77,10 +77,12 @@ fun digitNumber(n: Int): Int {
  * Ряд Фибоначчи определён следующим образом: fib(1) = 1, fib(2) = 1, fib(n+2) = fib(n) + fib(n+1)
  */
 fun fib(n: Int): Int {
-    val a: Int
-    if (n >= 3) a=(fib(n - 1) + fib(n - 2))
-    else a = 1
-    return a
+    if ((n == 1)||(n == 2)) return 1
+    else if (n >=3) {
+        val sq5 = sqrt(5.0)
+        val phi = (sq5 + 1) / 2
+        return ((pow(phi, n.toDouble()))/sq5 + 0.5).toInt()
+    } else return "".toInt()
 }
 /**
  * Простая
@@ -89,12 +91,15 @@ fun fib(n: Int): Int {
  * минимальное число k, которое делится и на m и на n без остатка
  */
 fun lcm(m: Int, n: Int): Int {
-    var a = 1
-    for (i in 1..m*n) {
-        if ((a%m == 0)&&(a%n == 0)) break
-        else a += 1
+    val a = max(m,n)
+    val b = min(m,n)
+    var k = a
+    if ((a == b)||(a%b == 0)) return a
+    else for (i in a..m*n) {
+        if ((k%m == 0)&&(k%n == 0)) break
+        else k+=1
     }
-    return a
+    return k
 }
 
 /**
@@ -103,12 +108,13 @@ fun lcm(m: Int, n: Int): Int {
  * Для заданного числа n > 1 найти минимальный делитель, превышающий 1
  */
 fun minDivisor(n: Int): Int {
+    val sqrtN = ceil(sqrt(n.toDouble()))
     var a = 2
-    for (i in 2..n) {
-        if (n%a == 0) break
+    while (a <= sqrtN) {
+        if (n%a == 0) return a
         else a += 1
     }
-    return a
+    return n
 }
 
 /**
@@ -117,8 +123,8 @@ fun minDivisor(n: Int): Int {
  * Для заданного числа n > 1 найти максимальный делитель, меньший n
  */
 fun maxDivisor(n: Int): Int {
-    var a = n - 1
-    for (i in n-1 downTo 1) {
+    var a = n/2 + 1
+    for (i in n/2+1 downTo 1) {
         if (n%a == 0) break
         else a -= 1
     }
@@ -132,11 +138,11 @@ fun maxDivisor(n: Int): Int {
  * Например, 25 и 49 взаимно простые, а 6 и 8 -- нет.
  */
 fun isCoPrime(m: Int, n: Int): Boolean {
-    var a = max(m, n)
-    for (i in a downTo 2) {
-        if (m%i != n%i) return true
+    val x = max(m, n)
+    for (i in 2..x) {
+        if ((m%i == 0)&&(n%i ==0)) return false
     }
-    return false
+    return true
 }
 
 /**
