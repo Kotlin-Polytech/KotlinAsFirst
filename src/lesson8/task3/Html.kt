@@ -45,3 +45,37 @@ fun List<List<String>>.convertToHtmlTableUsingKotlinxHtml(): String {
     return sb.toString()
 }
 
+fun generateSimpleHtml(s: String): String {
+    val sb = StringBuilder()
+    sb.myHtml {
+        myBody {
+            +s
+        }
+    }
+    return sb.toString()
+}
+
+private class HTML(val sb: StringBuilder) {
+    fun myBody(init: HTMLBody.() -> Unit): HTMLBody {
+        val body = HTMLBody(sb)
+        sb.append("<body>")
+        body.init()
+        sb.append("</body>")
+        return body
+    }
+}
+
+private class HTMLBody(val sb: StringBuilder) {
+    operator fun String.unaryPlus() {
+        sb.append(this)
+    }
+}
+
+private fun StringBuilder.myHtml(init: HTML.() -> Unit): HTML {
+    val html = HTML(this)
+    append("<html>")
+    html.init()
+    append("</html>")
+    return html
+}
+

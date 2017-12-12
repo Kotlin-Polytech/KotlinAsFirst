@@ -25,4 +25,10 @@ class Tests {
                      "<tr><td>4</td><td>5</td><td>6</td></tr>" +
                      "</table></body></html>", data.convertToHtmlTableUsingKotlinxHtml().replace("\\s+".toRegex(), ""))
     }
+
+    @Test
+    @Tag("Example")
+    fun generateSimpleHtml() {
+        assertEquals("<html><body>Hello!</body></html>", generateSimpleHtml("Hello!"))
+    }
 }
