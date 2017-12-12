@@ -1,5 +1,8 @@
 package lesson8.task3
 
+import kotlinx.html.*
+import kotlinx.html.stream.appendHTML
+
 /**
  * Пример: преобразование списка списков в HTML таблицу
  */
@@ -22,3 +25,23 @@ fun List<List<String>>.convertToHtmlTable(): String {
     sb.append("</html>")
     return sb.toString()
 }
+
+fun List<List<String>>.convertToHtmlTableUsingKotlinxHtml(): String {
+    val inputList = this
+    val sb = StringBuilder()
+    sb.appendHTML().html {
+        body {
+            table {
+                for (row in inputList) {
+                    tr {
+                        for (data in row) {
+                            td { +data }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return sb.toString()
+}
+
