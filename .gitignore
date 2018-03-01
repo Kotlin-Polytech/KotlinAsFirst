@@ -15,6 +15,7 @@ build/*
 report/*
 lib
 report
+checkme.bat
 
 *.iml
 *.ipr
