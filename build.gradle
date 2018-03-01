@@ -21,7 +21,7 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath group: 'org.jetbrains.intellij.plugins', name: 'inspection-plugin', version: '0.1.1'
+        classpath group: 'org.jetbrains.intellij.plugins', name: 'inspection-plugin', version: '0.1.2'
     }
 }
 
@@ -31,6 +31,14 @@ repositories {
 
 inspections {
     toolVersion "ideaIC:2017.2.6"
+}
+
+inspectionsMain {
+    reports {
+        html {
+            destination "report/inspections.html"
+        }
+    }
 }
 
 dependencies {
