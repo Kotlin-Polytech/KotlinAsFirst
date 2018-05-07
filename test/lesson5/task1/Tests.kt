@@ -1,6 +1,7 @@
 package lesson5.task1
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 
@@ -89,6 +90,11 @@ class Tests {
         assertEquals(4, plusMinus("2 + 2"))
         assertEquals(6, plusMinus("2 + 31 - 40 + 13"))
         assertEquals(-1, plusMinus("0 - 1"))
+        assertThrows(IllegalArgumentException::class.java) { plusMinus("+2") }
+        assertThrows(IllegalArgumentException::class.java) { plusMinus("+ 4") }
+        assertThrows(IllegalArgumentException::class.java) { plusMinus("4 - -2") }
+        assertThrows(IllegalArgumentException::class.java) { plusMinus("44 - - 12") }
+        assertThrows(IllegalArgumentException::class.java) { plusMinus("4 - + 12") }
     }
 
     @Test
@@ -133,5 +139,8 @@ class Tests {
         assertEquals(listOf(1, 1, 1, 0, 0, -1, 0, 0, 0, 0), computeDeviceCells(10, "- <<<<< +[>+]", 17))
         assertEquals(listOf(0, 6, 5, 4, 3, 2, 1, 0, -1, -1, -2),
                 computeDeviceCells(11, "<<<<< + >>>>>>>>>> --[<-] >+[>+] >++[--< <[<] >+[>+] >++]", 256))
+        assertThrows(IllegalArgumentException::class.java) { computeDeviceCells(10, "===", 3) }
+        assertThrows(IllegalArgumentException::class.java) { computeDeviceCells(10, "+>+>[+>", 3) }
+        assertThrows(IllegalStateException::class.java) { computeDeviceCells(20, ">>>>>>>>>>>>>", 12) }
     }
 }
