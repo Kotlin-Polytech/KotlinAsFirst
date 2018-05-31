@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <inspections>
-    <errors>
-
-    </errors>
-    <warnings>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.CanBeParameterInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.CanBePrimaryConstructorPropertyInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.CanBeValInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.CascadeIfInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.ConstantConditionIfInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.EmptyRangeInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.EqualsOrHashCodeInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.KotlinUnusedImportInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.LiftReturnOrAssignmentInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.NullChecksToSafeCallInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.NullableBooleanElvisInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.RedundantIfInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.RedundantModalityModifierInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.RedundantSemicolonInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.RedundantUnitReturnTypeInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.RedundantVisibilityModifierInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.RemoveToStringInStringTemplateInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.ReplaceRangeToWithUntilInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.UnnecessaryVariableInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.UnusedLambdaExpressionBodyInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.UseExpressionBodyInspection"/>
-
-        <warning class = "org.jetbrains.kotlin.idea.inspections.collections.SimplifiableCallChainInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.collections.UselessCallOnCollectionInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.inspections.collections.UselessCallOnNotNullInspection"/>
-
-        <warning class = "org.jetbrains.kotlin.idea.intentions.branchedTransformations.intentions.IfThenToElvisInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.branchedTransformations.intentions.IfThenToSafeAccessInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.branchedTransformations.intentions.IntroduceWhenSubjectInspection"/>
-
-        <warning class = "org.jetbrains.kotlin.idea.intentions.FoldInitializerAndIfToElvisInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.RemoveExplicitTypeArgumentsInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.SimplifyNegatedBinaryExpressionInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.RemoveCurlyBracesFromTemplateInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.SimplifyBooleanWithConstantsInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.RemoveSingleExpressionStringTemplateInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.RemoveEmptyParenthesesFromLambdaCallInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.ReplaceArrayEqualityOpWithArraysEqualsInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.ReplaceSingleLineLetInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.ReplaceSizeCheckWithIsNotEmptyInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.ReplaceSizeZeroCheckWithIsEmptyInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.RemoveRedundantCallsOfConversionMethodsInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.JoinDeclarationAndAssignmentInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.ConvertTryFinallyToUseCallInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.ConvertTwoComparisonsToRangeCheckInspection"/>
-        <warning class = "org.jetbrains.kotlin.idea.intentions.ConvertToStringTemplateInspection"/>
-    </warnings>
-    <infos>
-
-    </infos>
+    <inheritFromIdea profileName="Project_Default.xml"/>
+    <errors/>
+    <warnings/>
+    <infos/>
 </inspections>
