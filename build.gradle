@@ -27,10 +27,11 @@ buildscript {
 
 repositories {
     maven { url "http://repo.maven.apache.org/maven2" }
+    jcenter()
 }
 
 inspections {
-    toolVersion "ideaIC:2017.2.6"
+    toolVersion "ideaIC:2017.3"
 }
 
 inspectionsMain {
@@ -45,6 +46,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib"
     compile "org.jetbrains.kotlin:kotlin-reflect"
     compile "org.jetbrains.kotlin:kotlin-runtime"
+    compile "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.8"
 
     testCompile "org.junit.jupiter:junit-jupiter-api:5.0.0"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:5.0.0"
