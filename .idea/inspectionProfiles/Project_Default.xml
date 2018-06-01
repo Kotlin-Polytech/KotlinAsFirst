@@ -19,7 +19,6 @@
     <inspection_tool class="ImplicitNullableNothingType" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="LiftReturnOrAssignment" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="LoopToCallChain" enabled="false" level="INFO" enabled_by_default="false" />
-    <inspection_tool class="MemberVisibilityCanBePrivate" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="MemberVisibilityCanBePrivate" enabled="false" level="INFO" enabled_by_default="false" />
     <inspection_tool class="MoveSuspiciousCallableReferenceIntoParentheses" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="NullableBooleanElvis" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
@@ -32,6 +31,11 @@
     <inspection_tool class="SimplifyAssertNotNull" enabled="false" level="INFO" enabled_by_default="false" />
     <inspection_tool class="SuspiciousEqualsCombination" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="UnsafeCastFromDynamic" enabled="false" level="INFO" enabled_by_default="false" />
+    <inspection_tool class="SpellCheckingInspection" enabled="true" level="TYPO" enabled_by_default="true">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="false" />
+      <option name="processComments" value="false" />
+    </inspection_tool>
     <inspection_tool class="UseExpressionBody" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="UseWithIndex" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="WrapUnaryOperator" enabled="true" level="WARNING" enabled_by_default="true" />
