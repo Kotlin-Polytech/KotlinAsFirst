@@ -3,6 +3,10 @@ package lesson8.task1
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
+import java.lang.Math.ulp
+import kotlin.math.PI
+import kotlin.math.abs
+import kotlin.math.sqrt
 
 class Tests {
     @Test
@@ -46,14 +50,14 @@ class Tests {
     }
 
     private fun approxEquals(expected: Line, actual: Line, delta: Double): Boolean =
-            Math.abs(expected.angle - actual.angle) <= delta &&
-            Math.abs(expected.b - actual.b) <= delta
+            abs(expected.angle - actual.angle) <= delta &&
+            abs(expected.b - actual.b) <= delta
 
-    private fun assertApproxEquals(expected: Line, actual: Line, delta: Double = Math.ulp(10.0)) {
+    private fun assertApproxEquals(expected: Line, actual: Line, delta: Double = ulp(10.0)) {
         assertTrue(approxEquals(expected, actual, delta))
     }
 
-    private fun assertApproxNotEquals(expected: Line, actual: Line, delta: Double = Math.ulp(10.0)) {
+    private fun assertApproxNotEquals(expected: Line, actual: Line, delta: Double = ulp(10.0)) {
         assertFalse(approxEquals(expected, actual, delta))
     }
 
@@ -71,20 +75,20 @@ class Tests {
             assertApproxNotEquals(fourth, first)
         }
         run {
-            val first = Line(Point(0.0, 0.0), Math.PI / 2)
-            val second = Line(Point(0.0, 3.0), Math.PI / 2)
-            val third = Line(Point(0.0, -5.0), Math.PI / 2)
-            val fourth = Line(Point(1.0, 3.0), Math.PI / 2)
+            val first = Line(Point(0.0, 0.0), PI / 2)
+            val second = Line(Point(0.0, 3.0), PI / 2)
+            val third = Line(Point(0.0, -5.0), PI / 2)
+            val fourth = Line(Point(1.0, 3.0), PI / 2)
             assertApproxEquals(first, second)
             assertApproxEquals(second, third)
             assertApproxEquals(third, first)
             assertApproxNotEquals(fourth, first)
         }
         run {
-            val first = Line(Point(0.0, 0.0), Math.PI / 4)
-            val second = Line(Point(3.0, 3.0), Math.PI / 4)
-            val third = Line(Point(-5.0, -5.0), Math.PI / 4)
-            val fourth = Line(Point(3.00001, 3.0), Math.PI / 4)
+            val first = Line(Point(0.0, 0.0), PI / 4)
+            val second = Line(Point(3.0, 3.0), PI / 4)
+            val third = Line(Point(-5.0, -5.0), PI / 4)
+            val fourth = Line(Point(3.00001, 3.0), PI / 4)
             assertApproxEquals(first, second)
             assertApproxEquals(second, third)
             assertApproxEquals(third, first)
@@ -111,7 +115,7 @@ class Tests {
         assertEquals(0.0, Circle(Point(0.0, 0.0), 1.0).distance(Circle(Point(1.0, 0.0), 1.0)), 1e-5)
         assertEquals(0.0, Circle(Point(0.0, 0.0), 1.0).distance(Circle(Point(0.0, 2.0), 1.0)), 1e-5)
         assertEquals(1.0, Circle(Point(0.0, 0.0), 1.0).distance(Circle(Point(-4.0, 0.0), 2.0)), 1e-5)
-        assertEquals(2.0 * Math.sqrt(2.0) - 2.0, Circle(Point(0.0, 0.0), 1.0).distance(Circle(Point(2.0, 2.0), 1.0)), 1e-5)
+        assertEquals(2.0 * sqrt(2.0) - 2.0, Circle(Point(0.0, 0.0), 1.0).distance(Circle(Point(2.0, 2.0), 1.0)), 1e-5)
     }
 
     @Test
@@ -149,8 +153,8 @@ class Tests {
     @Test
     @Tag("Normal")
     fun crossPoint() {
-        assertTrue(Point(2.0, 3.0).distance(Line(Point(2.0, 0.0), Math.PI / 2).crossPoint(Line(Point(0.0, 3.0), 0.0))) < 1e-5)
-        assertTrue(Point(2.0, 2.0).distance(Line(Point(0.0, 0.0), Math.PI / 4).crossPoint(Line(Point(0.0, 4.0), 3 * Math.PI / 4))) < 1e-5)
+        assertTrue(Point(2.0, 3.0).distance(Line(Point(2.0, 0.0), PI / 2).crossPoint(Line(Point(0.0, 3.0), 0.0))) < 1e-5)
+        assertTrue(Point(2.0, 2.0).distance(Line(Point(0.0, 0.0), PI / 4).crossPoint(Line(Point(0.0, 4.0), 3 * PI / 4))) < 1e-5)
         val p = Point(1.0, 3.0)
         assertTrue(p.distance(Line(p, 1.0).crossPoint(Line(p, 2.0))) < 1e-5)
     }
@@ -159,21 +163,21 @@ class Tests {
     @Tag("Normal")
     fun lineBySegment() {
         assertApproxEquals(Line(Point(0.0, 0.0), 0.0), lineBySegment(Segment(Point(0.0, 0.0), Point(7.0, 0.0))))
-        assertApproxEquals(Line(Point(0.0, 0.0), Math.PI / 2), lineBySegment(Segment(Point(0.0, 0.0), Point(0.0, 8.0))))
-        assertApproxEquals(Line(Point(1.0, 1.0), Math.PI / 4), lineBySegment(Segment(Point(1.0, 1.0), Point(3.0, 3.0))))
+        assertApproxEquals(Line(Point(0.0, 0.0), PI / 2), lineBySegment(Segment(Point(0.0, 0.0), Point(0.0, 8.0))))
+        assertApproxEquals(Line(Point(1.0, 1.0), PI / 4), lineBySegment(Segment(Point(1.0, 1.0), Point(3.0, 3.0))))
     }
 
     @Test
     @Tag("Normal")
     fun lineByPoint() {
-        assertApproxEquals(Line(Point(0.0, 0.0), Math.PI / 2), lineByPoints(Point(0.0, 0.0), Point(0.0, 2.0)))
-        assertApproxEquals(Line(Point(1.0, 1.0), Math.PI / 4), lineByPoints(Point(1.0, 1.0), Point(3.0, 3.0)))
+        assertApproxEquals(Line(Point(0.0, 0.0), PI / 2), lineByPoints(Point(0.0, 0.0), Point(0.0, 2.0)))
+        assertApproxEquals(Line(Point(1.0, 1.0), PI / 4), lineByPoints(Point(1.0, 1.0), Point(3.0, 3.0)))
     }
 
     @Test
     @Tag("Hard")
     fun bisectorByPoints() {
-        assertApproxEquals(Line(Point(2.0, 0.0), Math.PI / 2), bisectorByPoints(Point(0.0, 0.0), Point(4.0, 0.0)))
+        assertApproxEquals(Line(Point(2.0, 0.0), PI / 2), bisectorByPoints(Point(0.0, 0.0), Point(4.0, 0.0)))
         assertApproxEquals(Line(Point(1.0, 2.0), 0.0), bisectorByPoints(Point(1.0, 5.0), Point(1.0, -1.0)))
     }
 

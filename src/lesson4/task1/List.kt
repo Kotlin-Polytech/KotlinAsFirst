@@ -2,6 +2,7 @@
 package lesson4.task1
 
 import lesson1.task1.discriminant
+import kotlin.math.sqrt
 
 /**
  * Пример
@@ -13,7 +14,7 @@ fun sqRoots(y: Double) =
             y < 0 -> listOf()
             y == 0.0 -> listOf(0.0)
             else -> {
-                val root = Math.sqrt(y)
+                val root = sqrt(y)
                 // Результат!
                 listOf(-root, root)
             }
@@ -33,8 +34,8 @@ fun biRoots(a: Double, b: Double, c: Double): List<Double> {
     val d = discriminant(a, b, c)
     if (d < 0.0) return listOf()
     if (d == 0.0) return sqRoots(-b / (2 * a))
-    val y1 = (-b + Math.sqrt(d)) / (2 * a)
-    val y2 = (-b - Math.sqrt(d)) / (2 * a)
+    val y1 = (-b + sqrt(d)) / (2 * a)
+    val y2 = (-b - sqrt(d)) / (2 * a)
     return sqRoots(y1) + sqRoots(y2)
 }
 

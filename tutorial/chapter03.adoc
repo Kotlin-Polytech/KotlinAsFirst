@@ -179,7 +179,7 @@ fun isPrime(n: Int): Boolean {
 ----
 fun isPrime(n: Int): Boolean {
     if (n < 2) return false // Необходимо, так как 1 -- не простое число
-    for (m in 2..Math.sqrt(n.toDouble()).toInt()) {
+    for (m in 2..sqrt(n.toDouble()).toInt()) {
         if (n % m == 0) return false
     }
     return true

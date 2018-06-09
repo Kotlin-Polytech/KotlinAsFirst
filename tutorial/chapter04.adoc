@@ -25,21 +25,21 @@ fun biRoots(a: Double, b: Double, c: Double): List<Double> {
         if (b == 0.0) return listOf()
         val bc = -c / b
         if (bc < 0.0) return listOf()
-        val root = Math.sqrt(bc)
+        val root = sqrt(bc)
         return if (root == 0.0) listOf(root) else listOf(-root, root)
     }
     val d = discriminant(a, b, c)
     if (d < 0.0) return listOf()
-    val y1 = (-b + Math.sqrt(d)) / (2 * a)
-    val y2 = (-b - Math.sqrt(d)) / (2 * a)
+    val y1 = (-b + sqrt(d)) / (2 * a)
+    val y2 = (-b - sqrt(d)) / (2 * a)
     // part1: List<Double>
     val part1 = if (y1 < 0) listOf() else if (y1 == 0.0) listOf(0.0) else {
-        val x1 = Math.sqrt(y1)
+        val x1 = sqrt(y1)
         listOf(-x1, x1)
     }
     // part2: List<Double>
     val part2 = if (y2 < 0) listOf() else if (y2 == 0.0) listOf(0.0) else {
-        val x2 = Math.sqrt(y2)
+        val x2 = sqrt(y2)
         listOf(-x2, x2)
     }
     return part1 + part2
@@ -81,7 +81,7 @@ fun sqRoots(y: Double) =
         if (y < 0) listOf()
         else if (y == 0.0) listOf(0.0)
         else {
-            val root = Math.sqrt(y)
+            val root = sqrt(y)
             // Результат!
             listOf(-root, root)
         }
@@ -101,7 +101,7 @@ fun sqRoots(y: Double) =
             y < 0 -> listOf()
             y == 0.0 -> listOf(0.0)
             else -> {
-                val root = Math.sqrt(y)
+                val root = sqrt(y)
                 // Результат!
                 listOf(-root, root)
             }
@@ -121,8 +121,8 @@ fun biRoots(a: Double, b: Double, c: Double): List<Double> {
     val d = discriminant(a, b, c)
     if (d < 0.0) return listOf()
     if (d == 0.0) return sqRoots(-b / (2 * a))
-    val y1 = (-b + Math.sqrt(d)) / (2 * a)
-    val y2 = (-b - Math.sqrt(d)) / (2 * a)
+    val y1 = (-b + sqrt(d)) / (2 * a)
+    val y2 = (-b - sqrt(d)) / (2 * a)
     return sqRoots(y1) + sqRoots(y2)
 }
 ----

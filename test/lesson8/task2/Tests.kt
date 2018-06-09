@@ -3,6 +3,7 @@ package lesson8.task2
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
+import kotlin.math.abs
 
 class Tests {
     @Test
@@ -84,7 +85,7 @@ class Tests {
         for (i in 0..size - 2) {
             val previous = this[i]
             val next = this[i + 1]
-            assertTrue(Math.abs(next.row - previous.row) == Math.abs(next.column - previous.column))
+            assertTrue(abs(next.row - previous.row) == abs(next.column - previous.column))
         }
     }
 
@@ -117,8 +118,8 @@ class Tests {
         for (i in 0..size - 2) {
             val previous = this[i]
             val next = this[i + 1]
-            assertTrue(Math.abs(next.column - previous.column) <= 1)
-            assertTrue(Math.abs(next.row - previous.row) <= 1)
+            assertTrue(abs(next.column - previous.column) <= 1)
+            assertTrue(abs(next.row - previous.row) <= 1)
         }
     }
 
@@ -152,8 +153,8 @@ class Tests {
             val previous = this[i]
             val next = this[i + 1]
             assertTrue(
-                    Math.abs(next.column - previous.column) == 2 && Math.abs(next.row - previous.row) == 1 ||
-                    Math.abs(next.column - previous.column) == 1 && Math.abs(next.row - previous.row) == 2
+                    abs(next.column - previous.column) == 2 && abs(next.row - previous.row) == 1 ||
+                    abs(next.column - previous.column) == 1 && abs(next.row - previous.row) == 2
             )
         }
     }

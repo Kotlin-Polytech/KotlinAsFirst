@@ -275,7 +275,7 @@ data class Triangle(val a: Point, val b: Point, val c: Point) {
 
     fun area(): Double {
         val p = halfPerimeter()
-        return Math.sqrt(p * (p - a.distance(b)) * (p - b.distance(c)) * (p - c.distance(a)))
+        return sqrt(p * (p - a.distance(b)) * (p - b.distance(c)) * (p - c.distance(a)))
     }
 
     fun contains(p: Point): Boolean {
