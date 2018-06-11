@@ -36,13 +36,14 @@ class Tests {
     }
 
     @Test
+    @Tag("Example")
     fun filterByCountryCode() {
         val phoneBook = mutableMapOf(
                 "Quagmire" to "+1-800-555-0143",
                 "Adam's Ribs" to "+82-000-555-2960",
                 "Pharmakon Industries" to "+1-800-555-6321"
         )
-        
+
         filterByCountryCode(phoneBook, "+1")
         assertEquals(2, phoneBook.size)
 

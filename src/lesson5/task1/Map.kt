@@ -25,7 +25,8 @@ fun shoppingListCost(
 /**
  * Пример
  *
- *
+ * Для набора "имя"-"номер телефона" `phoneBook` оставить только такие пары,
+ * для которых телефон начинается с заданного кода страны `countryCode`
  */
 fun filterByCountryCode(
         phoneBook: MutableMap<String, String>,
