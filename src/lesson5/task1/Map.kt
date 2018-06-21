@@ -44,4 +44,35 @@ fun filterByCountryCode(
     }
 }
 
+/**
+ * Пример
+ *
+ * Для заданного текста `text` убрать заданные слова-паразиты `fillerWords`
+ * и вернуть отфильтрованный текст
+ */
+fun removeFillerWords(
+        text: List<String>,
+        vararg fillerWords: String): List<String> {
+    val fillerWordSet = setOf(*fillerWords)
+
+    val res = mutableListOf<String>()
+    for (word in text) {
+        if (word !in fillerWordSet) {
+            res += word
+        }
+    }
+    return res
+}
+
+/**
+ * Пример
+ *
+ * Для заданного текста `text` построить множество встречающихся в нем слов
+ */
+fun buildWordSet(text: List<String>): MutableSet<String> {
+    val res = mutableSetOf<String>()
+    for (word in text) res.add(word)
+    return res
+}
+
 // TODO: map tasks

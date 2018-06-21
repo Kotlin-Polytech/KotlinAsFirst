@@ -54,5 +54,50 @@ class Tests {
         assertEquals(0, phoneBook.size)
     }
 
+    @Test
+    @Tag("Example")
+    fun removeFillerWords() {
+        assertEquals(
+                "Я люблю Котлин".split(" "),
+                removeFillerWords(
+                        "Я как-то люблю Котлин".split(" "),
+                        "как-то"
+                )
+        )
+        assertEquals(
+                "Я люблю Котлин".split(" "),
+                removeFillerWords(
+                        "Я как-то люблю таки Котлин".split(" "),
+                        "как-то",
+                        "таки"
+                )
+        )
+        assertEquals(
+                "Я люблю Котлин".split(" "),
+                removeFillerWords(
+                        "Я люблю Котлин".split(" "),
+                        "как-то",
+                        "таки"
+                )
+        )
+    }
+
+    @Test
+    @Tag("Example")
+    fun buildWordSet() {
+        assertEquals(
+                buildWordSet("Я люблю Котлин".split(" ")),
+                mutableSetOf("Я", "люблю", "Котлин")
+        )
+        assertEquals(
+                buildWordSet("Я люблю люблю Котлин".split(" ")),
+                mutableSetOf("Котлин", "люблю", "Я")
+        )
+        assertEquals(
+                buildWordSet(listOf()),
+                mutableSetOf<String>()
+        )
+    }
+
     // TODO: map task tests
 }
