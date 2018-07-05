@@ -20,12 +20,13 @@ class Tests {
     @Test
     @Tag("Example")
     fun isPrime() {
-        assertTrue(isPrime(2))
-        assertTrue(isPrime(3))
-        assertTrue(isPrime(19))
-        assertTrue(isPrime(53))
         assertFalse(isPrime(1))
+        assertTrue(isPrime(2))
+        assertTrue(isPrime(5))
+        assertTrue(isPrime(11))
+        assertFalse(isPrime(4))
         assertFalse(isPrime(9))
+        assertFalse(isPrime(15))
         var count = 0
         for (n in 2..7919) {
             if (isPrime(n)) {
