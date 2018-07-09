@@ -53,9 +53,12 @@ class Tests {
     @Test
     @Tag("Example")
     fun digitCountInNumber() {
-        assertEquals(4, digitCountInNumber(5373393, 3))
-        assertEquals(2, digitCountInNumber(100, 0))
         assertEquals(1, digitCountInNumber(0, 0))
+        assertEquals(1, digitCountInNumber(7, 7))
+        assertEquals(0, digitCountInNumber(21, 3))
+        assertEquals(1, digitCountInNumber(510, 5))
+        assertEquals(3, digitCountInNumber(4784041, 4))
+        assertEquals(4, digitCountInNumber(5373393, 3))
     }
 
     @Test
