@@ -75,4 +75,44 @@ fun buildWordSet(text: List<String>): MutableSet<String> {
     return res
 }
 
+/**
+ * Простая
+ *
+ * Объединить два ассоциативных массива `mapA` и `mapB` с парами
+ * "имя"-"номер телефона" в итоговый ассоциативный массив, склеивая
+ * значения для повторяющихся ключей через запятую.
+ * Повторяющиеся *значения* следует добавлять только один раз.
+ *
+ * Например:
+ *   mergePhoneBooks(
+ *     mapOf("Emergency" to "112", "Police" to "02"),
+ *     mapOf("Emergency" to "911", "Police" to "02")
+ *   ) -> mapOf("Emergency" to "112, 911", "Police", "02")
+ */
+fun mergePhoneBooks(mapA: Map<String, String>, mapB: Map<String, String>): Map<String, String> = TODO()
+
+/**
+ * Сложная
+ *
+ * Для заданного ассоциативного массива друзей через одно рукопожатие `friends`
+ * необходимо построить его максимальное расширение по рукопожатиям, то есть,
+ * для каждого человека найти всех людей, с которыми он знаком через любое
+ * количество рукопожатий.
+ * Считать, что все имена людей являются уникальными.
+ *
+ * Например:
+ *   propagateHandshakes(
+ *     mapOf(
+ *       "Marat" to setOf("Mikhail", "Sveta")),
+ *       "Sveta" to setOf("Marat"),
+ *       "Mikhail" to setOf("Sveta")
+ *     )
+ *   ) -> mapOf(
+ *          "Marat" to setOf("Mikhail", "Sveta"),
+ *          "Sveta" to setOf("Marat", "Mikhail"),
+ *          "Mikhail" to setOf("Sveta", "Marat")
+ *        )
+ */
+fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<String>> = TODO()
+
 // TODO: map tasks
