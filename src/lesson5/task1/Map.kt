@@ -92,6 +92,18 @@ fun buildWordSet(text: List<String>): MutableSet<String> {
 fun mergePhoneBooks(mapA: Map<String, String>, mapB: Map<String, String>): Map<String, String> = TODO()
 
 /**
+ * Средняя
+ *
+ * Для заданного списка пар "акция"-"стоимость" вернуть ассоциативный массив,
+ * содержащий для каждой акции ее усредненную стоимость.
+ *
+ * Например:
+ *   averageStockPrice(listOf("MSFT" to 100.0, "MSFT" to 200.0, "NFLX" to 40.0))
+ *     -> mapOf("MSFT" to 150.0, "NFLX" to 40.0)
+ */
+fun averageStockPrice(stockPrices: List<Pair<String, Double>>): Map<String, Double> = TODO()
+
+/**
  * Сложная
  *
  * Для заданного ассоциативного массива друзей через одно рукопожатие `friends`
