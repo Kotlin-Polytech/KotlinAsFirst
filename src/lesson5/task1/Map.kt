@@ -92,6 +92,18 @@ fun buildWordSet(text: List<String>): MutableSet<String> {
 fun mergePhoneBooks(mapA: Map<String, String>, mapB: Map<String, String>): Map<String, String> = TODO()
 
 /**
+ * Простая
+ *
+ * По заданному ассоциативному массиву "студент"-"оценка за экзамен" построить
+ * обратный массив "оценка за экзамен"-"список студентов с этой оценкой".
+ *
+ * Например:
+ *   buildGrades(mapOf("Марат" to 3, "Семён" to 5, "Михаил" to 5))
+ *     -> mapOf(5 to listOf("Семён", "Михаил"), 3 to listOf("Марат"))
+ */
+fun buildGrades(map: Map<String, Int>): Map<Int, List<String>> = TODO()
+
+/**
  * Средняя
  *
  * Для заданного списка пар "акция"-"стоимость" вернуть ассоциативный массив,
