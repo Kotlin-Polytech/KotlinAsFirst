@@ -173,7 +173,33 @@ class Tests {
     @Test
     @Tag("Hard")
     fun propagateHandshakes() {
-        TODO()
+        assertEquals(
+                mapOf(
+                        "Marat" to setOf("Mikhail", "Sveta"),
+                        "Sveta" to setOf("Mikhail"),
+                        "Mikhail" to setOf()
+                ),
+                propagateHandshakes(
+                        mapOf(
+                                "Marat" to setOf("Sveta"),
+                                "Sveta" to setOf("Mikhail")
+                        )
+                )
+        )
+        assertEquals(
+                mapOf(
+                        "Marat" to setOf("Mikhail", "Sveta"),
+                        "Sveta" to setOf("Marat", "Mikhail"),
+                        "Mikhail" to setOf("Sveta", "Marat")
+                ),
+                propagateHandshakes(
+                        mapOf(
+                                "Marat" to setOf("Mikhail", "Sveta"),
+                                "Sveta" to setOf("Marat"),
+                                "Mikhail" to setOf("Sveta")
+                        )
+                )
+        )
     }
 
     // TODO: map task tests
