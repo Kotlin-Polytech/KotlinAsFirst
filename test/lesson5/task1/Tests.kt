@@ -1,7 +1,6 @@
 package lesson5.task1
 
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertNull
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 
@@ -148,6 +147,13 @@ class Tests {
                 mapOf(3 to listOf("Семён", "Михаил", "Марат")),
                 buildGrades(mapOf("Марат" to 3, "Семён" to 3, "Михаил" to 3))
         )
+    }
+
+    @Test
+    @Tag("Easy")
+    fun containsIn() {
+        assertTrue(containsIn(mapOf("a" to "z"), mapOf("a" to "z", "b" to "sweet")))
+        assertFalse(containsIn(mapOf("a" to "z"), mapOf("a" to "zee", "b" to "sweet")))
     }
 
     @Test
