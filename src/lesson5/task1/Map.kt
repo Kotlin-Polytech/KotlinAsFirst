@@ -116,6 +116,23 @@ fun buildGrades(map: Map<String, Int>): Map<Int, List<String>> = TODO()
 fun averageStockPrice(stockPrices: List<Pair<String, Double>>): Map<String, Double> = TODO()
 
 /**
+ * Средняя
+ *
+ * Входными данными является ассоциативный массив
+ * "название товара"-"пара (тип товара, цена товара)"
+ * и тип интересующего нас товара.
+ * Необходимо вернуть название товара заданного типа с минимальной стоимостью
+ * или null в случае, если товаров такого типа нет.
+ *
+ * Например:
+ *   findCheapestStuff(
+ *     mapOf("Мария" to ("печенье" to 20.0), "Орео" to ("печенье" to 100.0)),
+ *     "печенье"
+ *   ) -> "Мария"
+ */
+fun findCheapestStuff(stuff: Map<String, Pair<String, Double>>, kind: String): String? = TODO()
+
+/**
  * Сложная
  *
  * Для заданного ассоциативного массива друзей через одно рукопожатие `friends`
