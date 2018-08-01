@@ -227,5 +227,20 @@ class Tests {
         )
     }
 
+    @Test
+    @Tag("Easy")
+    fun subtractOf() {
+        val from = mutableMapOf("a" to "z", "b" to "c")
+
+        subtractOf(from, mapOf())
+        assertEquals(from, mapOf("a" to "z", "b" to "c"))
+
+        subtractOf(from, mapOf("b" to "z"))
+        assertEquals(from, mapOf("a" to "z", "b" to "c"))
+
+        subtractOf(from, mapOf("a" to "z"))
+        assertEquals(from, mapOf("b" to "c"))
+    }
+
     // TODO: map task tests
 }

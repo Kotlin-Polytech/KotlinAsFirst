@@ -170,4 +170,20 @@ fun findCheapestStuff(stuff: Map<String, Pair<String, Double>>, kind: String): S
  */
 fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<String>> = TODO()
 
+/**
+ * Простая
+ *
+ * Удалить из изменяемого ассоциативного массива все записи,
+ * которые встречаются в заданном ассоциативном массиве.
+ * Записи считать одинаковыми, если и ключи, и значения совпадают.
+ *
+ * ВАЖНО: необходимо изменить переданный в качестве аргумента
+ *        изменяемый ассоциативный массив
+ *
+ * Например:
+ *   subtractOf(a = mutableMapOf("a" to "z"), mapOf("a" to "z"))
+ *     -> a changes to mutableMapOf() aka becomes empty
+ */
+fun subtractOf(a: MutableMap<String, String>, b: Map<String, String>): Unit = TODO()
+
 // TODO: map tasks
