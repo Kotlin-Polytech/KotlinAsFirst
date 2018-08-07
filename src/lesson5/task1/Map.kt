@@ -1,5 +1,7 @@
 package lesson5.task1
 
+import javax.xml.stream.events.Characters
+
 /**
  * Пример
  *
@@ -185,5 +187,35 @@ fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<Stri
  *     -> a changes to mutableMapOf() aka becomes empty
  */
 fun subtractOf(a: MutableMap<String, String>, b: Map<String, String>): Unit = TODO()
+
+/**
+ * Простая
+ *
+ * Для двух списков людей найти людей, встречающихся в обоих списках
+ */
+fun whoAreInBoth(a: List<String>, b: List<String>): List<String> = TODO()
+
+/**
+ * Средняя
+ *
+ * Для заданного набора символов определить, можно ли составить из него
+ * указанное слово (регистр символов игнорируется)
+ *
+ * Например:
+ *   canBuildFrom(listOf('a', 'b', 'o'), "baobab") -> true
+ */
+fun canBuildFrom(chars: List<Char>, word: String): Boolean = TODO()
+
+/**
+ * Сложная
+ *
+ * Найти в заданном списке повторяющиеся элементы и вернуть
+ * ассоциативный массив с информацией о числе повторений
+ * для каждого повторяющегося элемента
+ *
+ * Например:
+ *   extractRepeats(listOf("a", "b", "a")) -> mapOf("a" to 2)
+ */
+fun extractRepeats(list: List<String>): Map<String, Int> = TODO()
 
 // TODO: map tasks

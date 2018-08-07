@@ -242,5 +242,47 @@ class Tests {
         assertEquals(from, mapOf("b" to "c"))
     }
 
+    @Test
+    @Tag("Easy")
+    fun whoAreInBoth() {
+        assertEquals(
+                emptyList<String>(),
+                whoAreInBoth(emptyList(), emptyList())
+        )
+        assertEquals(
+                listOf("Marat"),
+                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Marat", "Kirill"))
+        )
+        assertEquals(
+                emptyList<String>(),
+                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Sveta", "Kirill"))
+        )
+    }
+
+    @Test
+    @Tag("Normal")
+    fun canBuildFrom() {
+        assertFalse(canBuildFrom(emptyList(), "foo"))
+        assertTrue(canBuildFrom(listOf('a', 'b', 'o'), "baobab"))
+        assertFalse(canBuildFrom(listOf('a', 'm', 'r'), "Marat"))
+    }
+
+    @Test
+    @Tag("Hard")
+    fun extractRepeats() {
+        assertEquals(
+                emptyMap<String, Int>(),
+                extractRepeats(emptyList())
+        )
+        assertEquals(
+                mapOf("a" to 2),
+                extractRepeats(listOf("a", "b", "a"))
+        )
+        assertEquals(
+                emptyMap<String, Int>(),
+                extractRepeats(listOf("a", "b", "c"))
+        )
+    }
+
     // TODO: map task tests
 }
