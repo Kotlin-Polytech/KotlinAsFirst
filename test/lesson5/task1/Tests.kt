@@ -100,7 +100,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("Normal")
     fun mergePhoneBooks() {
         assertEquals(
                 mapOf("Emergency" to "112"),
@@ -268,7 +268,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("Normal")
     fun extractRepeats() {
         assertEquals(
                 emptyMap<String, Int>(),
@@ -281,6 +281,31 @@ class Tests {
         assertEquals(
                 emptyMap<String, Int>(),
                 extractRepeats(listOf("a", "b", "c"))
+        )
+    }
+
+    @Test
+    @Tag("Normal")
+    fun hasAnagrams() {
+        assertFalse(hasAnagrams(emptyList()))
+        assertTrue(hasAnagrams(listOf("рот", "свет", "тор")))
+        assertFalse(hasAnagrams(listOf("рот", "свет", "код", "дверь")))
+    }
+
+    @Test
+    @Tag("Hard")
+    fun findSumOfTwo() {
+        assertEquals(
+                Pair(-1, -1),
+                findSumOfTwo(emptyList(), 1)
+        )
+        assertEquals(
+                Pair(0, 2),
+                findSumOfTwo(listOf(1, 2, 3), 4)
+        )
+        assertEquals(
+                Pair(-1, -1),
+                findSumOfTwo(listOf(1, 2, 3), 6)
         )
     }
 

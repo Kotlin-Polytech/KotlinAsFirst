@@ -1,7 +1,5 @@
 package lesson5.task1
 
-import javax.xml.stream.events.Characters
-
 /**
  * Пример
  *
@@ -78,7 +76,7 @@ fun buildWordSet(text: List<String>): MutableSet<String> {
 }
 
 /**
- * Простая
+ * Средняя
  *
  * Объединить два ассоциативных массива `mapA` и `mapB` с парами
  * "имя"-"номер телефона" в итоговый ассоциативный массив, склеивая
@@ -207,7 +205,7 @@ fun whoAreInBoth(a: List<String>, b: List<String>): List<String> = TODO()
 fun canBuildFrom(chars: List<Char>, word: String): Boolean = TODO()
 
 /**
- * Сложная
+ * Средняя
  *
  * Найти в заданном списке повторяющиеся элементы и вернуть
  * ассоциативный массив с информацией о числе повторений
@@ -218,4 +216,31 @@ fun canBuildFrom(chars: List<Char>, word: String): Boolean = TODO()
  */
 fun extractRepeats(list: List<String>): Map<String, Int> = TODO()
 
-// TODO: map tasks
+/**
+ * Средняя
+ *
+ * Для заданного списка слов определить, содержит ли он анаграммы
+ * (два слова являются анаграммами, если одно можно составить из второго)
+ *
+ * Например:
+ *   hasAnagrams(listOf("тор", "свет", "рот")) -> true
+ */
+fun hasAnagrams(words: List<String>): Boolean = TODO()
+
+/**
+ * Сложная
+ *
+ * Для заданного списка и числа определить, есть ли в списке пара чисел таких,
+ * что их сумма равна заданному числу. Если да, верните их индексы в виде
+ * Pair<Int, Int>; если нет, верните пару Pair(-1, -1).
+ *
+ * Постарайтесь сделать ваше решение как можно более эффективным,
+ * используя то, что вы узнали в данном уроке.
+ *
+ * Например:
+ *   findSumOfTwo(listOf(1, 2, 3), 4) -> Pair(0, 2)
+ *   findSumOfTwo(listOf(1, 2, 3), 6) -> Pair(-1, -1)
+ */
+fun findSumOfTwo(list: List<Int>, number: Int): Pair<Int, Int> = TODO()
+
+// TODO: map/set tasks
