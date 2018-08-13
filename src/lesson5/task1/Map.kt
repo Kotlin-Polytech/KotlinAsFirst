@@ -1,3 +1,4 @@
+@file:Suppress("UNUSED_PARAMETER")
 package lesson5.task1
 
 /**
