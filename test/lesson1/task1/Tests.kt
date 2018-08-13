@@ -24,9 +24,9 @@ class Tests {
 
     @Test
     @Tag("Example")
-    fun sqRoot() {
-        assertEquals(1.0, sqRoot(1.0, -2.0, 1.0), 1e-5)
-        assertEquals(-3.0, sqRoot(1.0, 6.0, 9.0), 1e-5)
+    fun quadraticEquationRoot() {
+        assertEquals(1.0, quadraticEquationRoot(1.0, -2.0, 1.0), 1e-5)
+        assertEquals(-3.0, quadraticEquationRoot(1.0, 6.0, 9.0), 1e-5)
     }
 
     @Test

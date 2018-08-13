@@ -147,7 +147,8 @@ fun discriminant(a: Double, b: Double, c: Double) = sqr(b) - 4 * a * c
 
 [source,kotlin]
 ----
-fun sqRoot(a: Double, b: Double, c: Double) = (-b + kotlin.math.sqrt(discriminant(a, b, c))) / (2 * a)
+fun quadraticEquationRoot(a: Double, b: Double, c: Double) =
+        (-b + kotlin.math.sqrt(discriminant(a, b, c))) / (2 * a)
 ----
 
 Здесь мы, в свою очередь, используем **уже написанную** функцию `discriminant` для поиска дискриминанта,
@@ -164,7 +165,8 @@ fun sqRoot(a: Double, b: Double, c: Double) = (-b + kotlin.math.sqrt(discriminan
 // Разрешение использовать короткие имена для ВСЕХ функций из пакета kotlin.math
 import kotlin.math.*
 
-fun sqRoot(a: Double, b: Double, c: Double) = (-b + sqrt(discriminant(a, b, c))) / (2 * a)
+fun quadraticEquationRoot(a: Double, b: Double, c: Double) =
+        (-b + sqrt(discriminant(a, b, c))) / (2 * a)
 ----
 
 Здесь **import** -- так называемая __директива__ импорта имён, смысл её пояснён в комментарии.

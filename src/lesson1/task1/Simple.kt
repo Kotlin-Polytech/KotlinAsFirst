@@ -22,7 +22,8 @@ fun discriminant(a: Double, b: Double, c: Double) = sqr(b) - 4 * a * c
  *
  * Поиск одного из корней квадратного уравнения
  */
-fun sqRoot(a: Double, b: Double, c: Double) = (-b + sqrt(discriminant(a, b, c))) / (2 * a)
+fun quadraticEquationRoot(a: Double, b: Double, c: Double) =
+        (-b + sqrt(discriminant(a, b, c))) / (2 * a)
 
 /**
  * Пример
