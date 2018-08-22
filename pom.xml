@@ -6,7 +6,7 @@
 
     <groupId>ru.spbstu</groupId>
     <artifactId>kfirst</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>
@@ -16,7 +16,8 @@
             UTF-8
         </project.reporting.outputEncoding>
 
-        <kotlin.version>1.2.41</kotlin.version>
+        <kotlin.version>1.2.51</kotlin.version>
+        <kotlinx.html.version>0.6.8</kotlinx.html.version>
         <junit.jupiter.version>5.0.0</junit.jupiter.version>
         <junit.vintage.version>4.12.0</junit.vintage.version>
         <junit.platform.version>1.0.0</junit.platform.version>
@@ -60,7 +61,7 @@
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-html-jvm</artifactId>
-            <version>0.6.8</version>
+            <version>${kotlinx.html.version}</version>
         </dependency>
     </dependencies>
     <build>
@@ -129,16 +130,18 @@
                         <package>lesson3.task1</package>
                         <package>lesson4.task1</package>
                         <package>lesson5.task1</package>
-
                         <package>lesson6.task1</package>
-                        <package>lesson6.task2</package>
-                        <package>lesson6.task3</package>
-
                         <package>lesson7.task1</package>
-                        <package>lesson7.task2</package>
 
                         <package>lesson8.task1</package>
                         <package>lesson8.task2</package>
+                        <package>lesson8.task3</package>
+
+                        <package>lesson9.task1</package>
+                        <package>lesson9.task2</package>
+
+                        <package>lesson10.task1</package>
+                        <package>lesson10.task2</package>
                     </packages>
                 </configuration>
             </plugin>
