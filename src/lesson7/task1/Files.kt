@@ -399,7 +399,7 @@ fun printMultiplicationProcess(lhv: Int, rhv: Int, outputName: String) {
 
 
 /**
- * Очень сложная
+ * Сложная
  *
  * Вывести в выходной файл процесс деления столбиком числа lhv (> 0) на число rhv (> 0).
  *
