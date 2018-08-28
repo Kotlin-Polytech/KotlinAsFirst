@@ -347,7 +347,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("Hard")
     fun printDivisionProcess() {
 
         fun test(lhv: Int, rhv: Int, res: String) {
