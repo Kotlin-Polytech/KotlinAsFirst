@@ -1,4 +1,5 @@
-@file:Suppress("UNUSED_PARAMETER")
+@file:Suppress("UNUSED_PARAMETER", "ConvertCallChainIntoSequence")
+
 package lesson7.task1
 
 import java.io.File
