@@ -234,8 +234,8 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double /* тип об
 [source,kotlin]
 ----
 fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
-    val x1 = (-b + sd) / (2 * a) // Unresolved reference: d
-    val x2 = (-b - sd) / (2 * a) // Unresolved reference: d
+    val x1 = (-b + sd) / (2 * a) // Unresolved reference: sd
+    val x2 = (-b - sd) / (2 * a) // Unresolved reference: sd
     val sd = sqrt(discriminant(a, b, c))
     return x1 * x2 // Результат
 }
