@@ -8,6 +8,33 @@ import kotlin.math.sqrt
 /**
  * Пример
  *
+ * Найти число корней квадратного уравнения ax^2 + bx + c = 0
+ */
+fun quadraticRootNumber(a: Double, b: Double, c: Double): Int {
+    val discriminant = discriminant(a, b, c)
+    return when {
+        discriminant > 0.0 -> 2
+        discriminant == 0.0 -> 1
+        else -> 0
+    }
+}
+
+/**
+ * Пример
+ *
+ * Получить строковую нотацию для оценки по пятибалльной системе
+ */
+fun gradeNotation(grade: Int): String = when (grade) {
+    5 -> "отлично"
+    4 -> "хорошо"
+    3 -> "удовлетворительно"
+    2 -> "неудовлетворительно"
+    else -> "несуществующая оценка $grade"
+}
+
+/**
+ * Пример
+ *
  * Найти наименьший корень биквадратного уравнения ax^4 + bx^2 + c = 0
  */
 fun minBiRoot(a: Double, b: Double, c: Double): Double {

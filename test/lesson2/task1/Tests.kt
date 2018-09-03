@@ -7,6 +7,21 @@ import org.junit.jupiter.api.Test
 class Tests {
     @Test
     @Tag("Example")
+    fun quadraticRootNumber() {
+        assertEquals(1, quadraticRootNumber(1.0, 2.0, 1.0))
+        assertEquals(2, quadraticRootNumber(1.0, 3.0, 2.0))
+        assertEquals(0, quadraticRootNumber(1.0, 4.0, 10.0))
+    }
+
+    @Test
+    @Tag("Example")
+    fun gradeNotation() {
+        assertEquals("отлично", gradeNotation(5))
+        assertEquals("удовлетворительно", gradeNotation(3))
+    }
+
+    @Test
+    @Tag("Example")
     fun minBiRoot() {
         assertEquals(Double.NaN, minBiRoot(0.0, 0.0, 1.0), 1e-2)
         assertEquals(Double.NaN, minBiRoot(0.0, 1.0, 2.0), 1e-2)
