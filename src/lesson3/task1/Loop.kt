@@ -23,7 +23,9 @@ fun factorial(n: Int): Double {
  */
 fun isPrime(n: Int): Boolean {
     if (n < 2) return false
-    for (m in 2..sqrt(n.toDouble()).toInt()) {
+    if (n == 2) return true
+    if (n % 2 == 0) return false
+    for (m in 3..sqrt(n.toDouble()).toInt() step 2) {
         if (n % m == 0) return false
     }
     return true
