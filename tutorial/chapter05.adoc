@@ -298,6 +298,18 @@ fun removeFillerWords(
 После получения этого множества мы проходимся по всем элементам текста и, если элемент не является словом-паразитом (`word !in fillerWordSet`), мы добавляем его в список результата.
 Когда мы перебрали все элементы, мы возвращаем результат обратно.
 
+NB: данная задача очень хорошо ложиться в концепцию функций высших порядков, которую мы с вами обсуждали в прошлом уроке. С использованием функции `filter` наше решение будет выглядеть совсем просто:
+
+[source,kotlin]
+----
+fun removeFillerWords(
+        text: List<String>,
+        vararg fillerWords: String): List<String> {
+    val fillerWordSet = setOf(*fillerWords)
+    return text.filter { it !in fillerWordSet }
+}
+----
+
 Попробуем написать тесты для нашей функции `removeFillerWords`.
 
 [source,kotlin]
