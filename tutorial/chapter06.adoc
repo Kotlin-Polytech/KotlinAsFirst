@@ -351,44 +351,6 @@ fun main(args: Array<String>) {
 
 Здесь используется уже написанная нами функция `timeStrToSeconds`, которой передаётся на вход прочитанная строка `line`.
 
-== Чуть больше о null
-
-Обратите внимание на проверку `if (line != null)` после вызова функции `readLine()`.
-Если этого не сделать, мы получим следующую ошибку:
-
-[source,kotlin]
-----
-fun main(args: Array<String>) {
-    println("Введите время в формате ЧЧ:ММ:СС")
-    val line = readLine()
-    val seconds = timeStrToSeconds(line) // Type mismatch. Required: String, found: String?
-    // ...
-}
-----
-
-Это ошибка несовпадения типов. Параметр `timeStrToSeconds` имеет тип `String`,
-в то время как аргумент `line` имеет тип `String?`.
-Эти два типа отличаются тем, что значением типа `String?` может быть константа **null**,
-а значением типа `String` -- нет.
-Проверка на неравенство **null** служит для __преобразования__ типа `String?` в `String`.
-Внимательный читатель заметит следующее сообщение IDE:
-
-[source,kotlin]
-----
-fun main(args: Array<String>) {
-    println("Введите время в формате ЧЧ:ММ:СС")
-    val line = readLine()
-    if (line != null) {
-        val seconds = timeStrToSeconds(line) // Smart cast to String
-        // ...
-    }
-}
-----
-
-что в переводе с английского значит "Умное преобразование (типа) в String".
-Функция в данном случае "помнит", что `line` был проверен на неравенство **null**,
-что и позволяет выполнить данное преобразование.
-
 == Упражнения
 
 Откройте файл `srс/lesson6/task1/Parse.kt` в проекте `KotlinAsFirst`. Выберите любую из задач в нём.
