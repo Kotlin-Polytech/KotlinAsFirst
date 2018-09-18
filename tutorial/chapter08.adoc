@@ -369,7 +369,7 @@ fun test() {
 
 [source,kotlin]
 ----
-data class IndexedValue<T>(index: Int, value: T)
+data class IndexedValue<T>(val index: Int, val value: T)
 ----
 
 Такая функция `test` выведет на консоль строчки `#0: abc` и `#1: def`.
