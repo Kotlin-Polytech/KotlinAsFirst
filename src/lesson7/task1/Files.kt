@@ -341,10 +341,16 @@ fun markdownToHtmlSimple(inputName: String, outputName: String) {
       </li>
       <li>Помидоры</li>
       <li>
-        Яблоки
+        Фрукты
         <ol>
-          <li>Красные</li>
-          <li>Зелёные</li>
+          <li>Бананы</li>
+          <li>
+            Яблоки
+            <ol>
+              <li>Красные</li>
+              <li>Зелёные</li>
+            </ol>
+          </li>
         </ol>
       </li>
     </ul>
