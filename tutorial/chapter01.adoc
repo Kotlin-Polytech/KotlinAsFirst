@@ -175,7 +175,7 @@ fun quadraticEquationRoot(a: Double, b: Double, c: Double) =
 
  * abs(x: Int) или abs(x: Double) -- модуль;
  * sqrt(x: Double) -- квадратный корень;
- * pow(x: Double, y: Double) -- возведение в степень x^y^;
+ * Double.pow(x: Double) -- возведение в степень x^y^, используется как `x.pow(y)`;
  * sin(x: Double) -- синус, cos(x: Double) -- косинус, tan(x: Double) -- тангенс, все три функции считают, что `x` задан в радианах;
  * exp(x: Double) -- экспонента e^x^;
  * log(x: Double), log10(x: Double) -- соответственно натуральный и десятичный логарифм;
