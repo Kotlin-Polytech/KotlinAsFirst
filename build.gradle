@@ -20,7 +20,7 @@ plugins {
 apply plugin: 'org.jetbrains.intellij.inspections'
 
 group = 'ru.spbstu'
-version = '0.0.1-SNAPSHOT'
+version = '0.1.14-SNAPSHOT'
 
 description = """"""
 
@@ -35,12 +35,16 @@ repositories {
 inspections {
     toolVersion "ideaIC:2018.2.4"
     inheritFromIdea = true
+    profileName = "Project_Default.xml"
     plugins.kotlin.version = '1.2.71'
     plugins.kotlin.location = 'https://plugins.jetbrains.com/plugin/download?rel=true&updateId=50255'
 }
 
 inspectionsMain {
     reports {
+        xml {
+            destination "report/inspections.xml"
+        }
         html {
             destination "report/inspections.html"
         }
@@ -82,4 +86,3 @@ sourceSets {
         }
     }
 }
-
