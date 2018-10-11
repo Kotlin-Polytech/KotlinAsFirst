@@ -10,7 +10,7 @@ description = """"""
 sourceCompatibility = 1.8
 
 buildscript {
-    ext.kotlin_version = '1.2.51'
+    ext.kotlin_version = '1.2.71'
 
     repositories {
         mavenCentral()
@@ -32,6 +32,8 @@ repositories {
 inspections {
     toolVersion "ideaIC:2018.2.4"
     inheritFromIdea = true
+    plugins.kotlin.version = '1.2.71'
+    plugins.kotlin.location = 'https://plugins.jetbrains.com/plugin/download?rel=true&updateId=50255'
 }
 
 inspectionsMain {
