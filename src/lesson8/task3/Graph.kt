@@ -42,7 +42,7 @@ class Graph {
             if (next == finish) return distance
             for (neighbor in next.neighbors) {
                 if (neighbor in visited) continue
-                visited.put(neighbor, distance + 1)
+                visited[neighbor] = distance + 1
                 queue.add(neighbor)
             }
         }

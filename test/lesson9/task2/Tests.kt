@@ -208,26 +208,28 @@ class Tests {
     @Test
     @Tag("Hard")
     fun fifteenGameMoves() {
-        val start = createMatrix(4, 4, listOf(listOf(1, 2, 3, 4), listOf(5, 6, 7, 8),
-                                              listOf(9, 10, 11, 12), listOf(13, 14, 15, 0)))
+        val start = createMatrix(4, 4, listOf(
+                listOf(1, 2, 3, 4), listOf(5, 6, 7, 8),
+                listOf(9, 10, 11, 12), listOf(13, 14, 15, 0))
+        )
         assertEquals(start, fifteenGameMoves(start, listOf()))
-        assertEquals(start, fifteenGameMoves(createMatrix(4, 4, listOf(listOf(1, 2, 3, 4), listOf(5, 6, 7, 8),
-                                                                       listOf(9, 10, 11, 12), listOf(0, 13, 14, 15))),
-                                             listOf(13, 14, 15)))
+        assertEquals(start, fifteenGameMoves(createMatrix(4, 4, listOf(
+                listOf(1, 2, 3, 4), listOf(5, 6, 7, 8),
+                listOf(9, 10, 11, 12), listOf(0, 13, 14, 15))
+        ), listOf(13, 14, 15)))
         assertEquals(start, fifteenGameMoves(createMatrix(4, 4, listOf(listOf(1, 2, 3, 0), listOf(5, 6, 7, 4),
                 listOf(9, 10, 11, 8), listOf(13, 14, 15, 12))),
                 listOf(4, 8, 12)))
         assertEquals(createMatrix(4, 4, listOf(listOf(5, 7, 9, 1), listOf(2, 12, 14, 15),
                 listOf(0, 4, 13, 6), listOf(3, 10, 11, 8))),
-                fifteenGameMoves(createMatrix(4, 4, listOf(listOf(5, 7, 9, 1), listOf(2, 12, 14, 15),
-                        listOf(3, 4, 6, 8), listOf(10, 11, 13, 0))),
-                                 listOf(8, 6, 13, 11, 10, 3)))
+                fifteenGameMoves(createMatrix(4, 4, listOf(
+                        listOf(5, 7, 9, 1), listOf(2, 12, 14, 15), listOf(3, 4, 6, 8), listOf(10, 11, 13, 0)
+                )), listOf(8, 6, 13, 11, 10, 3)))
         try {
             fifteenGameMoves(start, listOf(1))
             assert(false) { "Exception expected" }
-        }
-        catch (e: IllegalStateException) {}
-        catch (e: Throwable) {
+        } catch (e: IllegalStateException) {
+        } catch (e: Throwable) {
             assert(false) { "IllegalStateException expected" }
         }
     }

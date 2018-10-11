@@ -65,10 +65,18 @@ sealed class Expression {
         Variable -> x
         is Constant -> value
         is Binary -> when (op) {
-            PLUS  -> left.calculate(x) + right.calculate(x)
-            MINUS -> left.calculate(x) - right.calculate(x)
-            TIMES -> left.calculate(x) * right.calculate(x)
-            DIV   -> left.calculate(x) / right.calculate(x)
+            PLUS -> {
+                left.calculate(x) + right.calculate(x)
+            }
+            MINUS -> {
+                left.calculate(x) - right.calculate(x)
+            }
+            TIMES -> {
+                left.calculate(x) * right.calculate(x)
+            }
+            DIV -> {
+                left.calculate(x) / right.calculate(x)
+            }
         }
         is Negate -> -arg.calculate(x)
     }

@@ -1,4 +1,5 @@
 @file:Suppress("UNUSED_PARAMETER")
+
 package lesson8.task1
 
 import lesson1.task1.sqr
@@ -34,6 +35,7 @@ class Triangle private constructor(private val points: Set<Point>) {
     val c: Point get() = pointList[2]
 
     constructor(a: Point, b: Point, c: Point): this(linkedSetOf(a, b, c))
+
     /**
      * Пример: полупериметр
      */
