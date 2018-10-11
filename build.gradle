@@ -30,7 +30,7 @@ repositories {
 }
 
 inspections {
-    toolVersion "ideaIC:2017.3"
+    toolVersion "ideaIC:2018.2.4"
 }
 
 inspectionsMain {
