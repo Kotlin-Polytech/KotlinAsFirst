@@ -8,7 +8,7 @@ buildscript {
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath group: 'org.jetbrains.intellij.plugins', name: 'inspection-plugin', version: '0.2.1'
+        classpath group: 'org.jetbrains.intellij.plugins', name: 'inspection-plugin', version: '0.2.2'
     }
 }
 
@@ -35,9 +35,9 @@ repositories {
 inspections {
     toolVersion "ideaIC:2018.2.4"
     inheritFromIdea = true
-    profileName = "Project_Default.xml"
     plugins.kotlin.version = '1.2.71'
     plugins.kotlin.location = 'https://plugins.jetbrains.com/plugin/download?rel=true&updateId=50255'
+    tempDirInHome = true
 }
 
 inspectionsMain {
