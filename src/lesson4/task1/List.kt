@@ -11,15 +11,15 @@ import kotlin.math.sqrt
  * Найти все корни уравнения x^2 = y
  */
 fun sqRoots(y: Double) =
-        when {
-            y < 0 -> listOf()
-            y == 0.0 -> listOf(0.0)
-            else -> {
-                val root = sqrt(y)
-                // Результат!
-                listOf(-root, root)
-            }
+    when {
+        y < 0 -> listOf()
+        y == 0.0 -> listOf(0.0)
+        else -> {
+            val root = sqrt(y)
+            // Результат!
+            listOf(-root, root)
         }
+    }
 
 /**
  * Пример

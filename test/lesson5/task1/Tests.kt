@@ -9,29 +9,29 @@ class Tests {
     @Tag("Example")
     fun shoppingListCostTest() {
         val itemCosts = mapOf(
-                "Хлеб" to 50.0,
-                "Молоко" to 100.0
+            "Хлеб" to 50.0,
+            "Молоко" to 100.0
         )
         assertEquals(
-                150.0,
-                shoppingListCost(
-                        listOf("Хлеб", "Молоко"),
-                        itemCosts
-                )
+            150.0,
+            shoppingListCost(
+                listOf("Хлеб", "Молоко"),
+                itemCosts
+            )
         )
         assertEquals(
-                150.0,
-                shoppingListCost(
-                        listOf("Хлеб", "Молоко", "Кефир"),
-                        itemCosts
-                )
+            150.0,
+            shoppingListCost(
+                listOf("Хлеб", "Молоко", "Кефир"),
+                itemCosts
+            )
         )
         assertEquals(
-                0.0,
-                shoppingListCost(
-                        listOf("Хлеб", "Молоко", "Кефир"),
-                        mapOf()
-                )
+            0.0,
+            shoppingListCost(
+                listOf("Хлеб", "Молоко", "Кефир"),
+                mapOf()
+            )
         )
     }
 
@@ -39,9 +39,9 @@ class Tests {
     @Tag("Example")
     fun filterByCountryCode() {
         val phoneBook = mutableMapOf(
-                "Quagmire" to "+1-800-555-0143",
-                "Adam's Ribs" to "+82-000-555-2960",
-                "Pharmakon Industries" to "+1-800-555-6321"
+            "Quagmire" to "+1-800-555-0143",
+            "Adam's Ribs" to "+82-000-555-2960",
+            "Pharmakon Industries" to "+1-800-555-6321"
         )
 
         filterByCountryCode(phoneBook, "+1")
@@ -58,27 +58,27 @@ class Tests {
     @Tag("Example")
     fun removeFillerWords() {
         assertEquals(
-                "Я люблю Котлин".split(" "),
-                removeFillerWords(
-                        "Я как-то люблю Котлин".split(" "),
-                        "как-то"
-                )
+            "Я люблю Котлин".split(" "),
+            removeFillerWords(
+                "Я как-то люблю Котлин".split(" "),
+                "как-то"
+            )
         )
         assertEquals(
-                "Я люблю Котлин".split(" "),
-                removeFillerWords(
-                        "Я как-то люблю таки Котлин".split(" "),
-                        "как-то",
-                        "таки"
-                )
+            "Я люблю Котлин".split(" "),
+            removeFillerWords(
+                "Я как-то люблю таки Котлин".split(" "),
+                "как-то",
+                "таки"
+            )
         )
         assertEquals(
+            "Я люблю Котлин".split(" "),
+            removeFillerWords(
                 "Я люблю Котлин".split(" "),
-                removeFillerWords(
-                        "Я люблю Котлин".split(" "),
-                        "как-то",
-                        "таки"
-                )
+                "как-то",
+                "таки"
+            )
         )
     }
 
@@ -86,16 +86,16 @@ class Tests {
     @Tag("Example")
     fun buildWordSet() {
         assertEquals(
-                buildWordSet("Я люблю Котлин".split(" ")),
-                mutableSetOf("Я", "люблю", "Котлин")
+            buildWordSet("Я люблю Котлин".split(" ")),
+            mutableSetOf("Я", "люблю", "Котлин")
         )
         assertEquals(
-                buildWordSet("Я люблю люблю Котлин".split(" ")),
-                mutableSetOf("Котлин", "люблю", "Я")
+            buildWordSet("Я люблю люблю Котлин".split(" ")),
+            mutableSetOf("Котлин", "люблю", "Я")
         )
         assertEquals(
-                buildWordSet(listOf()),
-                mutableSetOf<String>()
+            buildWordSet(listOf()),
+            mutableSetOf<String>()
         )
     }
 
@@ -103,32 +103,32 @@ class Tests {
     @Tag("Normal")
     fun mergePhoneBooks() {
         assertEquals(
+            mapOf("Emergency" to "112"),
+            mergePhoneBooks(
                 mapOf("Emergency" to "112"),
-                mergePhoneBooks(
-                        mapOf("Emergency" to "112"),
-                        mapOf("Emergency" to "112")
-                )
+                mapOf("Emergency" to "112")
+            )
         )
         assertEquals(
-                mapOf("Emergency" to "112", "Police" to "02"),
-                mergePhoneBooks(
-                        mapOf("Emergency" to "112"),
-                        mapOf("Emergency" to "112", "Police" to "02")
-                )
+            mapOf("Emergency" to "112", "Police" to "02"),
+            mergePhoneBooks(
+                mapOf("Emergency" to "112"),
+                mapOf("Emergency" to "112", "Police" to "02")
+            )
         )
         assertEquals(
-                mapOf("Emergency" to "112, 911", "Police" to "02"),
-                mergePhoneBooks(
-                        mapOf("Emergency" to "112"),
-                        mapOf("Emergency" to "911", "Police" to "02")
-                )
+            mapOf("Emergency" to "112, 911", "Police" to "02"),
+            mergePhoneBooks(
+                mapOf("Emergency" to "112"),
+                mapOf("Emergency" to "911", "Police" to "02")
+            )
         )
         assertEquals(
-                mapOf("Emergency" to "112, 911", "Fire department" to "01", "Police" to "02"),
-                mergePhoneBooks(
-                        mapOf("Emergency" to "112", "Fire department" to "01"),
-                        mapOf("Emergency" to "911", "Police" to "02")
-                )
+            mapOf("Emergency" to "112, 911", "Fire department" to "01", "Police" to "02"),
+            mergePhoneBooks(
+                mapOf("Emergency" to "112", "Fire department" to "01"),
+                mapOf("Emergency" to "911", "Police" to "02")
+            )
         )
     }
 
@@ -136,18 +136,18 @@ class Tests {
     @Tag("Easy")
     fun buildGrades() {
         assertEquals(
-                mapOf<Int, List<String>>(),
-                buildGrades(mapOf())
+            mapOf<Int, List<String>>(),
+            buildGrades(mapOf())
         )
         assertEquals(
-                mapOf(5 to listOf("Михаил", "Семён"), 3 to listOf("Марат")),
-                buildGrades(mapOf("Марат" to 3, "Семён" to 5, "Михаил" to 5))
-                        .mapValues { (_, v) -> v.sorted() }
+            mapOf(5 to listOf("Михаил", "Семён"), 3 to listOf("Марат")),
+            buildGrades(mapOf("Марат" to 3, "Семён" to 5, "Михаил" to 5))
+                .mapValues { (_, v) -> v.sorted() }
         )
         assertEquals(
-                mapOf(3 to listOf("Марат", "Михаил", "Семён")),
-                buildGrades(mapOf("Марат" to 3, "Семён" to 3, "Михаил" to 3))
-                        .mapValues { (_, v) -> v.sorted() }
+            mapOf(3 to listOf("Марат", "Михаил", "Семён")),
+            buildGrades(mapOf("Марат" to 3, "Семён" to 3, "Михаил" to 3))
+                .mapValues { (_, v) -> v.sorted() }
         )
     }
 
@@ -162,20 +162,20 @@ class Tests {
     @Tag("Normal")
     fun averageStockPrice() {
         assertEquals(
-                mapOf<String, Double>(),
-                averageStockPrice(listOf())
+            mapOf<String, Double>(),
+            averageStockPrice(listOf())
         )
         assertEquals(
-                mapOf("MSFT" to 100.0, "NFLX" to 40.0),
-                averageStockPrice(listOf("MSFT" to 100.0, "NFLX" to 40.0))
+            mapOf("MSFT" to 100.0, "NFLX" to 40.0),
+            averageStockPrice(listOf("MSFT" to 100.0, "NFLX" to 40.0))
         )
         assertEquals(
-                mapOf("MSFT" to 150.0, "NFLX" to 40.0),
-                averageStockPrice(listOf("MSFT" to 100.0, "MSFT" to 200.0, "NFLX" to 40.0))
+            mapOf("MSFT" to 150.0, "NFLX" to 40.0),
+            averageStockPrice(listOf("MSFT" to 100.0, "MSFT" to 200.0, "NFLX" to 40.0))
         )
         assertEquals(
-                mapOf("MSFT" to 150.0, "NFLX" to 45.0),
-                averageStockPrice(listOf("MSFT" to 100.0, "MSFT" to 200.0, "NFLX" to 40.0, "NFLX" to 50.0))
+            mapOf("MSFT" to 150.0, "NFLX" to 45.0),
+            averageStockPrice(listOf("MSFT" to 100.0, "MSFT" to 200.0, "NFLX" to 40.0, "NFLX" to 50.0))
         )
     }
 
@@ -183,17 +183,17 @@ class Tests {
     @Tag("Normal")
     fun findCheapestStuff() {
         assertNull(
-                findCheapestStuff(
-                        mapOf("Мария" to ("печенье" to 20.0), "Орео" to ("печенье" to 100.0)),
-                        "торт"
-                )
+            findCheapestStuff(
+                mapOf("Мария" to ("печенье" to 20.0), "Орео" to ("печенье" to 100.0)),
+                "торт"
+            )
         )
         assertEquals(
-                "Мария",
-                findCheapestStuff(
-                        mapOf("Мария" to ("печенье" to 20.0), "Орео" to ("печенье" to 100.0)),
-                        "печенье"
-                )
+            "Мария",
+            findCheapestStuff(
+                mapOf("Мария" to ("печенье" to 20.0), "Орео" to ("печенье" to 100.0)),
+                "печенье"
+            )
         )
     }
 
@@ -201,31 +201,31 @@ class Tests {
     @Tag("Hard")
     fun propagateHandshakes() {
         assertEquals(
+            mapOf(
+                "Marat" to setOf("Mikhail", "Sveta"),
+                "Sveta" to setOf("Mikhail"),
+                "Mikhail" to setOf()
+            ),
+            propagateHandshakes(
                 mapOf(
-                        "Marat" to setOf("Mikhail", "Sveta"),
-                        "Sveta" to setOf("Mikhail"),
-                        "Mikhail" to setOf()
-                ),
-                propagateHandshakes(
-                        mapOf(
-                                "Marat" to setOf("Sveta"),
-                                "Sveta" to setOf("Mikhail")
-                        )
+                    "Marat" to setOf("Sveta"),
+                    "Sveta" to setOf("Mikhail")
                 )
+            )
         )
         assertEquals(
+            mapOf(
+                "Marat" to setOf("Mikhail", "Sveta"),
+                "Sveta" to setOf("Marat", "Mikhail"),
+                "Mikhail" to setOf("Sveta", "Marat")
+            ),
+            propagateHandshakes(
                 mapOf(
-                        "Marat" to setOf("Mikhail", "Sveta"),
-                        "Sveta" to setOf("Marat", "Mikhail"),
-                        "Mikhail" to setOf("Sveta", "Marat")
-                ),
-                propagateHandshakes(
-                        mapOf(
-                                "Marat" to setOf("Mikhail", "Sveta"),
-                                "Sveta" to setOf("Marat"),
-                                "Mikhail" to setOf("Sveta")
-                        )
+                    "Marat" to setOf("Mikhail", "Sveta"),
+                    "Sveta" to setOf("Marat"),
+                    "Mikhail" to setOf("Sveta")
                 )
+            )
         )
     }
 
@@ -248,16 +248,16 @@ class Tests {
     @Tag("Easy")
     fun whoAreInBoth() {
         assertEquals(
-                emptyList<String>(),
-                whoAreInBoth(emptyList(), emptyList())
+            emptyList<String>(),
+            whoAreInBoth(emptyList(), emptyList())
         )
         assertEquals(
-                listOf("Marat"),
-                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Marat", "Kirill"))
+            listOf("Marat"),
+            whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Marat", "Kirill"))
         )
         assertEquals(
-                emptyList<String>(),
-                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Sveta", "Kirill"))
+            emptyList<String>(),
+            whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Sveta", "Kirill"))
         )
     }
 
@@ -273,16 +273,16 @@ class Tests {
     @Tag("Normal")
     fun extractRepeats() {
         assertEquals(
-                emptyMap<String, Int>(),
-                extractRepeats(emptyList())
+            emptyMap<String, Int>(),
+            extractRepeats(emptyList())
         )
         assertEquals(
-                mapOf("a" to 2),
-                extractRepeats(listOf("a", "b", "a"))
+            mapOf("a" to 2),
+            extractRepeats(listOf("a", "b", "a"))
         )
         assertEquals(
-                emptyMap<String, Int>(),
-                extractRepeats(listOf("a", "b", "c"))
+            emptyMap<String, Int>(),
+            extractRepeats(listOf("a", "b", "c"))
         )
     }
 
@@ -298,16 +298,16 @@ class Tests {
     @Tag("Hard")
     fun findSumOfTwo() {
         assertEquals(
-                Pair(-1, -1),
-                findSumOfTwo(emptyList(), 1)
+            Pair(-1, -1),
+            findSumOfTwo(emptyList(), 1)
         )
         assertEquals(
-                Pair(0, 2),
-                findSumOfTwo(listOf(1, 2, 3), 4)
+            Pair(0, 2),
+            findSumOfTwo(listOf(1, 2, 3), 4)
         )
         assertEquals(
-                Pair(-1, -1),
-                findSumOfTwo(listOf(1, 2, 3), 6)
+            Pair(-1, -1),
+            findSumOfTwo(listOf(1, 2, 3), 6)
         )
     }
 
@@ -315,18 +315,18 @@ class Tests {
     @Tag("Impossible")
     fun bagPacking() {
         assertEquals(
-                setOf("Кубок"),
-                bagPacking(
-                        mapOf("Кубок" to (500 to 2000), "Слиток" to (1000 to 5000)),
-                        850
-                )
+            setOf("Кубок"),
+            bagPacking(
+                mapOf("Кубок" to (500 to 2000), "Слиток" to (1000 to 5000)),
+                850
+            )
         )
         assertEquals(
-                emptySet<String>(),
-                bagPacking(
-                        mapOf("Кубок" to (500 to 2000), "Слиток" to (1000 to 5000)),
-                        450
-                )
+            emptySet<String>(),
+            bagPacking(
+                mapOf("Кубок" to (500 to 2000), "Слиток" to (1000 to 5000)),
+                450
+            )
         )
     }
 

@@ -15,7 +15,10 @@ class Tests {
             throw AssertionError("NumberFormatException expected")
         } catch (e: NumberFormatException) {
         }
-        assertEquals(mapOf(-2 to 12, -1 to 2, 0 to 0, 1 to 0, 2 to -4), parseExpr("input/expr_in4.txt", listOf(-2, -1, 0, 1, 2)))
+        assertEquals(
+            mapOf(-2 to 12, -1 to 2, 0 to 0, 1 to 0, 2 to -4),
+            parseExpr("input/expr_in4.txt", listOf(-2, -1, 0, 1, 2))
+        )
         assertEquals(mapOf(1 to -16, 3 to -54, 4 to -73), parseExpr("input/expr_in5.txt", listOf(1, 3, 4)))
         assertEquals(mapOf(0 to 1, 1 to -1, -1 to 1), parseExpr("input/expr_in6.txt", listOf(0, 1, -1)))
     }

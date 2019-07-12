@@ -128,8 +128,10 @@ class Tests {
     fun kingTrajectory() {
         assertEquals(listOf(square("f3")), kingTrajectory(square("f3"), square("f3")))
         kingTrajectory(square("c2"), square("a6")).assertKingTrajectory(square("c2"), square("a6"), 4)
-        assertEquals(listOf(square("h2"), square("g3"), square("f4"), square("e5"), square("d6"), square("c7")),
-                kingTrajectory(square("h2"), square("c7")))
+        assertEquals(
+            listOf(square("h2"), square("g3"), square("f4"), square("e5"), square("d6"), square("c7")),
+            kingTrajectory(square("h2"), square("c7"))
+        )
     }
 
     @Test
@@ -153,8 +155,8 @@ class Tests {
             val previous = this[i]
             val next = this[i + 1]
             assertTrue(
-                    abs(next.column - previous.column) == 2 && abs(next.row - previous.row) == 1 ||
-                            abs(next.column - previous.column) == 1 && abs(next.row - previous.row) == 2
+                abs(next.column - previous.column) == 2 && abs(next.row - previous.row) == 1 ||
+                        abs(next.column - previous.column) == 1 && abs(next.row - previous.row) == 2
             )
         }
     }

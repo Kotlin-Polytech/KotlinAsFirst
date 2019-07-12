@@ -24,6 +24,7 @@ data class Point(val x: Double, val y: Double) {
  * Треугольник, заданный тремя точками (a, b, c, см. constructor ниже).
  * Эти три точки хранятся в множестве points, их порядок не имеет значения.
  */
+@Suppress("MemberVisibilityCanBePrivate")
 class Triangle private constructor(private val points: Set<Point>) {
 
     private val pointList = points.toList()
@@ -34,7 +35,7 @@ class Triangle private constructor(private val points: Set<Point>) {
 
     val c: Point get() = pointList[2]
 
-    constructor(a: Point, b: Point, c: Point): this(linkedSetOf(a, b, c))
+    constructor(a: Point, b: Point, c: Point) : this(linkedSetOf(a, b, c))
 
     /**
      * Пример: полупериметр
@@ -93,10 +94,10 @@ data class Circle(val center: Point, val radius: Double) {
  */
 data class Segment(val begin: Point, val end: Point) {
     override fun equals(other: Any?) =
-            other is Segment && (begin == other.begin && end == other.end || end == other.begin && begin == other.end)
+        other is Segment && (begin == other.begin && end == other.end || end == other.begin && begin == other.end)
 
     override fun hashCode() =
-            begin.hashCode() + end.hashCode()
+        begin.hashCode() + end.hashCode()
 }
 
 /**
@@ -126,7 +127,7 @@ class Line private constructor(val b: Double, val angle: Double) {
         require(angle >= 0 && angle < PI) { "Incorrect line angle: $angle" }
     }
 
-    constructor(point: Point, angle: Double): this(point.y * cos(angle) - point.x * sin(angle), angle)
+    constructor(point: Point, angle: Double) : this(point.y * cos(angle) - point.x * sin(angle), angle)
 
     /**
      * Средняя

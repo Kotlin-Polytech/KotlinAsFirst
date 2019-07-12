@@ -126,21 +126,21 @@ class Parser(private val groups: List<String>) {
     }
 
     private fun parseFactor(): Expression =
-            if (pos >= groups.size) throw IllegalStateException("Unexpected expression end")
-            else {
-                val group = groups[pos++]
-                when (group) {
-                    "x" -> Expression.Variable
-                    "-" -> Expression.Negate(parseFactor())
-                    "(" -> {
-                        val arg = parseExpression()
-                        val next = groups[pos++]
-                        if (next == ")") arg
-                        else throw IllegalStateException(") expected instead of $next")
-                    }
-                    else -> Expression.Constant(group.toInt())
+        if (pos >= groups.size) throw IllegalStateException("Unexpected expression end")
+        else {
+            val group = groups[pos++]
+            when (group) {
+                "x" -> Expression.Variable
+                "-" -> Expression.Negate(parseFactor())
+                "(" -> {
+                    val arg = parseExpression()
+                    val next = groups[pos++]
+                    if (next == ")") arg
+                    else throw IllegalStateException(") expected instead of $next")
                 }
+                else -> Expression.Constant(group.toInt())
             }
+        }
 
     private val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
 }
