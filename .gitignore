@@ -2,11 +2,15 @@
 
 
 .idea/*.xml
+.idea/.name
 .idea/copyright
 .idea/libraries
 .idea/shelf
 target
 out
+build/*
+.gradle/*
+report/*
 
 *.iml
 *.ipr
