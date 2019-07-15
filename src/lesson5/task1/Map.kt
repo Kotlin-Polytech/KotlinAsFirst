@@ -80,24 +80,6 @@ fun buildWordSet(text: List<String>): MutableSet<String> {
     return res
 }
 
-/**
- * Средняя
- *
- * Объединить два ассоциативных массива `mapA` и `mapB` с парами
- * "имя"-"номер телефона" в итоговый ассоциативный массив, склеивая
- * значения для повторяющихся ключей через запятую.
- * В случае повторяющихся *ключей* значение из mapA должно быть
- * перед значением из mapB.
- *
- * Повторяющиеся *значения* следует добавлять только один раз.
- *
- * Например:
- *   mergePhoneBooks(
- *     mapOf("Emergency" to "112", "Police" to "02"),
- *     mapOf("Emergency" to "911", "Police" to "02")
- *   ) -> mapOf("Emergency" to "112, 911", "Police" to "02")
- */
-fun mergePhoneBooks(mapA: Map<String, String>, mapB: Map<String, String>): Map<String, String> = TODO()
 
 /**
  * Простая
@@ -122,6 +104,50 @@ fun buildGrades(grades: Map<String, Int>): Map<Int, List<String>> = TODO()
  *   containsIn(mapOf("a" to "z"), mapOf("a" to "zee", "b" to "sweet")) -> false
  */
 fun containsIn(a: Map<String, String>, b: Map<String, String>): Boolean = TODO()
+
+/**
+ * Простая
+ *
+ * Удалить из изменяемого ассоциативного массива все записи,
+ * которые встречаются в заданном ассоциативном массиве.
+ * Записи считать одинаковыми, если и ключи, и значения совпадают.
+ *
+ * ВАЖНО: необходимо изменить переданный в качестве аргумента
+ *        изменяемый ассоциативный массив
+ *
+ * Например:
+ *   subtractOf(a = mutableMapOf("a" to "z"), mapOf("a" to "z"))
+ *     -> a changes to mutableMapOf() aka becomes empty
+ */
+fun subtractOf(a: MutableMap<String, String>, b: Map<String, String>): Unit = TODO()
+
+/**
+ * Простая
+ *
+ * Для двух списков людей найти людей, встречающихся в обоих списках.
+ * В выходном списке не должно быть повторяюихся элементов,
+ * т. е. whoAreInBoth(listOf("Марат", "Семён, "Марат"), listOf("Марат", "Марат")) == listOf("Марат")
+ */
+fun whoAreInBoth(a: List<String>, b: List<String>): List<String> = TODO()
+
+/**
+ * Средняя
+ *
+ * Объединить два ассоциативных массива `mapA` и `mapB` с парами
+ * "имя"-"номер телефона" в итоговый ассоциативный массив, склеивая
+ * значения для повторяющихся ключей через запятую.
+ * В случае повторяющихся *ключей* значение из mapA должно быть
+ * перед значением из mapB.
+ *
+ * Повторяющиеся *значения* следует добавлять только один раз.
+ *
+ * Например:
+ *   mergePhoneBooks(
+ *     mapOf("Emergency" to "112", "Police" to "02"),
+ *     mapOf("Emergency" to "911", "Police" to "02")
+ *   ) -> mapOf("Emergency" to "112, 911", "Police" to "02")
+ */
+fun mergePhoneBooks(mapA: Map<String, String>, mapB: Map<String, String>): Map<String, String> = TODO()
 
 /**
  * Средняя
@@ -151,57 +177,6 @@ fun averageStockPrice(stockPrices: List<Pair<String, Double>>): Map<String, Doub
  *   ) -> "Мария"
  */
 fun findCheapestStuff(stuff: Map<String, Pair<String, Double>>, kind: String): String? = TODO()
-
-/**
- * Сложная
- *
- * Для заданного ассоциативного массива знакомых через одно рукопожатие `friends`
- * необходимо построить его максимальное расширение по рукопожатиям, то есть,
- * для каждого человека найти всех людей, с которыми он знаком через любое
- * количество рукопожатий.
- * Считать, что все имена людей являются уникальными, а также что рукопожатия
- * являются направленными, то есть, если Марат знает Свету, то это не означает,
- * что Света знает Марата.
- *
- * Например:
- *   propagateHandshakes(
- *     mapOf(
- *       "Marat" to setOf("Mikhail", "Sveta"),
- *       "Sveta" to setOf("Marat"),
- *       "Mikhail" to setOf("Sveta")
- *     )
- *   ) -> mapOf(
- *          "Marat" to setOf("Mikhail", "Sveta"),
- *          "Sveta" to setOf("Marat", "Mikhail"),
- *          "Mikhail" to setOf("Sveta", "Marat")
- *        )
- */
-fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<String>> = TODO()
-
-/**
- * Простая
- *
- * Удалить из изменяемого ассоциативного массива все записи,
- * которые встречаются в заданном ассоциативном массиве.
- * Записи считать одинаковыми, если и ключи, и значения совпадают.
- *
- * ВАЖНО: необходимо изменить переданный в качестве аргумента
- *        изменяемый ассоциативный массив
- *
- * Например:
- *   subtractOf(a = mutableMapOf("a" to "z"), mapOf("a" to "z"))
- *     -> a changes to mutableMapOf() aka becomes empty
- */
-fun subtractOf(a: MutableMap<String, String>, b: Map<String, String>): Unit = TODO()
-
-/**
- * Простая
- *
- * Для двух списков людей найти людей, встречающихся в обоих списках.
- * В выходном списке не должно быть повторяюихся элементов,
- * т. е. whoAreInBoth(listOf("Марат", "Семён, "Марат"), listOf("Марат", "Марат")) == listOf("Марат")
- */
-fun whoAreInBoth(a: List<String>, b: List<String>): List<String> = TODO()
 
 /**
  * Средняя
@@ -238,6 +213,32 @@ fun extractRepeats(list: List<String>): Map<String, Int> = TODO()
  *   hasAnagrams(listOf("тор", "свет", "рот")) -> true
  */
 fun hasAnagrams(words: List<String>): Boolean = TODO()
+
+/**
+ * Сложная
+ *
+ * Для заданного ассоциативного массива знакомых через одно рукопожатие `friends`
+ * необходимо построить его максимальное расширение по рукопожатиям, то есть,
+ * для каждого человека найти всех людей, с которыми он знаком через любое
+ * количество рукопожатий.
+ * Считать, что все имена людей являются уникальными, а также что рукопожатия
+ * являются направленными, то есть, если Марат знает Свету, то это не означает,
+ * что Света знает Марата.
+ *
+ * Например:
+ *   propagateHandshakes(
+ *     mapOf(
+ *       "Marat" to setOf("Mikhail", "Sveta"),
+ *       "Sveta" to setOf("Marat"),
+ *       "Mikhail" to setOf("Sveta")
+ *     )
+ *   ) -> mapOf(
+ *          "Marat" to setOf("Mikhail", "Sveta"),
+ *          "Sveta" to setOf("Marat", "Mikhail"),
+ *          "Mikhail" to setOf("Sveta", "Marat")
+ *        )
+ */
+fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<String>> = TODO()
 
 /**
  * Сложная

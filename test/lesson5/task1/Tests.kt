@@ -100,6 +100,64 @@ class Tests {
     }
 
     @Test
+    @Tag("Easy")
+    fun buildGrades() {
+        assertEquals(
+                mapOf<Int, List<String>>(),
+                buildGrades(mapOf())
+        )
+        assertEquals(
+                mapOf(5 to listOf("Михаил", "Семён"), 3 to listOf("Марат")),
+                buildGrades(mapOf("Марат" to 3, "Семён" to 5, "Михаил" to 5))
+                        .mapValues { (_, v) -> v.sorted() }
+        )
+        assertEquals(
+                mapOf(3 to listOf("Марат", "Михаил", "Семён")),
+                buildGrades(mapOf("Марат" to 3, "Семён" to 3, "Михаил" to 3))
+                        .mapValues { (_, v) -> v.sorted() }
+        )
+    }
+
+    @Test
+    @Tag("Easy")
+    fun containsIn() {
+        assertTrue(containsIn(mapOf("a" to "z"), mapOf("a" to "z", "b" to "sweet")))
+        assertFalse(containsIn(mapOf("a" to "z"), mapOf("a" to "zee", "b" to "sweet")))
+    }
+
+    @Test
+    @Tag("Easy")
+    fun subtractOf() {
+        val from = mutableMapOf("a" to "z", "b" to "c")
+
+        subtractOf(from, mapOf())
+        assertEquals(from, mapOf("a" to "z", "b" to "c"))
+
+        subtractOf(from, mapOf("b" to "z"))
+        assertEquals(from, mapOf("a" to "z", "b" to "c"))
+
+        subtractOf(from, mapOf("a" to "z"))
+        assertEquals(from, mapOf("b" to "c"))
+    }
+
+    @Test
+    @Tag("Easy")
+    fun whoAreInBoth() {
+        assertEquals(
+                emptyList<String>(),
+                whoAreInBoth(emptyList(), emptyList())
+        )
+        assertEquals(
+                listOf("Marat"),
+                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Marat", "Kirill"))
+        )
+        assertEquals(
+                emptyList<String>(),
+                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Sveta", "Kirill"))
+        )
+    }
+
+    @Test
     @Tag("Normal")
     fun mergePhoneBooks() {
         assertEquals(
@@ -130,32 +188,6 @@ class Tests {
                 mapOf("Emergency" to "911", "Police" to "02")
             )
         )
-    }
-
-    @Test
-    @Tag("Easy")
-    fun buildGrades() {
-        assertEquals(
-            mapOf<Int, List<String>>(),
-            buildGrades(mapOf())
-        )
-        assertEquals(
-            mapOf(5 to listOf("Михаил", "Семён"), 3 to listOf("Марат")),
-            buildGrades(mapOf("Марат" to 3, "Семён" to 5, "Михаил" to 5))
-                .mapValues { (_, v) -> v.sorted() }
-        )
-        assertEquals(
-            mapOf(3 to listOf("Марат", "Михаил", "Семён")),
-            buildGrades(mapOf("Марат" to 3, "Семён" to 3, "Михаил" to 3))
-                .mapValues { (_, v) -> v.sorted() }
-        )
-    }
-
-    @Test
-    @Tag("Easy")
-    fun containsIn() {
-        assertTrue(containsIn(mapOf("a" to "z"), mapOf("a" to "z", "b" to "sweet")))
-        assertFalse(containsIn(mapOf("a" to "z"), mapOf("a" to "zee", "b" to "sweet")))
     }
 
     @Test
@@ -198,6 +230,39 @@ class Tests {
     }
 
     @Test
+    @Tag("Normal")
+    fun canBuildFrom() {
+        assertFalse(canBuildFrom(emptyList(), "foo"))
+        assertTrue(canBuildFrom(listOf('a', 'b', 'o'), "baobab"))
+        assertFalse(canBuildFrom(listOf('a', 'm', 'r'), "Marat"))
+    }
+
+    @Test
+    @Tag("Normal")
+    fun extractRepeats() {
+        assertEquals(
+                emptyMap<String, Int>(),
+                extractRepeats(emptyList())
+        )
+        assertEquals(
+                mapOf("a" to 2),
+                extractRepeats(listOf("a", "b", "a"))
+        )
+        assertEquals(
+                emptyMap<String, Int>(),
+                extractRepeats(listOf("a", "b", "c"))
+        )
+    }
+
+    @Test
+    @Tag("Normal")
+    fun hasAnagrams() {
+        assertFalse(hasAnagrams(emptyList()))
+        assertTrue(hasAnagrams(listOf("рот", "свет", "тор")))
+        assertFalse(hasAnagrams(listOf("рот", "свет", "код", "дверь")))
+    }
+
+    @Test
     @Tag("Hard")
     fun propagateHandshakes() {
         assertEquals(
@@ -229,72 +294,7 @@ class Tests {
         )
     }
 
-    @Test
-    @Tag("Easy")
-    fun subtractOf() {
-        val from = mutableMapOf("a" to "z", "b" to "c")
-
-        subtractOf(from, mapOf())
-        assertEquals(from, mapOf("a" to "z", "b" to "c"))
-
-        subtractOf(from, mapOf("b" to "z"))
-        assertEquals(from, mapOf("a" to "z", "b" to "c"))
-
-        subtractOf(from, mapOf("a" to "z"))
-        assertEquals(from, mapOf("b" to "c"))
-    }
-
-    @Test
-    @Tag("Easy")
-    fun whoAreInBoth() {
-        assertEquals(
-            emptyList<String>(),
-            whoAreInBoth(emptyList(), emptyList())
-        )
-        assertEquals(
-            listOf("Marat"),
-            whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Marat", "Kirill"))
-        )
-        assertEquals(
-            emptyList<String>(),
-            whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Sveta", "Kirill"))
-        )
-    }
-
-    @Test
-    @Tag("Normal")
-    fun canBuildFrom() {
-        assertFalse(canBuildFrom(emptyList(), "foo"))
-        assertTrue(canBuildFrom(listOf('a', 'b', 'o'), "baobab"))
-        assertFalse(canBuildFrom(listOf('a', 'm', 'r'), "Marat"))
-    }
-
-    @Test
-    @Tag("Normal")
-    fun extractRepeats() {
-        assertEquals(
-            emptyMap<String, Int>(),
-            extractRepeats(emptyList())
-        )
-        assertEquals(
-            mapOf("a" to 2),
-            extractRepeats(listOf("a", "b", "a"))
-        )
-        assertEquals(
-            emptyMap<String, Int>(),
-            extractRepeats(listOf("a", "b", "c"))
-        )
-    }
-
-    @Test
-    @Tag("Normal")
-    fun hasAnagrams() {
-        assertFalse(hasAnagrams(emptyList()))
-        assertTrue(hasAnagrams(listOf("рот", "свет", "тор")))
-        assertFalse(hasAnagrams(listOf("рот", "свет", "код", "дверь")))
-    }
-
-    @Test
+   @Test
     @Tag("Hard")
     fun findSumOfTwo() {
         assertEquals(
