@@ -128,19 +128,19 @@ class Tests {
     @Test
     @Tag("Normal")
     fun times() {
-        assertEquals(0.0, times(listOf(), listOf()), 1e-5)
-        assertEquals(-5.0, times(listOf(1.0, -4.0), listOf(3.0, 2.0)), 1e-5)
-        assertEquals(-19.0, times(listOf(-1.0, 2.0, -3.0), listOf(3.0, -2.0, 4.0)), 1e-5)
+        assertEquals(0, times(listOf(), listOf()))
+        assertEquals(-5, times(listOf(1, -4), listOf(3, 2)))
+        assertEquals(-19, times(listOf(-1, 2, -3), listOf(3, -2, 4)))
     }
 
     @Test
     @Tag("Normal")
     fun polynom() {
-        assertEquals(0.0, polynom(listOf(), 1000.0), 1e-5)
-        assertEquals(42.0, polynom(listOf(42.0), -1000.0), 1e-5)
-        assertEquals(13.0, polynom(listOf(3.0, 2.0), 5.0), 1e-5)
-        assertEquals(0.0, polynom(listOf(2.0, -3.0, 1.0), 1.0), 1e-5)
-        assertEquals(45.0, polynom(listOf(-7.0, 6.0, 4.0, -4.0, 1.0), -2.0), 1e-5)
+        assertEquals(0, polynom(listOf(), 1000))
+        assertEquals(42, polynom(listOf(42), -1000))
+        assertEquals(13, polynom(listOf(3, 2), 5))
+        assertEquals(0, polynom(listOf(2, -3, 1), 1))
+        assertEquals(45, polynom(listOf(-7, 6, 4, -4, 1), -2))
     }
 
     @Test
@@ -148,16 +148,14 @@ class Tests {
     fun accumulate() {
         assertEquals(listOf<Double>(), accumulate(arrayListOf()))
         assertArrayEquals(
-            listOf(3.14).toDoubleArray(),
-            accumulate(arrayListOf(3.14)).toDoubleArray(),
-            1e-5
+            listOf(3).toIntArray(),
+            accumulate(arrayListOf(3)).toIntArray()
         )
         assertArrayEquals(
-            listOf(1.0, 3.0, 6.0, 10.0).toDoubleArray(),
-            accumulate(arrayListOf(1.0, 2.0, 3.0, 4.0)).toDoubleArray(),
-            1e-5
+            listOf(1, 3, 6, 10).toIntArray(),
+            accumulate(arrayListOf(1, 2, 3, 4)).toIntArray()
         )
-        val toMutate = mutableListOf(-3.0, -1.0, 4.0, 5.0, -5.0)
+        val toMutate = mutableListOf(-3, -1, 4, 5, -5)
         assertTrue(toMutate === accumulate(toMutate)) { "You should mutate an input list, not create a copy" }
     }
 
