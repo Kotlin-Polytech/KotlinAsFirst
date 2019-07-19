@@ -103,18 +103,18 @@ class Tests {
     @Tag("Easy")
     fun buildGrades() {
         assertEquals(
-                mapOf<Int, List<String>>(),
-                buildGrades(mapOf())
+            mapOf<Int, List<String>>(),
+            buildGrades(mapOf())
         )
         assertEquals(
-                mapOf(5 to listOf("Михаил", "Семён"), 3 to listOf("Марат")),
-                buildGrades(mapOf("Марат" to 3, "Семён" to 5, "Михаил" to 5))
-                        .mapValues { (_, v) -> v.sorted() }
+            mapOf(5 to listOf("Михаил", "Семён"), 3 to listOf("Марат")),
+            buildGrades(mapOf("Марат" to 3, "Семён" to 5, "Михаил" to 5))
+                .mapValues { (_, v) -> v.sorted() }
         )
         assertEquals(
-                mapOf(3 to listOf("Марат", "Михаил", "Семён")),
-                buildGrades(mapOf("Марат" to 3, "Семён" to 3, "Михаил" to 3))
-                        .mapValues { (_, v) -> v.sorted() }
+            mapOf(3 to listOf("Марат", "Михаил", "Семён")),
+            buildGrades(mapOf("Марат" to 3, "Семён" to 3, "Михаил" to 3))
+                .mapValues { (_, v) -> v.sorted() }
         )
     }
 
@@ -144,16 +144,16 @@ class Tests {
     @Tag("Easy")
     fun whoAreInBoth() {
         assertEquals(
-                emptyList<String>(),
-                whoAreInBoth(emptyList(), emptyList())
+            emptyList<String>(),
+            whoAreInBoth(emptyList(), emptyList())
         )
         assertEquals(
-                listOf("Marat"),
-                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Marat", "Kirill"))
+            listOf("Marat"),
+            whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Marat", "Kirill"))
         )
         assertEquals(
-                emptyList<String>(),
-                whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Sveta", "Kirill"))
+            emptyList<String>(),
+            whoAreInBoth(listOf("Marat", "Mikhail"), listOf("Sveta", "Kirill"))
         )
     }
 
@@ -241,16 +241,16 @@ class Tests {
     @Tag("Normal")
     fun extractRepeats() {
         assertEquals(
-                emptyMap<String, Int>(),
-                extractRepeats(emptyList())
+            emptyMap<String, Int>(),
+            extractRepeats(emptyList())
         )
         assertEquals(
-                mapOf("a" to 2),
-                extractRepeats(listOf("a", "b", "a"))
+            mapOf("a" to 2),
+            extractRepeats(listOf("a", "b", "a"))
         )
         assertEquals(
-                emptyMap<String, Int>(),
-                extractRepeats(listOf("a", "b", "c"))
+            emptyMap<String, Int>(),
+            extractRepeats(listOf("a", "b", "c"))
         )
     }
 
@@ -294,7 +294,7 @@ class Tests {
         )
     }
 
-   @Test
+    @Test
     @Tag("Hard")
     fun findSumOfTwo() {
         assertEquals(
