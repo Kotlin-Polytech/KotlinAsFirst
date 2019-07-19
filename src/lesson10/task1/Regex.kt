@@ -87,17 +87,14 @@ class Parser(private val groups: List<String>) {
 
     fun parse(): Expression {
         val result = parseExpression()
-        if (pos < groups.size) {
-            throw IllegalStateException("Unexpected expression remainder: ${groups.subList(pos, groups.size)}")
-        }
+        check(pos >= groups.size) { "Unexpected expression remainder: ${groups.subList(pos, groups.size)}" }
         return result
     }
 
     private fun parseExpression(): Expression {
         var left = parseItem()
         while (pos < groups.size) {
-            val op = operationMap[groups[pos]]
-            when (op) {
+            when (val op = operationMap[groups[pos]]) {
                 PLUS, MINUS -> {
                     pos++
                     val right = parseItem()
@@ -112,8 +109,7 @@ class Parser(private val groups: List<String>) {
     private fun parseItem(): Expression {
         var left = parseFactor()
         while (pos < groups.size) {
-            val op = operationMap[groups[pos]]
-            when (op) {
+            when (val op = operationMap[groups[pos]]) {
                 TIMES, DIV -> {
                     pos++
                     val right = parseFactor()
@@ -125,22 +121,20 @@ class Parser(private val groups: List<String>) {
         return left
     }
 
-    private fun parseFactor(): Expression =
-        if (pos >= groups.size) throw IllegalStateException("Unexpected expression end")
-        else {
-            val group = groups[pos++]
-            when (group) {
-                "x" -> Expression.Variable
-                "-" -> Expression.Negate(parseFactor())
-                "(" -> {
-                    val arg = parseExpression()
-                    val next = groups[pos++]
-                    if (next == ")") arg
-                    else throw IllegalStateException(") expected instead of $next")
-                }
-                else -> Expression.Constant(group.toInt())
+    private fun parseFactor(): Expression {
+        check(pos < groups.size) { "Unexpected expression end" }
+        return when (val group = groups[pos++]) {
+            "x" -> Expression.Variable
+            "-" -> Expression.Negate(parseFactor())
+            "(" -> {
+                val arg = parseExpression()
+                val next = groups[pos++]
+                if (next == ")") arg
+                else throw IllegalStateException(") expected instead of $next")
             }
+            else -> Expression.Constant(group.toInt())
         }
+    }
 
     private val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
 }
