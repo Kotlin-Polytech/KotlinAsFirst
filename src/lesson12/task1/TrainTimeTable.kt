@@ -64,10 +64,11 @@ class TrainTimeTable(val baseStationName: String) {
      * Если stopName совпадает с именем одной из промежуточных остановок, удалить её и вернуть true.
      * Если у поезда нет такой остановки, или stopName совпадает с начальной или конечной остановкой, вернуть false.
      *
+     * @param train название поезда
      * @param stopName название промежуточной остановки
      * @return true, если удаление успешно
      */
-    fun removeStop(stopName: String): Boolean = TODO()
+    fun removeStop(train: String, stopName: String): Boolean = TODO()
 
     /**
      * Вернуть список всех поездов, упорядоченный по времени отправления с baseStationName
