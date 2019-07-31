@@ -105,7 +105,9 @@ data class Time(val hour: Int, val minute: Int) : Comparable<Time> {
 data class Stop(val name: String, val time: Time)
 
 /**
- * Поезд (список остановок, упорядоченный по времени).
+ * Поезд (имя, список остановок, упорядоченный по времени).
  * Первой идёт начальная остановка, последней конечная.
  */
-data class Train(val stops: List<Stop>)
+data class Train(val name: String, val stops: List<Stop>) {
+    constructor(name: String, vararg stops: Stop) : this(name, stops.asList())
+}
