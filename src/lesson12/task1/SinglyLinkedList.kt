@@ -16,26 +16,27 @@ package lesson12.task1
  */
 class SinglyLinkedList {
 
+    // Ссылка на первый узел в списке
     private var start: Node? = null
 
     private class Node(
         val value: Int,
-        var next: Node? // null means the node is the last in the list
+        var next: Node? // next == null означает, что данный узел -- последний в списке
     )
 
     fun add(newValue: Int) {
-        // Node is added to the first position
+        // Узел всегда добавляется в первую позицию в списке
         start = Node(newValue, start)
     }
 
-    // Returns false for empty list
+    // Удаление первого узла, возвращает false, если список пуст
     fun removeFirst(): Boolean {
         if (start == null) return false
         start = start?.next
         return true
     }
 
-    // Returns false for empty list
+    // Удаление последнего узла, возвращает false, если список пуст
     fun removeLast(): Boolean {
         val start = start ?: return false
         if (start.next == null) {
@@ -50,6 +51,7 @@ class SinglyLinkedList {
         return true
     }
 
+    // Удаление узла по значению, возвращает false, если узла с таким значением нет в списке
     fun remove(removedValue: Int): Boolean {
         val start = start ?: return false
         if (start.value == removedValue) {
@@ -68,6 +70,7 @@ class SinglyLinkedList {
         }
     }
 
+    // Размер
     fun size(): Int {
         var current = start
         var result = 0
@@ -78,8 +81,10 @@ class SinglyLinkedList {
         return result
     }
 
+    // Признак пустоты
     fun isEmpty(): Boolean = start == null
 
+    // Списки равны, если равны их размеры и соответствующие элементы
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is SinglyLinkedList) return false
