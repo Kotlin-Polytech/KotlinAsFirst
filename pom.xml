@@ -10,6 +10,14 @@
 
     <name>kfirst</name>
 
+    <repositories>
+        <repository>
+            <id>bintray-vorpal-research-kotlin-maven</id>
+            <name>vorpal-research-kotlin-maven</name>
+            <url>http://dl.bintray.com/vorpal-research/kotlin-maven</url>
+        </repository>
+    </repositories>
+
     <parent>
         <groupId>ru.spbstu</groupId>
         <artifactId>kfirst-bom</artifactId>
