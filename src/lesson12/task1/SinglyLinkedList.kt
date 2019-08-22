@@ -71,15 +71,16 @@ class SinglyLinkedList {
     }
 
     // Размер
-    fun size(): Int {
-        var current = start
-        var result = 0
-        while (current != null) {
-            current = current.next
-            result++
+    val size: Int
+        get() {
+            var current = start
+            var result = 0
+            while (current != null) {
+                current = current.next
+                result++
+            }
+            return result
         }
-        return result
-    }
 
     // Признак пустоты
     fun isEmpty(): Boolean = start == null
