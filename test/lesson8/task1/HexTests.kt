@@ -35,7 +35,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("Impossible")
     fun hexagonByThreePoints() {
         assertEquals(
             Hexagon(HexPoint(4, 2), 2),
