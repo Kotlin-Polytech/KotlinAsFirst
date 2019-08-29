@@ -234,6 +234,8 @@ fun chooseLongestChaoticWord(inputName: String, outputName: String) {
  * Отдельно следует заметить, что открывающая последовательность из трёх звёздочек (***) должна трактоваться как "<b><i>"
  * и никак иначе.
  *
+ * При решении этой и двух следующих задач полезно прочитать статью Википедии "Стек".
+ *
  * Пример входного файла:
 Lorem ipsum *dolor sit amet*, consectetur **adipiscing** elit.
 Vestibulum lobortis, ~~Est vehicula rutrum *suscipit*~~, ipsum ~~lib~~ero *placerat **tortor***,
