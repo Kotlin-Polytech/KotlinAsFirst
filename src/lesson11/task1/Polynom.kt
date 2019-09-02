@@ -79,4 +79,9 @@ class Polynom(vararg coeffs: Double) {
      * Сравнение на равенство
      */
     override fun equals(other: Any?): Boolean = TODO()
+
+    /**
+     * Получение хеш-кода
+     */
+    override fun hashCode(): Int = TODO()
 }
