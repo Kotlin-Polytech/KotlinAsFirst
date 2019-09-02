@@ -38,7 +38,6 @@ inspections {
     inheritFromIdea = true
     tempDirInHome = true
     plugins.kotlin.version = "$kotlin_version"
-    plugins.kotlin.location = "https://plugins.jetbrains.com/plugin/download?rel=true&updateId=50255"
 }
 
 inspectionsMain {
