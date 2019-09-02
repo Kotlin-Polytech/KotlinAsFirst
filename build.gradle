@@ -1,42 +1,44 @@
 buildscript {
-    ext.kotlin_version = '1.2.71'
+    ext.kotlin_version = "1.3.41"
 
     repositories {
         mavenCentral()
-        maven { url 'https://dl.bintray.com/kotlin/kotlin-dev' }
+        maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
+        maven { url "https://dl.bintray.com/vorpal-research/kotlin-maven" }
+        mavenLocal()
     }
 
     dependencies {
+        // noinspection DifferentKotlinGradleVersion
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath group: 'org.jetbrains.intellij.plugins', name: 'inspection-plugin', version: '0.3.0-rc-3'
+        classpath "org.jetbrains.intellij.plugins:inspection-plugin:0.3.0"
     }
 }
 
-plugins {
-    id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.2.71'
-}
+apply plugin: "java"
+apply plugin: "kotlin"
+apply plugin: "org.jetbrains.intellij.inspections"
 
-apply plugin: 'org.jetbrains.intellij.inspections'
+group = "ru.spbstu"
+version = "19.0.1-SNAPSHOT"
 
-group = 'ru.spbstu'
-version = '0.1.14-SNAPSHOT'
-
-description = """"""
+description = "None"
 
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
-    maven { url "http://repo.maven.apache.org/maven2" }
     mavenCentral()
     jcenter()
+    mavenLocal()
 }
 
 inspections {
-    toolVersion "ideaIC:2018.2.4"
+    toolVersion "ideaIC:2019.1"
     inheritFromIdea = true
-    plugins.kotlin.version = '1.2.71'
     tempDirInHome = true
+    plugins.kotlin.version = "$kotlin_version"
+    plugins.kotlin.location = "https://plugins.jetbrains.com/plugin/download?rel=true&updateId=50255"
 }
 
 inspectionsMain {
@@ -51,22 +53,14 @@ inspectionsMain {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    compile "org.jetbrains.kotlin:kotlin-runtime:$kotlin_version"
-    compile "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.8"
+    compile "org.jetbrains.kotlin:kotlin-stdlib"
+    compile "org.jetbrains.kotlin:kotlin-reflect"
+    compile "org.jetbrains.kotlinx:kotlinx-html-jvm:0.6.12"
 
-    testCompile "org.junit.jupiter:junit-jupiter-api:5.2.0"
-    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.2.0"
-    testRuntime "org.junit.vintage:junit-vintage-engine:4.12.0"
-    testRuntime "org.junit.platform:junit-platform-launcher:1.0.0"
-}
-
-compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
-}
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.5.1"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.5.1"
+    testRuntime "org.junit.vintage:junit-vintage-engine:4.12.3"
+    testRuntime "org.junit.platform:junit-platform-launcher:1.5.1"
 }
 
 test {
@@ -76,12 +70,12 @@ test {
 sourceSets {
     main {
         java {
-            srcDirs = ['src']
+            srcDirs = ["src"]
         }
     }
     test {
         java {
-            srcDirs = ['test']
+            srcDirs = ["test"]
         }
     }
 }
