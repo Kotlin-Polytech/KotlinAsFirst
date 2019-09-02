@@ -34,7 +34,7 @@ repositories {
 }
 
 inspections {
-    toolVersion "ideaIC:2019.1"
+    toolVersion "ideaIC:2019.1.4"
     inheritFromIdea = true
     tempDirInHome = true
     plugins.kotlin.version = "$kotlin_version"
