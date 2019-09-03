@@ -6,7 +6,7 @@
 
     <groupId>ru.spbstu</groupId>
     <artifactId>kfirst</artifactId>
-    <version>19.0.1</version>
+    <version>19.0.2</version>
 
     <name>kfirst</name>
 
@@ -29,7 +29,7 @@
             <plugin>
                 <artifactId>kfirst-runner-plugin</artifactId>
                 <groupId>org.jetbrains.research</groupId>
-                <version>19.0.1</version>
+                <version>19.0.2</version>
                 <configuration>
                     <packages>
                         <package>lesson1.task1</package>
