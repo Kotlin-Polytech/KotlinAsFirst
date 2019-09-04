@@ -80,11 +80,84 @@ class HexSegment(val begin: HexPoint, val end: HexPoint) {
      */
     fun isValid(): Boolean = TODO()
 
+    /**
+     * Средняя
+     *
+     * Вернуть направление отрезка (см. описание класса Direction ниже).
+     * Для "правильного" отрезка выбирается одно из первых шести направлений,
+     * для "неправильного" -- INCORRECT.
+     */
+    fun direction(): Direction = TODO()
+
     override fun equals(other: Any?) =
         other is HexSegment && (begin == other.begin && end == other.end || end == other.begin && begin == other.end)
 
     override fun hashCode() =
         begin.hashCode() + end.hashCode()
+}
+
+/**
+ * Направление отрезка на гексагональной сетке.
+ * Если отрезок "правильный", то он проходит вдоль одной из трёх осей шестугольника.
+ * Если нет, его направление считается INCORRECT
+ */
+enum class Direction {
+    RIGHT,      // слева направо, например 30 -> 34
+    UP_RIGHT,   // вверх-вправо, например 32 -> 62
+    UP_LEFT,    // вверх-влево, например 25 -> 61
+    LEFT,       // справа налево, например 34 -> 30
+    DOWN_LEFT,  // вниз-влево, например 62 -> 32
+    DOWN_RIGHT, // вниз-вправо, например 61 -> 25
+    INCORRECT;  // отрезок имеет изгиб, например 30 -> 55 (изгиб в точке 35)
+
+    /**
+     * Простая
+     *
+     * Вернуть направление, противоположное данному.
+     * Для INCORRECT вернуть INCORRECT
+     */
+    fun opposite(): Direction = TODO()
+
+    /**
+     * Средняя
+     *
+     * Вернуть направление, повёрнутое относительно
+     * заданного на 60 градусов против часовой стрелки.
+     *
+     * Например, для RIGHT это UP_RIGHT, для UP_LEFT это LEFT, для LEFT это DOWN_LEFT.
+     * Для направления INCORRECT бросить исключение IllegalArgumentException.
+     */
+    fun next(): Direction = TODO()
+
+    /**
+     * Простая
+     *
+     * Вернуть true, если данное направление совпадает с other или противоположно ему.
+     * INCORRECT не параллельно никакому направлению, в том числе другому INCORRECT.
+     */
+    fun isParallel(other: Direction): Boolean = TODO()
+}
+
+/**
+ * Простая
+ *
+ * Сдвинуть точку в направлении direction на расстояние distance.
+ *
+ * Примеры:
+ * 30, direction = RIGHT, distance = 3 --> 33
+ * 35, direction = UP_LEFT, distance = 2 --> 53
+ * 45, direction = DOWN_LEFT, distance = 4 --> 05
+ */
+fun HexPoint.move(direction: Direction, distance: Int): HexPoint {
+    return when (direction) {
+        Direction.RIGHT -> HexPoint(x + distance, y)
+        Direction.UP_RIGHT -> HexPoint(x, y + distance)
+        Direction.UP_LEFT -> HexPoint(x - distance, y + distance)
+        Direction.LEFT -> HexPoint(x - distance, y)
+        Direction.DOWN_LEFT -> HexPoint(x, y - distance)
+        Direction.DOWN_RIGHT -> HexPoint(x + distance, y - distance)
+        Direction.INCORRECT -> throw IllegalArgumentException()
+    }
 }
 
 /**
