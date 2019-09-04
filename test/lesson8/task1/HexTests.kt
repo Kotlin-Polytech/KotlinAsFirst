@@ -93,7 +93,7 @@ class HexTests {
     fun hexPointMove() {
         assertEquals(HexPoint(3, 3), HexPoint(0, 3).move(RIGHT, 3))
         assertEquals(HexPoint(3, 5), HexPoint(5, 3).move(UP_LEFT, 2))
-        assertEquals(HexPoint(5, 0), HexPoint(0, 3).move(DOWN_LEFT, 4))
+        assertEquals(HexPoint(5, 0), HexPoint(5, 4).move(DOWN_LEFT, 4))
         assertEquals(HexPoint(1, 1), HexPoint(1, 1).move(DOWN_RIGHT, 0))
         assertEquals(HexPoint(4, 2), HexPoint(2, 2).move(LEFT, -2))
         assertThrows(IllegalArgumentException::class.java) {
