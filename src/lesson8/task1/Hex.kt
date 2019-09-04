@@ -13,6 +13,17 @@ package lesson8.task1
  *   21  22  23  24  25  26  27  28
  *     12  13  14  15  16  17  18
  *       03  04  05  06  07  08
+ *
+ * В задачах, работающих с шестиугольниками на сетке, считать, что они имеют
+ * _плоскую_ ориентацию:
+ *  __
+ * /  \
+ * \__/
+ *
+ * со сторонами, параллельными координатным осям _плоской_ сетки.
+ *
+ * Более подробно про шестиугольные системы координат можно почитать по следующей ссылке:
+ *   https://www.redblobgames.com/grids/hexagons/
  */
 data class HexPoint(val x: Int, val y: Int) {
     /**
@@ -75,6 +86,25 @@ class HexSegment(val begin: HexPoint, val end: HexPoint) {
     override fun hashCode() =
         begin.hashCode() + end.hashCode()
 }
+
+/**
+ * Средняя
+ *
+ * Найти путь между двумя заданными гексами, представленный в виде списка всех гексов,
+ * которые входят в этот путь.
+ * Начальный и конечный гекс также входят в данный список.
+ *
+ * Пример (для координатной сетки из примера в начале файла):
+ *   pathBetweenHexes(HexPoint(y = 2, x = 2), HexPoint(y = 5, x = 3)) ->
+ *     listOf(
+ *       HexPoint(y = 2, x = 2),
+ *       HexPoint(y = 2, x = 3),
+ *       HexPoint(y = 3, x = 3),
+ *       HexPoint(y = 4, x = 3),
+ *       HexPoint(y = 5, x = 3)
+ *     )
+ */
+fun pathBetweenHexes(from: HexPoint, to: HexPoint): List<HexPoint> = TODO()
 
 /**
  * Очень сложная

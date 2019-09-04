@@ -35,6 +35,12 @@ class HexTests {
     }
 
     @Test
+    @Tag("Normal")
+    fun pathBetweenHexes() {
+        // TODO: add tests
+    }
+
+    @Test
     @Tag("Impossible")
     fun hexagonByThreePoints() {
         assertEquals(
