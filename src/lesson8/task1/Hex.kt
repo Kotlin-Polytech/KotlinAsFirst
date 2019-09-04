@@ -14,6 +14,9 @@ package lesson8.task1
  *     12  13  14  15  16  17  18
  *       03  04  05  06  07  08
  *
+ * В примерах к задачам используются те же обозначения точек,
+ * к примеру, 16 соответствует HexPoint(x = 6, y = 1), а 41 -- HexPoint(x = 1, y = 4).
+ *
  * В задачах, работающих с шестиугольниками на сетке, считать, что они имеют
  * _плоскую_ ориентацию:
  *  __
@@ -126,6 +129,7 @@ enum class Direction {
      *
      * Например, для RIGHT это UP_RIGHT, для UP_LEFT это LEFT, для LEFT это DOWN_LEFT.
      * Для направления INCORRECT бросить исключение IllegalArgumentException.
+     * При решении этой задачи попробуйте обойтись без перечисления всех семи вариантов.
      */
     fun next(): Direction = TODO()
 
@@ -139,33 +143,27 @@ enum class Direction {
 }
 
 /**
- * Простая
+ * Средняя
  *
  * Сдвинуть точку в направлении direction на расстояние distance.
+ * Бросить IllegalArgumentException(), если задано направление INCORRECT.
+ * Для расстояния 0 и направления не INCORRECT вернуть ту же точку.
+ * Для отрицательного расстояния сдвинуть точку в противоположном направлении на -distance.
  *
  * Примеры:
  * 30, direction = RIGHT, distance = 3 --> 33
  * 35, direction = UP_LEFT, distance = 2 --> 53
  * 45, direction = DOWN_LEFT, distance = 4 --> 05
  */
-fun HexPoint.move(direction: Direction, distance: Int): HexPoint {
-    return when (direction) {
-        Direction.RIGHT -> HexPoint(x + distance, y)
-        Direction.UP_RIGHT -> HexPoint(x, y + distance)
-        Direction.UP_LEFT -> HexPoint(x - distance, y + distance)
-        Direction.LEFT -> HexPoint(x - distance, y)
-        Direction.DOWN_LEFT -> HexPoint(x, y - distance)
-        Direction.DOWN_RIGHT -> HexPoint(x + distance, y - distance)
-        Direction.INCORRECT -> throw IllegalArgumentException()
-    }
-}
+fun HexPoint.move(direction: Direction, distance: Int): HexPoint = TODO()
 
 /**
- * Средняя
+ * Сложная
  *
- * Найти путь между двумя заданными гексами, представленный в виде списка всех гексов,
+ * Найти кратчайший путь между двумя заданными гексами, представленный в виде списка всех гексов,
  * которые входят в этот путь.
  * Начальный и конечный гекс также входят в данный список.
+ * Если кратчайших путей существует несколько, вернуть любой из них.
  *
  * Пример (для координатной сетки из примера в начале файла):
  *   pathBetweenHexes(HexPoint(y = 2, x = 2), HexPoint(y = 5, x = 3)) ->

@@ -1,8 +1,10 @@
 package lesson8.task1
 
+import lesson8.task1.Direction.*
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
+import java.lang.IllegalArgumentException
 
 class HexTests {
 
@@ -36,8 +38,81 @@ class HexTests {
 
     @Test
     @Tag("Normal")
+    fun hexSegmentDirection() {
+        assertEquals(RIGHT, HexSegment(HexPoint(1, 3), HexPoint(5, 3)).direction())
+        assertEquals(UP_RIGHT, HexSegment(HexPoint(3, 1), HexPoint(3, 6)).direction())
+        assertEquals(DOWN_RIGHT, HexSegment(HexPoint(1, 5), HexPoint(4, 2)).direction())
+        assertEquals(LEFT, HexSegment(HexPoint(5, 3), HexPoint(1, 3)).direction())
+        assertEquals(DOWN_LEFT, HexSegment(HexPoint(3, 6), HexPoint(3, 1)).direction())
+        assertEquals(UP_LEFT, HexSegment(HexPoint(4, 2), HexPoint(1, 5)).direction())
+        assertEquals(INCORRECT, HexSegment(HexPoint(3, 1), HexPoint(6, 2)).direction())
+    }
+
+    @Test
+    @Tag("Easy")
+    fun oppositeDirection() {
+        assertEquals(LEFT, RIGHT.opposite())
+        assertEquals(DOWN_LEFT, UP_RIGHT.opposite())
+        assertEquals(UP_LEFT, DOWN_RIGHT.opposite())
+        assertEquals(RIGHT, LEFT.opposite())
+        assertEquals(DOWN_RIGHT, UP_LEFT.opposite())
+        assertEquals(UP_RIGHT, DOWN_LEFT.opposite())
+        assertEquals(INCORRECT, INCORRECT.opposite())
+    }
+
+    @Test
+    @Tag("Normal")
+    fun nextDirection() {
+        assertEquals(UP_RIGHT, RIGHT.next())
+        assertEquals(UP_LEFT, UP_RIGHT.next())
+        assertEquals(RIGHT, DOWN_RIGHT.next())
+        assertEquals(DOWN_LEFT, LEFT.next())
+        assertEquals(LEFT, UP_LEFT.next())
+        assertEquals(DOWN_RIGHT, DOWN_LEFT.next())
+        assertThrows(IllegalArgumentException::class.java) {
+            INCORRECT.next()
+        }
+    }
+
+    @Test
+    @Tag("Easy")
+    fun isParallelDirection() {
+        assertTrue(RIGHT.isParallel(RIGHT))
+        assertTrue(RIGHT.isParallel(LEFT))
+        assertFalse(RIGHT.isParallel(UP_LEFT))
+        assertFalse(RIGHT.isParallel(INCORRECT))
+        assertTrue(UP_RIGHT.isParallel(UP_RIGHT))
+        assertTrue(UP_RIGHT.isParallel(DOWN_LEFT))
+        assertFalse(UP_RIGHT.isParallel(UP_LEFT))
+        assertFalse(INCORRECT.isParallel(INCORRECT))
+        assertFalse(INCORRECT.isParallel(UP_LEFT))
+    }
+
+    @Test
+    @Tag("Normal")
+    fun hexPointMove() {
+        assertEquals(HexPoint(3, 3), HexPoint(0, 3).move(RIGHT, 3))
+        assertEquals(HexPoint(3, 5), HexPoint(5, 3).move(UP_LEFT, 2))
+        assertEquals(HexPoint(5, 0), HexPoint(0, 3).move(DOWN_LEFT, 4))
+        assertEquals(HexPoint(1, 1), HexPoint(1, 1).move(DOWN_RIGHT, 0))
+        assertEquals(HexPoint(4, 2), HexPoint(2, 2).move(LEFT, -2))
+        assertThrows(IllegalArgumentException::class.java) {
+            HexPoint(0, 0).move(INCORRECT, 0)
+        }
+    }
+
+    @Test
+    @Tag("Hard")
     fun pathBetweenHexes() {
-        // TODO: add tests
+        assertEquals(
+            listOf(
+                HexPoint(y = 2, x = 2),
+                HexPoint(y = 2, x = 3),
+                HexPoint(y = 3, x = 3),
+                HexPoint(y = 4, x = 3),
+                HexPoint(y = 5, x = 3)
+            ), pathBetweenHexes(HexPoint(y = 2, x = 2), HexPoint(y = 5, x = 3))
+        )
     }
 
     @Test
