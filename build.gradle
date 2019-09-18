@@ -11,7 +11,7 @@ buildscript {
     dependencies {
         // noinspection DifferentKotlinGradleVersion
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.intellij.plugins:inspection-plugin:0.3.0"
+        classpath "org.jetbrains.intellij.plugins:inspection-plugin:0.3.2"
     }
 }
 
