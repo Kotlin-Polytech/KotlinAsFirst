@@ -31,6 +31,19 @@ import java.io.File
 fun alignFile(inputName: String, lineLength: Int, outputName: String) {
     val writer = File(outputName).bufferedWriter()
     var currentLineLength = 0
+    fun append(word: String) {
+        if (currentLineLength > 0) {
+            if (word.length + currentLineLength >= lineLength) {
+                writer.newLine()
+                currentLineLength = 0
+            } else {
+                writer.write(" ")
+                currentLineLength++
+            }
+        }
+        writer.write(word)
+        currentLineLength += word.length
+    }
     for (line in File(inputName).readLines()) {
         if (line.isEmpty()) {
             writer.newLine()
@@ -38,20 +51,10 @@ fun alignFile(inputName: String, lineLength: Int, outputName: String) {
                 writer.newLine()
                 currentLineLength = 0
             }
+            continue
         }
         for (word in line.split(Regex("\\s+"))) {
-            if (currentLineLength > 0) {
-                if (word.length + currentLineLength >= lineLength) {
-                    writer.newLine()
-                    currentLineLength = 0
-                }
-                else {
-                    writer.write(" ")
-                    currentLineLength++
-                }
-            }
-            writer.write(word)
-            currentLineLength += word.length
+            append(word)
         }
     }
     writer.close()
