@@ -16,32 +16,35 @@ import java.io.File
  * их следует сохранить и в выходном файле
  */
 fun alignFile(inputName: String, lineLength: Int, outputName: String) {
-    val outputStream = File(outputName).bufferedWriter()
+    val writer = File(outputName).bufferedWriter()
     var currentLineLength = 0
+    fun append(word: String) {
+        if (currentLineLength > 0) {
+            if (word.length + currentLineLength >= lineLength) {
+                writer.newLine()
+                currentLineLength = 0
+            } else {
+                writer.write(" ")
+                currentLineLength++
+            }
+        }
+        writer.write(word)
+        currentLineLength += word.length
+    }
     for (line in File(inputName).readLines()) {
         if (line.isEmpty()) {
-            outputStream.newLine()
+            writer.newLine()
             if (currentLineLength > 0) {
-                outputStream.newLine()
+                writer.newLine()
                 currentLineLength = 0
             }
             continue
         }
-        for (word in line.split(" ")) {
-            if (currentLineLength > 0) {
-                if (word.length + currentLineLength >= lineLength) {
-                    outputStream.newLine()
-                    currentLineLength = 0
-                } else {
-                    outputStream.write(" ")
-                    currentLineLength++
-                }
-            }
-            outputStream.write(word)
-            currentLineLength += word.length
+        for (word in line.split(Regex("\\s+"))) {
+            append(word)
         }
     }
-    outputStream.close()
+    writer.close()
 }
 
 /**
