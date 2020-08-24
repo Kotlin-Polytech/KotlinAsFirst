@@ -170,7 +170,7 @@ Basic, Ruby, Swift.
                 "он" to 306,
                 "на" to 290,
                 "я" to 261,
-                "с" to 260,
+                "с" to 261,
                 "как" to 211,
                 "но" to 210,
                 "что" to 187,
@@ -183,7 +183,8 @@ Basic, Ruby, Swift.
                 "а" to 98,
                 "ее" to 95,
                 "мне" to 95,
-                "уж" to 95
+                "уж" to 95,
+                "ей" to 95
             ), top20Words("input/onegin.txt")
         )
     }
