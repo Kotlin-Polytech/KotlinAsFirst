@@ -284,13 +284,18 @@ class Tests {
             mapOf(
                 "Marat" to setOf("Mikhail", "Sveta"),
                 "Sveta" to setOf("Marat", "Mikhail"),
-                "Mikhail" to setOf("Sveta", "Marat")
+                "Mikhail" to setOf("Sveta", "Marat"),
+                "Friend" to setOf("GoodGnome"),
+                "EvilGnome" to setOf(),
+                "GoodGnome" to setOf()
             ),
             propagateHandshakes(
                 mapOf(
                     "Marat" to setOf("Mikhail", "Sveta"),
                     "Sveta" to setOf("Marat"),
-                    "Mikhail" to setOf("Sveta")
+                    "Mikhail" to setOf("Sveta"),
+                    "Friend" to setOf("GoodGnome"),
+                    "EvilGnome" to setOf()
                 )
             )
         )

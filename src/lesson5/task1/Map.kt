@@ -226,21 +226,33 @@ fun hasAnagrams(words: List<String>): Boolean = TODO()
  * необходимо построить его максимальное расширение по рукопожатиям, то есть,
  * для каждого человека найти всех людей, с которыми он знаком через любое
  * количество рукопожатий.
+ *
  * Считать, что все имена людей являются уникальными, а также что рукопожатия
  * являются направленными, то есть, если Марат знает Свету, то это не означает,
  * что Света знает Марата.
+ *
+ * Оставлять пустой список знакомых для людей, которые их не имеют (см. EvilGnome ниже),
+ * в том числе для случая, когда данного человека нет в ключах, но он есть в значениях
+ * (см. GoodGnome ниже).
+ *
+ * Людей, которые не имеют знакомых, не включать в итоговый список
  *
  * Например:
  *   propagateHandshakes(
  *     mapOf(
  *       "Marat" to setOf("Mikhail", "Sveta"),
  *       "Sveta" to setOf("Marat"),
- *       "Mikhail" to setOf("Sveta")
+ *       "Mikhail" to setOf("Sveta"),
+ *       "Friend" to setOf("GoodGnome"),
+ *       "EvilGnome" to setOf()
  *     )
  *   ) -> mapOf(
  *          "Marat" to setOf("Mikhail", "Sveta"),
  *          "Sveta" to setOf("Marat", "Mikhail"),
- *          "Mikhail" to setOf("Sveta", "Marat")
+ *          "Mikhail" to setOf("Sveta", "Marat"),
+ *          "Friend" to setOf("GoodGnome"),
+ *          "EvilGnome" to setOf(),
+ *          "GoodGnome" to setOf()
  *        )
  */
 fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<String>> = TODO()
