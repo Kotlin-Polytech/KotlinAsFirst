@@ -212,6 +212,8 @@ class Tests {
         assertFalse(isPalindrome(3653))
         assertTrue(isPalindrome(15751))
         assertTrue(isPalindrome(24688642))
+        assertFalse(isPalindrome(Int.MAX_VALUE))
+        assertTrue(isPalindrome(2147447412))
     }
 
     @Test
