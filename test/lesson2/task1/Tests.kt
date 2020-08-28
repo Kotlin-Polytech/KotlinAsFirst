@@ -32,7 +32,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun ageDescription() {
         assertEquals("1 год", ageDescription(1))
         assertEquals("21 год", ageDescription(21))
@@ -43,7 +43,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun timeForHalfWay() {
         assertEquals(2.5, timeForHalfWay(1.0, 5.0, 2.0, 4.0, 3.0, 3.0), 1e-2)
         assertEquals(3.67, timeForHalfWay(4.0, 3.0, 1.0, 4.0, 1.0, 6.0), 1e-2)
@@ -51,7 +51,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun whichRookThreatens() {
         assertEquals(0, whichRookThreatens(1, 2, 3, 4, 5, 6))
         assertEquals(1, whichRookThreatens(5, 3, 7, 3, 4, 8))
@@ -60,7 +60,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun rookOrBishopThreatens() {
         assertEquals(0, rookOrBishopThreatens(4, 5, 5, 7, 8, 8))
         assertEquals(1, rookOrBishopThreatens(2, 8, 6, 8, 1, 6))
@@ -69,7 +69,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun triangleKind() {
         assertEquals(-1, triangleKind(3.0, 7.5, 4.0))
         assertEquals(1, triangleKind(5.0, 3.0, 4.0))
@@ -78,7 +78,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun segmentLength() {
         assertEquals(-1, segmentLength(1, 2, 3, 4))
         assertEquals(-1, segmentLength(5, 7, 1, 3))

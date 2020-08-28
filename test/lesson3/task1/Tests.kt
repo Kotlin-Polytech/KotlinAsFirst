@@ -63,7 +63,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun digitNumber() {
         assertEquals(1, digitNumber(0))
         assertEquals(1, digitNumber(7))
@@ -74,7 +74,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun fib() {
         assertEquals(1, fib(1))
         assertEquals(1, fib(2))
@@ -89,21 +89,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
-    fun lcm() {
-        assertEquals(13, lcm(13, 13))
-        assertEquals(8, lcm(2, 8))
-        assertEquals(24, lcm(6, 8))
-        assertEquals(975, lcm(39, 75))
-        assertEquals(13384091, lcm(1357, 9863))
-        assertEquals(1339310349, lcm(13579, 98631))
-        assertEquals(2089830349, lcm(23579, 88631))
-        assertEquals(2022222222, lcm(2, 1011111111))
-        assertEquals(2022222222, lcm(1011111111, 2))
-    }
-
-    @Test
-    @Tag("Easy")
+    @Tag("2")
     fun minDivisor() {
         assertEquals(2, minDivisor(2))
         assertEquals(3, minDivisor(75))
@@ -117,7 +103,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun maxDivisor() {
         assertEquals(1, maxDivisor(17))
         assertEquals(12, maxDivisor(24))
@@ -131,31 +117,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
-    fun isCoPrime() {
-        assertTrue(isCoPrime(25, 49))
-        assertFalse(isCoPrime(6, 8))
-        assertTrue(isCoPrime(17, 97))
-        assertFalse(isCoPrime(37, 111))
-        assertTrue(isCoPrime(1234567890, 908765431))
-        assertTrue(isCoPrime(2109876543, 1234567891))
-    }
-
-    @Test
-    @Tag("Easy")
-    fun squareBetweenExists() {
-        assertTrue(squareBetweenExists(1, 1))
-        assertTrue(squareBetweenExists(21, 28))
-        assertTrue(squareBetweenExists(36, 48))
-        assertTrue(squareBetweenExists(50, 64))
-        assertFalse(squareBetweenExists(51, 61))
-        assertFalse(squareBetweenExists(999, 1001))
-        assertTrue(squareBetweenExists(152374337, 152423715))
-        assertFalse(squareBetweenExists(2147395601, Int.MAX_VALUE))
-    }
-
-    @Test
-    @Tag("Normal")
+    @Tag("2")
     fun collatzSteps() {
         assertEquals(0, collatzSteps(1))
         assertEquals(1, collatzSteps(2))
@@ -171,7 +133,78 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
+    fun lcm() {
+        assertEquals(13, lcm(13, 13))
+        assertEquals(8, lcm(2, 8))
+        assertEquals(24, lcm(6, 8))
+        assertEquals(975, lcm(39, 75))
+        assertEquals(13384091, lcm(1357, 9863))
+        assertEquals(1339310349, lcm(13579, 98631))
+        assertEquals(2089830349, lcm(23579, 88631))
+        assertEquals(2022222222, lcm(2, 1011111111))
+        assertEquals(2022222222, lcm(1011111111, 2))
+    }
+
+    @Test
+    @Tag("3")
+    fun isCoPrime() {
+        assertTrue(isCoPrime(25, 49))
+        assertFalse(isCoPrime(6, 8))
+        assertTrue(isCoPrime(17, 97))
+        assertFalse(isCoPrime(37, 111))
+        assertTrue(isCoPrime(1234567890, 908765431))
+        assertTrue(isCoPrime(2109876543, 1234567891))
+    }
+
+    @Test
+    @Tag("3")
+    fun squareBetweenExists() {
+        assertTrue(squareBetweenExists(1, 1))
+        assertTrue(squareBetweenExists(21, 28))
+        assertTrue(squareBetweenExists(36, 48))
+        assertTrue(squareBetweenExists(50, 64))
+        assertFalse(squareBetweenExists(51, 61))
+        assertFalse(squareBetweenExists(999, 1001))
+        assertTrue(squareBetweenExists(152374337, 152423715))
+        assertFalse(squareBetweenExists(2147395601, Int.MAX_VALUE))
+    }
+
+    @Test
+    @Tag("3")
+    fun revert() {
+        assertEquals(87431, revert(13478))
+        assertEquals(0, revert(0))
+        assertEquals(3, revert(3))
+        assertEquals(111, revert(111))
+        assertEquals(17571, revert(17571))
+        assertEquals(123456789, revert(987654321))
+    }
+
+    @Test
+    @Tag("3")
+    fun isPalindrome() {
+        assertTrue(isPalindrome(3))
+        assertFalse(isPalindrome(3653))
+        assertTrue(isPalindrome(15751))
+        assertTrue(isPalindrome(24688642))
+        assertFalse(isPalindrome(Int.MAX_VALUE))
+        assertTrue(isPalindrome(2147447412))
+    }
+
+    @Test
+    @Tag("3")
+    fun hasDifferentDigits() {
+        assertTrue(hasDifferentDigits(323))
+        assertTrue(hasDifferentDigits(54))
+        assertTrue(hasDifferentDigits(222266666))
+        assertFalse(hasDifferentDigits(0))
+        assertFalse(hasDifferentDigits(777))
+        assertTrue(hasDifferentDigits(31122))
+    }
+
+    @Test
+    @Tag("4")
     fun sin() {
         assertEquals(0.0, sin(0.0, 1e-5), 1e-5)
         assertEquals(1.0, sin(PI / 2.0, 1e-5), 1e-5)
@@ -183,7 +216,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("4")
     fun cos() {
         assertEquals(1.0, cos(0.0, 1e-5), 1e-5)
         assertEquals(0.0, cos(PI / 2.0, 1e-5), 1e-5)
@@ -195,40 +228,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
-    fun revert() {
-        assertEquals(87431, revert(13478))
-        assertEquals(0, revert(0))
-        assertEquals(3, revert(3))
-        assertEquals(111, revert(111))
-        assertEquals(17571, revert(17571))
-        assertEquals(123456789, revert(987654321))
-    }
-
-    @Test
-    @Tag("Normal")
-    fun isPalindrome() {
-        assertTrue(isPalindrome(3))
-        assertFalse(isPalindrome(3653))
-        assertTrue(isPalindrome(15751))
-        assertTrue(isPalindrome(24688642))
-        assertFalse(isPalindrome(Int.MAX_VALUE))
-        assertTrue(isPalindrome(2147447412))
-    }
-
-    @Test
-    @Tag("Normal")
-    fun hasDifferentDigits() {
-        assertTrue(hasDifferentDigits(323))
-        assertTrue(hasDifferentDigits(54))
-        assertTrue(hasDifferentDigits(222266666))
-        assertFalse(hasDifferentDigits(0))
-        assertFalse(hasDifferentDigits(777))
-        assertTrue(hasDifferentDigits(31122))
-    }
-
-    @Test
-    @Tag("Hard")
+    @Tag("4")
     fun squareSequenceDigit() {
         assertEquals(1, squareSequenceDigit(1))
         assertEquals(4, squareSequenceDigit(2))
@@ -239,7 +239,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("5")
     fun fibSequenceDigit() {
         assertEquals(1, fibSequenceDigit(1))
         assertEquals(1, fibSequenceDigit(2))
