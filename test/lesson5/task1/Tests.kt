@@ -100,7 +100,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun buildGrades() {
         assertEquals(
             mapOf<Int, List<String>>(),
@@ -119,14 +119,14 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun containsIn() {
         assertTrue(containsIn(mapOf("a" to "z"), mapOf("a" to "z", "b" to "sweet")))
         assertFalse(containsIn(mapOf("a" to "z"), mapOf("a" to "zee", "b" to "sweet")))
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun subtractOf() {
         val from = mutableMapOf("a" to "z", "b" to "c")
 
@@ -141,7 +141,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun whoAreInBoth() {
         assertEquals(
             emptyList<String>(),
@@ -158,7 +158,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun mergePhoneBooks() {
         assertEquals(
             mapOf("Emergency" to "112"),
@@ -191,7 +191,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("4")
     fun averageStockPrice() {
         assertEquals(
             mapOf<String, Double>(),
@@ -212,7 +212,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("4")
     fun findCheapestStuff() {
         assertNull(
             findCheapestStuff(
@@ -230,7 +230,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun canBuildFrom() {
         assertFalse(canBuildFrom(emptyList(), "foo"))
         assertTrue(canBuildFrom(listOf('a', 'b', 'o'), "baobab"))
@@ -238,7 +238,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("4")
     fun extractRepeats() {
         assertEquals(
             emptyMap<String, Int>(),
@@ -255,7 +255,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun hasAnagrams() {
         assertFalse(hasAnagrams(emptyList()))
         assertTrue(hasAnagrams(listOf("рот", "свет", "тор")))
@@ -265,7 +265,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("5")
     fun propagateHandshakes() {
         assertEquals(
             mapOf(
@@ -302,7 +302,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("6")
     fun findSumOfTwo() {
         assertEquals(
             Pair(-1, -1),
@@ -319,7 +319,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("8")
     fun bagPacking() {
         assertEquals(
             setOf("Кубок"),
@@ -336,6 +336,4 @@ class Tests {
             )
         )
     }
-
-    // TODO: map task tests
 }

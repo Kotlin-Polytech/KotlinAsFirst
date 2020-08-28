@@ -85,7 +85,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun abs() {
         assertEquals(0.0, abs(listOf()), 1e-5)
         assertEquals(3.0, abs(listOf(3.0)), 1e-5)
@@ -94,7 +94,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun mean() {
         assertEquals(0.0, mean(listOf()), 1e-5)
         assertEquals(1.0, mean(listOf(1.0)), 1e-5)
@@ -103,7 +103,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun center() {
         assertEquals(listOf<Double>(), center(mutableListOf()))
         assertArrayEquals(
@@ -126,7 +126,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun times() {
         assertEquals(0, times(listOf(), listOf()))
         assertEquals(-5, times(listOf(1, -4), listOf(3, 2)))
@@ -134,7 +134,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun polynom() {
         assertEquals(0, polynom(listOf(), 1000))
         assertEquals(42, polynom(listOf(42), -1000))
@@ -144,7 +144,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun accumulate() {
         assertEquals(listOf<Double>(), accumulate(arrayListOf()))
         assertArrayEquals(
@@ -160,7 +160,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun factorize() {
         assertEquals(listOf(2), factorize(2))
         assertEquals(listOf(3, 5, 5), factorize(75))
@@ -168,7 +168,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("4")
     fun factorizeToString() {
         assertEquals("2", factorizeToString(2))
         assertEquals("3*5*5", factorizeToString(75))
@@ -179,7 +179,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun convert() {
         assertEquals(listOf(1), convert(1, 2))
         assertEquals(listOf(1, 2, 1, 0), convert(100, 4))
@@ -188,7 +188,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("4")
     fun convertToString() {
         assertEquals("1", convertToString(1, 2))
         assertEquals("1210", convertToString(100, 4))
@@ -199,7 +199,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun decimal() {
         assertEquals(1, decimal(listOf(1), 2))
         assertEquals(100, decimal(listOf(1, 2, 1, 0), 4))
@@ -208,7 +208,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("4")
     fun decimalFromString() {
         assertEquals(1, decimalFromString("1", 2))
         assertEquals(100, decimalFromString("1210", 4))
@@ -219,7 +219,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("5")
     fun roman() {
         assertEquals("I", roman(1))
         assertEquals("MMM", roman(3000))
@@ -229,7 +229,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("7")
     fun russian() {
         assertEquals("триста семьдесят пять", russian(375))
         assertEquals("двадцать две тысячи девятьсот шестьдесят четыре", russian(22964))
