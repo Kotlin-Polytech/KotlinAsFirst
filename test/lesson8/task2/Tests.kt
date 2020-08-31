@@ -21,7 +21,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun notation() {
         assertEquals("", Square(1, 0).notation())
         assertEquals("b3", Square(2, 3).notation())
@@ -31,7 +31,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun square() {
         assertEquals(Square(3, 2), square("c2"))
         assertEquals(Square(5, 5), square("e5"))
@@ -40,7 +40,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun rookMoveNumber() {
         assertEquals(0, rookMoveNumber(square("e3"), square("e3")))
         assertEquals(2, rookMoveNumber(square("c2"), square("b1")))
@@ -61,7 +61,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun rookTrajectory() {
         assertEquals(listOf(square("g5")), rookTrajectory(square("g5"), square("g5")))
         rookTrajectory(square("c3"), square("h6")).assertRookTrajectory(square("c3"), square("h6"), 2)
@@ -69,7 +69,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun bishopMoveNumber() {
         assertEquals(-1, bishopMoveNumber(square("a1"), square("g8")))
         assertEquals(-1, bishopMoveNumber(square("c1"), square("f3")))
@@ -90,7 +90,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("5")
     fun bishopTrajectory() {
         assertEquals(listOf<Square>(), bishopTrajectory(square("a1"), square("g8")))
         assertEquals(listOf<Square>(), bishopTrajectory(square("c1"), square("f3")))
@@ -102,7 +102,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun kingMoveNumber() {
         assertEquals(0, kingMoveNumber(square("e3"), square("e3")))
         assertEquals(1, kingMoveNumber(square("c2"), square("b1")))
@@ -124,7 +124,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("5")
     fun kingTrajectory() {
         assertEquals(listOf(square("f3")), kingTrajectory(square("f3"), square("f3")))
         kingTrajectory(square("c2"), square("a6")).assertKingTrajectory(square("c2"), square("a6"), 4)
@@ -135,7 +135,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("6")
     fun knightMoveNumber() {
         assertEquals(0, knightMoveNumber(square("d3"), square("d3")))
         assertEquals(1, knightMoveNumber(square("e4"), square("d6")))
@@ -162,7 +162,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("10")
     fun knightTrajectory() {
         assertEquals(listOf(square("d3")), knightTrajectory(square("d3"), square("d3")))
         assertEquals(listOf(square("e4"), square("d6")), knightTrajectory(square("e4"), square("d6")))

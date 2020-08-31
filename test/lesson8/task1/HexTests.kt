@@ -9,26 +9,26 @@ import java.lang.IllegalArgumentException
 class HexTests {
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun hexPointDistance() {
         assertEquals(5, HexPoint(6, 1).distance(HexPoint(1, 4)))
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun hexagonDistance() {
         assertEquals(2, Hexagon(HexPoint(1, 3), 1).distance(Hexagon(HexPoint(6, 2), 2)))
     }
 
     @Test
-    @Tag("Trivial")
+    @Tag("1")
     fun hexagonContains() {
         assertTrue(Hexagon(HexPoint(3, 3), 1).contains(HexPoint(2, 3)))
         assertFalse(Hexagon(HexPoint(3, 3), 1).contains(HexPoint(4, 4)))
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun hexSegmentValid() {
         assertTrue(HexSegment(HexPoint(1, 3), HexPoint(5, 3)).isValid())
         assertTrue(HexSegment(HexPoint(3, 1), HexPoint(3, 6)).isValid())
@@ -37,7 +37,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun hexSegmentDirection() {
         assertEquals(RIGHT, HexSegment(HexPoint(1, 3), HexPoint(5, 3)).direction())
         assertEquals(UP_RIGHT, HexSegment(HexPoint(3, 1), HexPoint(3, 6)).direction())
@@ -49,7 +49,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun oppositeDirection() {
         assertEquals(LEFT, RIGHT.opposite())
         assertEquals(DOWN_LEFT, UP_RIGHT.opposite())
@@ -61,7 +61,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun nextDirection() {
         assertEquals(UP_RIGHT, RIGHT.next())
         assertEquals(UP_LEFT, UP_RIGHT.next())
@@ -75,7 +75,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("2")
     fun isParallelDirection() {
         assertTrue(RIGHT.isParallel(RIGHT))
         assertTrue(RIGHT.isParallel(LEFT))
@@ -89,7 +89,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("3")
     fun hexPointMove() {
         assertEquals(HexPoint(3, 3), HexPoint(0, 3).move(RIGHT, 3))
         assertEquals(HexPoint(3, 5), HexPoint(5, 3).move(UP_LEFT, 2))
@@ -102,7 +102,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("5")
     fun pathBetweenHexes() {
         assertEquals(
             listOf(
@@ -116,7 +116,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("20")
     fun hexagonByThreePoints() {
         assertEquals(
             Hexagon(HexPoint(4, 2), 2),
@@ -132,7 +132,7 @@ class HexTests {
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("20")
     fun minContainingHexagon() {
         val points = arrayOf(HexPoint(3, 1), HexPoint(3, 2), HexPoint(5, 4), HexPoint(8, 1))
         val result = minContainingHexagon(*points)

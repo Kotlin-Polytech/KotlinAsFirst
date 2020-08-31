@@ -8,6 +8,9 @@ import kotlin.math.cos
 import kotlin.math.sin
 import kotlin.math.sqrt
 
+// Урок 8: простые классы
+// Максимальное количество баллов = 40 (без очень трудных задач = 11)
+
 /**
  * Точка на плоскости
  */
