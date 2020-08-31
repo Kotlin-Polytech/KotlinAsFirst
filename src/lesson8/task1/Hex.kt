@@ -30,7 +30,7 @@ package lesson8.task1
  */
 data class HexPoint(val x: Int, val y: Int) {
     /**
-     * Средняя
+     * Средняя (3 балла)
      *
      * Найти целочисленное расстояние между двумя гексами сетки.
      * Расстояние вычисляется как число единичных отрезков в пути между двумя гексами.
@@ -49,7 +49,7 @@ data class HexPoint(val x: Int, val y: Int) {
 data class Hexagon(val center: HexPoint, val radius: Int) {
 
     /**
-     * Средняя
+     * Средняя (3 балла)
      *
      * Рассчитать расстояние между двумя шестиугольниками.
      * Оно равно расстоянию между ближайшими точками этих шестиугольников,
@@ -62,7 +62,7 @@ data class Hexagon(val center: HexPoint, val radius: Int) {
     fun distance(other: Hexagon): Int = TODO()
 
     /**
-     * Тривиальная
+     * Тривиальная (1 балл)
      *
      * Вернуть true, если заданная точка находится внутри или на границе шестиугольника
      */
@@ -74,7 +74,7 @@ data class Hexagon(val center: HexPoint, val radius: Int) {
  */
 class HexSegment(val begin: HexPoint, val end: HexPoint) {
     /**
-     * Простая
+     * Простая (2 балла)
      *
      * Определить "правильность" отрезка.
      * "Правильным" считается только отрезок, проходящий параллельно одной из трёх осей шестиугольника.
@@ -84,7 +84,7 @@ class HexSegment(val begin: HexPoint, val end: HexPoint) {
     fun isValid(): Boolean = TODO()
 
     /**
-     * Средняя
+     * Средняя (3 балла)
      *
      * Вернуть направление отрезка (см. описание класса Direction ниже).
      * Для "правильного" отрезка выбирается одно из первых шести направлений,
@@ -114,7 +114,7 @@ enum class Direction {
     INCORRECT;  // отрезок имеет изгиб, например 30 -> 55 (изгиб в точке 35)
 
     /**
-     * Простая
+     * Простая (2 балла)
      *
      * Вернуть направление, противоположное данному.
      * Для INCORRECT вернуть INCORRECT
@@ -122,7 +122,7 @@ enum class Direction {
     fun opposite(): Direction = TODO()
 
     /**
-     * Средняя
+     * Средняя (3 балла)
      *
      * Вернуть направление, повёрнутое относительно
      * заданного на 60 градусов против часовой стрелки.
@@ -134,7 +134,7 @@ enum class Direction {
     fun next(): Direction = TODO()
 
     /**
-     * Простая
+     * Простая (2 балла)
      *
      * Вернуть true, если данное направление совпадает с other или противоположно ему.
      * INCORRECT не параллельно никакому направлению, в том числе другому INCORRECT.
@@ -143,7 +143,7 @@ enum class Direction {
 }
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Сдвинуть точку в направлении direction на расстояние distance.
  * Бросить IllegalArgumentException(), если задано направление INCORRECT.
@@ -158,7 +158,7 @@ enum class Direction {
 fun HexPoint.move(direction: Direction, distance: Int): HexPoint = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Найти кратчайший путь между двумя заданными гексами, представленный в виде списка всех гексов,
  * которые входят в этот путь.
@@ -178,7 +178,7 @@ fun HexPoint.move(direction: Direction, distance: Int): HexPoint = TODO()
 fun pathBetweenHexes(from: HexPoint, to: HexPoint): List<HexPoint> = TODO()
 
 /**
- * Очень сложная
+ * Очень сложная (20 баллов)
  *
  * Дано три точки (гекса). Построить правильный шестиугольник, проходящий через них
  * (все три точки должны лежать НА ГРАНИЦЕ, а не ВНУТРИ, шестиугольника).
@@ -195,7 +195,7 @@ fun pathBetweenHexes(from: HexPoint, to: HexPoint): List<HexPoint> = TODO()
 fun hexagonByThreePoints(a: HexPoint, b: HexPoint, c: HexPoint): Hexagon? = TODO()
 
 /**
- * Очень сложная
+ * Очень сложная (20 баллов)
  *
  * Дано множество точек (гексов). Найти правильный шестиугольник минимального радиуса,
  * содержащий все эти точки (безразлично, внутри или на границе).
