@@ -58,6 +58,20 @@ Basic, Ruby, Swift.
     }
 
     @Test
+    @Tag("Easy")
+    fun deleteMarked() {
+        deleteMarked("input/delete_in1.txt", "temp.txt")
+        assertFileContent(
+            "temp.txt",
+            """Задачи _надо_ решать правильно,
+и не надо при этом никуда торопиться___
+
+            """.trimIndent()
+        )
+        File("temp.txt").delete()
+    }
+
+    @Test
     @Tag("Normal")
     fun countSubstrings() {
         assertEquals(
