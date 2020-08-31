@@ -58,7 +58,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("8")
     fun deleteMarked() {
         deleteMarked("input/delete_in1.txt", "temp.txt")
         assertFileContent(
@@ -72,7 +72,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("14")
     fun countSubstrings() {
         assertEquals(
             mapOf("РАЗНЫЕ" to 2, "ные" to 2, "Неряшливость" to 1, "е" to 49, "эволюция" to 0),
@@ -89,7 +89,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("12")
     fun sibilants() {
         sibilants("input/sibilants_in1.txt", "temp.txt")
         assertFileContent(
@@ -113,7 +113,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("15")
     fun centerFile() {
         centerFile("input/center_in1.txt", "temp.txt")
         assertFileContent(
@@ -132,7 +132,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("20")
     fun alignFileByWidth() {
         alignFileByWidth("input/width_in1.txt", "temp.txt")
         assertFileContent(
@@ -161,7 +161,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("14")
     fun top20Words() {
         assertEquals(mapOf<String, Int>(), top20Words("input/empty.txt"))
         assertEquals(mapOf(
@@ -204,7 +204,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("14")
     fun transliterate() {
         transliterate(
             "input/trans_in1.txt",
@@ -224,7 +224,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("12")
     fun chooseLongestChaoticWord() {
         chooseLongestChaoticWord("input/chaotic_in1.txt", "temp.txt")
         assertFileContent("temp.txt", "Карминовый, Некрасивый")
@@ -254,7 +254,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("22")
     fun markdownToHtmlSimple() {
         markdownToHtmlSimple("input/markdown_simple.md", "temp.html")
         checkHtmlSimpleExample()
@@ -309,14 +309,14 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("24")
     fun markdownToHtmlLists() {
         markdownToHtmlLists("input/markdown_lists.md", "temp.html")
         checkHtmlListsExample()
     }
 
     @Test
-    @Tag("Impossible")
+    @Tag("30")
     fun markdownToHtml() {
         markdownToHtml("input/markdown_simple.md", "temp.html")
         checkHtmlSimpleExample()
@@ -326,7 +326,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("12")
     fun printMultiplicationProcess() {
         fun test(lhv: Int, rhv: Int, res: String) {
             printMultiplicationProcess(lhv, rhv, "temp.txt")
@@ -379,7 +379,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("25")
     fun printDivisionProcess() {
 
         fun test(lhv: Int, rhv: Int, res: String) {
