@@ -4,7 +4,7 @@ import kotlinx.html.*
 import kotlinx.html.stream.appendHTML
 
 /**
- * Пример: преобразование списка списков в HTML таблицу
+ * Пример: преобразование списка списков в HTML таблицу (решение в лоб)
  */
 fun List<List<String>>.convertToHtmlTable(): String {
     val sb = StringBuilder()
@@ -26,6 +26,10 @@ fun List<List<String>>.convertToHtmlTable(): String {
     return sb.toString()
 }
 
+/**
+ * Пример: преобразование списка списков в HTML таблицу
+ * (через функции библиотеки kotlinx.html)
+ */
 fun List<List<String>>.convertToHtmlTableUsingKotlinxHtml(): String {
     val inputList = this
     val sb = StringBuilder()
@@ -45,6 +49,9 @@ fun List<List<String>>.convertToHtmlTableUsingKotlinxHtml(): String {
     return sb.toString()
 }
 
+/**
+ * Пример: генерация простого HTML (собственный мини-DSL)
+ */
 fun generateSimpleHtml(s: String): String {
     val sb = StringBuilder()
     sb.myHtml {
