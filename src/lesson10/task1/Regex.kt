@@ -54,7 +54,8 @@ sealed class Expression {
         PLUS,
         MINUS,
         TIMES,
-        DIV;
+        DIV,
+        POW;
     }
 
     class Binary(val left: Expression, val op: Operation, val right: Expression) : Expression()
@@ -76,6 +77,9 @@ sealed class Expression {
             }
             DIV -> {
                 left.calculate(x) / right.calculate(x)
+            }
+            POW -> {
+                TODO()
             }
         }
         is Negate -> -arg.calculate(x)
@@ -136,5 +140,17 @@ class Parser(private val groups: List<String>) {
         }
     }
 
-    private val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV)
+    /**
+     * Нормальная
+     *
+     * Поддержать операцию возведения в степень на базе того же парсера.
+     * Операция обозначается символом ^, выполняется раньше, чем умножение и деление.
+     * Кроме написания этой функции, вам придётся вызвать её в одной или двух
+     * предыдущих функциях парсера, и поддержать операцию POW внутри функции calculate.
+     */
+    internal fun parseExponentiation(): Expression {
+        TODO()
+    }
+
+    private val operationMap = mapOf("+" to PLUS, "-" to MINUS, "*" to TIMES, "/" to DIV, "^" to POW)
 }
