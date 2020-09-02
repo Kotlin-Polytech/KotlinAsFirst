@@ -13,7 +13,7 @@ internal class DimensionalValueTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("8")
     fun base() {
         val first = DimensionalValue(1.0, "Kg")
         assertEquals(1.0, first.value)
@@ -24,7 +24,7 @@ internal class DimensionalValueTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun plus() {
         assertApproxEquals(DimensionalValue("2 Km"), DimensionalValue("1 Km") + DimensionalValue("1000 m"), 1e-8)
         assertThrows(IllegalArgumentException::class.java) {
@@ -33,13 +33,13 @@ internal class DimensionalValueTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     operator fun unaryMinus() {
         assertApproxEquals(DimensionalValue("-2 g"), -DimensionalValue("2 g"), 1e-12)
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun minus() {
         assertApproxEquals(DimensionalValue("0 m"), DimensionalValue("1 Km") - DimensionalValue("1000 m"), 1e-10)
         assertThrows(IllegalArgumentException::class.java) {
@@ -48,13 +48,13 @@ internal class DimensionalValueTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun times() {
         assertApproxEquals(DimensionalValue("2 Kg"), DimensionalValue("2 g") * 1000.0, 1e-8)
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun divValue() {
         assertEquals(1.0, DimensionalValue("3 m") / DimensionalValue("3000 mm"), 1e-10)
         assertThrows(IllegalArgumentException::class.java) {
@@ -63,26 +63,26 @@ internal class DimensionalValueTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun divDouble() {
         assertApproxEquals(DimensionalValue("42 mm"), DimensionalValue("42 m") / 1000.0, 1e-11)
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun equals() {
         assertEquals(DimensionalValue("1 Kg"), DimensionalValue("1 Kg"))
         assertEquals(DimensionalValue("3 mm"), DimensionalValue("3 mm"))
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun hashCodeTest() {
         assertEquals(DimensionalValue("1 Kg").hashCode(), DimensionalValue("1 Kg").hashCode())
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun compareTo() {
         assertTrue(DimensionalValue("1 Kg") < DimensionalValue("1500 g"))
         assertTrue(DimensionalValue("1 m") > DimensionalValue("900 mm"))
