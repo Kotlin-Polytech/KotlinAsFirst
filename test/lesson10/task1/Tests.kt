@@ -24,7 +24,7 @@ class Tests {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("15")
     fun parseWithExponentiation() {
         assertEquals(
             mapOf(-2 to 4, 0 to 0, 1 to 1, 3 to 9, 11 to 121),

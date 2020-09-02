@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Tag
 class FixedPointNumberTest {
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun getPrecision() {
         val n = FixedPointNumber("1.2345")
         assertEquals(4, n.precision)
@@ -17,7 +17,7 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun plus() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
@@ -25,14 +25,14 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     operator fun unaryMinus() {
         val x = FixedPointNumber("2.345")
         assertEquals(FixedPointNumber("-2.345"), -x)
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun minus() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
@@ -40,7 +40,7 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("10")
     fun times() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
@@ -48,7 +48,7 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("10")
     fun div() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
@@ -56,7 +56,7 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun testEquals() {
         val x = FixedPointNumber(19.7532, 4)
         val y = FixedPointNumber("19.7532")
@@ -64,7 +64,7 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun testHashCode() {
         val x = FixedPointNumber(19.7532, 4)
         val y = FixedPointNumber("19.7532")
@@ -72,7 +72,7 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun compareTo() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
@@ -81,14 +81,14 @@ class FixedPointNumberTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun testToString() {
         val x = FixedPointNumber(19.7532, 4)
         assertEquals("19.7532", x.toString())
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun toDouble() {
         val x = FixedPointNumber("19.7532")
         assertEquals(19.7532, x.toDouble(), 1e-5)

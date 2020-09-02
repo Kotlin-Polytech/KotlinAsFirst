@@ -15,14 +15,14 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun getValue() {
         val p = Polynom(1.0, 3.0, 2.0)
         assertEquals(42.0, p.getValue(5.0), 1e-10)
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun degree() {
         val p = Polynom(1.0, 1.0, 1.0)
         assertEquals(2, p.degree())
@@ -33,7 +33,7 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun plus() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
@@ -43,7 +43,7 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     operator fun unaryMinus() {
         val p = Polynom(1.0, -1.0, 2.0)
         val r = Polynom(-1.0, 1.0, -2.0)
@@ -51,7 +51,7 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun minus() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
@@ -61,7 +61,7 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun times() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
@@ -71,7 +71,7 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("8")
     fun div() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
@@ -81,7 +81,7 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("8")
     fun rem() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
@@ -92,14 +92,14 @@ class PolynomTest {
     }
 
     @Test
-    @Tag("Easy")
+    @Tag("4")
     fun equals() {
         assertEquals(Polynom(1.0, 2.0, 3.0), Polynom(1.0, 2.0, 3.0))
         assertEquals(Polynom(0.0, 2.0, 3.0), Polynom(2.0, 3.0))
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun hashCodeTest() {
         assertEquals(Polynom(1.0, 2.0, 3.0).hashCode(), Polynom(1.0, 2.0, 3.0).hashCode())
     }
