@@ -3,10 +3,12 @@ package lesson12.task1
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Tag
 
 class OpenHashSetTest {
 
     @Test
+    @Tag("6")
     fun size() {
         val set = OpenHashSet<Int>(32)
         assertEquals(32, set.capacity)
@@ -19,6 +21,7 @@ class OpenHashSetTest {
     }
 
     @Test
+    @Tag("4")
     fun isEmpty() {
         val set = OpenHashSet<Int>(16)
         assertTrue(set.isEmpty())
@@ -27,6 +30,7 @@ class OpenHashSetTest {
     }
 
     @Test
+    @Tag("10")
     fun add() {
         val set = OpenHashSet<String>(4)
         assertTrue(set.add("alpha"))
@@ -41,6 +45,7 @@ class OpenHashSetTest {
     }
 
     @Test
+    @Tag("10")
     fun contains() {
         val set = OpenHashSet<Int>(8)
         set.add(1)
@@ -51,6 +56,7 @@ class OpenHashSetTest {
     }
 
     @Test
+    @Tag("8")
     fun testEquals() {
         val set1 = OpenHashSet<Int>(8)
         set1.add(1)
@@ -66,6 +72,7 @@ class OpenHashSetTest {
     }
 
     @Test
+    @Tag("6")
     fun testHashCode() {
         val set1 = OpenHashSet<Int>(8)
         set1.add(1)

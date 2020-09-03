@@ -3,10 +3,12 @@ package lesson12.task1
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Tag
 
 internal class PhoneBookTest {
 
     @Test
+    @Tag("6")
     fun addHuman() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
@@ -15,6 +17,7 @@ internal class PhoneBookTest {
     }
 
     @Test
+    @Tag("6")
     fun removeHuman() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
@@ -24,6 +27,7 @@ internal class PhoneBookTest {
     }
 
     @Test
+    @Tag("6")
     fun addPhone() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
@@ -36,6 +40,7 @@ internal class PhoneBookTest {
     }
 
     @Test
+    @Tag("6")
     fun removePhone() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
@@ -49,6 +54,7 @@ internal class PhoneBookTest {
     }
 
     @Test
+    @Tag("6")
     fun phones() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
@@ -59,6 +65,7 @@ internal class PhoneBookTest {
     }
 
     @Test
+    @Tag("8")
     fun humanByPhone() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
@@ -72,6 +79,7 @@ internal class PhoneBookTest {
     }
 
     @Test
+    @Tag("6")
     fun testEquals() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
@@ -89,6 +97,7 @@ internal class PhoneBookTest {
     }
 
     @Test
+    @Tag("6")
     fun testHashCode() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))

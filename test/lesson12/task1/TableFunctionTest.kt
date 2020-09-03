@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Tag
 internal class TableFunctionTest {
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun add() {
         val function = TableFunction()
         function.add(1.0, 2.0)
@@ -19,7 +19,7 @@ internal class TableFunctionTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun remove() {
         val function = TableFunction()
         function.add(1.0, 2.0)
@@ -30,7 +30,7 @@ internal class TableFunctionTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun getPairs() {
         val function = TableFunction()
         function.add(1.0, 2.0)
@@ -40,7 +40,7 @@ internal class TableFunctionTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun findPair() {
         val function = TableFunction()
         function.add(1.0, 2.0)
@@ -51,7 +51,7 @@ internal class TableFunctionTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("10")
     fun getValue() {
         val function = TableFunction()
         try {
@@ -70,7 +70,7 @@ internal class TableFunctionTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun equals() {
         val f1 = TableFunction()
         f1.add(1.0, 2.0)

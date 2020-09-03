@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Tag
 class TrainTimeTableTest {
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun addTrain() {
         val ttt = TrainTimeTable("СПб")
         assertTrue(ttt.addTrain("N1", Time(6, 35), Stop("Пушкин", Time(7, 4))))
@@ -23,7 +23,7 @@ class TrainTimeTableTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun removeTrain() {
         val ttt = TrainTimeTable("СПб")
         assertTrue(ttt.addTrain("N1", Time(6, 35), Stop("Пушкин", Time(7, 4))))
@@ -34,7 +34,7 @@ class TrainTimeTableTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("8")
     fun addStop() {
         val ttt = TrainTimeTable("СПб")
         assertTrue(ttt.addTrain("N1", Time(6, 35), Stop("Пушкин", Time(7, 4))))
@@ -55,7 +55,7 @@ class TrainTimeTableTest {
     }
 
     @Test
-    @Tag("Normal")
+    @Tag("6")
     fun removeStop() {
         val ttt = TrainTimeTable("СПб")
         assertTrue(ttt.addTrain("N1", Time(6, 35), Stop("Пушкин", Time(7, 4))))
@@ -68,7 +68,7 @@ class TrainTimeTableTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("8")
     fun trains() {
         val ttt = TrainTimeTable("СПб")
         assertTrue(ttt.addTrain("N1", Time(6, 35), Stop("Пушкин", Time(7, 6))))
@@ -86,7 +86,7 @@ class TrainTimeTableTest {
     }
 
     @Test
-    @Tag("Hard")
+    @Tag("8")
     fun testEquals() {
         val ttt1 = TrainTimeTable("СПб")
         assertTrue(ttt1.addTrain("N1", Time(6, 35), Stop("Пушкин", Time(7, 4))))
