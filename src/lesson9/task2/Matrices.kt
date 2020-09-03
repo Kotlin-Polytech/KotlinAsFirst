@@ -49,7 +49,7 @@ operator fun Matrix<Int>.plus(other: Matrix<Int>): Matrix<Int> {
 }
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Заполнить матрицу заданной высоты height и ширины width
  * натуральными числами от 1 до m*n по спирали,
@@ -63,7 +63,7 @@ operator fun Matrix<Int>.plus(other: Matrix<Int>): Matrix<Int> {
 fun generateSpiral(height: Int, width: Int): Matrix<Int> = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Заполнить матрицу заданной высоты height и ширины width следующим образом.
  * Элементам, находящимся на периферии (по периметру матрицы), присвоить значение 1;
@@ -79,7 +79,7 @@ fun generateSpiral(height: Int, width: Int): Matrix<Int> = TODO()
 fun generateRectangles(height: Int, width: Int): Matrix<Int> = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Заполнить матрицу заданной высоты height и ширины width диагональной змейкой:
  * в левый верхний угол 1, во вторую от угла диагональ 2 и 3 сверху вниз, в третью 4-6 сверху вниз и так далее.
@@ -94,7 +94,7 @@ fun generateRectangles(height: Int, width: Int): Matrix<Int> = TODO()
 fun generateSnake(height: Int, width: Int): Matrix<Int> = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Содержимое квадратной матрицы matrix (с произвольным содержимым) повернуть на 90 градусов по часовой стрелке.
  * Если height != width, бросить IllegalArgumentException.
@@ -107,7 +107,7 @@ fun generateSnake(height: Int, width: Int): Matrix<Int> = TODO()
 fun <E> rotate(matrix: Matrix<E>): Matrix<E> = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Проверить, является ли квадратная целочисленная матрица matrix латинским квадратом.
  * Латинским квадратом называется матрица размером n x n,
@@ -122,7 +122,7 @@ fun <E> rotate(matrix: Matrix<E>): Matrix<E> = TODO()
 fun isLatinSquare(matrix: Matrix<Int>): Boolean = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * В матрице matrix каждый элемент заменить суммой непосредственно примыкающих к нему
  * элементов по вертикали, горизонтали и диагоналям.
@@ -141,7 +141,7 @@ fun isLatinSquare(matrix: Matrix<Int>): Boolean = TODO()
 fun sumNeighbours(matrix: Matrix<Int>): Matrix<Int> = TODO()
 
 /**
- * Средняя
+ * Средняя (4 балла)
  *
  * Целочисленная матрица matrix состоит из "дырок" (на их месте стоит 0) и "кирпичей" (на их месте стоит 1).
  * Найти в этой матрице все ряды и колонки, целиком состоящие из "дырок".
@@ -163,7 +163,7 @@ fun findHoles(matrix: Matrix<Int>): Holes = TODO()
 data class Holes(val rows: List<Int>, val columns: List<Int>)
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * В целочисленной матрице matrix каждый элемент заменить суммой элементов подматрицы,
  * расположенной в левом верхнем углу матрицы matrix и ограниченной справа-снизу данным элементом.
@@ -179,7 +179,25 @@ data class Holes(val rows: List<Int>, val columns: List<Int>)
 fun sumSubMatrix(matrix: Matrix<Int>): Matrix<Int> = TODO()
 
 /**
- * Сложная
+ * Простая (2 балла)
+ *
+ * Инвертировать заданную матрицу.
+ * При инвертировании знак каждого элемента матрицы следует заменить на обратный
+ */
+operator fun Matrix<Int>.unaryMinus(): Matrix<Int> = TODO(this.toString())
+
+/**
+ * Средняя (4 балла)
+ *
+ * Перемножить две заданные матрицы друг с другом.
+ * Матрицы можно умножать, только если ширина первой матрицы совпадает с высотой второй матрицы.
+ * В противном случае бросить IllegalArgumentException.
+ * Подробно про порядок умножения см. статью Википедии "Умножение матриц".
+ */
+operator fun Matrix<Int>.times(other: Matrix<Int>): Matrix<Int> = TODO(this.toString())
+
+/**
+ * Сложная (7 баллов)
  *
  * Даны мозаичные изображения замочной скважины и ключа. Пройдет ли ключ в скважину?
  * То есть даны две матрицы key и lock, key.height <= lock.height, key.width <= lock.width, состоящие из нулей и единиц.
@@ -201,25 +219,7 @@ fun sumSubMatrix(matrix: Matrix<Int>): Matrix<Int> = TODO()
 fun canOpenLock(key: Matrix<Int>, lock: Matrix<Int>): Triple<Boolean, Int, Int> = TODO()
 
 /**
- * Простая
- *
- * Инвертировать заданную матрицу.
- * При инвертировании знак каждого элемента матрицы следует заменить на обратный
- */
-operator fun Matrix<Int>.unaryMinus(): Matrix<Int> = TODO(this.toString())
-
-/**
- * Средняя
- *
- * Перемножить две заданные матрицы друг с другом.
- * Матрицы можно умножать, только если ширина первой матрицы совпадает с высотой второй матрицы.
- * В противном случае бросить IllegalArgumentException.
- * Подробно про порядок умножения см. статью Википедии "Умножение матриц".
- */
-operator fun Matrix<Int>.times(other: Matrix<Int>): Matrix<Int> = TODO(this.toString())
-
-/**
- * Сложная
+ * Сложная (8 баллов)
  *
  * В матрице matrix размером 4х4 дана исходная позиция для игры в 15, например
  *  5  7  9  1
@@ -248,7 +248,7 @@ operator fun Matrix<Int>.times(other: Matrix<Int>): Matrix<Int> = TODO(this.toSt
 fun fifteenGameMoves(matrix: Matrix<Int>, moves: List<Int>): Matrix<Int> = TODO()
 
 /**
- * Очень сложная
+ * Очень сложная (32 балла)
  *
  * В матрице matrix размером 4х4 дана исходная позиция для игры в 15, например
  *  5  7  9  2

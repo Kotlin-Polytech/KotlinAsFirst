@@ -75,7 +75,7 @@ class Triangle private constructor(private val points: Set<Point>) {
  */
 data class Circle(val center: Point, val radius: Double) {
     /**
-     * Простая
+     * Простая (2 балла)
      *
      * Рассчитать расстояние между двумя окружностями.
      * Расстояние между непересекающимися окружностями рассчитывается как
@@ -85,7 +85,7 @@ data class Circle(val center: Point, val radius: Double) {
     fun distance(other: Circle): Double = TODO()
 
     /**
-     * Тривиальная
+     * Тривиальная (1 балл)
      *
      * Вернуть true, если и только если окружность содержит данную точку НА себе или ВНУТРИ себя
      */
@@ -104,7 +104,7 @@ data class Segment(val begin: Point, val end: Point) {
 }
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Дано множество точек. Вернуть отрезок, соединяющий две наиболее удалённые из них.
  * Если в множестве менее двух точек, бросить IllegalArgumentException
@@ -112,7 +112,7 @@ data class Segment(val begin: Point, val end: Point) {
 fun diameter(vararg points: Point): Segment = TODO()
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Построить окружность по её диаметру, заданному двумя точками
  * Центр её должен находиться посередине между точками, а радиус составлять половину расстояния между ними
@@ -133,7 +133,7 @@ class Line private constructor(val b: Double, val angle: Double) {
     constructor(point: Point, angle: Double) : this(point.y * cos(angle) - point.x * sin(angle), angle)
 
     /**
-     * Средняя
+     * Средняя (3 балла)
      *
      * Найти точку пересечения с другой линией.
      * Для этого необходимо составить и решить систему из двух уравнений (каждое для своей прямой)
@@ -152,28 +152,28 @@ class Line private constructor(val b: Double, val angle: Double) {
 }
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Построить прямую по отрезку
  */
 fun lineBySegment(s: Segment): Line = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Построить прямую по двум точкам
  */
 fun lineByPoints(a: Point, b: Point): Line = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Построить серединный перпендикуляр по отрезку или по двум точкам
  */
 fun bisectorByPoints(a: Point, b: Point): Line = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Задан список из n окружностей на плоскости.
  * Найти пару наименее удалённых из них; расстояние между окружностями
@@ -187,7 +187,7 @@ fun bisectorByPoints(a: Point, b: Point): Line = TODO()
 fun findNearestCirclePair(vararg circles: Circle): Pair<Circle, Circle> = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Дано три различные точки. Построить окружность, проходящую через них
  * (все три точки должны лежать НА, а не ВНУТРИ, окружности).
@@ -198,7 +198,7 @@ fun findNearestCirclePair(vararg circles: Circle): Pair<Circle, Circle> = TODO()
 fun circleByThreePoints(a: Point, b: Point, c: Point): Circle = TODO()
 
 /**
- * Очень сложная
+ * Очень сложная (10 баллов)
  *
  * Дано множество точек на плоскости. Найти круг минимального радиуса,
  * содержащий все эти точки. Если множество пустое, бросить IllegalArgumentException.

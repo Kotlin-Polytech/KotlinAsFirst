@@ -16,7 +16,7 @@ data class Square(val column: Int, val row: Int) {
     fun inside(): Boolean = column in 1..8 && row in 1..8
 
     /**
-     * Простая
+     * Простая (2 балла)
      *
      * Возвращает строковую нотацию для клетки.
      * В нотации, колонки обозначаются латинскими буквами от a до h, а ряды -- цифрами от 1 до 8.
@@ -26,7 +26,7 @@ data class Square(val column: Int, val row: Int) {
 }
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Создаёт клетку по строковой нотации.
  * В нотации, колонки обозначаются латинскими буквами от a до h, а ряды -- цифрами от 1 до 8.
@@ -35,7 +35,7 @@ data class Square(val column: Int, val row: Int) {
 fun square(notation: String): Square = TODO()
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Определить число ходов, за которое шахматная ладья пройдёт из клетки start в клетку end.
  * Шахматная ладья может за один ход переместиться на любую другую клетку
@@ -60,7 +60,7 @@ fun square(notation: String): Square = TODO()
 fun rookMoveNumber(start: Square, end: Square): Int = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Вернуть список из клеток, по которым шахматная ладья может быстрее всего попасть из клетки start в клетку end.
  * Описание ходов ладьи см. предыдущую задачу.
@@ -76,7 +76,7 @@ fun rookMoveNumber(start: Square, end: Square): Int = TODO()
 fun rookTrajectory(start: Square, end: Square): List<Square> = TODO()
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Определить число ходов, за которое шахматный слон пройдёт из клетки start в клетку end.
  * Шахматный слон может за один ход переместиться на любую другую клетку по диагонали.
@@ -101,7 +101,7 @@ fun rookTrajectory(start: Square, end: Square): List<Square> = TODO()
 fun bishopMoveNumber(start: Square, end: Square): Int = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Вернуть список из клеток, по которым шахматный слон может быстрее всего попасть из клетки start в клетку end.
  * Описание ходов слона см. предыдущую задачу.
@@ -121,7 +121,7 @@ fun bishopMoveNumber(start: Square, end: Square): Int = TODO()
 fun bishopTrajectory(start: Square, end: Square): List<Square> = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Определить число ходов, за которое шахматный король пройдёт из клетки start в клетку end.
  * Шахматный король одним ходом может переместиться из клетки, в которой стоит,
@@ -143,7 +143,7 @@ fun bishopTrajectory(start: Square, end: Square): List<Square> = TODO()
 fun kingMoveNumber(start: Square, end: Square): Int = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Вернуть список из клеток, по которым шахматный король может быстрее всего попасть из клетки start в клетку end.
  * Описание ходов короля см. предыдущую задачу.
@@ -159,7 +159,7 @@ fun kingMoveNumber(start: Square, end: Square): Int = TODO()
 fun kingTrajectory(start: Square, end: Square): List<Square> = TODO()
 
 /**
- * Сложная
+ * Сложная (6 баллов)
  *
  * Определить число ходов, за которое шахматный конь пройдёт из клетки start в клетку end.
  * Шахматный конь одним ходом вначале передвигается ровно на 2 клетки по горизонтали или вертикали,
@@ -184,7 +184,7 @@ fun kingTrajectory(start: Square, end: Square): List<Square> = TODO()
 fun knightMoveNumber(start: Square, end: Square): Int = TODO()
 
 /**
- * Очень сложная
+ * Очень сложная (10 баллов)
  *
  * Вернуть список из клеток, по которым шахматный конь может быстрее всего попасть из клетки start в клетку end.
  * Описание ходов коня см. предыдущую задачу.
