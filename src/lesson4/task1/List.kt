@@ -114,7 +114,7 @@ fun isPalindrome(str: String): Boolean {
 fun buildSumExample(list: List<Int>) = list.joinToString(separator = " + ", postfix = " = ${list.sum()}")
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Найти модуль заданного вектора, представленного в виде списка v,
  * по формуле abs = sqrt(a1^2 + a2^2 + ... + aN^2).
@@ -123,14 +123,14 @@ fun buildSumExample(list: List<Int>) = list.joinToString(separator = " + ", post
 fun abs(v: List<Double>): Double = TODO()
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Рассчитать среднее арифметическое элементов списка list. Вернуть 0.0, если список пуст
  */
 fun mean(list: List<Double>): Double = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Центрировать заданный список list, уменьшив каждый элемент на среднее арифметическое всех элементов.
  * Если список пуст, не делать ничего. Вернуть изменённый список.
@@ -140,7 +140,7 @@ fun mean(list: List<Double>): Double = TODO()
 fun center(list: MutableList<Double>): MutableList<Double> = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Найти скалярное произведение двух векторов равной размерности,
  * представленные в виде списков a и b. Скалярное произведение считать по формуле:
@@ -149,7 +149,7 @@ fun center(list: MutableList<Double>): MutableList<Double> = TODO()
 fun times(a: List<Int>, b: List<Int>): Int = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Рассчитать значение многочлена при заданном x:
  * p(x) = p0 + p1*x + p2*x^2 + p3*x^3 + ... + pN*x^N.
@@ -159,7 +159,7 @@ fun times(a: List<Int>, b: List<Int>): Int = TODO()
 fun polynom(p: List<Int>, x: Int): Int = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * В заданном списке list каждый элемент, кроме первого, заменить
  * суммой данного элемента и всех предыдущих.
@@ -171,7 +171,7 @@ fun polynom(p: List<Int>, x: Int): Int = TODO()
 fun accumulate(list: MutableList<Int>): MutableList<Int> = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Разложить заданное натуральное число n > 1 на простые множители.
  * Результат разложения вернуть в виде списка множителей, например 75 -> (3, 5, 5).
@@ -180,7 +180,7 @@ fun accumulate(list: MutableList<Int>): MutableList<Int> = TODO()
 fun factorize(n: Int): List<Int> = TODO()
 
 /**
- * Сложная
+ * Сложная (4 балла)
  *
  * Разложить заданное натуральное число n > 1 на простые множители.
  * Результат разложения вернуть в виде строки, например 75 -> 3*5*5
@@ -189,7 +189,7 @@ fun factorize(n: Int): List<Int> = TODO()
 fun factorizeToString(n: Int): String = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Перевести заданное целое число n >= 0 в систему счисления с основанием base > 1.
  * Результат перевода вернуть в виде списка цифр в base-ичной системе от старшей к младшей,
@@ -198,7 +198,7 @@ fun factorizeToString(n: Int): String = TODO()
 fun convert(n: Int, base: Int): List<Int> = TODO()
 
 /**
- * Сложная
+ * Сложная (4 балла)
  *
  * Перевести заданное целое число n >= 0 в систему счисления с основанием 1 < base < 37.
  * Результат перевода вернуть в виде строки, цифры более 9 представлять латинскими
@@ -211,7 +211,7 @@ fun convert(n: Int, base: Int): List<Int> = TODO()
 fun convertToString(n: Int, base: Int): String = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Перевести число, представленное списком цифр digits от старшей к младшей,
  * из системы счисления с основанием base в десятичную.
@@ -220,7 +220,7 @@ fun convertToString(n: Int, base: Int): String = TODO()
 fun decimal(digits: List<Int>, base: Int): Int = TODO()
 
 /**
- * Сложная
+ * Сложная (4 балла)
  *
  * Перевести число, представленное цифровой строкой str,
  * из системы счисления с основанием base в десятичную.
@@ -234,7 +234,7 @@ fun decimal(digits: List<Int>, base: Int): Int = TODO()
 fun decimalFromString(str: String, base: Int): Int = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Перевести натуральное число n > 0 в римскую систему.
  * Римские цифры: 1 = I, 4 = IV, 5 = V, 9 = IX, 10 = X, 40 = XL, 50 = L,
@@ -244,7 +244,7 @@ fun decimalFromString(str: String, base: Int): Int = TODO()
 fun roman(n: Int): String = TODO()
 
 /**
- * Очень сложная
+ * Очень сложная (7 баллов)
  *
  * Записать заданное натуральное число 1..999999 прописью по-русски.
  * Например, 375 = "триста семьдесят пять",

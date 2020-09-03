@@ -87,7 +87,7 @@ fun buildWordSet(text: List<String>): MutableSet<String> {
 
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * По заданному ассоциативному массиву "студент"-"оценка за экзамен" построить
  * обратный массив "оценка за экзамен"-"список студентов с этой оценкой".
@@ -99,7 +99,7 @@ fun buildWordSet(text: List<String>): MutableSet<String> {
 fun buildGrades(grades: Map<String, Int>): Map<Int, List<String>> = TODO()
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Определить, входит ли ассоциативный массив a в ассоциативный массив b;
  * это выполняется, если все ключи из a содержатся в b с такими же значениями.
@@ -111,7 +111,7 @@ fun buildGrades(grades: Map<String, Int>): Map<Int, List<String>> = TODO()
 fun containsIn(a: Map<String, String>, b: Map<String, String>): Boolean = TODO()
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Удалить из изменяемого ассоциативного массива все записи,
  * которые встречаются в заданном ассоциативном массиве.
@@ -129,7 +129,7 @@ fun subtractOf(a: MutableMap<String, String>, b: Map<String, String>) {
 }
 
 /**
- * Простая
+ * Простая (2 балла)
  *
  * Для двух списков людей найти людей, встречающихся в обоих списках.
  * В выходном списке не должно быть повторяюихся элементов,
@@ -138,7 +138,7 @@ fun subtractOf(a: MutableMap<String, String>, b: Map<String, String>) {
 fun whoAreInBoth(a: List<String>, b: List<String>): List<String> = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Объединить два ассоциативных массива `mapA` и `mapB` с парами
  * "имя"-"номер телефона" в итоговый ассоциативный массив, склеивая
@@ -157,7 +157,7 @@ fun whoAreInBoth(a: List<String>, b: List<String>): List<String> = TODO()
 fun mergePhoneBooks(mapA: Map<String, String>, mapB: Map<String, String>): Map<String, String> = TODO()
 
 /**
- * Средняя
+ * Средняя (4 балла)
  *
  * Для заданного списка пар "акция"-"стоимость" вернуть ассоциативный массив,
  * содержащий для каждой акции ее усредненную стоимость.
@@ -169,7 +169,7 @@ fun mergePhoneBooks(mapA: Map<String, String>, mapB: Map<String, String>): Map<S
 fun averageStockPrice(stockPrices: List<Pair<String, Double>>): Map<String, Double> = TODO()
 
 /**
- * Средняя
+ * Средняя (4 балла)
  *
  * Входными данными является ассоциативный массив
  * "название товара"-"пара (тип товара, цена товара)"
@@ -186,7 +186,7 @@ fun averageStockPrice(stockPrices: List<Pair<String, Double>>): Map<String, Doub
 fun findCheapestStuff(stuff: Map<String, Pair<String, Double>>, kind: String): String? = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Для заданного набора символов определить, можно ли составить из него
  * указанное слово (регистр символов игнорируется)
@@ -197,7 +197,7 @@ fun findCheapestStuff(stuff: Map<String, Pair<String, Double>>, kind: String): S
 fun canBuildFrom(chars: List<Char>, word: String): Boolean = TODO()
 
 /**
- * Средняя
+ * Средняя (4 балла)
  *
  * Найти в заданном списке повторяющиеся элементы и вернуть
  * ассоциативный массив с информацией о числе повторений
@@ -211,7 +211,7 @@ fun canBuildFrom(chars: List<Char>, word: String): Boolean = TODO()
 fun extractRepeats(list: List<String>): Map<String, Int> = TODO()
 
 /**
- * Средняя
+ * Средняя (3 балла)
  *
  * Для заданного списка слов определить, содержит ли он анаграммы.
  * Два слова здесь считаются анаграммами, если они имеют одинаковую длину
@@ -225,7 +225,7 @@ fun extractRepeats(list: List<String>): Map<String, Int> = TODO()
 fun hasAnagrams(words: List<String>): Boolean = TODO()
 
 /**
- * Сложная
+ * Сложная (5 баллов)
  *
  * Для заданного ассоциативного массива знакомых через одно рукопожатие `friends`
  * необходимо построить его максимальное расширение по рукопожатиям, то есть,
@@ -261,7 +261,7 @@ fun hasAnagrams(words: List<String>): Boolean = TODO()
 fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<String>> = TODO()
 
 /**
- * Сложная
+ * Сложная (6 баллов)
  *
  * Для заданного списка неотрицательных чисел и числа определить,
  * есть ли в списке пара чисел таких, что их сумма равна заданному числу.
@@ -280,7 +280,7 @@ fun propagateHandshakes(friends: Map<String, Set<String>>): Map<String, Set<Stri
 fun findSumOfTwo(list: List<Int>, number: Int): Pair<Int, Int> = TODO()
 
 /**
- * Очень сложная
+ * Очень сложная (8 баллов)
  *
  * Входными данными является ассоциативный массив
  * "название сокровища"-"пара (вес сокровища, цена сокровища)"
