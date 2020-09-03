@@ -309,7 +309,7 @@ Basic, Ruby, Swift.
     }
 
     @Test
-    @Tag("24")
+    @Tag("23")
     fun markdownToHtmlLists() {
         markdownToHtmlLists("input/markdown_lists.md", "temp.html")
         checkHtmlListsExample()
