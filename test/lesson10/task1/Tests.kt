@@ -26,6 +26,7 @@ class Tests {
     @Test
     @Tag("15")
     fun parseWithExponentiation() {
+        Expression.Binary(Expression.Variable, Expression.Operation.POW, Expression.Constant(3)).calculate(3)
         assertEquals(
             mapOf(-2 to 4, 0 to 0, 1 to 1, 3 to 9, 11 to 121),
             parseExpr("input/expr_pow1.txt", listOf(-2, 0, 1, 3, 11))
