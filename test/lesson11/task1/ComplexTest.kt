@@ -21,7 +21,7 @@ internal class ComplexTest {
     @Test
     @Tag("2")
     operator fun unaryMinus() {
-        assertApproxEquals(Complex(1.0, -2.0), -Complex(2.0, -1.0), 1e-10)
+        assertApproxEquals(Complex(1.0, -2.0), -Complex(-1.0, 2.0), 1e-10)
     }
 
     @Test
