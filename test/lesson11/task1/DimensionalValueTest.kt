@@ -16,7 +16,7 @@ internal class DimensionalValueTest {
     @Tag("12")
     fun base() {
         val first = DimensionalValue(1.0, "Kg")
-        assertEquals(1.0, first.value)
+        assertEquals(1000.0, first.value)
         assertEquals(Dimension.GRAM, first.dimension)
         val second = DimensionalValue("200 m")
         assertEquals(200.0, second.value)
