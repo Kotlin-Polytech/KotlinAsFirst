@@ -12,9 +12,14 @@
 
     <repositories>
         <repository>
-            <id>bintray-vorpal-research-kotlin-maven</id>
+            <id>github-kotlin-polytech-kotlin-maven</id>
+            <name>kotlin-polytech-kotlin-maven</name>
+            <url>https://maven.polytech.vorpal-research.science</url>
+        </repository>
+        <repository>
+            <id>github-vorpal-research-kotlin-maven</id>
             <name>vorpal-research-kotlin-maven</name>
-            <url>http://dl.bintray.com/vorpal-research/kotlin-maven</url>
+            <url>https://maven.vorpal-research.science</url>
         </repository>
     </repositories>
 
