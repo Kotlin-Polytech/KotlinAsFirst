@@ -254,5 +254,16 @@ class Tests {
         for (p in listOf(p1, p2, p3, p4, p5, p6)) {
             assertTrue(result.contains(p))
         }
+        // Набор точек для примера
+        // A = (-3,-1), B = (0, 3), C = (1.96, -1.6), D = (0, -2.4), тут диаметр это BD = 5.4, но ни окружность по B и D, ни окружность по B, D и A, ни окружность по B, D и C все точки не содержат, причём, с запасом в районе 0.2 - 0.3
+        val a = Point(-3.0, -1.0)
+        val b = Point(0.0, 3.0)
+        val c = Point(1.96, -1.6)
+        val d = Point(0.0, -2.4)
+        val result2 = minContainingCircle(a, b, c, d)
+        assertEquals(2.89, result2.radius, 0.01)
+        for (p in listOf(a, b, c, d)) {
+            assertTrue(result2.contains(p))
+        }
     }
 }
