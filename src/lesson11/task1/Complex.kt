@@ -3,6 +3,11 @@
 package lesson11.task1
 
 /**
+ * Фабричный метод для создания комплексного числа из строки вида x+yi
+ */
+fun Complex(s: String): Complex = TODO()
+
+/**
  * Класс "комплексное число".
  *
  * Общая сложность задания -- лёгкая, общая ценность в баллах -- 8.
@@ -17,11 +22,6 @@ class Complex(val re: Double, val im: Double) {
      * Конструктор из вещественного числа
      */
     constructor(x: Double) : this(TODO(), TODO())
-
-    /**
-     * Конструктор из строки вида x+yi
-     */
-    constructor(s: String) : this(TODO(), TODO())
 
     /**
      * Сложение.
