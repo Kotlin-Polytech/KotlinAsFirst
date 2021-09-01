@@ -62,6 +62,36 @@ fun generateSimpleHtml(s: String): String {
     return sb.toString()
 }
 
+/**
+ * Средняя (5 баллов)
+ *
+ * Преобразовать заданный список строк в нумерованный список HTML.
+ * К примеру, из ["Alpha", "Beta", "Omega"] мы должны получить следующее
+ * <html><body>
+ * <ol>
+ *     <li>Alpha</li>
+ *     <li>Beta</li>
+ *     <li>Omega</li>
+ * </ol>
+ * </body></html>
+ *
+ * В этом задании вы должны заменить на реальный код содержимое функций myList, myItem, unaryPlus
+ * и использовать их в функции generateSimpleHtml
+ *
+ * Пробелы и переводы строк между тегами в этом задании значения не имеют.
+ */
+fun generateListHtml(list: List<String>): String {
+    val sb = StringBuilder()
+    sb.myHtml {
+        myBody {
+            myList {
+                TODO()
+            }
+        }
+    }
+    return sb.toString()
+}
+
 private class HTML(val sb: StringBuilder) {
     fun myBody(init: HTMLBody.() -> Unit): HTMLBody {
         val body = HTMLBody(sb)
@@ -75,6 +105,21 @@ private class HTML(val sb: StringBuilder) {
 private class HTMLBody(val sb: StringBuilder) {
     operator fun String.unaryPlus() {
         sb.append(this)
+    }
+
+    fun myList(init: HTMLList.() -> Unit): HTMLList {
+        TODO()
+    }
+}
+
+private class HTMLList(val sb: StringBuilder) {
+    fun myItem(init: HTMLItem.() -> Unit): HTMLItem {
+        TODO()
+    }
+}
+
+private class HTMLItem(val sb: StringBuilder) {
+    operator fun String.unaryPlus() {
     }
 }
 

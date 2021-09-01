@@ -35,4 +35,20 @@ class Tests {
     fun generateSimpleHtml() {
         assertEquals("<html><body>Hello!</body></html>", generateSimpleHtml("Hello!"))
     }
+
+    @Test
+    @Tag("5")
+    fun generateListHtml() {
+        assertEquals(
+            """
+                 <html><body>
+                     <ol>
+                         <li>Alpha</li>
+                         <li>Beta</li>
+                         <li>Omega</li>
+                     </ol>
+                  </body></html>
+            """.trimIndent().replace("[\\r\\n ]".toRegex(), ""), generateListHtml(listOf("Alpha", "Beta", "Omega"))
+        )
+    }
 }
