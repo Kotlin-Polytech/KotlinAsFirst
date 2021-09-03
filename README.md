@@ -41,7 +41,7 @@
 
 Руководство по настройке среды программирования:
 
-* http://kspt.icc.spbstu.ru/media/files/2018/kaf/IdeaConfig.pdf
+* http://kspt.icc.spbstu.ru/media/files/2021/kaf/KotlinAsFirstConfig.pdf
 
 Задачи по алгоритмам (Java/Kotlin):
 
