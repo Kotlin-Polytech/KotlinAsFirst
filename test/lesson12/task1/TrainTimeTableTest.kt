@@ -87,7 +87,7 @@ class TrainTimeTableTest {
 
     @Test
     @Tag("8")
-    fun testEquals() {
+    fun tttEquals() {
         val ttt1 = TrainTimeTable("СПб")
         assertTrue(ttt1.addTrain("N1", Time(6, 35), Stop("Пушкин", Time(7, 4))))
         assertTrue(ttt1.addTrain("N2", Time(6, 18), Stop("Пушкин", Time(6, 45))))

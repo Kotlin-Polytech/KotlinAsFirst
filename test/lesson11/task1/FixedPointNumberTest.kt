@@ -9,7 +9,7 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("6")
-    fun getPrecision() {
+    fun fpnGetPrecision() {
         val n = FixedPointNumber("1.2345")
         assertEquals(4, n.precision)
         val m = FixedPointNumber(42)
@@ -18,7 +18,7 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("6")
-    fun plus() {
+    fun fpnPlus() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
         assertEquals(FixedPointNumber("22.0982"), x + y)
@@ -26,14 +26,14 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("4")
-    operator fun unaryMinus() {
+    fun fpnUnaryMinus() {
         val x = FixedPointNumber("2.345")
         assertEquals(FixedPointNumber("-2.345"), -x)
     }
 
     @Test
     @Tag("6")
-    fun minus() {
+    fun fpnMinus() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
         assertEquals(FixedPointNumber("17.4082"), y - x)
@@ -41,7 +41,7 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("10")
-    fun times() {
+    fun fpnTimes() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
         assertEquals(FixedPointNumber("46.3213"), x * y)
@@ -49,7 +49,7 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("10")
-    fun div() {
+    fun fpnDiv() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
         assertEquals(FixedPointNumber("8.424"), y / x)
@@ -57,7 +57,7 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("6")
-    fun testEquals() {
+    fun fpnEquals() {
         val x = FixedPointNumber(19.7532, 4)
         val y = FixedPointNumber("19.7532")
         assertTrue(x == y)
@@ -65,7 +65,7 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("6")
-    fun testHashCode() {
+    fun fpnHashCode() {
         val x = FixedPointNumber(19.7532, 4)
         val y = FixedPointNumber("19.7532")
         assertTrue(x.hashCode() == y.hashCode())
@@ -73,7 +73,7 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("6")
-    fun compareTo() {
+    fun fpnCompareTo() {
         val x = FixedPointNumber("2.345")
         val y = FixedPointNumber("19.7532")
         assertTrue(y > x)
@@ -82,14 +82,14 @@ class FixedPointNumberTest {
 
     @Test
     @Tag("4")
-    fun testToString() {
+    fun fpnToString() {
         val x = FixedPointNumber(19.7532, 4)
         assertEquals("19.7532", x.toString())
     }
 
     @Test
     @Tag("6")
-    fun toDouble() {
+    fun fpnToDouble() {
         val x = FixedPointNumber("19.7532")
         assertEquals(19.7532, x.toDouble(), 1e-5)
     }

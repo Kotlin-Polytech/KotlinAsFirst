@@ -10,14 +10,14 @@ internal class UnsignedBigIntegerTest {
 
     @Test
     @Tag("8")
-    fun plus() {
+    fun ubiPlus() {
         assertEquals(UnsignedBigInteger(4), UnsignedBigInteger(2) + UnsignedBigInteger(2))
         assertEquals(UnsignedBigInteger("9087654330"), UnsignedBigInteger("9087654329") + UnsignedBigInteger(1))
     }
 
     @Test
     @Tag("8")
-    fun minus() {
+    fun ubiMinus() {
         assertEquals(UnsignedBigInteger(2), UnsignedBigInteger(4) - UnsignedBigInteger(2))
         assertEquals(UnsignedBigInteger("9087654329"), UnsignedBigInteger("9087654330") - UnsignedBigInteger(1))
         assertThrows(ArithmeticException::class.java) {
@@ -27,7 +27,7 @@ internal class UnsignedBigIntegerTest {
 
     @Test
     @Tag("12")
-    fun times() {
+    fun ubiTimes() {
         assertEquals(
             UnsignedBigInteger("18446744073709551616"),
             UnsignedBigInteger("4294967296‬") * UnsignedBigInteger("4294967296‬")
@@ -36,7 +36,7 @@ internal class UnsignedBigIntegerTest {
 
     @Test
     @Tag("16")
-    fun div() {
+    fun ubiDiv() {
         assertEquals(
             UnsignedBigInteger("4294967296‬"),
             UnsignedBigInteger("18446744073709551616") / UnsignedBigInteger("4294967296‬")
@@ -45,7 +45,7 @@ internal class UnsignedBigIntegerTest {
 
     @Test
     @Tag("16")
-    fun rem() {
+    fun ubiRem() {
         assertEquals(UnsignedBigInteger(5), UnsignedBigInteger(19) % UnsignedBigInteger(7))
         assertEquals(
             UnsignedBigInteger(0),
@@ -55,20 +55,20 @@ internal class UnsignedBigIntegerTest {
 
     @Test
     @Tag("8")
-    fun equals() {
+    fun ubiEquals() {
         assertEquals(UnsignedBigInteger(123456789), UnsignedBigInteger("123456789"))
     }
 
     @Test
     @Tag("8")
-    fun compareTo() {
+    fun ubiCompareTo() {
         assertTrue(UnsignedBigInteger(123456789) < UnsignedBigInteger("9876543210"))
         assertTrue(UnsignedBigInteger("9876543210") > UnsignedBigInteger(123456789))
     }
 
     @Test
     @Tag("8")
-    fun toInt() {
+    fun ubiToInt() {
         assertEquals(123456789, UnsignedBigInteger("123456789").toInt())
     }
 }

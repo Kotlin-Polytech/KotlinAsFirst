@@ -8,7 +8,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun add() {
+    fun sllAdd() {
         val list = SinglyLinkedList()
         list.add(0)
         assertSame(1, list.size)
@@ -16,7 +16,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun removeFirst() {
+    fun sllRemoveFirst() {
         val list = SinglyLinkedList()
         list.add(0)
         assertTrue(list.removeFirst())
@@ -26,7 +26,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun removeLast() {
+    fun sllRemoveLast() {
         val list = SinglyLinkedList()
         list.add(4)
         list.add(3)
@@ -47,7 +47,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun remove() {
+    fun sllRemove() {
         val list = SinglyLinkedList()
         for (i in 0..19) {
             list.add(i)
@@ -72,7 +72,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun size() {
+    fun sllSize() {
         val list = SinglyLinkedList()
         list.add(5)
         list.add(7)
@@ -84,7 +84,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun isEmpty() {
+    fun sllIsEmpty() {
         val list = SinglyLinkedList()
         assertTrue(list.isEmpty())
         list.add(42)
@@ -93,7 +93,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun equals() {
+    fun sllEquals() {
         val first = SinglyLinkedList()
         val second = SinglyLinkedList()
         assertTrue(first == second)
@@ -109,7 +109,7 @@ class SinglyLinkedListTest {
 
     @Test
     @Tag("Example")
-    fun hashCodeTest() {
+    fun sllHashCode() {
         val first = SinglyLinkedList()
         val second = SinglyLinkedList()
         assertTrue(first.hashCode() == second.hashCode())

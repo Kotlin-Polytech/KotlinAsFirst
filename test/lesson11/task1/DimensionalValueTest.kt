@@ -14,7 +14,7 @@ internal class DimensionalValueTest {
 
     @Test
     @Tag("12")
-    fun base() {
+    fun dvBase() {
         val first = DimensionalValue(1.0, "Kg")
         assertEquals(1000.0, first.value)
         assertEquals(Dimension.GRAM, first.dimension)
@@ -25,7 +25,7 @@ internal class DimensionalValueTest {
 
     @Test
     @Tag("6")
-    fun plus() {
+    fun dvPlus() {
         assertApproxEquals(DimensionalValue("2 Km"), DimensionalValue("1 Km") + DimensionalValue("1000 m"), 1e-8)
         assertThrows(IllegalArgumentException::class.java) {
             DimensionalValue("1 g") + DimensionalValue("1 m")
@@ -34,13 +34,13 @@ internal class DimensionalValueTest {
 
     @Test
     @Tag("4")
-    operator fun unaryMinus() {
+    fun dvUnaryMinus() {
         assertApproxEquals(DimensionalValue("-2 g"), -DimensionalValue("2 g"), 1e-12)
     }
 
     @Test
     @Tag("6")
-    fun minus() {
+    fun dvMinus() {
         assertApproxEquals(DimensionalValue("0 m"), DimensionalValue("1 Km") - DimensionalValue("1000 m"), 1e-10)
         assertThrows(IllegalArgumentException::class.java) {
             DimensionalValue("1 g") - DimensionalValue("1 m")
@@ -49,7 +49,7 @@ internal class DimensionalValueTest {
 
     @Test
     @Tag("4")
-    fun times() {
+    fun dvTimes() {
         assertApproxEquals(DimensionalValue("2 Kg"), DimensionalValue("2 g") * 1000.0, 1e-8)
     }
 
@@ -70,20 +70,20 @@ internal class DimensionalValueTest {
 
     @Test
     @Tag("4")
-    fun equals() {
+    fun dvEquals() {
         assertEquals(DimensionalValue("1 Kg"), DimensionalValue("1 Kg"))
         assertEquals(DimensionalValue("3 mm"), DimensionalValue("3 mm"))
     }
 
     @Test
     @Tag("4")
-    fun hashCodeTest() {
+    fun dvHashCode() {
         assertEquals(DimensionalValue("1 Kg").hashCode(), DimensionalValue("1 Kg").hashCode())
     }
 
     @Test
     @Tag("4")
-    fun compareTo() {
+    fun dvCompareTo() {
         assertTrue(DimensionalValue("1 Kg") < DimensionalValue("1500 g"))
         assertTrue(DimensionalValue("1 m") > DimensionalValue("900 mm"))
     }

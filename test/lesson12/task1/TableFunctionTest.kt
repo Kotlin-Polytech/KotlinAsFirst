@@ -9,7 +9,7 @@ internal class TableFunctionTest {
 
     @Test
     @Tag("6")
-    fun add() {
+    fun tfAdd() {
         val function = TableFunction()
         function.add(1.0, 2.0)
         function.add(3.0, 4.0)
@@ -20,7 +20,7 @@ internal class TableFunctionTest {
 
     @Test
     @Tag("6")
-    fun remove() {
+    fun tfRemove() {
         val function = TableFunction()
         function.add(1.0, 2.0)
         function.add(3.0, 4.0)
@@ -52,7 +52,7 @@ internal class TableFunctionTest {
 
     @Test
     @Tag("10")
-    fun getValue() {
+    fun tfGetValue() {
         val function = TableFunction()
         try {
             function.getValue(0.0)
@@ -71,7 +71,7 @@ internal class TableFunctionTest {
 
     @Test
     @Tag("6")
-    fun equals() {
+    fun tfEquals() {
         val f1 = TableFunction()
         f1.add(1.0, 2.0)
         f1.add(3.0, 4.0)

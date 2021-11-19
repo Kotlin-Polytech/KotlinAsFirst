@@ -16,14 +16,14 @@ class PolynomTest {
 
     @Test
     @Tag("4")
-    fun getValue() {
+    fun polynomGetValue() {
         val p = Polynom(1.0, 3.0, 2.0)
         assertEquals(42.0, p.getValue(5.0), 1e-10)
     }
 
     @Test
     @Tag("4")
-    fun degree() {
+    fun polynomDegree() {
         val p = Polynom(1.0, 1.0, 1.0)
         assertEquals(2, p.degree())
         val q = Polynom(0.0)
@@ -34,7 +34,7 @@ class PolynomTest {
 
     @Test
     @Tag("4")
-    fun plus() {
+    fun polynomPlus() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
         val r = Polynom(1.0, -1.0, 2.0, 6.0)
@@ -44,7 +44,7 @@ class PolynomTest {
 
     @Test
     @Tag("4")
-    operator fun unaryMinus() {
+    fun polynomUnaryMinus() {
         val p = Polynom(1.0, -1.0, 2.0)
         val r = Polynom(-1.0, 1.0, -2.0)
         assertApproxEquals(r, -p, 1e-11)
@@ -52,7 +52,7 @@ class PolynomTest {
 
     @Test
     @Tag("4")
-    fun minus() {
+    fun polynomMinus() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
         val r = Polynom(1.0, -3.0, -4.0, 2.0)
@@ -62,7 +62,7 @@ class PolynomTest {
 
     @Test
     @Tag("6")
-    fun times() {
+    fun polynomTimes() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
         val r = Polynom(1.0, 1.0, -5.0, -3.0, 10.0, 8.0)
@@ -72,7 +72,7 @@ class PolynomTest {
 
     @Test
     @Tag("8")
-    fun div() {
+    fun polynomDiv() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
         val r = Polynom(1.0, -5.0)
@@ -82,7 +82,7 @@ class PolynomTest {
 
     @Test
     @Tag("8")
-    fun rem() {
+    fun polynomRem() {
         val p1 = Polynom(1.0, -2.0, -1.0, 4.0)
         val p2 = Polynom(1.0, 3.0, 2.0)
         val r = Polynom(1.0, -5.0)
@@ -93,14 +93,14 @@ class PolynomTest {
 
     @Test
     @Tag("4")
-    fun equals() {
+    fun polynomEquals() {
         assertEquals(Polynom(1.0, 2.0, 3.0), Polynom(1.0, 2.0, 3.0))
         assertEquals(Polynom(0.0, 2.0, 3.0), Polynom(2.0, 3.0))
     }
 
     @Test
     @Tag("6")
-    fun hashCodeTest() {
+    fun polynomHashCode() {
         assertEquals(Polynom(1.0, 2.0, 3.0).hashCode(), Polynom(1.0, 2.0, 3.0).hashCode())
     }
 }

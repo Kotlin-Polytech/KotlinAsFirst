@@ -80,7 +80,7 @@ internal class PhoneBookTest {
 
     @Test
     @Tag("6")
-    fun testEquals() {
+    fun pbEquals() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
         assertTrue(book.addHuman("Васильев Дмитрий"))
@@ -98,7 +98,7 @@ internal class PhoneBookTest {
 
     @Test
     @Tag("6")
-    fun testHashCode() {
+    fun pbHashCode() {
         val book = PhoneBook()
         assertTrue(book.addHuman("Иванов Петр"))
         assertTrue(book.addHuman("Васильев Дмитрий"))

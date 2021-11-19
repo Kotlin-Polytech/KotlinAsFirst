@@ -9,7 +9,7 @@ class OpenHashSetTest {
 
     @Test
     @Tag("6")
-    fun size() {
+    fun ohsSize() {
         val set = OpenHashSet<Int>(32)
         assertEquals(32, set.capacity)
         assertEquals(0, set.size)
@@ -22,7 +22,7 @@ class OpenHashSetTest {
 
     @Test
     @Tag("4")
-    fun isEmpty() {
+    fun ohsIsEmpty() {
         val set = OpenHashSet<Int>(16)
         assertTrue(set.isEmpty())
         set.add(0)
@@ -31,7 +31,7 @@ class OpenHashSetTest {
 
     @Test
     @Tag("10")
-    fun add() {
+    fun ohsAdd() {
         val set = OpenHashSet<String>(4)
         assertTrue(set.add("alpha"))
         assertTrue(set.add("beta"))
@@ -46,7 +46,7 @@ class OpenHashSetTest {
 
     @Test
     @Tag("10")
-    fun contains() {
+    fun ohsContains() {
         val set = OpenHashSet<Int>(8)
         set.add(1)
         set.add(3)
@@ -57,7 +57,7 @@ class OpenHashSetTest {
 
     @Test
     @Tag("8")
-    fun testEquals() {
+    fun ohsEquals() {
         val set1 = OpenHashSet<Int>(8)
         set1.add(1)
         set1.add(3)
@@ -73,7 +73,7 @@ class OpenHashSetTest {
 
     @Test
     @Tag("6")
-    fun testHashCode() {
+    fun ohsHashCode() {
         val set1 = OpenHashSet<Int>(8)
         set1.add(1)
         set1.add(3)

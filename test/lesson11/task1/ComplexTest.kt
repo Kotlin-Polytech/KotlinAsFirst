@@ -14,37 +14,37 @@ internal class ComplexTest {
 
     @Test
     @Tag("2")
-    fun plus() {
+    fun complexPlus() {
         assertApproxEquals(Complex("4-2i"), Complex("1+2i") + Complex("3-4i"), 1e-10)
     }
 
     @Test
     @Tag("2")
-    operator fun unaryMinus() {
+    fun complexUnaryMinus() {
         assertApproxEquals(Complex(1.0, -2.0), -Complex(-1.0, 2.0), 1e-10)
     }
 
     @Test
     @Tag("2")
-    fun minus() {
+    fun complexMinus() {
         assertApproxEquals(Complex("2-6i"), Complex("3-4i") - Complex("1+2i"), 1e-10)
     }
 
     @Test
     @Tag("4")
-    fun times() {
+    fun complexTimes() {
         assertApproxEquals(Complex("11+2i"), Complex("1+2i") * Complex("3-4i"), 1e-10)
     }
 
     @Test
     @Tag("4")
-    fun div() {
+    fun complexDiv() {
         assertApproxEquals(Complex("1+2i"), Complex("11+2i") / Complex("3-4i"), 1e-10)
     }
 
     @Test
     @Tag("2")
-    fun equals() {
+    fun complexEquals() {
         assertApproxEquals(Complex(1.0, 2.0), Complex("1+2i"), 1e-12)
         assertApproxEquals(Complex(1.0, 0.0), Complex(1.0), 1e-12)
     }
