@@ -364,11 +364,11 @@ BFS = Breadth-First Search.
 fun bfs(start: String, finish: String) = bfs(this[start], this[finish])
 
 private fun bfs(start: Vertex, finish: Vertex): Int {
-    val queue = ArrayDeque<Vertex>()
+    val queue = ArrayDeque<Vertex>() // kotlin.collections.ArrayDeque
     queue.add(start)
     val visited = mutableMapOf(start to 0)
     while (queue.isNotEmpty()) {
-        val next = queue.poll()
+        val next = queue.removeFirst() // Use poll for java.util.Deque instead
         val distance = visited[next]!!
         if (next == finish) return distance
         for (neighbor in next.neighbors) {
@@ -384,8 +384,8 @@ private fun bfs(start: Vertex, finish: Vertex): Int {
 В процессе выполнения поиска в ширину мы используем очередь вершин `ArrayQueue<Vertex>`.
 Принцип функционирования очереди подобен настоящей очереди в магазине --
 вызов функции `queue.add` добавляет вершину-аргумент в конец очереди (увеличивая размер очереди на 1),
-а вызов функции `queue.poll`, наоборот, достаёт из головы очереди первую вершину (уменьшая размер на 1).
-Для пустой очереди результат `queue.poll` будет равен **null**.
+а вызов функции `queue.removeFirst()`, наоборот, достаёт из головы очереди первую вершину (уменьшая размер на 1).
+Для пустой очереди результат `queue.removeFirst()` будет равен **null**.
 Изначально в очередь записывается только стартовая вершина.
 
 Для хранения найденных расстояний до уже посещённых вершин функция использует ассоциативный массив, 
